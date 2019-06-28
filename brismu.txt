@@ -32,4 +32,33 @@ This rule is an axiom! We may now state trivial theorems, like {da se du da}:
 ===========
 da se du da
 
-Good warmup.
+For an example of a reversible rule with surprising behavior, we give meaning to a classically-frustrating sumti, {zi'o}.
+
+ da broda de
+=============
+da broda zi'o
+
+To try to give meaning to this rule:
+* When unifying, {zi'o} is a don't-care not-a-value
+* A bridi with {zi'o} is true regardless of what values may match {zi'o}
+* {zi'o} erases columns from the relations of selbri
+
+When reversing this rule, {de} is existentially bound. Folks often wonder about how this might be interpreted computationally. When computing with relations, imagine all operations as many-to-many, relating multiple inputs to multiple outputs. This existential {de} therefore represents all of the many different possible values which would satisfy the relation if the column were to be added.
+
+We now start inching towards set theory inside Lojban. We begin with an important relation, {cmima}, which corresponds to the notion of subset. First, let us put size issues to rest:
+
+da na cmima da
+
+A {na} bridi asserts that its tuple of sumti are not related by its selbri. And now we can give an equivalent for the axiom of pairing:
+
+da ce de cmima di
+=================
+   da cmima di
+
+Another axiom for {ce}:
+
+da ce de broda
+==============
+de ce da broda
+
+Lojban lacks syntax for empty and singleton sets?
