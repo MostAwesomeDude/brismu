@@ -1,0 +1,35 @@
+We interpret Lojban by building a correspondence between Lojban utterances and relations.
+
+We start with bridi. A bridi relates a selbri to an ordered sequence, or tuple, of sumti. A bridi has a truth value within a context.
+
+To each selbri, we assign a relation. To each bridi, we consider whether the given tuple of sumti belongs to the given selbri's relation. Recall that a relation's characteristic function tells whether a given tuple belongs to the relation; then, to each bridi, we assign a truth value that tells the underlying selbri's relation's characteristic function on the bridi's sumti.
+
+We now assume sets and relations. To address the immediate size issues, we will forbid taking sets of all sets, or similar formulations. We will need to introduce {lo} and {lo'i} shortly, but not yet.
+
+The first selbri we'll define is {du}. {du} corresponds to structural rules in natural deduction, but with the constraint of identity. An example rule for {du}:
+
+da du de
+========
+de du da
+
+This rule says that, given some bridi whose selbri is {du}, we may consider its sumti, which are not inspected further than to be bound to names {da} and {de}, and we may interchange {de} with {da} and vice versa. This rule is not surprising in its content, but in its structure; the double-line === instead of a single-line --- indicates that the rule is reversible and may be run backwards. In relational logic, many rules are reversible.
+
+Our first selbri-altering word, {se}, also has reversible rules.
+
+ da broda de
+==============
+de se broda da
+
+This rule breaks the scoped interpretation, including scoped negation and scoped sumti. It corresponds to the reversibility of binary relations.
+
+We can bind {da} multiple times in a rule, and require that the referent sumti are unified. We really do require that the referents unify to a single identity, though, as in relational logic. Thus, another rule for {du} establishes its role in identity:
+
+da du da
+
+This rule is an axiom! We may now state trivial theorems, like {da se du da}:
+
+ da du da
+===========
+da se du da
+
+Good warmup.
