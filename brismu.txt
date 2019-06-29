@@ -51,14 +51,6 @@ da na cmima da
 
 A {na} bridi asserts that its tuple of sumti are not related by its selbri. And now we can give an equivalent for the axiom of pairing:
 
-da ce de cmima di
-=================
-   da cmima di
-
-Another axiom for {ce}:
-
-da ce de broda
-==============
-de ce da broda
+da cmima da ce de
 
 Lojban lacks syntax for empty and singleton sets?
