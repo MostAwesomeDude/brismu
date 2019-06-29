@@ -45,7 +45,7 @@ To try to give meaning to this rule:
 
 When reversing this rule, {de} is existentially bound. Folks often wonder about how this might be interpreted computationally. When computing with relations, imagine all operations as many-to-many, relating multiple inputs to multiple outputs. This existential {de} therefore represents all of the many different possible values which would satisfy the relation if the column were to be added.
 
-We now start inching towards set theory inside Lojban. We begin with an important relation, {cmima}, which corresponds to the notion of subset. First, let us put size issues to rest:
+We now start inching towards set theory inside Lojban. We begin with an important relation, {cmima}, which corresponds to the notion of membership. First, let us put size issues to rest:
 
 da na cmima da
 
@@ -53,4 +53,18 @@ A {na} bridi asserts that its tuple of sumti are not related by its selbri. And 
 
 da cmima da ce de
 
+{ce} is commutative:
+
+da ce de broda
+==============
+de ce da broda
+
 Lojban lacks syntax for empty and singleton sets?
+
+We now introduce useful sumti. First, {da} may be restricted with {poi}. A sumti {da poi ke'a broda} carries with it the implicit understanding that {da broda}. {broda} is here captured as a selbri, with {ke'a} for the sumti that {da} will fill in. In terms of set theory, the values that {da} can take on are universal, but the values that {da poi ke'a broda} can take on are limited by {broda}'s relation's cardinality. Therefore we cannot have a reversible rule for introducing and eliminating {poi} restrictions, only a one-way rule:
+
+          da broda
+----------------------------
+da poi ke'a brode ku'o broda
+
+We may now define {lo broda} as {da poi ke'a broda} and {lo broda be de} as {da poi ke'a broda de}.
