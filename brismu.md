@@ -76,3 +76,18 @@ We may also say {pa broda} as a sumti to indicate {pa da poi ke'a broda}, and {p
     pa da broda
     -----------
       da broda
+
+There is also a rule for {no da}, which asserts that zero values are taken on by {da}, which means that no rows match, which means that the relation effectively isn't true. This can be inverted, too.
+
+    no da broda
+    ===========
+    da na broda
+
+We are now ready to close over bridi with {ka}. {ka ce'u mlatu ce'u} captures the two open places like a lambda, or more precisely like an internal hom. There is only one {mlatu}, and so only one {ka ce'u mlatu ce'u}. Similarly, if there were a {da} bound, then there would only be one {ka da mlatu ce'u}. Why? Because while {da} takes upon multiple values, it only does so within a particular relation. {ka} is therefore performing a relational join between {da}'s source table and its bound bridi.
+
+All of this is to explain that {pa} is the correct quantifier for {ka}. {ckaji} can be used to cleave the first sumti away from a bridi, giving the rest of the bridi in a {ka}.
+
+            da broda de
+    ============================
+    da ckaji pa ka ce'u broda de
+
