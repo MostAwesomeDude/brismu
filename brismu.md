@@ -91,3 +91,28 @@ All of this is to explain that {pa} is the correct quantifier for {ka}. {ckaji} 
     ============================
     da ckaji pa ka ce'u broda de
 
+ We may now define {lo'i broda} as {lo se cmima be lo broda}. We can also define {lo'i pa broda} as {lo se cmima be lo pa broda}, and {lo pa broda} as {pa da poi ke'a broda}. In fact, for all natural numbers, we have an axiom. Let P be some natural number, and then:
+ 
+    lo P broda cmima lo'i P broda
+
+Applying definitions:
+
+    P da poi ke'a broda ku'o cmima de poi ke'a se cmima P di poi ke'a broda
+
+Or, in plainer language, if we expect {da} to be bound to P distinct values during the course of our query, then it follows that we will explore a set with cardinality P, whose elements each satisfy {da}'s constraints. This may seem trivial, but it is an important sanity check as well as an indication of the strength of our theory: Every defined set has P elements which each satisfy the set's defining property.
+
+As a special case:
+
+                       lo no broda cmima lo'i no broda
+    =====================================================================
+    no da poi ke'a broda ku'o cmima de poi ke'a se cmima no di ke'a broda
+    =====================================================================
+    no da poi ke'a broda ku'o cmima de poi ke'a na se cmima di ke'a broda
+    =====================================================================
+    da poi ke'a broda ku'o na cmima de poi ke'a na se cmima di ke'a broda
+    =====================================================================
+            lo broda ku na cmima de poi ke'a na se cmima lo broda
+            =====================================================
+               lo broda ku na cmima lo na se cmima be lo broda
+
+This is a nice double-negation theorem.
