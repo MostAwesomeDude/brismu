@@ -91,7 +91,13 @@ All of this is to explain that {pa} is the correct quantifier for {ka}. {ckaji} 
     ============================
     da ckaji pa ka ce'u broda de
 
- We may now define {lo'i broda} as {lo se cmima be lo broda}. We can also define {lo'i pa broda} as {lo se cmima be lo pa broda}, and {lo pa broda} as {pa da poi ke'a broda}. In fact, for all natural numbers, we have an axiom. Let P be some natural number, and then:
+Similarly, {ckini} can produce binary {ka}. That's right, {ka} have arity, and so we must be explicit about {ce'u}.
+
+               da broda de
+    =================================
+    da ckini de pa ka ce'u broda ce'u
+
+We may now define {lo'i broda} as {lo se cmima be lo broda}. We can also define {lo'i pa broda} as {lo se cmima be lo pa broda}, and {lo pa broda} as {pa da poi ke'a broda}. In fact, for all natural numbers, we have an axiom. Let P be some natural number, and then:
  
     lo P broda cmima lo'i P broda
 
@@ -136,3 +142,5 @@ Let's continue on to get a classic tautology of informal Lojban:
              lo broda ku broda
 
 Note the difference between the earlier axiom that {da brode} -> {lo broda ku brode}, and this axiom that {lo broda ku broda}. The earlier axiom is conditional upon already having established {brode} as a main selbri, while this newer theorem allows us to introduce a restricted query upon any {broda} as a starting point.
+
+We have set membership, one of the two important relations of set theory. The other is the subset relation, {steci}.
