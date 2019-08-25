@@ -120,19 +120,19 @@ This is a nice double-negation theorem.
 We can define {kampu} now. {kampu} relates a {ka} to a set, so that every member of the set can be plugged into the {ka}'s subordinate bridi. More formally, {kampu} relates sets to their membership relations. As a result, after defining {kampu} in terms of {ckaji}:
 
     pa ka ce'u broda ku kampu lo'i brode
-    ==
-    lo broda ku ckaji pa ka ce'u brode
+    ====================================
+     lo broda ku ckaji pa ka ce'u brode
 
-This looks like an adjunction, doesn't it? We can also define that, as an axiom, {kampu} should relate every membership relation to the set of all of the members:
+This looks like an adjunction, doesn't it? We can also define that, as an axiom, {kampu} should relate every membership relation to the set of the members:
 
     pa ka ce'u broda ku kampu lo'i broda
 
 Let's continue on to get a classic tautology of informal Lojban:
 
     pa ka ce'u broda ku kampu lo'i broda
-    ====================================
-     lo broda ku ckaji pa ka ce'u broda
-     ==================================
-            lo broda ku broda
+    =====================================
+      lo broda ku ckaji pa ka ce'u broda
+      ==================================
+             lo broda ku broda
 
 Note the difference between the earlier axiom that {da brode} -> {lo broda ku brode}, and this axiom that {lo broda ku broda}. The earlier axiom is conditional upon already having established {brode} as a main selbri, while this newer theorem allows us to introduce a restricted query upon any {broda} as a starting point.
