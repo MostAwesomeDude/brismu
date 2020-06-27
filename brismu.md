@@ -50,31 +50,45 @@ Here I've drawn a double bar to show which part of the rule is which. I will som
 
 In relational logic, many rules are reversible. This is an instance of the [microcosm principle](https://ncatlab.org/nlab/show/microcosm+principle), where algebraic structures tend to show up within their own categorified presentations. We will eventually show that rules can be manipulated like sumti.
 
+A rule can have multiple assumptions. Here, I'll use an ampersand to separate multiple assumptions.
+
+    da du de & de du di
+    =================== (id-trans)
+         da du di
+
+And in relational logic, rules can have multiple conclusions! This happens if we take a reversible rule like `(id-trans)` and run it backwards.
+
+## Conversion Operators: {se}
+
+`{se}` is one of what I will call "operators" on selbri; they are cmavo which alter the structure around a selbri without changing the relation itself. `{se}` also has reversible rules, as one might expect.
+
+     da broda de
+    ============== (se-intel)
+    de se broda da
+
+"intel" is short for "introduction" and "elimination", which are traditionally two separate rules. With relational logic, it's one reversible rule instead.
+
+We can start to describe a conversion-normal form for selbri by imagining applying `(se-intel)` backwards whenever possible, eliminating `{se}`.
+
+Finally, let's finish our tour of natural deduction by building a proof. A proof is a tree of rules, with the conclusions of one rule becoming the assumptions of the next rule. When a proof only assumes axioms, then I will call its conclusions theorems, and consider them as honorary axioms. Here is our first proof; it starts from an axiom and applies a single rule, concluding in our first theorem.
+
+     da du da   (id-refl)
+    =========== (se-intel)
+    da se du da
+
+What we have concluded is that, in any context, `{da se du da}` is a true bridi. We could give this theorem a name and reuse it in the future.
+
+## Scoping
+
+Scoping comes into play at this time. Up until this point, we have not explained the scoping and binding of our `{da}` variables. However, scoped negation and plural quantifiers do not work with our `(se-intel)` rule. The fix comes from work done on bicategories of relations and [regular logic](https://en.wikipedia.org/wiki/Regular_category#Regular_logic_and_regular_categories): All quantifiers must either be lifted to the top level, or be single positive existential quantifiers.
+
+In more words, `{da}` is fine because it only binds one thing once, it asserts that the bound thing satisfies the bridi it's bound within, and it only claims that there is one satisfying thing at a time rather than all things at once, and it fortunately has all of these properties by default. When we need other quantifiers, we will use a [prenex](https://lojban.org/publications/cll/cll_v1.1_xhtml-section-chunks/section-da-and-zohu.html).
+
 ## Interpreting natural deduction
 
 Each logic in natural deduction can be used to give judgements, like "P is true." Wikipedia lists "P is possibly true," "P is always true," "P is true at a given time," and "P is constructible from the given resources," as other examples in other logics. What does relational logic give us? Relational logic judgements are of the form "P is true multiple times, under each of the given contexts;" we can imagine that a bridi is not just true or false, but true for each of the many possible values that are being related.
 
 # -1: Notes, Uncleaned
-
-Our first selbri-altering word, {se}, also has reversible rules.
-
-     da broda de
-    ==============
-    de se broda da
-
-This rule breaks the scoped interpretation, including scoped negation and scoped sumti. It corresponds to the reversibility of binary relations.
-
-We can give a {se} normal form for selbri by requiring this rule to be applied in reverse whenever possible.
-
-We can bind {da} multiple times in a rule, and require that the referent sumti are unified. We really do require that the referents unify to a single identity, though, as in relational logic. Thus, another rule for {du} establishes its role in identity:
-
-    da du da
-
-This rule is an axiom! We may always start from axioms, rather than starting from nothing. We may now state trivial theorems, like {da se du da}:
-
-     da du da
-    ===========
-    da se du da
 
 For an example of a reversible rule with surprising behavior, we give meaning to a classically-frustrating sumti, {zi'o}.
 
