@@ -1,18 +1,60 @@
-We interpret Lojban by building a correspondence between Lojban utterances and relations. (Content warning: Set theory and relational algebra ahead!)
+# 0: Introduction
 
-We start with bridi. A bridi relates a selbri to an ordered sequence, or tuple, of sumti. A bridi has a truth value within a context.
+This pamphlet is addressed at folks who know Lojban. They've read not just a tutorial like [la karda](http://ldlework.com/projects/cards/la-karda/index.html), the [Crash Course](https://mw.lojban.org/papri/The_Crash_Course_in_Lojban), or the [Wave Lessons](https://mw.lojban.org/papri/Lojban_Wave_Lessons), but also [CLL](https://lojban.org/publications/cll/cll_v1.1_xhtml-section-chunks/) and the [BPFK Sections](https://mw.lojban.org/papri/Category:BPFK_Section), and some of the various notes from many community members.
 
-To each selbri, we assign a relation. To each bridi, we consider whether the given tuple of sumti belongs to the given selbri's relation. Recall that a relation's characteristic function tells whether a given tuple belongs to the relation; then, to each bridi, we assign a truth value that tells the underlying selbri's relation's characteristic function on the bridi's sumti.
+I am not aiming to teach the syntax of Lojban, but to radically and fundamentally approach the logical foundations of the semantics of Lojban. We will not start with pronouns, but with relations, and we will always keep the mathematics in mind as we progress.
 
-We now assume sets and relations. To address the immediate size issues, we will forbid taking sets of all sets, or similar formulations. We will need to introduce {lo} and {lo'i} shortly, but not yet.
+A common theme in the Lojban community is an uncertainty about what words mean. Since words are treacherous and don't have ultimate meaning, and many Lojbanists are philosophers, it is predictably common for such uncertainty to evolve into passionate discussion featuring these themes:
 
-The first selbri we'll define is {du}. {du} corresponds to structural rules in natural deduction, but with the constraint of identity. An example rule for {du}:
+* "Lojban is not a [relex](https://en.wikibooks.org/wiki/Conlang/Types#Relexes)": Aside from Lojban itself being forked from Loglan, Lojban is not merely a borrowing of semantics precisely established and defined in some natural language.
+* Limited words can still blanket semantic space by being vague. We can use tanru to carefully describe observed objects in only certain ways, without committing to imprecision or incorrectness.
+* The [grue/bleen problem](https://en.wikipedia.org/wiki/New_riddle_of_induction#Grue_and_bleen) prevents us from fixing any absolute meaning to any word over time.
+
+So, rather than give each word a meaning on its own, I will use categorical logic and reasoning to build up structural meanings for Lojban. The resulting interpretation will have the structure of an [allegory](https://en.wikipedia.org/wiki/Allegory_(mathematics)), indeed a [bicategory of relations](https://ncatlab.org/nlab/show/bicategory+of+relations), but do not let these currently-unfamiliar mathematical terms worry you, as they are both just ways to talk about what relations are.
+
+# 1: What is a relation?
+
+First, mathematically, a [binary relation](https://en.wikipedia.org/wiki/Binary_relation) `R : X -> Y` between two collections of objects `X` and `Y` is a collection of pairs of objects `(x, y)` in `(X, Y)`.
+
+Immediately, the most important feature is the reversibility of the relation; for every `R : X -> Y` there is an `R† : Y -> X`, called the [dagger](https://en.wikipedia.org/wiki/Dagger_category) of `R`, which is the same relation but backwards. Another important feature is that we can ask whether a given pair `(x, y)` is in `R`, and this leads to the [characteristic function](https://en.wikipedia.org/wiki/Indicator_function) for `R`, which returns the Boolean truth value, true or false, indicating whether the pair is in the relation. We'll write this characteristic as `R(x, y)`.
+
+While binary relations are the most common kind, relations can come in any arity, and we might see unary relations (which are just subsets) or ternary relations or any arity.
+
+Now, Lojbanically, a selbri has an underlying relation, and its sumti have underlying sets. When we write `{da broda de}`, we are indicating that `(da, de)` is within some collection referenced by `broda : abu -> ebu`. The intermediate Lojbanist will immediately recognize that `{de se broda da}` is the same utterance, but rearranged; `{se}` acts as a dagger operator. Similarly, the bridi `{da broda de}` is syntax for the characteristic function; we are applying the selbri `{broda}` onto the pair `(da, de)` and seeing whether it is present in the relation.
+
+While I will try to keep this terminology straight, I may occasionally abuse words to say that some sumti are in a selbri, by which I mean that the referent objects of each sumti, taken as a tuple, belong to the relation referred to by the selbri.
+
+## Size issues
+
+What are our collections? In mathematics, we usually build relations and pairs from sets. However, when sets contain other sets, then we have problems about infinite sets which contain other infinite sets, popularly known as [Russell's paradoxes](https://en.wikipedia.org/wiki/Russell%27s_paradox), or affectionately known to mathematicians as ["size issues"](https://math.stackexchange.com/questions/1971632/whats-behind-the-word-size-issues). To avoid size issues, we have to say that there are only some certain ways to form infinite sets. In particular, the only infinite set we'll directly build is the set of natural numbers.
+
+# 2: Definitions and Proofs
+
+Let's define some valsi, just like any good Lojban tutorial. Since I assume that the reader has already consumed an introductory tutorial and a grammar reference, I will attempt to focus on the formal side of our budding correspondence between Lojban and categorical logic.
+
+## Identity: {du}
+
+The first selbri we'll define is `{du}`. With `{du}`, we can relate any object to itself. How do we talk about this property formally? We'll use [natural deduction](https://en.wikipedia.org/wiki/Natural_deduction), which is a common style of formal proof. The idea is to start from some assumptions, and apply some rules, coming to some conclusions.
+
+To start, let's give an axiom for `{du}`. An axiom is an assumption that we can always make. I'll put this axiom in a block by itself, but I'm also going to give it a petname in parentheses so that we can refer to it later easily.
+
+    da du da (id-refl)
+
+"id" is short for "identity", and that's precisely what `{du}` does. "refl" is short for "reflexive", which is one of the three properties of [equivalence relations](https://en.wikipedia.org/wiki/Equivalence_relation). An equivalence relation is a relational way to talk about equality, and `{du}` definitely should be an equivalence relation, so let's add those other rules. The second property is called "symmetry", and it means that we can swap the sumti without changing the bridi. To show what a swap looks like, we'll introduce rules. A rule has some assumptions on top, and then a bar, and then some conclusions on the bottom.
 
     da du de
-    ========
+    ======== (id-sym)
     de du da
 
-This rule says that, given some bridi whose selbri is {du}, we may consider its sumti, which are not inspected further than to be bound to names {da} and {de}, and we may interchange {de} with {da} and vice versa. This rule is not surprising in its content, but in its structure; the double-line === instead of a single-line --- indicates that the rule is reversible and may be run backwards. In relational logic, many rules are reversible.
+Here I've drawn a double bar to show which part of the rule is which. I will sometimes also draw single bars. The double bar is reversible; it can be turned upside down to gain another rule. For `{du}` this is unsurprising, but some double bars later on may feel confusing at first. I encourage the reader to take their time and carefully examine the diagrams to make sure that they can read each step in a proof.
+
+In relational logic, many rules are reversible. This is an instance of the [microcosm principle](https://ncatlab.org/nlab/show/microcosm+principle), where algebraic structures tend to show up within their own categorified presentations. We will eventually show that rules can be manipulated like sumti.
+
+## Interpreting natural deduction
+
+Each logic in natural deduction can be used to give judgements, like "P is true." Wikipedia lists "P is possibly true," "P is always true," "P is true at a given time," and "P is constructible from the given resources," as other examples in other logics. What does relational logic give us? Relational logic judgements are of the form "P is true multiple times, under each of the given contexts;" we can imagine that a bridi is not just true or false, but true for each of the many possible values that are being related.
+
+# -1: Notes, Uncleaned
 
 Our first selbri-altering word, {se}, also has reversible rules.
 
