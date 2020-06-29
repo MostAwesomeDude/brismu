@@ -88,6 +88,30 @@ In more words, `{da}` is fine because it only binds one thing once, it asserts t
 
 Each logic in natural deduction can be used to give judgements, like "P is true." Wikipedia lists "P is possibly true," "P is always true," "P is true at a given time," and "P is constructible from the given resources," as other examples in other logics. What does relational logic give us? Relational logic judgements are of the form "P is true multiple times, under each of the given contexts;" we can imagine that a bridi is not just true or false, but true for each of the many possible values that are being related.
 
+# 3: ???
+
+# 4: Categorical Set Theory
+
+At this point, we are ready to give the axioms for set theory. We will be using [ZF](https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory), and the shape of each axiom comes from [Rethinking Set Theory](https://arxiv.org/abs/1212.6543).
+
+## Composition
+
+## Terminal object
+
+## Initial object
+
+## Products
+
+## Internal homs
+
+## Pullbacks
+
+## Subobject classifier
+
+## NNO
+
+## Choice
+
 # -1: Notes, Uncleaned
 
 For an example of a reversible rule with surprising behavior, we give meaning to a classically-frustrating sumti, {zi'o}.
