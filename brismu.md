@@ -224,6 +224,22 @@ Looks reasonable. What about the symmetry within `{ckini}`? Can we, say, put `{s
     ==================================== (ckini-intel)
     de ckini da pa ka ce'u se broda ce'u
 
+## Monoidal structure: {pamei}
+
+A [monoid](https://en.wikipedia.org/wiki/Monoid) is a structure with a unit and a binary operation which associates. Categories are already monoids in one way, with identity arrows for units and composition as the binary operation. However, in a monoidal category, there is another unit and binary operation, and this second monoid gives us the ability to have multiple sumti packed into a single sumti.
+
+First, we'll need our unit object. This object will only have one way to represent and relate data. We'll have this be a one-element set, or [singleton set](https://en.wikipedia.org/wiki/Singleton_(mathematics)). The bridi `{da pamei de}` relates this set to its lone element. We would like to be able to say `{le pamei}`, and maybe we will eventually, but for now we'll have to designate the uniqueness of these sumti in a different way. Note the single-dashed lines in these rules; these are one-way derivations.
+
+    da pamei di & de pamei di
+    ------------------------- (pamei-fa)
+            da du de
+
+    da pamei de & da pamei di
+    ------------------------- (pamei-fe)
+            de du di
+
+More importantly, we need rules to let us remove units from monoidal products. If we have a pair of `(da, @)` where `@` is the unique sumti `{le se pamei}`, then that's just like having a single value.
+
 ## Copying and Deletion: {zi'o}
 
 Relationship diagrams can copy and delete data. The universal property for copying says that, after we make a copy, it doesn't matter which copy we take. Since we are working relationally, we can also run copying in reverse, to merge identical copies together.
@@ -247,8 +263,6 @@ We can erase any column of the relation this way.
     de se broda zi'o
     ================ (se-intel)
      zi'o broda de
-
-## Units
 
 # 4: Categorical Set Theory
 
@@ -371,3 +385,5 @@ We have set membership, one of the two important relations of set theory. The ot
 Building on that, {da poi selcmi zo'u fancu da da pa ka ce'u du ce'u} ought to designate the identity function on any particular set {da}. But there may be many functional subrelations on {da} which are too small to be the identity! In this case, though, it is okay because every element of fancu2 must be accounted for, and so all functional subrelations satisfying this condition will be big enough. We know, then, that there's a nice sandwich that lets {pa ka ce'u du ce'u} do what we want here.
 
 {mintu} is like {du} but generalized to take an equivalence relation for mintu3.
+
+{pamei} can justify {le} for its two sumti. So can {nomei} for its fa sumti. Are there others?
