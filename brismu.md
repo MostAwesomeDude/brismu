@@ -224,22 +224,6 @@ Looks reasonable. What about the symmetry within `{ckini}`? Can we, say, put `{s
     ==================================== (ckini-intel)
     de ckini da pa ka ce'u se broda ce'u
 
-## Monoidal structure: {pamei}
-
-A [monoid](https://en.wikipedia.org/wiki/Monoid) is a structure with a unit and a binary operation which associates. Categories are already monoids in one way, with identity arrows for units and composition as the binary operation. However, in a monoidal category, there is another unit and binary operation, and this second monoid gives us the ability to have multiple sumti packed into a single sumti.
-
-First, we'll need our unit object. This object will only have one way to represent and relate data. We'll have this be a one-element set, or [singleton set](https://en.wikipedia.org/wiki/Singleton_(mathematics)). The bridi `{da pamei de}` relates this set to its lone element. We would like to be able to say `{le pamei}`, and maybe we will eventually, but for now we'll have to designate the uniqueness of these sumti in a different way. Note the single-dashed lines in these rules; these are one-way derivations.
-
-    da pamei di & de pamei di
-    ------------------------- (pamei-fa)
-            da du de
-
-    da pamei de & da pamei di
-    ------------------------- (pamei-fe)
-            de du di
-
-More importantly, we need rules to let us remove units from monoidal products. If we have a pair of `(da, @)` where `@` is the unique sumti `{le se pamei}`, then that's just like having a single value.
-
 ## Copying and Deletion: {zi'o}
 
 Relationship diagrams can copy and delete data. The universal property for copying says that, after we make a copy, it doesn't matter which copy we take. Since we are working relationally, we can also run copying in reverse, to merge identical copies together.
@@ -263,6 +247,40 @@ We can erase any column of the relation this way.
     de se broda zi'o
     ================ (se-intel)
      zi'o broda de
+
+## Monoidal structure: {pamei}, {fa'u}
+
+A [monoid](https://en.wikipedia.org/wiki/Monoid) is a structure with a unit and a binary operation which associates. Categories are already monoids in one way, with identity arrows for units and composition as the binary operation. However, in a monoidal category, there is another unit and binary operation, and this second monoid gives us the ability to have multiple sumti packed into a single sumti.
+
+First, we'll need our unit object. This object will only have one way to represent and relate data. We'll have this be a one-element set, or [singleton set](https://en.wikipedia.org/wiki/Singleton_(mathematics)). The bridi `{da pamei de}` relates this set to its lone element. We would like to be able to say `{le pamei}`, and maybe we will eventually, but for now we'll have to designate the uniqueness of these sumti in a different way. Note the single-dashed lines in these rules; these are one-way derivations.
+
+    da pamei di & de pamei di
+    ------------------------- (pamei-fa)
+            da du de
+
+    da pamei de & da pamei di
+    ------------------------- (pamei-fe)
+            de du di
+
+Monoidal products are designated with `{fa'u}`, both for sumti and selbri. We have one basic rule introducing and eliminating them, as usual.
+
+          da broda de & di brode daxivo
+    ========================================== (fa'u-intel)
+    da fa'u di broda fa'u brode de fa'u davixo
+
+We have reached the point where we need at least four distinct sumti, and so we will need `{xi}` to give us additional names. Note that, as before with `{gi'e}` and `{se}`, the symmetry of our proof tree leads to a symmetry underneath `{fa'u}`.
+
+More importantly, we need rules to let us remove units from monoidal products. If we have a pair of `(da, @)` where `@` is the unique sumti `{le se pamei}`, then that's just like having a single value. However, once again, we can't just forget the underlying relation which is tied to the sumti, so we'll have to both pattern-match `{fa'u}` and also deliberately ask for `{zi'o}` to remove the lone irrelevant value from the other end of the pair.
+
+    da fa'u di broda fa'u brode de fa'u zi'o & de pamei di
+    ====================================================== (fa'u-unit)
+                         da broda de
+
+That awkward rule is formally known by the awkward name of the "unitor". It has an elegant relative, just called the "unit", which also needs an awkward phrasing with `{zi'o}`.
+
+    zi'o pamei da & de broda zi'o (pamei-unit)
+
+This axiom can be used like a selbri, and lets us start and stop a computation by replacing everything with the single unit value from the singleton set.
 
 # 4: Categorical Set Theory
 
@@ -387,3 +405,5 @@ Building on that, {da poi selcmi zo'u fancu da da pa ka ce'u du ce'u} ought to d
 {mintu} is like {du} but generalized to take an equivalence relation for mintu3.
 
 {pamei} can justify {le} for its two sumti. So can {nomei} for its fa sumti. Are there others?
+
+If la tsani contributes a third insight, then they may be entitled to co-author credit.
