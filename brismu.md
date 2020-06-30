@@ -78,6 +78,46 @@ Finally, let's finish our tour of natural deduction by building a proof. A proof
 
 What we have concluded is that, in any context, `{da se du da}` is a true bridi. We could give this theorem a name and reuse it in the future.
 
+# Composition: {gi'e}
+
+When a variable shows up in two different bridi, then we might be able to combine them. The underlying relations compose cleanly, so most of the difficulty is in Lojbanic arrangement. We need to use the concept of contravariance, and turn around one of the bridi, in order to apply `{gi'e}`.
+
+    da broda de & da brode di
+    ========================= (gi'e-intel)
+    da broda de gi'e brode di
+
+Our ampersand happens to commute, so `{gi'e}` commutes as well. To see this in full, let's do a deduction that can't be done with only two dimensions. The `(sr)` rule is short for "structural rearrangement"; we are doing bookkeeping that doesn't affect the logical correctness of assumptions and that would be free if we could stand our proof up like a tree in three dimensions. Recall that `{gi'e}` groups to the left.
+
+    da broda da gi'e brode de gi'e brodi di
+    ======================================= (gi'e-intel)
+    da broda da gi'e brode de & da brodi di
+    ======================================= (gi'e-intel)
+    da broda da & da brode de & da brodi di
+    ======================================= (sr)
+    da broda da & da brodi di & da brode de
+    ======================================= (gi'e-intel)
+    da broda da gi'e brodi di & da brode de
+    ======================================= (gi'e-intel)
+    da broda da gi'e brodi di gi'e brode de
+
+In the middle, those two triangles of assumptions are each two-dimensional, but stacked on top of each other, giving a three-dimensional structure to the proof.
+
+To get more comfortable with proofs, let's do another one. This proof is closer in phrasing to traditional categorical texts, where given `f : X -> Y` and `g : Y -> Z`, one can form `f;g : X -> Z`. Note that, unlike in traditional notation, we do not forget our intermediate connecting values between relations.
+
+     da broda de & de brode di
+    ============================ (se-intel)
+    de se broda da & de brode di
+    ============================ (gi'e-intel)
+    de se broda da gi'e brode di
+
+One more rule connects `{gi'e}` back to `{du}` by letting us effectively rewrite across an equality.
+
+    da broda de gi'e de du di
+    ========================= (gi'e-du)
+           da broda di
+
+Along with the other rules introduced, we now have a dagger category on selbri, with `{du}` as our identity selbri, `{gi'e}` for composition, and `{se}` for the dagger.
+
 ## Scoping
 
 Scoping comes into play at this time. Up until this point, we have not explained the scoping and binding of our `{da}` variables. However, scoped negation and plural quantifiers do not work with our `(se-intel)` rule. The fix comes from work done on bicategories of relations and [regular logic](https://en.wikipedia.org/wiki/Regular_category#Regular_logic_and_regular_categories): All quantifiers must either be lifted to the top level, or be single positive existential quantifiers.
@@ -88,7 +128,45 @@ In more words, `{da}` is fine because it only binds one thing once, it asserts t
 
 Each logic in natural deduction can be used to give judgements, like "P is true." Wikipedia lists "P is possibly true," "P is always true," "P is true at a given time," and "P is constructible from the given resources," as other examples in other logics. What does relational logic give us? Relational logic judgements are of the form "P is true multiple times, under each of the given contexts;" we can imagine that a bridi is not just true or false, but true for each of the many possible values that are being related.
 
-# 3: ???
+# 3: Categorical Relational Algebra
+
+Let's investigate more properties of the category of sumti and selbri. In this section, we'll think categorically, and look for abstract patterns which show up elsewhere in logic. We'll look at products and coproducts, as well as internal homs.
+
+## Products: {gi'o}
+
+Is there a selbri for categorical products? Let's first write out the categorical [universal property](https://en.wikipedia.org/wiki/Universal_property) that we want to search for. Given two objects `X` and `Y`, their product `X * Y` comes with the ability to combine any two arrows `l : I -> X` and `r : I -> Y` into a single compound arrow `l*r : I -> X * Y`, as well as two arrows `p1 : X * Y -> X` and `p2 : X * Y -> Y`. Next, let's write a selbri in English, along the lines of "x1 (set) is the disjoint union of x2 (set) and x3 (set)". We know from the definition of the [category of relations, Rel](https://en.wikipedia.org/wiki/Category_of_relations), that the disjoint union of sets is the correct choice for products.
+
+As it happens, the experimental non-logical cmavo `{jo'ei}` can build disjoint unions, although there is no selbri satisfying `{da jo'ei de broda da de}` as we might like.
+
+Now, let's state the actual universal property. For products, this means combining our two arrows into one arrow. To achieve a disjoint union, we will select from either the left-hand arrow or the right-hand arrow, but not both at once. This is a job for `{onai}`.
+
+     da broda de & da brode di
+    ============================ (gi'onai-intel)
+    da broda de gi'onai brode di
+
+What makes this rule different from `(gi'e-intel)` is the logical interpretation of results. An `{onai}` forms a branch, and only variables on one side of the branch will be bound. That is, even when the entire bridi succeeds, some of its variables may not have any values. If we wanted to prevent this situation, then we could produce a fresh variable and adopt the convention that scoped variables aren't visible at the top level, but that requires some extra machinery that we haven't set up yet.
+
+Let's get weird. We haven't properly introduced negation yet, so let's just say that when `{onai}` chooses one branch, then the other branch is not explored. Negation is like a refusal to bind any values. We will get more precise later, but for now, consider this surprising statement.
+
+     da broda de gi'e brode di
+     =========================   (gi'e-intel)
+     da broda de & da brode di
+    ============================ (gi'onai-intel)
+    da brode de gi'onai brode di
+
+Here is part of the strange reality of relational algebra: The number of results is not necessarily zero, neither on the top nor the bottom of this statement!  On top, we need both relations to be satisfied simultaneously, so we'll get triples `(da, de, di)`. On bottom, we can have pairs of either `(da, de)` or `(da, di)`. So, if we go from top to bottom, then each input triple gives two output triples. In the other direction, we are performing a unification that matches up these pairs into [spans](https://en.wikipedia.org/wiki/Span_(category_theory)), which happens to be a common operation in low-level relational algebra.
+
+## Coproducts
+
+Relations are extremely symmetrical, and sometimes that is very powerful. Categorical coproducts, also known as sums, are very popular in programming language theory. Coproducts are defined by [categorical duality](https://en.wikipedia.org/wiki/Dual_(category_theory)); we take the definition of products, mechanically turn around all of the arrows, and obtain a new universal property. But because relations are so symmetrical, it happens that the disjoint union implements both products and coproducts for relations.
+
+      da broda di      de brode di
+     ==============   ============== (se-intel)
+     di se broda da & di se brode de
+    ================================== (gi'onai-intel)
+    di se broda da gi'onai se brode de
+
+## Internal homs
 
 # 4: Categorical Set Theory
 
