@@ -190,9 +190,65 @@ One more curious example. Here, we are looking for `broda(di, de)` pairs where `
      ======================   (du-intel)
            di broda de
 
-## Internal homs
+## Internal homs: {ka}, {ckaji}, {ckini}
 
+We can now search for the [internal hom](https://ncatlab.org/nlab/show/internal+hom) ([WP](https://en.wikipedia.org/wiki/Hom_functor#Internal_Hom_functor)), the construction which behaves like functions with closure. It turns out that relationally, internal homs are built from Cartesian products. To see this, let's see the universal property: Given a pair `(X, Y^X)`, we can apply the latter to the former, and get a `Y`. So the universal property comes as a single arrow `apply : (X, Y^X) -> Y`.
 
+            da broda de
+    ============================ (ckaji-intel)
+    da ckaji pa ka ce'u broda de
+
+We will use `{ka}` for selbri which have been closed over, with `{ce'u}` indicating where holes remain. Arity will matter; `{ckaji}` can only fill in one hole at a time. Why `{pa}`? Because there's only one way to perform the closure, up to unique isomorphism, and so the quantifier ought to be "there exists exactly one". This is a common property of universal properties, but it is very different from traditional Lojban quantification, where `{lo ka}` is used to generically select relations. A notable consequence is that, in rules like `(ckaji-intel)`, we will not bind the `{ka}` to any name, but we will bind each `{de}` just the same in both the top and bottom.
+
+So, where were those Cartesian products? One is hidden inside `{da broda de}`: each solution to this bridi is a pair `(da, de)` drawn from their Cartesian product! We can make a more explicit coupling with `{ckini}`, which does for binary `{ka}` what `{ckaji}` does for unary `{ka}`. Note that we use explicit `{ce'u}` to mark 
+
+              da broda de
+    ================================= (ckini-intel)
+    da ckini de pa ka ce'u broda ce'u
+
+I can think of a few useful lemmas to try out. First, let's see if we can connect `{ckaji}` and `{ckini}` without any more rules.
+
+      da ckaji pa ka ce'u broda de
+      ============================    (ckaji-intel)
+              da broda de
+    ================================= (ckini-intel)
+    da ckini de pa ka ce'u broda ce'u
+
+Looks reasonable. What about the symmetry within `{ckini}`? Can we, say, put `{se}` underneath `{ka}`? Yes, we can.
+
+     da ckini de pa ka ce'u broda ce'u
+     =================================   (ckini-intel)
+                da broda de
+               ==============            (se-intel)
+               de se broda da
+    ==================================== (ckini-intel)
+    de ckini da pa ka ce'u se broda ce'u
+
+## Copying and Deletion: {zi'o}
+
+Relationship diagrams can copy and delete data. The universal property for copying says that, after we make a copy, it doesn't matter which copy we take. Since we are working relationally, we can also run copying in reverse, to merge identical copies together.
+
+           da broda de
+    ========================= (gi'e-copy)
+    da broda de gi'e broda de
+
+Similarly, deletion removes names from data. Note, though, that the underlying relation is not erased. This is important both for preserving the behavior of the remaining data, and also for running in reverse. When we reverse deletion, we get creation of data from within the surrounding bridi.
+
+     da broda de
+    ============= (zi'o-del)
+    da broda zi'o
+
+We can erase any column of the relation this way.
+
+      da broda de
+      ===========    (se-intel)
+     de se broda da
+    ================ (zi'o-del)
+    de se broda zi'o
+    ================ (se-intel)
+     zi'o broda de
+
+## Units
 
 # 4: Categorical Set Theory
 
@@ -218,22 +274,11 @@ At this point, we are ready to give the axioms for set theory. We will be using 
 
 # -1: Notes, Uncleaned
 
-For an example of a reversible rule with surprising behavior, we give meaning to a classically-frustrating sumti, {zi'o}.
-
-     da broda de
-    =============
-    da broda zi'o
-
-To try to give meaning to this rule:
-* When unifying, {zi'o} is a don't-care not-a-value
-* A bridi with {zi'o} is true regardless of what values may match {zi'o}
-* {zi'o} erases columns from the relations of selbri
-
-When reversing this rule, {de} is existentially bound. Folks often wonder about how this might be interpreted computationally. When computing with relations, imagine all operations as many-to-many, relating multiple inputs to multiple outputs. This existential {de} therefore represents all of the many different possible values which would satisfy the relation if the column were to be added.
-
 We now start inching towards set theory inside Lojban. We begin with an important relation, {cmima}, which corresponds to the notion of membership. First, let us put size issues to rest:
 
     da na cmima da
+
+This doesn't actually do what I had imagined when I wrote it. It's pretty but useless.
 
 A {na} bridi asserts that its tuple of sumti are not related by its selbri; that is, that the tuple doesn't belong to the selbri's relation. And now we can give an equivalent for the axiom of pairing:
 
@@ -266,20 +311,6 @@ There is also a rule for {no da}, which asserts that zero values are taken on by
     no da broda
     ===========
     da na broda
-
-We are now ready to close over bridi with {ka}. {ka ce'u mlatu ce'u} captures the two open places like a lambda, or more precisely like an internal hom. There is only one {mlatu}, and so only one {ka ce'u mlatu ce'u}. Similarly, if there were a {da} bound, then there would only be one {ka da mlatu ce'u}. Why? Because while {da} takes upon multiple values, it only does so within a particular relation. {ka} is therefore performing a relational join between {da}'s source table and its bound bridi.
-
-All of this is to explain that {pa} is the correct quantifier for {ka}. {ckaji} can be used to cleave the first sumti away from a bridi, giving the rest of the bridi in a {ka}.
-
-            da broda de
-    ============================
-    da ckaji pa ka ce'u broda de
-
-Similarly, {ckini} can produce binary {ka}. That's right, {ka} have arity, and so we must be explicit about {ce'u}.
-
-               da broda de
-    =================================
-    da ckini de pa ka ce'u broda ce'u
 
 We may now define {lo'i broda} as {lo se cmima be lo broda}. We can also define {lo'i pa broda} as {lo se cmima be lo pa broda}, and {lo pa broda} as {pa da poi ke'a broda}. In fact, for all natural numbers, we have an axiom. Let P be some natural number, and then:
  
