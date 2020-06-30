@@ -76,7 +76,15 @@ Finally, let's finish our tour of natural deduction by building a proof. A proof
     =========== (se-intel)
     da se du da
 
-What we have concluded is that, in any context, `{da se du da}` is a true bridi. We could give this theorem a name and reuse it in the future.
+What we have concluded is that, in any context, `{da se du da}` is a true bridi. We could give this theorem a name and reuse it in the future. Here's another useful theorem.
+
+     da du de
+     ========   (id-sym)
+     de du da
+    =========== (se-intel)
+    da se du de
+
+This theorem states the symmetry of `{du}` using `{se}`.
 
 # Composition: {gi'e}
 
@@ -110,11 +118,19 @@ To get more comfortable with proofs, let's do another one. This proof is closer 
     ============================ (gi'e-intel)
     de se broda da gi'e brode di
 
-One more rule connects `{gi'e}` back to `{du}` by letting us effectively rewrite across an equality.
+One more rule connects `{gi'e}` back to `{du}` by letting us effectively rewrite across an equality. This is like performing a sort of unification, too.
 
-    da broda de gi'e de du di
-    ========================= (gi'e-du)
-           da broda di
+    da broda de & de du di
+    ====================== (du-intel)
+         da broda di
+
+We can use both of these new rules to write the more categorically-oriented proof, which says that composition with the identity relation has no effect.
+
+    da broda de gi'e du di
+    ====================== (gi'e-intel)
+    da broda de & de du di
+    ====================== (du-intel)
+         da broda di
 
 Along with the other rules introduced, we now have a dagger category on selbri, with `{du}` as our identity selbri, `{gi'e}` for composition, and `{se}` for the dagger.
 
@@ -132,7 +148,7 @@ Each logic in natural deduction can be used to give judgements, like "P is true.
 
 Let's investigate more properties of the category of sumti and selbri. In this section, we'll think categorically, and look for abstract patterns which show up elsewhere in logic. We'll look at products and coproducts, as well as internal homs.
 
-## Products: {gi'o}
+## Products: {gi'onai}
 
 Is there a selbri for categorical products? Let's first write out the categorical [universal property](https://en.wikipedia.org/wiki/Universal_property) that we want to search for. Given two objects `X` and `Y`, their product `X * Y` comes with the ability to combine any two arrows `l : I -> X` and `r : I -> Y` into a single compound arrow `l*r : I -> X * Y`, as well as two arrows `p1 : X * Y -> X` and `p2 : X * Y -> Y`. Next, let's write a selbri in English, along the lines of "x1 (set) is the disjoint union of x2 (set) and x3 (set)". We know from the definition of the [category of relations, Rel](https://en.wikipedia.org/wiki/Category_of_relations), that the disjoint union of sets is the correct choice for products.
 
@@ -166,7 +182,17 @@ Relations are extremely symmetrical, and sometimes that is very powerful. Catego
     ================================== (gi'onai-intel)
     di se broda da gi'onai se brode de
 
+One more curious example. Here, we are looking for `broda(di, de)` pairs where `di ≠ di`. We are allowed to transition between zero and nonzero numbers of results!
+
+    da broda de gi'onai du di
+    ========================= (gi'onai-intel)
+     da broda de & da du di
+     ======================   (du-intel)
+           di broda de
+
 ## Internal homs
+
+
 
 # 4: Categorical Set Theory
 
@@ -313,4 +339,4 @@ We have set membership, one of the two important relations of set theory. The ot
 
 Building on that, {da poi selcmi zo'u fancu da da pa ka ce'u du ce'u} ought to designate the identity function on any particular set {da}. But there may be many functional subrelations on {da} which are too small to be the identity! In this case, though, it is okay because every element of fancu2 must be accounted for, and so all functional subrelations satisfying this condition will be big enough. We know, then, that there's a nice sandwich that lets {pa ka ce'u du ce'u} do what we want here.
 
-Reversibility hints at how to use contravariance to define composition. {de se broda da} and {de brode di} can be composed to give {de se broda da gi'e brode di}. While it's not attractive, it works.
+{mintu} is like {du} but generalized to take an equivalence relation for mintu3.
