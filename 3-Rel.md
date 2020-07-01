@@ -246,7 +246,7 @@ delete the selbri too. However, we don't need a new rule for this.
 Curious how everything fits together. To be honest, this probably means that
 I've made a mistake somewhere.
 
-## More logical operations: {je}
+## More logical operations: {je}, {jonai}, {onai}
 
 We can encode the Booleans as in bicategories of relations. The bridi `{du}`
 and `{na du}` serve as true and false respectively. We will have to soon
@@ -276,3 +276,75 @@ easy fact, which is that `{broda je broda}` is equivalent to mere `{broda}`.
           da broda de & da broda de
           =========================        (sw)
                  da broda de
+
+We also have a rule corresponding to what's called the [modular
+law](https://en.wikipedia.org/wiki/Modular_lattice) of lattices. This is
+important in allegory theory.
+
+    da broda de & da brode di & di se brodi de & de brodi daxivo
+    ------------------------------------------------------------ (mod)
+          da broda de & de brodi daxivo & da brode daxivo
+
+Perhaps this is already derivable, though? I'm not sure.
+
+We can define the full disjoint union now, but we will need to rely on the
+ability to take "codiagonals", or choices, of which side of the union to take.
+
+    da .onai di broda de
+    ==================== (onai-intel)
+        da broda de
+
+    da .onai de broda di
+    ==================== (onai-sym)
+    de .onai da broda di
+
+This gives us one way to define `{jonai}`, by taking the disjoint union of any
+two bridi by taking the disjoint union of their selbri and terbri.
+
+            da broda di & de brode daxivo
+    ============================================= (jonai-pair)
+    da .onai de broda jonai brode di .onai daxivo
+
+We can also define `{jonai}` by lifting (co)products which have one end tied
+together and tying together their other end as well.
+
+    da broda de gi'onai brode de
+    ============================ (jonai-intel)
+      da broda jonai brode de
+
+I've inserted a courtesy application of `(onai-intel)` in there, but we should
+definitely read both sumti of the selbri as being disjoint unions.
+
+## Negation as elements of the empty set: {nomei}
+
+I warned you that we had many symmetries, and it's time for another one;
+symmetrically to `{pamei}`, we have `{nomei}`, which has two nice features. On
+`{le nomei}` we have the [empty set](https://en.wikipedia.org/wiki/Empty_set),
+which is unique up to unique isomorphism just like the singleton set. On the
+other hand, `{le se nomei}` is impossible; there's nothing that satisfies it.
+As a result, `{nomei}` without a `{zi'o}` can indicate a kind of logical
+wrongness which will be preserved throughout the computation. This is
+precisely what makes the empty relation into the false Boolean relation!
+
+Our first rule is just like `(pamei-fa)`. We don't have a corresponding rule
+for `(pamei-fe)` though.
+
+    da nomei di & de nomei di
+    ------------------------- (nomei-fa)
+            da du de
+
+We also need a unitor for the disjoint union with the empty set. If we have
+either something or an element of the empty set, then we have something.
+
+    da .onai di broda jonai brode de .onai daxivo & zi'o nomei daxivo
+    ================================================================= (onai-unit)
+                         da broda de
+
+Here, honestly, being too traditional seems like it might be obscuring what's
+going on. Perhaps an alternative rule could be:
+
+    da .onai di broda de & zi'o nomei di
+    ==================================== (onai-unit-simpler)
+                da broda de
+
+I bet many of these could be simpler.
