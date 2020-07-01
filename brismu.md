@@ -146,7 +146,7 @@ Each logic in natural deduction can be used to give judgements, like "P is true.
 
 # 3: Categorical Relational Algebra
 
-Let's investigate more properties of the category of sumti and selbri. In this section, we'll think categorically, and look for abstract patterns which show up elsewhere in logic. We'll look at products and coproducts, as well as internal homs.
+Let's investigate more properties of the category of sumti and selbri. In this section, we'll think categorically, and look for abstract patterns which show up elsewhere in logic. We'll look at products and coproducts, as well as internal homs. We will be guided by the properties of [bicategories of relations](https://arxiv.org/abs/1706.00526).
 
 ## Products: {gi'onai}
 
@@ -224,15 +224,9 @@ Looks reasonable. What about the symmetry within `{ckini}`? Can we, say, put `{s
     ==================================== (ckini-intel)
     de ckini da pa ka ce'u se broda ce'u
 
-## Copying and Deletion: {zi'o}
+## Creation and Deletion: {zi'o}
 
-Relationship diagrams can copy and delete data. The universal property for copying says that, after we make a copy, it doesn't matter which copy we take. Since we are working relationally, we can also run copying in reverse, to merge identical copies together.
-
-           da broda de
-    ========================= (gi'e-copy)
-    da broda de gi'e broda de
-
-Similarly, deletion removes names from data. Note, though, that the underlying relation is not erased. This is important both for preserving the behavior of the remaining data, and also for running in reverse. When we reverse deletion, we get creation of data from within the surrounding bridi.
+Relationship diagrams can create and delete data. Note, though, that the underlying relation is not erased. This is important both for preserving the behavior of the remaining data, and also for running in reverse. When we reverse deletion, we get creation of data from within the surrounding bridi.
 
      da broda de
     ============= (zi'o-del)
@@ -281,6 +275,26 @@ That awkward rule is formally known by the awkward name of the "unitor". It has 
     zi'o pamei da & de broda zi'o (pamei-unit)
 
 This axiom can be used like a selbri, and lets us start and stop a computation by replacing everything with the single unit value from the singleton set.
+
+We can encode the Booleans as in bicategories of relations. The bridi `{du}` and `{na du}` serve as true and false respectively. We will have to soon define `{na}`, but we can put it off a little longer.
+
+In addition to creation and deletion, there are also copying and merging. A copy of a value is a pair of that value twice; when we reverse copying, we get merging, where pairs are accepted only when they are two copies of the same value.
+
+    da du de fa'u de (fa'u-copy)
+
+There are also two rules which relate to internal logic and let us move selbri up and down the monoidal structure. The first says that, if we have a selbri followed by a copy, then we can duplicate the selbri along the copy.
+
+              da broda de & de fa'u de du di
+    ---------------------------------------------------- (selbri-copy)
+    da broda de & da broda daxivo & de fa'u daxivo du di
+
+The second says that, if we have a selbri followed by a deletion, then we can delete the selbri too. However, we don't need a new rule for this.
+
+     da broda de & zi'o pamei di
+    ============================= (zi'o-del)
+    da broda zi'o & zi'o pamei di
+
+Curious how everything fits together. To be honest, this probably means that I've made a mistake somewhere.
 
 # 4: Categorical Set Theory
 
