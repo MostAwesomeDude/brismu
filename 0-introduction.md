@@ -38,3 +38,16 @@ interpretation will have the structure of an
 relations](https://ncatlab.org/nlab/show/bicategory+of+relations), but do not
 let these currently-unfamiliar mathematical terms worry you, as they are both
 just ways to talk about what relations are.
+
+## Open questions
+
+Everything listed here is something I'd like resolved eventually, although the
+resolution is probably in my own misunderstanding of Lojban.
+
+### How to say...
+
+Many times, I suspect that a word exists in Lojban, but don't know what it is.
+I'm not asking for new words to be invented; I'm trying to ensure that I
+haven't overlooked Lojban's existing inventory.
+
+* How to say "exists unique"?
