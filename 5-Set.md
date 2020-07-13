@@ -202,3 +202,31 @@ And similarly, putting an outer quantifier onto `{lo'i}` selects subsets of
 the already-selected subset. If there are four `{mlatu}` total under
 consideration, then `{re lo'i ci mlatu}` will first select three cats, then
 select two of those, binding a total of twelve times.
+
+## Negation: {na}
+
+We now open the door to the ability to say no. First, note that the outer
+quantifier `{no}` can effectively act like a negation: If there are zero
+results, then we succeed, and if there are any results at all, then we fail.
+This is a gentle extension of [negation as
+failure](https://en.wikipedia.org/wiki/Negation_as_failure); this is failure
+as negation.
+
+So, for unary selbri, we can start out by saying:
+
+    no da broda
+    =========== (na-no-unary)
+    da na broda
+
+But this is thorny for binary selbri. We will have a pair of one-way rules
+which have a round-trip in one direction but not the other.
+
+    no da broda no de
+    ================= (na-no-binary-both)
+     da na broda de
+
+If we made this two-way, then `{na}` wouldn't always be dual to `{no}`.
+
+    no da broda de
+    -------------- (na-no-binary)
+    da na broda de

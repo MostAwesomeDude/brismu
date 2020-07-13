@@ -103,6 +103,8 @@ single arrow `apply : (X, Y^X) -> Y`.
     ============================ (ckaji-intel)
     da ckaji pa ka ce'u broda de
 
+Note: This rule is in CLL 11.4.
+
 We will use `{ka}` for selbri which have been closed over, with `{ce'u}`
 indicating where holes remain. Arity will matter; `{ckaji}` can only fill in
 one hole at a time. Why `{pa}`? Because there's only one way to perform the
