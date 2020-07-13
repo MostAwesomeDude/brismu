@@ -82,6 +82,7 @@ resolution is probably in my own misunderstanding of Lojban.
 * CLL 13.4: Is there a connection between {carmi}, {tsali}, and {ruble}? Does
   {cumki} follow the pattern too?
 * CLL 15.3: Do colors form a scale, or a color space?
+* logji1: What are rules/methods?
 
 ### How to say...
 
@@ -96,3 +97,4 @@ haven't overlooked Lojban's existing inventory.
 * {da} or {ko'a} in the bulk of rules? {da du da} or {ko'a du ko'a}?
 * Similarly, {broda} or {bu'a}?
 * Prenex-normal form?
+* sumti vs terbri?

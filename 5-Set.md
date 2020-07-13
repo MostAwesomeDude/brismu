@@ -203,6 +203,21 @@ the already-selected subset. If there are four `{mlatu}` total under
 consideration, then `{re lo'i ci mlatu}` will first select three cats, then
 select two of those, binding a total of twelve times.
 
+CLL allows for {PA broda} to be shorthand for {PA lo broda}.
+
+    PA lo broda ku brode
+    ==================== (pa-lo-sugar) [CLL 6.8]
+     PA broda ku brode
+
+BPFK defines {PA broda} as {PA da poi broda}. That sounds familiar, and
+indeed, we can recover this definition from a proof.
+
+            PA broda ku brode
+           ====================        (pa-lo-sugar)
+           PA lo broda ku brode
+    ================================== (lo-intel)
+    PA da poi ke'a broda ku'o brode de
+
 ## Negation: {na}
 
 We now open the door to the ability to say no. First, note that the outer
@@ -230,3 +245,43 @@ If we made this two-way, then `{na}` wouldn't always be dual to `{no}`.
     no da broda de
     -------------- (na-no-binary)
     da na broda de
+
+## Articles III: {be}
+
+Almost as a technicality, I will need `{be}` later on. Let's not leave loose
+ends; `{be}` is just as easy as we might hope.
+
+        lo broda be de ku brode di
+    ================================== (be-intel)
+    da poi ke'a broda de ku'o brode di
+
+## Logical Set Operators: {ja}, {jo'e}, {ku'a}
+
+By flipping around the universal properties, we can build some operators and
+also define more logical connections. First, let's define `{ku'a}`, the
+intersection of two sets.
+
+         lo'i broda je brode ku brodi
+    ====================================== (ku'a-intel) [CLL 14.15]
+    lo'i broda ku ku'a lo'i brode ku brodi
+
+We know what `{jo'e}` is, too; it's the union of sets. We have the disjoint
+union already, and the non-disjoint union simply forgets that its components
+come from one option or another. What is `{ja}`, though? Traditionally, in
+classical logic, it's an inclusive Boolean OR. We need to preserve all of the
+related data, though, and for the OR operation, it's whether only one of the
+branches is taken, or both are taken. Those cases are themselves disjoint, and
+so we have an equivalence:
+
+    da broda jonai brode jonai ke broda je brode de
+    =============================================== (ja-intel)
+                da broda ja brode de
+
+This is an awkward amount of data. But now we can define `{jo'e}`:
+
+         lo'i broda ja brode ku brodi
+    ====================================== (jo'e-intel) [CLL 14.15]
+    lo'i broda ku jo'e lo'i brode ku brodi
+
+Tracing back through the data, on the bottom of the equivalence, we have
+elements belonging to one set or the other or possibly both.

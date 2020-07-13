@@ -63,11 +63,12 @@ alter the structure around a selbri without changing the relation itself.
 `{se}` also has reversible rules, as one might expect.
 
      da broda de
-    ============== (se-intel)
+    ============== (se-intel) [CLL 5.11]
     de se broda da
 
 "intel" is short for "introduction" and "elimination", which are traditionally
 two separate rules. With relational logic, it's one reversible rule instead.
+In brackets, "CLL 5.11" is a citation.
 
 We can start to describe a conversion-normal form for selbri by imagining
 applying `(se-intel)` backwards whenever possible, eliminating `{se}`.
