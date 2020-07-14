@@ -14,7 +14,7 @@ function](https://en.wikipedia.org/wiki/Indicator_function) for `R`, which
 returns the Boolean truth value, true or false, indicating whether the pair is
 in the relation. We'll write this characteristic as `R(x, y)`. We can also ask
 about how many pairs are in `R`, and we'll write this as `|R|` and call it the
-[cardinality](https://en.wikipedia.org/wiki/Cardinality)). We'll say that `R`
+[cardinality](https://en.wikipedia.org/wiki/Cardinality). We'll say that `R`
 is satisfiable when it has nonzero cardinality.
 
 While binary relations are the most common kind, relations can come in any
