@@ -196,7 +196,7 @@ have one basic rule introducing and eliminating them, as usual.
 
           da broda de & di brode daxivo
     ========================================== (fa'u-intel)
-    da fa'u di broda fa'u brode de fa'u davixo
+    da fa'u di broda fa'u brode de fa'u daxivo
 
 We have reached the point where we need at least four distinct sumti, and so
 we will need `{xi}` to give us additional names. Note that, as before with
