@@ -17,23 +17,37 @@ To start, let's give an axiom for `{du}`. An axiom is an assumption that we
 can always make. I'll put this axiom in a block by itself, but I'm also going
 to give it a petname in parentheses so that we can refer to it later easily.
 
-    da du da (id-refl)
+    ro da zo'u da du da (id-refl)
 
 "id" is short for "identity", and that's precisely what `{du}` does. "refl" is
 short for "reflexive", which is one of the three properties of [equivalence
 relations](https://en.wikipedia.org/wiki/Equivalence_relation). An equivalence
 relation is a relational way to talk about equality, and `{du}` definitely
-should be an equivalence relation, so let's add those other rules. The second
-property is called "symmetry", and it means that we can swap the sumti without
-changing the bridi. To show what a swap looks like, we'll introduce rules. A
-rule has some assumptions on top, and then a bar, and then some conclusions on
-the bottom.
+should be an equivalence relation!
+
+Often we'll want to work underneath a single prenex, focusing on the body of
+the bridi. In addition, we'll want to use the classic prenex-expansion and
+prenex-contraction rules from CLL. And finally, [regular
+logic](https://en.wikipedia.org/wiki/Regular_category#Regular_logic_and_regular_categories)
+requires a single prenex to be configured for each implication rule. So, for
+most rules, we'll configure one prenex for two bridi bodies.
+
+Don't worry about `{ro}` yet. For now, we'll insist that every prenex variable
+is universally quantified; `{ro}` really does mean every single value that we
+possibly might consider.
+
+Let's continue with `{du}`. The second property is called "symmetry", and it
+means that we can swap the sumti without changing the bridi. To show what a
+swap looks like, we'll introduce rules. A rule has a prenex, and then an
+assumption and a conclusion, separated by a bar.
+
+    ro da ro de zo'u:
 
     da du de
     ======== (id-sym)
     de du da
 
-Here I've drawn a double bar to show which part of the rule is which. I will
+Here I've drawn a double bar to show which part of the rule is which; I will
 sometimes also draw single bars. The double bar is reversible; it can be
 turned upside down to gain another rule. For `{du}` this is unsurprising, but
 some double bars later on may feel confusing at first. I encourage the reader
@@ -49,6 +63,8 @@ sumti.
 A rule can have multiple assumptions. Here, I'll use an ampersand to separate
 multiple assumptions.
 
+    ro da ro de ro di zo'u:
+
     da du de & de du di
     =================== (id-trans)
          da du di
@@ -61,6 +77,8 @@ we take a reversible rule like `(id-trans)` and run it backwards.
 `{se}` is one of what I will call "operators" on selbri; they are cmavo which
 alter the structure around a selbri without changing the relation itself.
 `{se}` also has reversible rules, as one might expect.
+
+    ro da ro de zo'u:
 
      da broda de
     ============== (se-intel) [CLL 5.11]
@@ -80,13 +98,18 @@ call its conclusions theorems, and consider them as honorary axioms. Here is
 our first proof; it starts from an axiom and applies a single rule, concluding
 in our first theorem.
 
+    ro da zo'u:
+
      da du da   (id-refl)
     =========== (se-intel)
     da se du da
 
 What we have concluded is that, in any context, `{da se du da}` is a true
-bridi. We could give this theorem a name and reuse it in the future. Here's
-another useful theorem.
+bridi. The reason that this conclusion needs no context is because `(id-refl)`
+is always true. We could give this theorem a name and reuse it in the future.
+Here's another useful theorem.
+
+    ro da ro de zo'u:
 
      da du de
      ========   (id-sym)
@@ -103,6 +126,8 @@ combine them. The underlying relations compose cleanly, so most of the
 difficulty is in Lojbanic arrangement. We need to use the concept of
 contravariance, and turn around one of the bridi, in order to apply `{gi'e}`.
 
+    ro da ro de ro di zo'u:
+
     da broda de & da brode di
     ========================= (gi'e-intel)
     da broda de gi'e brode di
@@ -113,6 +138,8 @@ full, let's do a deduction that can't be done with only two dimensions. The
 that doesn't affect the logical correctness of assumptions and that would be
 free if we could stand our proof up like a tree in three dimensions. Recall
 that `{gi'e}` groups to the left.
+
+    ro da ro de ro di zo'u:
 
     da broda da gi'e brode de gi'e brodi di
     ======================================= (gi'e-intel)
@@ -136,6 +163,8 @@ and `g : Y -> Z`, one can form `f;g : X -> Z`. Note that, unlike in
 traditional notation, we do not forget our intermediate connecting values
 between relations.
 
+    ro da ro de ro di zo'u:
+
      da broda de & de brode di
     ============================ (se-intel)
     de se broda da & de brode di
@@ -146,12 +175,16 @@ One more rule connects `{gi'e}` back to `{du}` by letting us effectively
 rewrite across an equality. This is like performing a sort of unification,
 too.
 
+    ro da ro de ro di zo'u:
+
     da broda de & de du di
     ====================== (du-intel)
          da broda di
 
 We can use both of these new rules to write the more categorically-oriented
 proof, which says that composition with the identity relation has no effect.
+
+    ro da ro de ro di zo'u:
 
     da broda de gi'e du di
     ====================== (gi'e-intel)
@@ -161,7 +194,8 @@ proof, which says that composition with the identity relation has no effect.
 
 Along with the other rules introduced, we now have a dagger category on
 selbri, with `{du}` as our identity selbri, `{gi'e}` for composition, and
-`{se}` for the dagger.
+`{se}` for the dagger. I assert that this is actually a regular category as
+well, and that our prenices connect us to untyped regular logic.
 
 ## Weakening
 
@@ -179,15 +213,8 @@ explained the scoping and binding of our `{da}` variables. However, scoped
 negation and plural quantifiers do not work with our `(se-intel)` rule. The
 fix comes from work done on bicategories of relations and [regular
 logic](https://en.wikipedia.org/wiki/Regular_category#Regular_logic_and_regular_categories):
-All quantifiers must either be lifted to the top level, or be single positive
+All quantifiers must either be lifted to the prenex, or be single positive
 existential quantifiers.
-
-In more words, `{da}` is fine because it only binds one thing once, it asserts
-that the bound thing satisfies the bridi it's bound within, and it only claims
-that there is one satisfying thing at a time rather than all things at once,
-and it fortunately has all of these properties by default. When we need other
-quantifiers, we will use a
-[prenex](https://lojban.org/publications/cll/cll_v1.1_xhtml-section-chunks/section-da-and-zohu.html).
 
 ## Interpreting natural deduction
 
@@ -195,6 +222,7 @@ Each logic in natural deduction can be used to give judgements, like "P is
 true." Wikipedia lists "P is possibly true," "P is always true," "P is true at
 a given time," and "P is constructible from the given resources," as other
 examples in other logics. What does relational logic give us? Relational logic
-judgements are of the form "P is true multiple times, under each of the given
-contexts;" we can imagine that a bridi is not just true or false, but true for
-each of the many possible values that are being related.
+judgements are of the form "P is true at least once;" we can imagine that a
+bridi is not just true or false, but true for each of the many possible values
+that are being related, and that there may be multiple worlds which provide a
+context in which a statement is true.

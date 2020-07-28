@@ -6,6 +6,8 @@ Let's start tackling arbitrary easy gismu.
 
 We can generalize `{du}` to arbitrary equivalence relations with `{mintu}`.
 
+    ro da ro de zo'u:
+
                da du de
     ============================== (mintu-intel)
     da mintu de pa ka ce'u du ce'u
@@ -20,6 +22,8 @@ We can generalize `{du}` to arbitrary equivalence relations with `{mintu}`.
 
 `{mupli}` is a straightforward combination of what we've already seen.
 
+    ro da ro de ro di zo'u:
+
     da ckaji de & da cmima di
     ========================= (mupli-intel)
          da mupli de di
@@ -28,6 +32,8 @@ We can generalize `{du}` to arbitrary equivalence relations with `{mintu}`.
 
 Similarly, `{basti}` is straightforward once we look below the `{ckaji}` in
 the traditional definitions.
+
+    ro da poi ke'a broda ro de poi ke'a broda zo'u:
 
            da .e de broda
     ============================ (basti-intel)
@@ -40,6 +46,8 @@ the other. As usual, first, we'll define the simpler one. The selbri `{simsa}`
 is akin to `{basti}` in that it relates similar objects, but includes extra
 data indicating *how* the objects are related; informally, this is what they
 have in common.
+
+    ro da poi ke'a broda ro de poi ke'a broda ro di poi broda ke'a zo'u:
 
            da .e de broda di
     =============================== (simsa-intel)
@@ -56,12 +64,16 @@ indeterminate even in each single possible world.
 The way that we indicate this, again by community convention, is with the
 compound cmavo `{makau}`.
 
+    ro de poi broda ke'a zo'u:
+
     zi'o broda de
     -------------- (makau-intro)
     makau broda de
 
 This one-way rule is a strict weakening. But now we can explain how `{frica}`
 works.
+
+    ro da poi ke'a broda ro de poi ke'a broda zo'u:
 
           da .onai de broda makau
     ================================== (frica-intel)
@@ -86,9 +98,11 @@ clause](https://en.wikipedia.org/wiki/Apposition) combines a relative clause
 with an identity relation. CLL 8.3 says that `{po'u}` means `{poi du}`,
 and we'll go with it.
 
-    da poi ke'a du de broda di
-    ========================== (po'u-intel) [CLL 8.3]
-       da po'u de broda di
+    ro da ro de zo'u:
+
+    da poi ke'a du de broda
+    ======================= (po'u-intel) [CLL 8.3]
+       da po'u de broda
 
 # Reciprocity: {simxu}
 
@@ -96,9 +110,11 @@ simxu1 is a set, and for each pair of elements in the set, the selbri simxu2
 relates that pair. We can give a very plain definition based on that
 description.
 
-    de cmima da & di cmima da & de broda di
-    ======================================= (simxu-intel)
-        da simxu pa ka ce'u broda ce'u
+    ro da poi cmima ke'a ro de poi ke'a cmima ro di poi ke'a cmima zo'u:
+
+             de broda di
+    ============================== (simxu-intel)
+    da simxu pa ka ce'u broda ce'u
 
 Once again, since we are working relationally, we get many different sets,
 each of which satisfying the reciprocality property that we are designating.
@@ -109,9 +125,13 @@ As in CLL, we can define `{la'e}` and `{lu'e}` as shorthand for `{sinxa}`.
 Note that symbols and interpretations are things, and thus are subject to
 quantification.
 
+    ro da poi sinxa ke'a zo'u:
+
     lo sinxa be da ku broda de
     ========================== (lu'e-intel) [CLL 6.10]
       lu'e da lu'u broda de
+
+    ro da poi ke'a sinxa zo'u:
 
     lo se sinxa be da ku broda de
     ============================= (la'e-intel) [CLL 6.10]

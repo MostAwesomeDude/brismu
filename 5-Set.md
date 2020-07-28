@@ -27,48 +27,17 @@ built it. When we run with steci2 and steci3 but not steci1, then this
 effectively selects a choice property out of thin air! Thus, just to implement
 `{steci}` will require us to adopt ZFC in full, including the Axiom of Choice.
 
-Thinking categorically, the properties for subsets are compositional; when we
-take a subset of a subset, then the resulting set's elements satisfy both
-builder properties. This reasoning leads to the following rule:
-
-    pa ka ce'u broda kei steci da de & pa ka ce'u brode kei steci de di
-    =================================================================== (steci-trans)
-                 pa ka ce'u broda je brode kei steci da di
-
 ## Inline sets: {ce}
 
 We can now give `{ce}`, which is like `{ce'o}` but forgets order. Since order
 is forgotten, when I write `{ce ...}` I mean that the set's elements can be
 permuted arbitrarily.
 
+    ro da poi ke'a cmima zo'u:
+
     da cmima da ce ... (ce-intel)
 
 Incidentally, this gives the Axiom of Pairing.
-
-## Restriction: {poi}, {ke'a}
-
-We can start to move some of this subset logic into quantifiers now, and
-recover useful high-level syntax. We can make an analogy between `{poi}` and
-`{ka}`, because of the `{ke'a}` and `{ce'u}` holes, as capturing selbri. But
-with `{poi}`, we are *restricting* what can be bound. This restriction is
-one-way, and cannot be logically reversed.
-
-              da broda de
-    ------------------------------- (poi-intro)
-    da poi ke'a brode ku'o broda de
-
-Why not, the reader might reasonably ask? After all, changing the number of
-results has never mattered before! But consider how this changes if we are
-restricting an already-restricted sumti which has other relations already in
-context. In that situation, perhaps the `{poi}` restriction is inherently
-related to the rest of the context, and cannot be safely removed.
-
-There's a [deep topological
-reason](https://en.wikipedia.org/wiki/Alexandrov_topology) why this one-way
-situation exists, but to relate it to sets and keep it simple, we can start
-with some superset, and remove some elements from it to make a subset just by
-filtering. But we can't go in the other direction with a filter which will add
-elements. We can only shrink a set when we filter, never grow it.
 
 ## Articles I: {lo}, {be}
 
@@ -82,18 +51,19 @@ claiming any particular difference between the two.
 
 Without further ado, the moment is here.
 
-    da poi ke'a broda ku'o brode de
-    =============================== (lo-intel)
-           lo broda ku brode
-
-But that's not all. Let's also add in `{be}` so that we can staple more sumti
-in there.
-
-    da poi ke'a broda de ku'o brode di
-    ================================== (lo-be)
-        lo broda be de ku brode di
+    ro da poi ke'a broda ku'o zo'u da brode
+    ======================================= (lo-intel)
+             ro lo broda ku brode
 
 Note that `{lo}` folds a hidden bound value within itself, like with `{zi'o}`.
+In addition, the prenex was consumed. When we use `{lo}`, we no longer have a
+variable `{da}` bound in scope.
+
+    ro de poi broda ke'a zo'u:
+
+    ro da poi ke'a broda de ku'o zo'u da brode
+    ========================================== (lo-intel-be)
+            ro lo broda be de ku brode
 
 ## Quantification I: {no}, {pa}, ...
 
@@ -229,6 +199,8 @@ as negation.
 
 So, for unary selbri, we can start out by saying:
 
+    ro da poi ke'a broda zo'u:
+
     no da broda
     =========== (na-no-unary)
     da na broda
@@ -236,24 +208,19 @@ So, for unary selbri, we can start out by saying:
 But this is thorny for binary selbri. We will have a pair of one-way rules
 which have a round-trip in one direction but not the other.
 
+    ro da poi ke'a broda ro de pok broda ke'a zo'u:
+
     no da broda no de
     ================= (na-no-binary-both)
      da na broda de
 
 If we made this two-way, then `{na}` wouldn't always be dual to `{no}`.
 
+    ro da poi ke'a broda ro de pok broda ke'a zo'u:
+
     no da broda de
     -------------- (na-no-binary)
     da na broda de
-
-## Articles III: {be}
-
-Almost as a technicality, I will need `{be}` later on. Let's not leave loose
-ends; `{be}` is just as easy as we might hope.
-
-        lo broda be de ku brode di
-    ================================== (be-intel)
-    da poi ke'a broda de ku'o brode di
 
 ## Logical Set Operators: {ja}, {jo'e}, {ku'a}
 

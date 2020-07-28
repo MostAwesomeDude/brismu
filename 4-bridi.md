@@ -12,11 +12,19 @@ the "rest" or "tail" of the sequence. This tail could well be empty.
 Note for the future: Experimental `{ra'ei}` could represent additional
 elements, but is in entirely the wrong selma'o.
 
+    ro da zo'u:
+
     da nomoi da ce'o ... (nomoi)
+
+    ro de zo'u:
 
     de pamoi da ce'o de ce'o ... (pamoi)
 
+    ro di zo'u:
+
     di remoi da ce'o de ce'o di ce'o ... (remoi)
+
+    ...
 
 # Ternary relations: {te}, {bridi}
 
@@ -24,6 +32,8 @@ We need to internalize relations, and for that we'll need `{bridi}`. First, we
 need to define ternary relations. All of our existing rules work on the first
 two sumti of ternary relations, and we'll define `{te}` to access the
 otherwise-inaccessible third sumti.
+
+    ro da ro de ro di zo'u:
 
      da broda de di
     ================= (te-intel)
@@ -36,6 +46,8 @@ the given terbri are present in the underlying relation. This is precisely the
 characteristic function! We use `{du'u}` to track whether a bridi is
 satisfying the characteristic of its selbri.
 
+    ro da poi ke'a broda ro de poi broda ke'a zo'u:
+
                                da broda de
     ================================================================== (bridi-intel-2)
     pa du'u da broda de kei bridi pa ka ce'u broda ce'u kei da ce'o de
@@ -47,6 +59,8 @@ result for every pair in the Cartesian product (the full relation), and also a
 `{du'u}` indicating whether or not the pair is also in the selbri.
 
 And once more, for ternary relations:
+
+    ro da poi ke'a broda ro de poi broda ke'a ro di poi broda fi ke'a zo'u:
 
                                      da broda de di
     ============================================================================= (bridi-intel-3)
