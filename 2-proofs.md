@@ -17,13 +17,17 @@ To start, let's give an axiom for `{du}`. An axiom is an assumption that we
 can always make. I'll put this axiom in a block by itself, but I'm also going
 to give it a petname in parentheses so that we can refer to it later easily.
 
-    ro da zo'u da du da (id-refl)
+    ro da zo'u da du da (id-refl) (bicat-equality)
 
 "id" is short for "identity", and that's precisely what `{du}` does. "refl" is
 short for "reflexive", which is one of the three properties of [equivalence
 relations](https://en.wikipedia.org/wiki/Equivalence_relation). An equivalence
 relation is a relational way to talk about equality, and `{du}` definitely
 should be an equivalence relation!
+
+Our references starting with "bicat-" are to the bicategory-of-relations
+logical structure. This structure includes several axiom schemata which we
+will instantiate over multiple different rules.
 
 Often we'll want to work underneath a single prenex, focusing on the body of
 the bridi. In addition, we'll want to use the classic prenex-expansion and
@@ -44,7 +48,7 @@ assumption and a conclusion, separated by a bar.
     ro da ro de zo'u:
 
     da du de
-    ======== (id-sym)
+    ======== (id-sym) (bicat-equality)
     de du da
 
 Here I've drawn a double bar to show which part of the rule is which; I will
@@ -66,7 +70,7 @@ multiple assumptions.
     ro da ro de ro di zo'u:
 
     da du de & de du di
-    =================== (id-trans)
+    =================== (id-trans) (bicat-equality)
          da du di
 
 And in relational logic, rules can have multiple conclusions! This happens if

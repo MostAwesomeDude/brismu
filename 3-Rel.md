@@ -4,7 +4,9 @@ Let's investigate more properties of the category of sumti and selbri. In this
 section, we'll think categorically, and look for abstract patterns which show
 up elsewhere in logic. We'll look at products and coproducts, as well as
 internal homs. We will be guided by the properties of [bicategories of
-relations](https://arxiv.org/abs/1706.00526).
+relations](https://arxiv.org/abs/1706.00526) and regular and coherent logic.
+In fact, I'm going to introduce some basic connectives, and then introduce the
+inference rules from Appendix B.
 
 ## Typed restriction: {poi}, {ke'a}
 
@@ -15,7 +17,7 @@ one-way, and cannot be logically reversed.
     ------------------------------ (poi-intro)
     ro da poi ke'a brode zo'u bu'a
 
-Technically, untyped regular logic may not be sensical; practical utterances
+Technically, untyped coherent logic may not be sensical; practical utterances
 will put types on every quantifier. But it is far easier to define our axioms
 on `{du}` and other polymorphic relations this way.
 
@@ -116,74 +118,49 @@ Looks reasonable. What about the symmetry within `{ckini}`? Can we, say, put
     ==================================== (ckini-intel)
     de ckini da pa ka ce'u se broda ce'u
 
-## Monoidal structure: {pamei}, {fa'u}
+## Truth, Falsity: {je'u}, {je'unai}
 
-A [monoid](https://en.wikipedia.org/wiki/Monoid) is a structure with a unit
-and a binary operation which associates. Categories are already monoids in one
-way, with identity arrows for units and composition as the binary operation.
-However, in a monoidal category, there is another unit and binary operation,
-and this second monoid gives us the ability to have multiple sumti packed into
-a single sumti.
+Truth is not very interesting; in any context, we may conclude an empty,
+vacuous truth.
+
+    je'u (je'u) (bicat-truth)
+
+More interestingly, we can be in a state of negation. From such a state, we
+have a [principle of
+explosion](https://en.wikipedia.org/wiki/Principle_of_explosion), and we may
+prove anything. Relationally, from falsity there are no possible worlds, and
+so we may assign these zero possible worlds any imaginary properties that we
+like, since there are no witnesses to contradict our imaginations.
+
+    je'unai
+    ------- (je'unai) (bicat-falsity)
+     bu'a
+
+The cmavo `{je'u}` is not used in a standard way here. Lojban lacks a
+community standard for talking about Booleans, and so I am gently providing a
+horribly wrong choice in the hope that the community will grow better valsi.
+This will not be the first time I do this.
+
+## Singleton, Empty Set: {nomei}, {pamei}, {je'unai}
 
 First, we'll need our unit object. This object will only have one way to
 represent and relate data. We'll have this be a one-element set, or [singleton
 set](https://en.wikipedia.org/wiki/Singleton_(mathematics)). The bridi `{da
 pamei de}` relates this set to its lone element. We would like to be able to
 say `{le pamei}`, and maybe we will eventually, but for now we'll have to
-designate the uniqueness of these sumti in a different way.
+designate the uniqueness of these sumti in a different way; we'll say
+`{tarci.bu}` for the singleton object.
 
-    ro da poi ke'a pamei ro de poi ke'a pamei zo'u:
+    ro da poi pamei ke'a zo'u:
 
-    da du de (pamei-fa)
+    da du tarci.bu (pamei) (bicat-singleton)
 
-    ro da poi zi'o pamei ke'a ro de poi zi'o pamei ke'a zo'u:
+For the empty set, however, the elements don't exist. This is a form of
+negation.
 
-    da du de (pamei-fe)
+    ro da poi nomei ke'a zo'u:
 
-Monoidal products are designated with `{fa'u}`, both for sumti and selbri. We
-have one basic rule introducing and eliminating them, as usual.
-
-    ro da poi ke'a broda zi'o ro de poi zi'o broda ke'a
-    ro di poi ke'a brode zi'o ro davixo poi zi'o brode ke'a zo'u:
-
-          da broda de & di brode daxivo
-    ========================================== (fa'u-intel)
-    da fa'u di broda fa'u brode de fa'u davixo
-
-We have reached the point where we need at least four distinct sumti, and so
-we will need `{xi}` to give us additional names. Note that, as before with
-`{gi'e}` and `{se}`, the symmetry of our proof tree leads to a symmetry
-underneath `{fa'u}`.
-
-More importantly, we need rules to let us remove units from monoidal products.
-If we have a pair of `(da, @)` where `@` is the unique sumti `{le se pamei}`,
-then that's just like having a single value. However, once again, we can't
-just forget the underlying relation which is tied to the sumti, so we'll have
-to both pattern-match `{fa'u}` and also deliberately ask for `{zi'o}` to
-remove the lone irrelevant value from the other end of the pair. The good news
-is that both ends of `{pamei}` have exactly one member, so it doesn't matter
-which way we orient it.
-
-    ro da poi ke'a broda zi'o ro de poi zi'o broda ke'a zo'u:
-
-    da fa'u zi'o broda fa'u pamei de fa'u zi'o
-    ========================================== (fa'u-unit)
-                   da broda de
-
-That awkward rule is formally known by the awkward name of the "unitor". It
-has an elegant relative, just called the "unit", which is implicit.
-
-In addition to creation and deletion, there are also copying and merging. A
-copy of a value is a pair of that value twice; when we reverse copying, we get
-merging, where pairs are accepted only when they are two copies of the same
-value.
-
-There are also two rules which relate to internal logic and let us move selbri
-up and down the monoidal structure. The first says that, if we have a selbri
-followed by a copy, then we can duplicate the selbri along the copy.
-
-The second says that, if we have a selbri followed by a deletion, then we can
-delete the selbri too. However, we don't need a new rule for this.
+    je'unai (nomei) (bicat-empty)
 
 ## More logical operations: {je}, {jonai}, {onai}
 
@@ -205,29 +182,192 @@ their monoidal product, after we account for plumbing values.
 
 `{je}` commutes and is idempotent, but we will not prove that here.
 
-## Negation as elements of the empty set: {nomei}
+## Projection: {fa'u}, {nomoi}, {pamoi}
 
-I warned you that we had many symmetries, and it's time for another one;
-symmetrically to `{pamei}`, we have `{nomei}`, which has two nice features. On
-`{le nomei}` we have the [empty set](https://en.wikipedia.org/wiki/Empty_set),
-which is unique up to unique isomorphism just like the singleton set. On the
-other hand, `{le se nomei}` is impossible; there's nothing that satisfies it.
-As a result, `{nomei}` without a `{zi'o}` can indicate a kind of logical
-wrongness which will be preserved throughout the computation. This is
-precisely what makes the empty relation into the false Boolean relation!
+To characterize pairs, we will enlist some helpers. `{fa'u}` designates
+ordered pairs of elements, like `{le se remei}`. We can address each member of
+a pair with `{nomoi}` and `{pamoi}` respectively.
 
-Our first rule is just like `(pamei-fa)`. We don't have a corresponding rule
-for `(pamei-fe)` though.
+    ro da poi ke'a broda ro de poi ke'a brode zo'u:
 
-    ro da poi ke'a nomei ro de poi ke'a nomei zo'u:
+    da nomoi da fa'u de (fa'u-nomoi) (bicat-projection)
 
-    da du de (nomei-fa)
+    .i
 
-Here, honestly, being too traditional seems like it might be obscuring what's
-going on. Perhaps an alternative rule could be:
+    de pamoi da fa'u de (fa'u-pamoi) (bicat-projection)
 
-    ro da poi ke'a broda ro de poi broda ke'a zo'u:
+We have reached the point where we need at least four distinct sumti, and so
+we will need `{xi}` to give us additional names. Note that, as before with
+`{gi'e}` and `{se}`, the symmetry of our proof tree leads to a symmetry
+underneath `{fa'u}`.
 
-    da .onai di broda de & zi'o nomei di
-    ==================================== (onai-unit)
-                da broda de
+## Pairs: {remei}
+
+We can also draw from pairs of relations. It's a bit verbose; we have to draw
+from the pair, and then lay out the cardinal and ordinal relationships with an
+existential quantifier.
+
+    ro da poi ke'a broda fa'u brode zo'u:
+
+    de di zo'u da remei de fa'u di .ije de nomoi da .ije di pamoi da (remei) (bicat-pair)
+
+This is the first time we've used such existential quantifiers. Unlike the
+top-level prenex, each existential quantification is scoped and can nest, with
+order mattering. In general, existential quantifiers aren't for top-level
+values that we want to capture and manipulate, but for inner plumbing in
+composite expressions. We'll see in a bit how to introduce and eliminate them
+more generally.
+
+## Disjoint Unions and Inclusions: {.a}, {.onai}, {dijro}
+
+We can form disjoint unions for sumti by using `{.onai}`, and for selbri by
+using `{jonai}`.
+
+In lieu of a community-accepted selbri, I will use the placeholder `{dijro}`,
+with the following place structure:
+
+    d1 is a disjoint union with value d2 from amongst possible types d3
+
+Which is a useless mouthful on its own, but can be made worse with
+`{zulrdijro}` and `{pritrdijro}`, which have place structures:
+
+    z1 is a left-hand/first/fixed disjoint union with value z2
+
+    p1 is a right-hand/second/varying disjoint union with value p2
+
+This is enough to be able to create binary coproducts.
+
+    ro da poi ke'a broda ro de poi ke'a brode zo'u:
+
+    da .onai de zulrdijro da (zulrdijro) (bicat-injection)
+
+    da .onai de pritrdijro de (pritrdijro) (bicat-injection)
+
+We can also eliminate binary coproducts if they're formed in the prenex,
+leading to disjunction. While binary coproducts have an XOR behavior, since
+disjoint unions can only take on one possible value at a time, disjunction of
+bridi allows for an inclusive OR behavior, and so we'll use a different word.
+
+    ro da poi ke'a broda jonai brode zo'u:
+
+    da zulrdijro de .ija da pritrdijro de (ija-intro) (bicat-case)
+
+The existential quantifiers are not wrong; they are closely scoped to each
+component bridi. `{de}` ranges over two different types here, one for each
+side of the disjoint union.
+
+A dual rule requires us to introduce `{je'u}` and `{je'unai}` for the true and
+false bridi. Again, there is no satisfactory community convention for this
+situation. The pattern should be obvious, though; this rule is part of proofs
+by contradiction. Since a disjoint union can't be in two states at once, if we
+have existential witnesses which see it in both states, then we can conclude
+falsity.
+
+    ro da poi ke'a broda jonai brode zo'u:
+
+    da zulrdijro de .ije da pritrdijro de
+    ------------------------------------- (ije-false) (bicat-case)
+                   je'unai
+
+## Distributivity
+
+Before we get to the difficult-to-visualize rules, let's handle the
+distributive law quickly. There is only one distributive law, and it relates
+`{.a}` and `{.e}` in a one-way derivation. For any three bridi in context:
+
+          bu'a .ije bu'e .ijabo bu'i
+    -------------------------------------- (ija-dist) (bicat-distributivity)
+    bu'a .ijebo bu'e .ija bu'a .ijebo bu'i
+
+This rule is reminiscent of CLL 14.8. We don't want to really deal with the
+syntax of `{bo}` in general, and it's just here for grouping; we will leave
+the full details of parentheses to the interested (and masochistic) reader.
+
+## Conjunction & Disjunction
+
+We continue to be extremely general and work under a single fixed context.
+First, a pair of rules for dismissing conjunction:
+
+    bu'a .ije bu'e
+    -------------- (ije-left) (bicat-conjunction)
+         bu'a
+
+    bu'a .ije bu'e
+    -------------- (ije-right) (bicat-conjunction)
+         bu'e
+
+And now, a new sort of diagram, for a two-dimensional rule. Here we will take
+pairs of rules on the left, and create a new composite rule on the right. This
+will allow us to cleanly combine pairs of rules in a natural way.
+
+    bu'a  |
+    ----  |
+    bu'e  |       bu'a
+          |  -------------- (ije) (bicat-conjunction)
+    bu'a  |  bu'e .ije bu'i
+    ----  |
+    bu'i  |
+
+I hope that this makes sense, because we're about to take the duals and do it
+all again. First, a pair of rules for introducing disjunction:
+
+         bu'a
+    -------------- (ija-left) (bicat-disjunction)
+    bu'a .ija bu'e
+
+         bu'e
+    -------------- (ija-right) (bicat-disjunction)
+    bu'a .ija bu'e
+
+And then another two-dimensional rule for removing disjunction:
+
+    bu'a  |
+    ----  |
+    bu'i  |  bu'a .ija bu'e
+          |  -------------- (ija) (bicat-disjunction)
+    bu'e  |       bu'i
+    ----  |
+    bu'i  |
+
+## Existential Quantifiers: {su'o}
+
+I'm only mentioning `{su'o}`. If community convention emerges, then `{su'o
+da}` might be the correct way to instantiate existential quantifiers, rather
+than `{da}`. However, right now, it's not mandatory to add `{su'o}` in order
+to be correct and so I am just leaving a note and doing it here in this
+section.
+
+Once again, we are going to forge a two-dimensional rule. This one is
+reversible. On the left, we have a context which holds for all possible
+values; on the right, we have individual values which witness each instance of
+a relation.
+
+    ro da poi ke'a broda zo'u:  ||
+                                ||  su'o da zo'u bu'a
+    bu'a                        ||  ----------------- (su'o-intel) (bicat-existential quantifier)
+    ----                        ||        bu'e
+    bu'e                        ||
+
+It is crucial to keep in mind that universal claims live at the top, at the
+prenex, and existential claims are scoped to particular formulae in the body.
+
+Think carefully about this rule, in both directions, to be sure that it makes
+sense. From left to right, if a rule always holds under some context, and we
+can choose a value from that context which witnesses the first part of the
+rule, then we can conclude the second part. From right to left, if we have a
+conditional conclusion which is waiting for a witness, then for all of the
+possible witnesses, it would be the case that conditionally we could draw the
+conclusion given the premise.
+
+Note also that we assumed that `{da}` was free. We will make this assumption a
+lot. In fact...
+
+## Frobenius
+
+Let's give the Frobenius law. This rule allows us to stretch the scope of
+existential quantifiers and include many component bridi. For a final time,
+please assume a fixed context under which `{da}` is free.
+
+    bu'a .ije su'o da zo'u bu'e
+    --------------------------- (ije-frob) (bicat-Frobenius)
+    su'o da zo'u bu'a .ije bu'e
