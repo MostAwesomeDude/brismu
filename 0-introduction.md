@@ -47,6 +47,10 @@ Often times, folks ask why I can't just add words for the correct mathematical
 objects to Lojban, and then work solely in those words. This doesn't help
 clarify the rules surrounding already-established logic!
 
+I've added new words where there's really no other option, and I've clearly
+indicated that I don't *want* to recommend my words when there are
+community-supported alternatives already.
+
 ### Why are you doing this?
 
 The main reason is that *any* logical language ought to have its logic clearly
@@ -69,32 +73,3 @@ object with an uncountable number of properties.
 That said, I try to use standard mathematical language, but I know that
 advanced mathematics is not common, and try to introduce concepts before I use
 them.
-
-## Open questions
-
-Everything listed here is something I'd like resolved eventually, although the
-resolution is probably in my own misunderstanding of Lojban.
-
-### Relations between words
-
-* CLL 7.14: Is {dunli} like binary {du} but with a customizeable equivalence
-  relation?
-* CLL 13.4: Is there a connection between {carmi}, {tsali}, and {ruble}? Does
-  {cumki} follow the pattern too?
-* CLL 15.3: Do colors form a scale, or a color space?
-* logji1: What are rules/methods?
-
-### How to say...
-
-Many times, I suspect that a word exists in Lojban, but don't know what it is.
-I'm not asking for new words to be invented; I'm trying to ensure that I
-haven't overlooked Lojban's existing inventory.
-
-* How to say "exists unique"? {pa} has been alright so far.
-
-### Cosmetics
-
-* {da} or {ko'a} in the bulk of rules? {da du da} or {ko'a du ko'a}?
-* Similarly, {broda} or {bu'a}?
-* Prenex-normal form?
-* sumti vs terbri?

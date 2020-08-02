@@ -284,6 +284,10 @@ falsity.
     ------------------------------------- (ije-false) (bicat-case)
                    je'unai
 
+Note: The experimental cmavo `{gai'o}` and `{cei'i}` might work for Booleans,
+but they don't really have a good record of being grokked, and they are not
+very related to existing words.
+
 ## Distributivity
 
 Before we get to the difficult-to-visualize rules, let's handle the
