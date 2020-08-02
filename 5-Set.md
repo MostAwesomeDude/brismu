@@ -68,15 +68,7 @@ somewhat; I'll go with these.
     ================== (kairvlina-intel)
       da kairni'i de
 
-## Elements, Functions: {cmima}, {fancu}
-
-One of the two essential relations of set theory is `{cmima}`, which relates
-sets to their elements. Like in some flavors of ZF, in Lojban we cannot forget
-to *which* set an element belongs.
-
-Remember, we are using relational logic, and a single set is related to each
-of its elements. `{da cmima de}` is, for each particular `{de}`, going to be
-true once for each distinct `{da}`.
+## Functions I: {fancu}, {pagyfancu}, {ficyfancu}, {gairfancu}, {mitfancu}
 
 We won't get far without functions, so we'll ignore the lack of community
 standard and start with `{fancu}`. We'll preserve the original place
@@ -207,6 +199,14 @@ got, but I'll just give it as an axiom:
 
 ## Subsets: {steci}
 
+One of the two essential relations of set theory is `{cmima}`, which relates
+sets to their elements. Like in some flavors of ZF, in Lojban we cannot forget
+to *which* set an element belongs.
+
+Remember, we are using relational logic, and a single set is related to each
+of its elements. `{da cmima de}` is, for each particular `{de}`, going to be
+true once for each distinct `{da}`.
+
 The other essential relation of set theory is `{steci}`, which relates sets to
 their subsets using [set
 comprehension](https://en.wikipedia.org/wiki/Set-builder_notation).
@@ -232,6 +232,21 @@ the input to the output.
 
 Also, I'm using live sets here, despite using labels earlier. Sorry not sorry.
 I'll keep figuring it out.
+
+## Functions II
+
+We'll need to be able to compose functions. The easy way is probably through
+the front door.
+
+    ro da poi ke'a fancu ko'a ko'e ku'o ro de poi ke'a fancu ko'e ko'i zo'u:
+
+    da fancu ko'a ko'e pa ka ce'u bu'a ce'u kei .ije de fancu ko'e ko'i pa ka ce'u bu'e ce'u
+    ======================================================================================== (fancu-comp)
+               zi'o fancu ko'a ko'i pa ka de zo'u ce'u bu'a de .ije de bu'e ce'u
+
+Maybe that's not so easy! We have to explicitly spell out all of the guts of
+our functions being composed, and don't have a high-level relation
+representing composition.
 
 ## Inline sets: {ce}
 
