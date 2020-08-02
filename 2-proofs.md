@@ -38,7 +38,7 @@ most rules, we'll configure one prenex for two bridi bodies.
 
 Don't worry about `{ro}` yet. For now, we'll insist that every prenex variable
 is universally quantified; `{ro}` really does mean every single value that we
-possibly might consider.
+possibly might consider. We'll clarify this later.
 
 Let's continue with `{du}`. The second property is called "symmetry", and it
 means that we can swap the sumti without changing the bridi. To show what a
@@ -201,15 +201,6 @@ selbri, with `{du}` as our identity selbri, `{gi'e}` for composition, and
 `{se}` for the dagger. I assert that this is actually a regular category as
 well, and that our prenices connect us to untyped regular logic.
 
-## Weakening
-
-Sometimes we'll want to duplicate a step, or have a duplicate copy of a bridi.
-In those cases, we can use "structural weakening" to add/remove a copy.
-
-       bu'a
-    =========== (sw)
-    bu'a & bu'a
-
 ## Scoping
 
 Scoping comes into play at this time. Up until this point, we have not
@@ -219,6 +210,34 @@ fix comes from work done on bicategories of relations and [regular
 logic](https://en.wikipedia.org/wiki/Regular_category#Regular_logic_and_regular_categories):
 All quantifiers must either be lifted to the prenex, or be single positive
 existential quantifiers.
+
+## Omitted sumti: {zo'e}
+
+The short version: `{zo'e}` should be read as `{zi'o}` if you're feeling
+charitable, and if not, then apply the following formal process.
+
+Lojban does not have a strong syntactic barrier between unary relations (mere
+sets, properties) and binary relations; both are encoded as selbri. This will
+bite us again and again, such as when we define `{poi}` and `{ke'a}`, or
+`{ka}` and `{ce'u}`, because arity matters and we have no way to annotate it
+other than by manually counting and requiring every place to be specified.
+
+So, here's the first part of the `{zo'e}` convention, and more will be added
+as needed. Whenever a rule has the form:
+
+    ro da zo'u:
+
+    da bu'a
+
+You may, if the selbri of `{bu'a}` needs to be binary, substitute the
+augmented rule:
+
+    ro da ro de zo'u:
+
+    da bu'a de
+
+And vice versa. The point is that the arity of the main selbri should not be
+an impediment to applying most deductive rules.
 
 ## Interpreting natural deduction
 

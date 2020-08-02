@@ -119,7 +119,7 @@ description.
 Once again, since we are working relationally, we get many different sets,
 each of which satisfying the reciprocality property that we are designating.
 
-# Signs: {sinxa}, {la'e}, {lu'e}
+# Signs: {sinxa}, {la'e}, {lu'e}, {lu'i}
 
 As in CLL, we can define `{la'e}` and `{lu'e}` as shorthand for `{sinxa}`.
 Note that symbols and interpretations are things, and thus are subject to
@@ -141,3 +141,17 @@ I recall discussion about whether sinxa3 is implicitly `{mi}` or `{mi'a}` or
 some similar connection to the speaker. However, I am not sure whether this is
 a cultural convention, and at any rate, leaving sinxa3 unbound allows for more
 flexible usage.
+
+Additionally, `{lu'i}` and `{lu'a}` can be defined as `{lo'i}`-like expansions
+of `{sinxa}` which include a set quantification. These definitions are only
+hinted at in CLL, and were explored by xorxes.
+
+    ro da zo'u:
+
+    lo sinxa be lo cmima be da ku broda
+    =================================== (lu'a-intel)
+               lu'a da broda
+
+    lo sinxa be lo se cmima be da ku broda
+    ====================================== (lu'i-intel)
+                lu'i da broda

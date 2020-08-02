@@ -6,6 +6,21 @@ using [ZF](https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory).
 Note: The shape of each axiom is also influenced by [Rethinking Set
 Theory](https://arxiv.org/abs/1212.6543) and categorical set theory.
 
+## Articles N
+
+Interwoven with building up sets, we'll build up the ability to quantify. As a
+start, let's see how we can eliminate a prenex. A `{ro}` quantification works
+more or less like in BPFK's formal expansions, but we use `{poi}` instead of
+`{noi}`. What is the difference? Logically, I think, nothing; instead, it's
+about how the search is done through the possible worlds which result. This is
+worth preserving and figuring out more closely, but here we will require all
+restrictions to be `{poi}` because that seems to give a better hint to
+speakers about how to intuitively reason about the quantification.
+
+    ro da poi ke'a broda zo'u da brode
+    ================================== (ro-quant)
+             ro broda cu brode
+
 ## Elements: {cmima}
 
 One of the two essential relations of set theory is `{cmima}`, which relates
@@ -51,19 +66,33 @@ claiming any particular difference between the two.
 
 Without further ado, the moment is here.
 
-    ro da poi ke'a broda ku'o zo'u da brode
-    ======================================= (lo-intel)
-             ro lo broda ku brode
+    zo'u:
+
+    da poi ke'a broda zo'u brode
+    ============================ (lo-intel)
+         lo broda ku brode
 
 Note that `{lo}` folds a hidden bound value within itself, like with `{zi'o}`.
 In addition, the prenex was consumed. When we use `{lo}`, we no longer have a
 variable `{da}` bound in scope.
 
+We can also do a `{be}` expansion. `{be}` creates a side condition which must
+be moved into the main formula.
+
+    zo'u:
+
+    da poi ke'a broda ku'o de poi broda ke'a ku'o zo'u da brode .ije da broda de
+    ============================================================================ (be-intel)
+                   de poi broda ke'a zo'u lo broda be de ku brode
+
+We can use the two-dimensional existential quantifier rule here, though, and
+obtain a prenexed form which is more ergonomic:
+
     ro de poi broda ke'a zo'u:
 
-    ro da poi ke'a broda de ku'o zo'u da brode
-    ========================================== (lo-intel-be)
-            ro lo broda be de ku brode
+    da poi ke'a broda zo'u da brode .ije da broda de
+    ================================================ (be-intel)
+                 lo broda be de ku brode
 
 ## Quantification I: {no}, {pa}, ...
 
@@ -79,7 +108,8 @@ when two cats are walking. Now, as usual in our relational logic, *which* two
 cats are walking is indeterminate, and there might be many pairs of cats which
 satisfy the bridi.
 
-There are no implicit `{su'o}` here. When we count, we are counting precisely.
+There are no implicit `{su'o}` for inner quantifiers here. When we count, we
+are counting precisely, and no inner quantifier means no counting.
 
 ## Articles II: {lo'i}
 

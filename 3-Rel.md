@@ -29,6 +29,15 @@ rule just for this sort of logical weakening.
     ------------------------------ (da-weak)
     ro da poi ke'a broda zo'u bu'a
 
+Another `{zo'e}` convention appears here; restrictions can occur over
+non-unary selbri. For example, I might want to talk about cats with an
+utterance like `{ro da poi ke'a mlatu}`; in that case, the implicit `{zo'e}`
+should be read as `{zi'o}`; I am talking only about the cats themselves and
+not their species. This doesn't mean that we've cleaved apart cats and their
+species; because cats are still identified by `{mlatu}`, the inherent ability
+to be related is still present. In other words, we are keeping the type
+information.
+
 ## Creation and Deletion: {zi'o}
 
 Relationship diagrams can create and delete data. Note, though, that the
@@ -53,6 +62,12 @@ We can erase any column of the relation this way.
     de se broda zi'o
     ================ (se-intel)
      zi'o broda de
+
+It is fair to ask, after the previous section, whether `{zi'o}` can be removed
+from underneath `{poi}`. No, there is a strict separation between
+quantification and relation in coherent logic, and so we need to complete our
+quantifications before we can do relational restrictions. We'll see how to
+make the syntax lighter in later chapters.
 
 ## Internal homs: {ka}, {ckaji}, {ckini}
 
