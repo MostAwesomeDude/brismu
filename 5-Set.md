@@ -248,6 +248,63 @@ Maybe that's not so easy! We have to explicitly spell out all of the guts of
 our functions being composed, and don't have a high-level relation
 representing composition.
 
+## Elements: {cmima}
+
+Almost all sets have elements. In categories of sets, elements are functions
+from the singleton set. We need to carefully note an equivalence while
+allowing for distinction; this is part of the "name" concept of functions. A
+cat, for example, is not the same as the function which chooses it from the
+set of cats; it *is*, however, equivalent to the *name* of the function, and
+that's a sort of sameness.
+
+As a compromise, the function corresponding to the element can be called, and
+calling the function will yield the element. Function calls, like relation
+traversals, are done with `{ckini}`.
+
+    ro da poi cmima ke'a ku'o ro de poi bridi ke'a zo'u:
+
+              zi'o fancu le pamei da de
+    --------------------------------------------- (cmima-elt)
+    di zo'u di cmima da .ije tarci.bu di ckini de
+
+The quantification is not great here. `{di}` ranges over the set of `{da}`,
+which is effectively a dependent type. This doesn't surprise me greatly, since
+I expected to find 2-categorical structure, but it will complicate the
+quantification story. From this point forward, quantification is sketchy.
+
+## Subset structure
+
+We'll give the axioms in ornate form. First, the Axiom of Extensionality: If
+two sets have all of the same supersets, then they're the same set.
+
+    ro da poi cmima ke'a ku'o ro de poi cmima ke'a zo'u:
+
+    pa ka zi'o steci da ce'u kei du pa ka zi'o steci de ce'u
+    -------------------------------------------------------- (steci-ext)
+                            da du de
+
+Next, the Axiom of the Empty Set: The empty set has no subsets; the set of
+subsets of the empty set is itself the empty set. This phrasing uses the idea
+that unary relations are equivalent to sets, which I haven't formalized
+further. It is lazy and probably we can do better.
+
+    le nomei du pa ka zi'o steci ce'u le nomei (steci-empty)
+
+The Axiom of Pairing: Every pair of sets belongs to a set which contains both
+of them as elements. My version includes the steci1 which builds that set.
+
+    ro da poi cmima ke'a ku'o ro de poi cmima ke'a zo'u:
+
+    di zo'u da cmima di .ije de cmima di (cmima-pair)
+
+Finally, the Axiom of Union: We may take the union of a set's elements, and
+it will again be a set. I'm not sure if I like the awkward phrasing I've used
+here; it might be better put with more `{cmima}` and no `{steci}`.
+
+    ro da poi cmima ke'a zo'u:
+
+    de zo'u pa ka ce'u cmima da kei steci de zi'o (steci-union)
+
 ## Inline sets: {ce}
 
 We can now give `{ce}`, which is like `{ce'o}` but forgets order. Since order
@@ -258,7 +315,19 @@ permuted arbitrarily.
 
     da cmima da ce ... (ce-intel)
 
-Incidentally, this gives the Axiom of Pairing.
+Incidentally, this gives the Axiom of Pairing in a lighter fashion.
+
+## Axiom of Anti-Foundation
+
+Controversially, although nobody's really said anything yet, relational set
+logic tends to use the [Axiom of
+Anti-Foundation](https://en.wikipedia.org/wiki/Aczel's_anti-foundation_axiom),
+AFA, instead of the Axiom of Foundation.
+
+AFA corresponds sets with rooted connected directed cyclic graphs; the root
+maps to the top of the set, and each path in the graph corresponds to a
+membership chain, with each edge being a single instance of membership. We
+will ask that our relations respect this structure when it occurs.
 
 ## Articles I: {lo}, {be}
 
