@@ -5,7 +5,7 @@ that the reader has already consumed an introductory tutorial and a grammar
 reference, I will attempt to focus on the formal side of our budding
 correspondence between Lojban and categorical logic.
 
-## Identity: {du}
+## Identity: {du}, {.ije}
 
 The first selbri we'll define is `{du}`. With `{du}`, we can relate any object
 to itself. How do we talk about this property formally? We'll use [natural
@@ -61,20 +61,38 @@ can read each step in a proof.
 In relational logic, many rules are reversible. This is an instance of the
 [microcosm principle](https://ncatlab.org/nlab/show/microcosm+principle),
 where algebraic structures tend to show up within their own categorified
-presentations. We will eventually show that rules can be manipulated like
-sumti.
+presentations. We will eventually show that rules can be manipulated within
+Lojban itself.
 
-A rule can have multiple assumptions. Here, I'll use an ampersand to separate
-multiple assumptions.
+A rule can have multiple assumptions. Here, I'll use `{.ije}` to separate
+multiple assumptions. We could also have an extralogical ampersand, or just
+some extra whitespace, but it will be much simpler for us to fully internalize
+the idea of one bridi which represents the conjunction of multiple bridi from
+the start.
 
     ro da ro de ro di zo'u:
 
-    da du de & de du di
-    =================== (id-trans) (bicat-equality)
-         da du di
+    da du de .ije de du di
+    ====================== (id-trans) (bicat-equality)
+           da du di
 
-And in relational logic, rules can have multiple conclusions! This happens if
-we take a reversible rule like `(id-trans)` and run it backwards.
+Finally, let's have a two-dimensional rule for rewriting underneath `{.ije}`.
+Two-dimensional rules are read left-to-right; whenever we have a rule of the
+form on the left, then we can instead substitute the rule on the right. Where
+we use `{broda}` within rules to relate individual `{da}` variables, in a
+two-dimensional rule we'll use `{bu'a}` to relate entire bridi in context,
+including the selbri and bound variables. Hopefully this will be less
+confusing once you look at the actual rule!
+
+    ... zo'u:    |  ... zo'u:
+                 |
+    bu'a         |  bu'a .ije bu'i
+    ~~~~ (rule)  |  ~~~~~~~~~~~~~~ (rule under .ije)
+    bu'e         |  bu'e .ije bu'i
+
+Why did I use a squiggly line ~~~ for the rules? Because the RHS is reversible
+only if the LHS is also reversible. I'm pattern-matching the reversibility of
+the rule! And also the prenex. Lots of stuff is matched here.
 
 ## Conversion Operators: {se}
 
@@ -132,30 +150,35 @@ contravariance, and turn around one of the bridi, in order to apply `{gi'e}`.
 
     ro da ro de ro di zo'u:
 
-    da broda de & da brode di
-    ========================= (gi'e-intel)
-    da broda de gi'e brode di
+    da broda de .ije da brode di
+    ============================ (gi'e-intel)
+     da broda de gi'e brode di
 
-Our ampersand happens to commute, so `{gi'e}` commutes as well. To see this in
-full, let's do a deduction that can't be done with only two dimensions. The
-`(sr)` rule is short for "structural rearrangement"; we are doing bookkeeping
-that doesn't affect the logical correctness of assumptions and that would be
-free if we could stand our proof up like a tree in three dimensions. Recall
-that `{gi'e}` groups to the left.
+Our ampersand `{.ije}` happens to commute, so `{gi'e}` commutes as well. We
+need an axiom for the first of these facts:
+
+    ro da ro de zo'u:
+
+    da broda .ije de brode
+    ====================== (.ije-sym)
+    de brode .ije da broda
+
+Let's do a deduction that can't be done with only two dimensions. Recall that
+`{gi'e}` groups to the left.
 
     ro da ro de ro di zo'u:
 
-    da broda da gi'e brode de gi'e brodi di
-    ======================================= (gi'e-intel)
-    da broda da gi'e brode de & da brodi di
-    ======================================= (gi'e-intel)
-    da broda da & da brode de & da brodi di
-    ======================================= (sr)
-    da broda da & da brodi di & da brode de
-    ======================================= (gi'e-intel)
-    da broda da gi'e brodi di & da brode de
-    ======================================= (gi'e-intel)
-    da broda da gi'e brodi di gi'e brode de
+      da broda da gi'e brode de gi'e brodi di
+     ==========================================   (gi'e-intel)
+     da broda da gi'e brode de .ije da brodi di
+     ==========================================   (gi'e-intel)
+    da broda da .ije da brode de .ije da brodi di
+    ============================================= (.ije-sym)
+    da broda da .ije da brodi di .ije da brode de
+    ============================================= (gi'e-intel)
+     da broda da gi'e brodi di .ije da brode de
+     ==========================================   (gi'e-intel)
+      da broda da gi'e brodi di gi'e brode de
 
 In the middle, those two triangles of assumptions are each two-dimensional,
 but stacked on top of each other, giving a three-dimensional structure to the
@@ -169,11 +192,11 @@ between relations.
 
     ro da ro de ro di zo'u:
 
-     da broda de & de brode di
-    ============================ (se-intel)
-    de se broda da & de brode di
-    ============================ (gi'e-intel)
-    de se broda da gi'e brode di
+     da broda de .ije de brode di
+    =============================== (se-intel under .ije)
+    de se broda da .ije de brode di
+    =============================== (gi'e-intel)
+     de se broda da gi'e brode di
 
 One more rule connects `{gi'e}` back to `{du}` by letting us effectively
 rewrite across an equality. This is like performing a sort of unification,
@@ -181,20 +204,20 @@ too.
 
     ro da ro de ro di zo'u:
 
-    da broda de & de du di
-    ====================== (du-intel)
-         da broda di
+    da broda de .ije de du di
+    ========================= (du-intel)
+           da broda di
 
 We can use both of these new rules to write the more categorically-oriented
 proof, which says that composition with the identity relation has no effect.
 
     ro da ro de ro di zo'u:
 
-    da broda de gi'e du di
-    ====================== (gi'e-intel)
-    da broda de & de du di
-    ====================== (du-intel)
-         da broda di
+     da broda de gi'e du di
+    ========================= (gi'e-intel)
+    da broda de .ije de du di
+    ========================= (du-intel)
+           da broda di
 
 Along with the other rules introduced, we now have a dagger category on
 selbri, with `{du}` as our identity selbri, `{gi'e}` for composition, and
@@ -249,3 +272,29 @@ judgements are of the form "P is true at least once;" we can imagine that a
 bridi is not just true or false, but true for each of the many possible values
 that are being related, and that there may be multiple worlds which provide a
 context in which a statement is true.
+
+## Logical Sugar: {.e}, {je}
+
+Lojban contains sugar syntax for some connectives, known as the "logical
+connectives". This means that when we see `{.e}` or `{je}`, then just like
+with `{gi'e}`, we must remember that there are two underlying bridi.
+
+First, whenever `{.ije}` connects two bridi which only differ in a single
+sumti, then we may use `{.e}` instead.
+
+    ro da ro de zo'u:
+
+    da broda .ije de broda
+    ====================== (.e-intel) [CLL 10.17, 14.6, 14.12, 16.10]
+        da .e de broda
+
+Second, whenever `{.ije}` connects two bridi which only differ in selbri, then
+we may use `{je}` instead.
+
+    ro da ro de zo'u:
+
+    da broda de .ije da brode de
+    ============================ (je-intel) [CLL 9.15, 14.12]
+        da broda je brode de
+
+Over the next few pages, we'll explore ever-more-powerful sugar.

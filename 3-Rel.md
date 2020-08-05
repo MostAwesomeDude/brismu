@@ -177,26 +177,6 @@ negation.
 
     je'unai (nomei) (bicat-empty)
 
-## More logical operations: {je}, {jonai}, {onai}
-
-We can encode the Booleans as in bicategories of relations. The bridi `{du}`
-and `{na du}` serve as true and false respectively. We will have to soon
-define `{na}`, but we can put it off a little longer.
-
-In fact, we can generalize the Boolean relations to local maxima on any pair
-of relations, asking whether the relation is
-[inhabited](https://en.wikipedia.org/wiki/Inhabited_set).
-
-We can also take the intersection of relations, and we'll use this to define
-`{je}`. An intersection between two compatible relations is very much like
-their monoidal product, after we account for plumbing values.
-
-    ro da poi ke'a broda je brode zo'u:
-
-    da fa'u da broda fa'u brode de fa'u de (je-intro)
-
-`{je}` commutes and is idempotent, but we will not prove that here.
-
 ## Projection: {fa'u}, {nomoi}, {pamoi}
 
 To characterize pairs, we will enlist some helpers. `{fa'u}` designates

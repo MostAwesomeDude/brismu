@@ -1,4 +1,4 @@
-# 6: Upward
+# 7: Upward
 
 Let's start tackling arbitrary easy gismu.
 
@@ -22,9 +22,9 @@ We can generalize `{du}` to arbitrary equivalence relations with `{mintu}`.
 
 `{mupli}` is a straightforward combination of what we've already seen.
 
-    ro da ro de ro di zo'u:
+    ro da ro de poi bridi ke'a ku'o ro di poi cmima ke'a zo'u:
 
-    da ckaji de & da cmima di
+    da ckaji de gi'e cmima di
     ========================= (mupli-intel)
          da mupli de di
 
