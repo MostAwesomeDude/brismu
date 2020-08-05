@@ -52,9 +52,11 @@ relations, which we know how to express, if in a slightly awkward fashion.
 
     ro da poi bridi ke'a zo'u:
 
-    pa ka je'unai kei kairni'i da (kairni'i-zero)
+    pa ka gai'o kei kairni'i da (kairni'i-zero)
 
-    da kairni'i pa ka je'u (kairni'i-one)
+    .i
+
+    da kairni'i pa ka cei'i (kairni'i-one)
 
 We can witness the infima and suprema of the lattice with more nonce lujvo,
 `{kairkanxe}` and `{kairvlina}` respectively. We have a choice of laws,

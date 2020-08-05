@@ -133,12 +133,12 @@ Looks reasonable. What about the symmetry within `{ckini}`? Can we, say, put
     ==================================== (ckini-intel)
     de ckini da pa ka ce'u se broda ce'u
 
-## Truth, Falsity: {je'u}, {je'unai}
+## Truth, Falsity: {cei'i}, {gai'o}
 
 Truth is not very interesting; in any context, we may conclude an empty,
 vacuous truth.
 
-    je'u (je'u) (bicat-truth)
+    cei'i (cei'i) (bicat-truth)
 
 More interestingly, we can be in a state of negation. From such a state, we
 have a [principle of
@@ -147,16 +147,14 @@ prove anything. Relationally, from falsity there are no possible worlds, and
 so we may assign these zero possible worlds any imaginary properties that we
 like, since there are no witnesses to contradict our imaginations.
 
-    je'unai
-    ------- (je'unai) (bicat-falsity)
-     bu'a
+    gai'o
+    ----- (gai'o) (bicat-falsity)
+    bu'a
 
-The cmavo `{je'u}` is not used in a standard way here. Lojban lacks a
-community standard for talking about Booleans, and so I am gently providing a
-horribly wrong choice in the hope that the community will grow better valsi.
-This will not be the first time I do this.
+I don't really like the cmavo for these predicates, but there are no good
+alternatives.
 
-## Singleton, Empty Set: {nomei}, {pamei}, {je'unai}
+## Singleton, Empty Set: {nomei}, {pamei}
 
 First, we'll need our unit object. This object will only have one way to
 represent and relate data. We'll have this be a one-element set, or [singleton
@@ -175,7 +173,7 @@ negation.
 
     ro da poi nomei ke'a zo'u:
 
-    je'unai (nomei) (bicat-empty)
+    gai'o (nomei) (bicat-empty)
 
 ## Projection: {fa'u}, {nomoi}, {pamoi}
 
@@ -251,22 +249,15 @@ The existential quantifiers are not wrong; they are closely scoped to each
 component bridi. `{de}` ranges over two different types here, one for each
 side of the disjoint union.
 
-A dual rule requires us to introduce `{je'u}` and `{je'unai}` for the true and
-false bridi. Again, there is no satisfactory community convention for this
-situation. The pattern should be obvious, though; this rule is part of proofs
-by contradiction. Since a disjoint union can't be in two states at once, if we
-have existential witnesses which see it in both states, then we can conclude
-falsity.
+This rule is part of proofs by contradiction. Since a disjoint union can't be
+in two states at once, if we have existential witnesses which see it in both
+states, then we can conclude falsity.
 
     ro da poi ke'a broda jonai brode zo'u:
 
     da zulrdijro de .ije da pritrdijro de
     ------------------------------------- (ije-false) (bicat-case)
-                   je'unai
-
-Note: The experimental cmavo `{gai'o}` and `{cei'i}` might work for Booleans,
-but they don't really have a good record of being grokked, and they are not
-very related to existing words.
+                    gai'o
 
 ## Distributivity
 
@@ -278,9 +269,10 @@ distributive law quickly. There is only one distributive law, and it relates
     -------------------------------------- (ija-dist) (bicat-distributivity)
     bu'a .ijebo bu'e .ija bu'a .ijebo bu'i
 
-This rule is reminiscent of CLL 14.8. We don't want to really deal with the
-syntax of `{bo}` in general, and it's just here for grouping; we will leave
-the full details of parentheses to the interested (and masochistic) reader.
+This rule is reminiscent of, but not literally, CLL 14.8. We don't want to
+really deal with the syntax of `{bo}` in general, and it's just here for
+grouping; we will leave the full details of parentheses to the interested (and
+masochistic) reader.
 
 ## Conjunction & Disjunction
 
