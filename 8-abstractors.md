@@ -23,7 +23,7 @@ mlatu/2, the binary relation which is inalienable from the text `{zo mlatu}`.
 
 Next, `{du'u}`. We haven't yet dug into these, but they are fully constructed
 bridi; `{lo mlatu ku cadzu}` is represented as `{pa du'u lo mlatu be zo'e ku
-cazdu zo'e zo'e}`. Folks like to imagine these as having definite truth
+cadzu zo'e zo'e}`. Folks like to imagine these as having definite truth
 values, and it's tempting to join in; after all, *surely* every relation
 either does or does not contain a given row, right? Well, if we do that, then
 we actually hobble our logical power! It seems strange, but classical logic
