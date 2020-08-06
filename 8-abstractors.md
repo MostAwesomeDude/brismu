@@ -78,7 +78,9 @@ ce'u broda}`, with broda2 becoming the measurement somehow. Questions abound,
 including why broda2 and not broda1, whether the arity change is correct, and
 how arithmetic evaluation interacts with the whole shebang. Nonetheless, the
 core theory is the same: Treat a numeric column as a numeric per-row
-annotation, and create a new abstracted relation which bends the wires.
+annotation, and create a new abstracted relation which bends the wires. This
+makes `{ni}` like a subtype of `{ka}`, although the as-parent-type and the
+as-true-as relation send `{ni}` to *different* `{ka}`.
 
 ## Events: {nu}, {mu'e}, {pu'u}, {za'i}, {zu'o}
 
@@ -149,7 +151,8 @@ CLL lumps these in a "minor" page, and I guess I will too. `{li'i}` is a
 subjective `{nu}`; li'i2 is the experiencer of the event. Not much more to say
 for now; we'll have to get to subjective experiences for this to be useful.
 
-`{si'o}` is similar, but vague.
+`{si'o}` is similar, but vague. si'o2 is an agent who is imagining a bridi.
+Can `{ce'u}` appear underneath? Nobody knows.
 
 `{su'u}` is theoretically essential for constructing abstractors, but CLL
 doesn't give us enough information for how to wield it. It's not even clear
@@ -162,10 +165,14 @@ Here's what I know.
 Abstractor | over selbri or bridi? | Produces/annotated in x1
 -----------|-----------------------|--------------------------------------------------------------
 ka         | selbri                | selbri (identity)
-du'u       | bridi                 | bridi (identity, implication)
+du'u       | bridi                 | truth value (implication)
+jei        | bridi                 | fuzzy truth value in [0,1]
+ni         | selbri                | number
 nu         | bridi                 | spacetime neighborhood
 mu'e       | bridi                 | connected spacetime neighborhood
 pu'u       | bridi                 | spacetime neighborhood containing ordered sequence of events
 za'i       | bridi                 | bounded spacetime neighborhood
 zu'o       | bridi                 | many overlapping neighborhoods each with ordered structure
 li'i       | bridi                 | spacetime neighborhood
+si'o       | bridi                 | reference to si'o2's mental state
+su'u       | selbri                | configurable based on su'u2
