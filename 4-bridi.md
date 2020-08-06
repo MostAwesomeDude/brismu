@@ -26,7 +26,7 @@ elements, but is in entirely the wrong selma'o.
 
     ...
 
-# Ternary relations: {te}, {bridi}
+# Ternary relations: {te}, {bridi}, {du'u}
 
 We need to internalize relations, and for that we'll need `{bridi}`. First, we
 need to define ternary relations. All of our existing rules work on the first
@@ -69,3 +69,8 @@ And once more, for ternary relations:
 Whew. This has been a lot of foundational work, hasn't it? But we're almost
 done with the basics. We've got a pretty good understanding of bridi and
 selbri now, and all that's left is terbri.
+
+Reactions have been mixed, to say the least, to this approach. la gleki opines
+that terbri do not work this way. However, CLL insists that selbri and bridi
+and `{bridi}` work this way. The main contention is what parts of the bridi
+are syntactic and which are semantic, since Lojban does support text literals.
