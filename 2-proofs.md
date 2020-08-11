@@ -58,6 +58,13 @@ some double bars later on may feel confusing at first. I encourage the reader
 to take their time and carefully examine the diagrams to make sure that they
 can read each step in a proof.
 
+I could have written that rule in this way, but later on, you'll appreciate
+the separated prenex for legibility.
+
+    ro da ro de zo'u da du de
+    ========================= (id-sym) (bicat-equality)
+    ro da ro de zo'u de du da
+
 In relational logic, many rules are reversible. This is an instance of the
 [microcosm principle](https://ncatlab.org/nlab/show/microcosm+principle),
 where algebraic structures tend to show up within their own categorified

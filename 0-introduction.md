@@ -73,3 +73,14 @@ object with an uncountable number of properties.
 That said, I try to use standard mathematical language, but I know that
 advanced mathematics is not common, and try to introduce concepts before I use
 them.
+
+### Isn't this kind of pathetic? It's sad, really.
+
+Somebody's gotta do it, or else it's not really a logical language, is it?
+
+### Can't I just learn logic by learning Lojban?
+
+That has clearly not worked in the past, and it probably won't start working
+now. I recommend studying a basic introduction to first-order predicate logic
+in your native language, and then hopefully an introduction to relational
+algebra.

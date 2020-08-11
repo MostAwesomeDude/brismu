@@ -17,17 +17,13 @@ one-way, and cannot be logically reversed.
     ------------------------------ (poi-intro)
     ro da poi ke'a brode zo'u bu'a
 
-Technically, untyped coherent logic may not be sensical; practical utterances
-will put types on every quantifier. But it is far easier to define our axioms
-on `{du}` and other polymorphic relations this way.
-
 Why `{bu'a}`? Because we can logically weaken any bridi by adding irrelevant
 typed variables to its prenex, and so `{da}` might not be used. We'll add a
 rule just for this sort of logical weakening.
 
-                 bu'a
-    ------------------------------ (da-weak)
-    ro da poi ke'a broda zo'u bu'a
+         bu'a
+    --------------- (da-weak)
+    ro da zo'u bu'a
 
 Another `{zo'e}` convention appears here; restrictions can occur over
 non-unary selbri. For example, I might want to talk about cats with an
@@ -37,6 +33,13 @@ not their species. This doesn't mean that we've cleaved apart cats and their
 species; because cats are still identified by `{mlatu}`, the inherent ability
 to be related is still present. In other words, we are keeping the type
 information.
+
+Finally, we can have a dependent type; we can range over relations, and then
+range over elements of the relation. Again, observe the `{zo'e}` convention.
+
+              ro bu'a zo'u bu'e
+    ------------------------------------- (da-dep-weak)
+    ro bu'a ro da poi ke'a bu'a zo'u bu'e
 
 ## Creation and Deletion: {zi'o}
 
@@ -80,11 +83,11 @@ let's see the universal property: Given a pair `(X, Y^X)`, we can apply the
 latter to the former, and get a `Y`. So the universal property comes as a
 single arrow `apply : (X, Y^X) -> Y`.
 
-    ro da poi ke'a broda zo'u:
+    ro bu'a ro da zo'u:
 
-            da broda
-    ========================= (ckaji-intel) [CLL 11.4]
-    da ckaji pa ka ce'u broda
+            da bu'a
+    ======================== (ckaji-intel) [CLL 11.4]
+    da ckaji pa ka ce'u bu'a
 
 We will use `{ka}` for selbri which have been closed over, with `{ce'u}`
 indicating where holes remain. Arity will matter; `{ckaji}` can only fill in
@@ -103,35 +106,35 @@ the prenex for `(ckaji-intel)`. We can make a more explicit coupling with
 `{ckini}`, which does for binary `{ka}` what `{ckaji}` does for unary `{ka}`.
 Note that we use explicit `{ce'u}` to mark each hole and keep track of arity.
 
-    ro da poi ke'a broda zi'o ro de poi zi'o broda ke'a zo'u:
+    ro bu'a ro da ro de zo'u:
 
-              da broda de
-    ================================= (ckini-intel)
-    da ckini de pa ka ce'u broda ce'u
+               da bu'a de
+    ================================ (ckini-intel)
+    da ckini de pa ka ce'u bu'a ce'u
 
 I can think of a few useful lemmas to try out. First, let's see if we can
 connect `{ckaji}` and `{ckini}` without any more rules.
 
-    ro da poi ke'a broda zi'o ro de poi zi'o broda ke'a zo'u:
+    ro bu'a ro da ro de zo'u:
 
-      da ckaji pa ka ce'u broda de
-      ============================    (ckaji-intel)
-              da broda de
-    ================================= (ckini-intel)
-    da ckini de pa ka ce'u broda ce'u
+       da ckaji pa ka ce'u bu'a de
+       ===========================   (ckaji-intel)
+               da bu'a de
+    ================================ (ckini-intel)
+    da ckini de pa ka ce'u bu'a ce'u
 
 Looks reasonable. What about the symmetry within `{ckini}`? Can we, say, put
 `{se}` underneath `{ka}`? Yes, we can.
 
-    ro da poi ke'a broda zi'o ro de poi zi'o broda ke'a zo'u:
+    ro bu'a ro da ro de zo'u:
 
-     da ckini de pa ka ce'u broda ce'u
-     =================================   (ckini-intel)
-                da broda de
-               ==============            (se-intel)
-               de se broda da
-    ==================================== (ckini-intel)
-    de ckini da pa ka ce'u se broda ce'u
+     da ckini de pa ka ce'u bu'a ce'u
+     ================================   (ckini-intel)
+                da bu'a de
+               =============            (se-intel)
+               de se bu'a da
+    =================================== (ckini-intel)
+    de ckini da pa ka ce'u se bu'a ce'u
 
 ## Truth, Falsity: {cei'i}, {gai'o}
 
@@ -147,9 +150,15 @@ prove anything. Relationally, from falsity there are no possible worlds, and
 so we may assign these zero possible worlds any imaginary properties that we
 like, since there are no witnesses to contradict our imaginations.
 
+    ro bu'a zo'u:
+
     gai'o
     ----- (gai'o) (bicat-falsity)
     bu'a
+
+I've added a courtesy prenex, but `(gai'o)` is usually going to be an
+arbitrary bridi composed from already-introduced variables, so it won't be
+necessary.
 
 I don't really like the cmavo for these predicates, but there are no good
 alternatives.
