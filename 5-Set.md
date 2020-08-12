@@ -371,6 +371,95 @@ obtain a prenexed form which is more ergonomic:
     ================================================ (be-intel)
                  lo broda be de ku brode
 
+## Natural Numbers Object: {kacna'u}, {kacli'e}, {sumji}, {pilji}, {li}, {no}, {pa}, ...
+
+The set of natural numbers is equivalent to the unary relation `{kacna'u}`.
+First, let's populate the set. `{li}` is grammar for a numeric constant
+literal, the metavariable `PA` matches any such literal, and the relation
+`{kacli'e}` sends Lojban natural numbers to their successor/increment.
+Nothing magical, just mundane and tedious. Then, zero is a natural number:
+
+    li no kacna'u (kacna'u-zero)
+
+And any successor of a natural number is also a natural number:
+
+    ro da zo'u:
+
+                  da kacna'u
+    ======================================= (kacna'u-succ)
+    su'o de zo'u de kacna'u gi'e kacli'e da
+
+But zero is not a successor:
+
+    ro da zo'u:
+
+    da kacli'e li no
+    ---------------- (kacli'e-zero)
+         gai'o
+
+And the natural numbers have structual equality:
+
+    ro da ro de zo'u:
+
+    su'o di zo'u da .e de kacli'e di
+    -------------------------------- (kacli'e-succ)
+                da du de
+
+This NNO is as strong as BA, the system of "baby arithmetic" obtained by
+weakening Robinson's arithmetic Q. To raise it up to Q, we need to remove all
+"pseudo-zero" non-successors:
+
+    ro da zo'u:
+
+    da kacna'u gi'e na du li no
+    --------------------------- (kacli'e-standard)
+    su'o de zo'u de kacli'e da
+
+We also need to add arithmetic. For addition, we define `{sumji}`. First,
+anything plus zero is itself:
+
+    ro da zo'u:
+
+       da kacna'u
+    ----------------- (sumji-zero)
+    da sumji da li no
+
+Anything plus a successor is the successor of that thing and its -- look, it's
+simpler in formal Lojban!
+
+    ro da ro de ro di zo'u:
+
+    su'o daxivo zo'u di sumji da daxivo .ije de kacli'e daxivo
+    ---------------------------------------------------------- (sumji-succ)
+    su'o daxivo zo'u daxivo sumji da de .ije daxivo kacli'e di
+
+Maybe not too much simpler. Multiplication is similar, with `{pilji}`:
+
+    ro da zo'u:
+
+         da kacna'u
+    -------------------- (pilji-zero)
+    li no pilji da li no
+
+Again, the recursive case is simpler formally than informally. Note the
+similarity between the top parts of both recursive cases.
+
+    ro da ro de ro di zo'u:
+
+    su'o daxivo zo'u di pilji da daxivo .ije de kacli'e daxivo
+    ----------------------------------------------------------- (pilji-succ)
+    su'o daxivo zo'u di sumji daxivo da .ije daxivo pilji da de
+
+So, to be explicit, how do we use these? Well, let's define `{li pa}` as an
+example.
+
+    li no kacli'e li pa (kacli'e-pa)
+
+    li pa kacli'e li re (kacli'e-re)
+
+Imagine the axiom schema which builds the NNO; CLL gives the algorithm for
+counting, and it's largely the same as standard decimal integer counting.
+
 ## Quantification I: {no}, {pa}, ...
 
 BPFK formally says that `{lo PA broda}`, where PA is some natural number like

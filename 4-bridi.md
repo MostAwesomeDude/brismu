@@ -28,6 +28,9 @@ elements, but is in entirely the wrong selma'o.
 
 # Ternary relations: {te}, {bridi}, {du'u}
 
+This entire section rests on whether `{bridi}` is semantic or syntactic; that
+is, whether it operates on live sets and values, or Lojban ASTs.
+
 We need to internalize relations, and for that we'll need `{bridi}`. First, we
 need to define ternary relations. All of our existing rules work on the first
 two sumti of ternary relations, and we'll define `{te}` to access the
