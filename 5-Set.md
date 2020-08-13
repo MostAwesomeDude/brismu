@@ -460,22 +460,29 @@ example.
 Imagine the axiom schema which builds the NNO; CLL gives the algorithm for
 counting, and it's largely the same as standard decimal integer counting.
 
+We also can do explicit second-order induction. The quantifiers and internal
+connectives are iffy.
+
+    ro bu'a zo'u:
+
+    li no bu'a .ije ro da su'o de zo'u da na.a de bu'a .ije da kacli'e de
+    --------------------------------------------------------------------- (kacna'u-ind)
+                      ro da zo'u da kacna'u nagi'a bu'a
+
 ## Quantification I: {no}, {pa}, ...
 
-BPFK formally says that `{lo PA broda}`, where PA is some natural number like
-`{no}`, `{pa}`, etc. is equivalent to `{lo broda}` but that the cardinality of
-the set of bound values is PA. (BPFK specifically uses the word `{zilkancu}`
-for this concept.) We can interpret this as a sort of "truncated" or
-all-or-nothing sumti; if the rest of the bridi is satisfied, but when we
-collect all of the possible results then the cardinality is wrong, then the
-bridi is overall unsatisfied. I hope that this isn't too strange, but if
-somebody says {lo re mlatu ku cadzu}, then their utterance ought only be true
-when two cats are walking. Now, as usual in our relational logic, *which* two
-cats are walking is indeterminate, and there might be many pairs of cats which
-satisfy the bridi.
+An essential quantifier in maths is the uniqueness existential quantifier
+`{pa}`. We can build it from a careful modification of the standard phrasing.
 
-There are no implicit `{su'o}` for inner quantifiers here. When we count, we
-are counting precisely, and no inner quantifier means no counting.
+    ro bu'a ro de zo'u:
+
+    su'o da zo'u da bu'a .ije de bu'a nagi'a du da
+    ============================================== (pa-unique)
+                  pa da zo'u da bu'a
+
+This lines up with both our intuitions on `{ka}` from earlier, and also our
+understanding of what uniqueness means: Any proclaimed witness to non-uniquess
+is, by contraposition, actually equivalent to our original thing.
 
 ## Articles II: {lo'i}
 
