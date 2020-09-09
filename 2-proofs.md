@@ -101,6 +101,14 @@ Why did I use a squiggly line ~~~ for the rules? Because the RHS is reversible
 only if the LHS is also reversible. I'm pattern-matching the reversibility of
 the rule! And also the prenex. Lots of stuff is matched here.
 
+Before we leave, a final note: We could define `{du}` entirely in terms of
+elementary second-order components. For example, if we had `{.o}` defined as
+the biconditional connective, then the selbri `{ka ro bu'a zo'u ce'u .o ce'u
+bu'a}`, "the property on x, y that for all R, R(x) iff R(y)" will give us the
+one and only identity relation. Given our current programme of totally
+ignoring the Boolean truth tables between connectives, we might in fact do
+this, or something similar.
+
 ## Conversion Operators: {se}
 
 `{se}` is one of what I will call "operators" on selbri; they are cmavo which

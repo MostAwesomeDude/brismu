@@ -37,6 +37,14 @@ words to say that some sumti are in a selbri, by which I mean that the
 referent objects of each sumti, taken as a tuple, belong to the relation
 referred to by the selbri.
 
+## Inventory issues
+
+It would be nice if there were no synonyms in Lojban. Sometimes, there is a
+one-directional quasi-synonym, like {bruna} => {tunba}, but we'll restrict
+ourselves to only considering full synonyms.
+
+We'll take it as a meta-axiom: No gismu are synonyms.
+
 ## Size issues
 
 [This paper by Shulman](https://arxiv.org/abs/0810.1279) was essential in

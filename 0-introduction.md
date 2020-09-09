@@ -1,5 +1,14 @@
 # 0: Introduction
 
+> A category is a deductive system. ~ Lambek, via [Encyclopedia of
+> Philosophy](https://plato.stanford.edu/entries/category-theory/)
+
+"Any deductive system T with objects formulae and morphisms proofs," says the
+[Encyclopedia of
+Philosophy](https://plato.stanford.edu/entries/category-theory/), forms a
+category. I aim to present a deductive system for Lojban, with a strong focus
+on category-theoretic framing.
+
 This pamphlet is addressed at folks who know Lojban. They've read not just a
 tutorial like [la
 karda](http://ldlework.com/projects/cards/la-karda/index.html), the [Crash
@@ -63,20 +72,6 @@ the best-understood loglang.
 I try to integrate BPFK's recommendations into my logical rules. Indeed, many
 details have been hammered out by talking with BPFK members. But BPFK hadn't
 published anything as precise as this.
-
-### Why do you use alien language?
-
-Mathematical concepts sometimes contain a lot of functionality inside a very
-small package. The phrase "the natural numbers" picks out one particular
-object with an uncountable number of properties.
-
-That said, I try to use standard mathematical language, but I know that
-advanced mathematics is not common, and try to introduce concepts before I use
-them.
-
-### Isn't this kind of pathetic? It's sad, really.
-
-Somebody's gotta do it, or else it's not really a logical language, is it?
 
 ### Can't I just learn logic by learning Lojban?
 
