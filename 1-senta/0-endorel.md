@@ -12,12 +12,27 @@ elements.
 A reflexive relation contains at least, for every element x in the underlying
 set, `x R x`.
 
+I don't know of any gismu which are reflexive but not equivalence relations.
+Still, were there any, they'd get the following formal rule.
+
+    da de zo'u:
+
+    da broda de
+    ----------- (broda is reflexive)
+     da du de
+
+For any gismu which is reflexive, just substitute into the above rule.
+
 ## Irreflexivity
 
 An irreflexive relation omits any pair which a reflexive relation would be
 required to have. For every element x in the underlying set, `x ~R x`. Since
 we only care about endorelations, we won't mention relations like ``{mlatu}``
 which would otherwise trivially be irreflexive.
+
+    da zo'u:
+
+    da na broda da (broda is irreflexive)
 
 Examples of irreflexive relations:
 
@@ -30,6 +45,12 @@ A transitive relation turns chains of related elements into transitive
 closures, which are subsets of the underlying set characterized by the heads
 of the longest chains. For any three elements x, y, and z,
 if `x R y` and `y R z` then also `x R z`.
+
+    da de di zo'u:
+
+    da broda de .ije de broda di
+    ---------------------------- (broda is transitive)
+            da broda di
 
 Examples of transitive relations:
 
@@ -48,17 +69,18 @@ An example of a not-quite-transitive relation is ``{dzena}``, because
 failure, indicating a need for composition in order to build the implied
 transitive structure. Or perhaps just ``{dzena fi zi'o}``, not sure.
 
-## Intransitivity
-
-An intransitive relation forbids transitive chains;
-whenever `x R y` and `y R z`, then also `x ~R z`.
-
-Intransitive relations are usually irreflexive.
-
 ## Symmetric
 
 A symmetric relation freely interchanges the elements in its pairs; whenever
 it is the case that `x R y`, it is also the case that `y R x`.
+
+    da de zo'u:
+
+    da broda de
+    =========== (broda is symmetric)
+    de broda da
+
+The rule for symmetric relations is also symmetric, which I find pleasant.
 
 Note that symmetric relations are like involutions, in that when composed with
 themselves they yield the identity relation ``{du}``. However, they need not
@@ -84,6 +106,12 @@ Examples of symmetric relations:
 An antisymmetric relation is like a symmetric relation, but degenerates
 whenver elements overlap. Specifically, if `x R y` and also `y R x`, then in
 fact `x = y`, `x R x`, and `y R y`.
+
+    da de zo'u:
+
+    da broda de .ije de broda da
+    ---------------------------- (broda is antisymmetric)
+              da du de
 
 Antisymmetric relations need not be reflexive, but in that case their graphs
 will not have cycles.
