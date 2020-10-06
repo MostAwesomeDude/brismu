@@ -511,39 +511,12 @@ Since there is only one subset with the same cardinality as the superset,
 there's only one way to bind this value. So, in effect, `{lo'i}` with a
 quantifier allows us to truncate and collect all at once.
 
-## Building Sets: {kampu}
+## Sets as Extensions: {kampu}
 
-We now have enough of a basis for the universal set builder, `{kampu}`. This
-selbri is very powerful, because for any kampu2, kampu1 will range over *all*
-properties. But one of the phrasings of Gödel's Incompleteness is that an
-infinite kampu2, like the set of natural numbers, has at least as many
-properties as the set of real numbers, which is not enumerable. Practically,
-this means that running `{kampu}` backwards might not ever terminate.
-
-Nonetheless, we can still manipulate `{kampu}`. For starters, it is related to
-`{ckaji}`!
-
-    pa ka ce'u broda kei kampu lo'i brode
-    ===================================== (kampu-ckaji)
-    lo'i broda ku ckaji pa ka ce'u brode
-
-This sort of lovely symmetry is called an **adjunction** in category theory,
-and they tend to be important whenever they appear naturally. On top, for each
-of `{lo'i brode}`, we have in common that they all fit `{broda}`; on bottom;
-all of `{lo'i broda}` are characterized by fit to `{brode}`.
-
-We also can give an axiom for `{kampu}` in terms of `{cmima}`, via `{lo'i}`.
+`{kampu}` relates `{ka}` properties to their corresponding sets. We can give
+an axiom for `{kampu}` in terms of `{cmima}`, via `{lo'i}`.
 
     pa ka ce'u broda kei kampu lo'i broda (kampu-def)
-
-Let's continue on to get a classic tautology of informal Lojban and possibly
-my favorite theorem:
-
-    pa ka ce'u broda ku kampu lo'i broda (kampu-def)
-    ==================================== (kampu-ckaji)
-    lo'i broda ku ckaji pa ka ce'u broda
-    ==================================== (ckaji-intel)
-            lo'i broda ku broda
 
 ## Quantifiers III
 
