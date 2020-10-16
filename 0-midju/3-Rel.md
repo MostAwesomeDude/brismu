@@ -211,7 +211,7 @@ existential quantifier.
 
     ro da poi ke'a broda fa'u brode zo'u:
 
-    de di zo'u da remei de fa'u di .ije de nomoi da .ije di pamoi da (remei) (bicat-pair)
+    su'o de su'o di zo'u da remei de fa'u di .ije de nomoi da .ije di pamoi da (remei) (bicat-pair)
 
 This is the first time we've used such existential quantifiers. Unlike the
 top-level prenex, each existential quantification is scoped and can nest, with
@@ -252,11 +252,12 @@ bridi allows for an inclusive OR behavior, and so we'll use a different word.
 
     ro da poi ke'a broda jonai brode zo'u:
 
-    da zulrdijro de .ija da pritrdijro de (ija-intro) (bicat-case)
+    su'o de zo'u da zulrdijro de .ija su'o de zo'u da pritrdijro de (ija-intro) (bicat-case)
 
 The existential quantifiers are not wrong; they are closely scoped to each
 component bridi. `{de}` ranges over two different types here, one for each
-side of the disjoint union.
+side of the disjoint union. We will later have more formal handling for these
+sorts of quantifiers.
 
 This next rule is part of proofs by contradiction. Since a disjoint union
 can't be in two states at once, if we have existential witnesses which see it
@@ -330,12 +331,6 @@ And then another two-dimensional rule for removing disjunction:
     bu'i  |
 
 ## Existential Quantifiers: {su'o}
-
-I'm only mentioning `{su'o}`. If community convention emerges, then `{su'o
-da}` might be the correct way to instantiate existential quantifiers, rather
-than `{da}`. However, right now, it's not mandatory to add `{su'o}` in order
-to be correct and so I am just leaving a note and doing it here in this
-section.
 
 Once again, we are going to forge a two-dimensional rule. This one is
 reversible. On the left, we have a context which holds for all possible

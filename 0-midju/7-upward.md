@@ -1,6 +1,7 @@
 # 7: Upward
 
-Let's start tackling arbitrary easy gismu.
+Let's start tackling arbitrary easy gismu. Some/all of this can be merged with
+the new sections in the next chapter.
 
 # Equivalence relations: {mintu}
 
@@ -13,6 +14,8 @@ We can generalize `{du}` to arbitrary equivalence relations with `{mintu}`.
     da mintu de pa ka ce'u du ce'u
 
 `{mintu}` gets a special rule to enforce equivalence on mintu3.
+
+    ro da ro de zo'u:
 
     da mintu de pa ka ce'u broda ce'u
     ================================= (mintu-refl)

@@ -265,9 +265,9 @@ traversals, are done with `{ckini}`.
 
     ro da poi cmima ke'a ku'o ro de poi bridi ke'a zo'u:
 
-              zi'o fancu le pamei da de
-    --------------------------------------------- (cmima-elt)
-    di zo'u di cmima da .ije tarci.bu di ckini de
+                zi'o fancu le pamei da de
+    -------------------------------------------------- (cmima-elt)
+    su'o di zo'u di cmima da .ije tarci.bu di ckini de
 
 The quantification is not great here. `{di}` ranges over the set of `{da}`,
 which is effectively a dependent type. This doesn't surprise me greatly, since
@@ -297,7 +297,7 @@ of them as elements. My version includes the steci1 which builds that set.
 
     ro da poi cmima ke'a ku'o ro de poi cmima ke'a zo'u:
 
-    di zo'u da cmima di .ije de cmima di (cmima-pair)
+    su'o di zo'u da cmima di .ije de cmima di (cmima-pair)
 
 Finally, the Axiom of Union: We may take the union of a set's elements, and
 it will again be a set. I'm not sure if I like the awkward phrasing I've used
@@ -305,7 +305,7 @@ here; it might be better put with more `{cmima}` and no `{steci}`.
 
     ro da poi cmima ke'a zo'u:
 
-    de zo'u pa ka ce'u cmima da kei steci de zi'o (steci-union)
+    su'o de zo'u pa ka ce'u cmima da kei steci de zi'o (steci-union)
 
 ## Inline sets: {ce}
 
@@ -345,9 +345,9 @@ Without further ado, the moment is here.
 
     zo'u:
 
-    da poi ke'a broda zo'u brode
-    ============================ (lo-intel)
-         lo broda ku brode
+    su'o da poi ke'a broda zo'u da brode
+    ==================================== (lo-intel)
+             lo broda ku brode
 
 Note that `{lo}` folds a hidden bound value within itself, like with `{zi'o}`.
 In addition, the prenex was consumed. When we use `{lo}`, we no longer have a
@@ -356,20 +356,18 @@ variable `{da}` bound in scope.
 We can also do a `{be}` expansion. `{be}` creates a side condition which must
 be moved into the main formula.
 
-    zo'u:
-
-    da poi ke'a broda ku'o de poi broda ke'a ku'o zo'u da brode .ije da broda de
-    ============================================================================ (be-intel)
-                   de poi broda ke'a zo'u lo broda be de ku brode
+    su'o da poi ke'a broda ku'o su'o de poi broda ke'a ku'o zo'u da brode .ije da broda de
+    ====================================================================================== (be-intel)
+                     su'o de poi broda ke'a zo'u lo broda be de ku brode
 
 We can use the two-dimensional existential quantifier rule here, though, and
 obtain a prenexed form which is more ergonomic:
 
     ro de poi broda ke'a zo'u:
 
-    da poi ke'a broda zo'u da brode .ije da broda de
-    ================================================ (be-intel)
-                 lo broda be de ku brode
+    su'o da poi ke'a broda zo'u da brode .ije da broda de
+    ===================================================== (be-intel)
+                   lo broda be de ku brode
 
 ## Natural Numbers Object: {kacna'u}, {kacli'e}, {sumji}, {pilji}, {li}, {no}, {pa}, ...
 
@@ -531,9 +529,9 @@ What's typical isn't guaranteed, though, so there's no rule that will add a
 quantifier to `{da}`. We can forget quantifiers, though, and that's a valid
 one-way weakening.
 
-    PA da broda de
-    -------------- (pa-weak)
-     da broda de
+     PA da broda de
+    ---------------- (pa-weak)
+    su'o da broda de
 
 Placing a natural number as an outer quantifier onto `{lo}` selects subsets of
 the given cardinality from the entire set of results. This interpretation is
@@ -615,6 +613,8 @@ classical logic, it's an inclusive Boolean OR. We need to preserve all of the
 related data, though, and for the OR operation, it's whether only one of the
 branches is taken, or both are taken. Those cases are themselves disjoint, and
 so we have an equivalence:
+
+    ro da ro de zo'u:
 
     da broda jonai brode jonai ke broda je brode de
     =============================================== (ja-intel)

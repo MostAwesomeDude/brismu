@@ -15,7 +15,7 @@ set, `x R x`.
 I don't know of any gismu which are reflexive but not equivalence relations.
 Still, were there any, they'd get the following formal rule.
 
-    da de zo'u:
+    ro da ro de zo'u:
 
     da broda de
     ----------- (broda is reflexive)
@@ -30,7 +30,7 @@ required to have. For every element x in the underlying set, `x ~R x`. Since
 we only care about endorelations, we won't mention relations like ``{mlatu}``
 which would otherwise trivially be irreflexive.
 
-    da zo'u:
+    ro da zo'u:
 
     da na broda da (broda is irreflexive)
 
@@ -46,7 +46,7 @@ closures, which are subsets of the underlying set characterized by the heads
 of the longest chains. For any three elements x, y, and z,
 if `x R y` and `y R z` then also `x R z`.
 
-    da de di zo'u:
+    ro da ro de ro di zo'u:
 
     da broda de .ije de broda di
     ---------------------------- (broda is transitive)
@@ -74,7 +74,7 @@ transitive structure. Or perhaps just ``{dzena fi zi'o}``, not sure.
 A symmetric relation freely interchanges the elements in its pairs; whenever
 it is the case that `x R y`, it is also the case that `y R x`.
 
-    da de zo'u:
+    ro da ro de zo'u:
 
     da broda de
     =========== (broda is symmetric)
@@ -107,7 +107,7 @@ An antisymmetric relation is like a symmetric relation, but degenerates
 whenver elements overlap. Specifically, if `x R y` and also `y R x`, then in
 fact `x = y`, `x R x`, and `y R y`.
 
-    da de zo'u:
+    ro da ro de zo'u:
 
     da broda de .ije de broda da
     ---------------------------- (broda is antisymmetric)
