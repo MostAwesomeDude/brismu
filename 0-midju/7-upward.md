@@ -81,7 +81,7 @@ flexible usage.
 
 Additionally, `{lu'i}` and `{lu'a}` can be defined as `{lo'i}`-like expansions
 of `{sinxa}` which include a set quantification. These definitions are only
-hinted at in CLL, and were explored by xorxes.
+hinted at in CLL, and were explored by la xorxes.
 
     ro da zo'u:
 

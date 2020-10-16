@@ -228,11 +228,15 @@ proof, which says that composition with the identity relation has no effect.
 
     ro da ro de ro di zo'u:
 
-     da broda de gi'e du di
-    ========================= (gi'e-intel)
-    da broda de .ije de du di
-    ========================= (du-intel)
+     de se broda da gi'e du di
+    ============================ (gi'e-intel)
+    de se broda da .ije de du di
+    ============================ (se-intel under .ije)
+     da broda de .ije de du di
+     =========================   (du-intel)
            da broda di
+          ==============         (se-intel)
+          di se broda da
 
 Along with the other rules introduced, we now have a dagger category on
 selbri, with `{du}` as our identity selbri, `{gi'e}` for composition, and

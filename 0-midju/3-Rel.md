@@ -6,7 +6,7 @@ up elsewhere in logic. We'll look at products and coproducts, as well as
 internal homs. We will be guided by the properties of [bicategories of
 relations](https://arxiv.org/abs/1706.00526) and regular and coherent logic.
 In fact, I'm going to introduce some basic connectives, and then introduce the
-inference rules from Appendix B.
+inference rules from Appendix B of this paper.
 
 ## Typed restriction: {poi}, {ke'a}
 
@@ -59,7 +59,7 @@ We can erase any column of the relation this way.
     ro da poi ke'a broda zi'o ro de poi zi'o broda ke'a zo'u:
 
       da broda de
-      ===========    (se-intel)
+     ==============  (se-intel)
      de se broda da
     ================ (zi'o-del)
     de se broda zi'o
@@ -190,7 +190,7 @@ To characterize pairs, we will enlist some helpers. `{fa'u}` designates
 ordered pairs of elements, like `{le se remei}`. We can address each member of
 a pair with `{nomoi}` and `{pamoi}` respectively.
 
-    ro da poi ke'a broda ro de poi ke'a brode zo'u:
+    ro da ro de zo'u:
 
     da nomoi da fa'u de (fa'u-nomoi) (bicat-projection)
 
@@ -239,7 +239,7 @@ Which is a useless mouthful on its own, but can be made worse with
 
 This is enough to be able to create binary coproducts.
 
-    ro da poi ke'a broda ro de poi ke'a brode zo'u:
+    ro da ro de zo'u:
 
     da .onai de zulrdijro da (zulrdijro) (bicat-injection)
 
@@ -258,9 +258,9 @@ The existential quantifiers are not wrong; they are closely scoped to each
 component bridi. `{de}` ranges over two different types here, one for each
 side of the disjoint union.
 
-This rule is part of proofs by contradiction. Since a disjoint union can't be
-in two states at once, if we have existential witnesses which see it in both
-states, then we can conclude falsity.
+This next rule is part of proofs by contradiction. Since a disjoint union
+can't be in two states at once, if we have existential witnesses which see it
+in both states, then we can conclude falsity.
 
     ro da poi ke'a broda jonai brode zo'u:
 
