@@ -41,4 +41,5 @@ TENSE, with e.g. {.ibabo} akin to {.ijebo}. So, uh?
 # Story Time
 
 Conversationally, Lojban bridi refer to events. The story-time convention
-connects those events spatiotemporally.
+connects those events spatiotemporally. The utterance ``{broda .i brode}``
+implies something like ``{lo nu broda ku purci lo nu brode}``.
