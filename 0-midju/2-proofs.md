@@ -71,43 +71,45 @@ where algebraic structures tend to show up within their own categorified
 presentations. We will eventually show that rules can be manipulated within
 Lojban itself.
 
-A rule can have multiple assumptions. Here, I'll use `{.ije}` to separate
-multiple assumptions. We could also have an extralogical ampersand, or just
-some extra whitespace, but it will be much simpler for us to fully internalize
-the idea of one bridi which represents the conjunction of multiple bridi from
-the start.
+## Conjunction: {ge}, {gi}
+
+A rule can have multiple assumptions. Here, I'll use ``{ge}`` to conjoin two
+bridi into a single bridi. We could also have an extralogical ampersand, or
+just some extra whitespace, but it will be much simpler for us to fully
+internalize the idea of one bridi which represents the conjunction of multiple
+bridi from the start.
 
     ro da ro de ro di zo'u:
 
-    da du de .ije de du di
-    ====================== (id-trans) (bicat-equality)
+    ge da du de gi de du di
+    ======================= (id-trans) (bicat-equality)
            da du di
 
-Finally, let's have a two-dimensional rule for rewriting underneath `{.ije}`.
-Two-dimensional rules are read left-to-right; whenever we have a rule of the
-form on the left, then we can instead substitute the rule on the right. Where
-we use `{broda}` within rules to relate individual `{da}` variables, in a
-two-dimensional rule we'll use `{bu'a}` to relate entire bridi in context,
-including the selbri and bound variables. Hopefully this will be less
-confusing once you look at the actual rule!
+Lojban has several options for bridi connectives. We will focus on ``{gi}``
+because it allows for nesting prenices, which will become essential to how we
+compose rules.
 
-    ... zo'u:    |  ... zo'u:
-                 |
-    bu'a         |  bu'a .ije bu'i
-    ~~~~ (rule)  |  ~~~~~~~~~~~~~~ (rule under .ije)
-    bu'e         |  bu'e .ije bu'i
+There are many facts about conjunction, but the main one we'll start with is
+that it is commutative:
+
+    ro bu'a ro bu'e zo'u:
+
+    ge bu'a gi bu'e
+    =============== (ge-sym)
+    ge bu'e gi bu'a
+
+And it is legal to rewrite under only one branch of a ``{gi}``. I'll give only
+one rule for now, but the other one should be fine, too.
+
+    ... zo'u:
+
+    bu'a         | ge bu'a gi bu'i
+    ~~~~ (rule)  | ~~~~~~~~~~~~~~~ (rule under ge)
+    bu'e         | ge bu'e gi bu'i
 
 Why did I use a squiggly line ~~~ for the rules? Because the RHS is reversible
 only if the LHS is also reversible. I'm pattern-matching the reversibility of
 the rule! And also the prenex. Lots of stuff is matched here.
-
-Before we leave, a final note: We could define `{du}` entirely in terms of
-elementary second-order components. For example, if we had `{.o}` defined as
-the biconditional connective, then the selbri `{ka ro bu'a zo'u ce'u .o ce'u
-bu'a}`, "the property on x, y that for all R, R(x) iff R(y)" will give us the
-one and only identity relation. Given our current programme of totally
-ignoring the Boolean truth tables between connectives, we might in fact do
-this, or something similar.
 
 ## NFOL N: Identity
 
@@ -186,27 +188,52 @@ Here's another useful theorem.
 
 This theorem states the symmetry of `{du}` using `{se}`.
 
-# Composition: {gi'e}
+# Composition: {.ije}, {gi'e}
+
+Let's introduce some sugar. When there is no need to nest a prenex, we can
+transform forethought connectives into afterthought connectives. In
+particular:
+
+    ro bu'a ro bu'e zo'u:
+
+    ge bu'a gi bu'e
+    =============== (.ije-intel) [CLL 14.5]
+    bu'a .ije bu'e
 
 When a variable shows up in two different bridi, then we might be able to
 combine them. The underlying relations compose cleanly, so most of the
 difficulty is in Lojbanic arrangement. We need to use the concept of
 contravariance, and turn around one of the bridi, in order to apply `{gi'e}`.
 
-    ro da ro de ro di zo'u:
+    ro bu'a ro bu'e ro da ro de ro di zo'u:
 
-    da broda de .ije da brode di
-    ============================ (gi'e-intel)
-     da broda de gi'e brode di
+    da bu'a de .ije da bu'e di
+    ========================== (gi'e-intel)
+     da bu'a de gi'e bu'e di
 
-Our ampersand `{.ije}` happens to commute, so `{gi'e}` commutes as well. We
-need an axiom for the first of these facts:
+Our ampersand `{.ije}` happens to commute:
 
-    ro da ro de zo'u:
+    ro bu'a ro bu'e zo'u:
 
-    da broda .ije de brode
-    ====================== (.ije-sym)
-    de brode .ije da broda
+    bu'a .ije bu'e
+    =============== (.ije-intel)
+    ge bu'a gi bu'e
+    =============== (ge-sym)
+    ge bu'e gi bu'a
+    =============== (.ije-intel)
+    bu'e .ije bu'a  (.ije-sym)
+
+So `{gi'e}` commutes as well:
+
+    ro bu'a ro bu'e ro da ro de ro di zo'u:
+
+     da bu'a de gi'e bu'e di
+    ========================== (gi'e-intel)
+    da bu'a de .ije da bu'e di
+    ========================== (.ije-sym)
+    da bu'e di .ije da bu'a de
+    ========================== (gi'e-intel)
+     da bu'e di gi'e bu'a de   (gi'e-sym)
 
 Let's do a deduction that can't be done with only two dimensions. Recall that
 `{gi'e}` groups to the left.

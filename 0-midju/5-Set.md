@@ -458,13 +458,14 @@ example.
 Imagine the axiom schema which builds the NNO; CLL gives the algorithm for
 counting, and it's largely the same as standard decimal integer counting.
 
-We also can do explicit second-order induction. The quantifiers and internal
-connectives are iffy.
+## NFOL II: NNO Categoricity
+
+We can give the induction principle for natural numbers with SO quantifiers.
 
     ro bu'a zo'u:
 
-    li no bu'a .ije ro da su'o de zo'u da na.a de bu'a .ije da kacli'e de
-    --------------------------------------------------------------------- (kacna'u-ind)
+    ge li no bu'a gi ro da su'o de zo'u da na.a de bu'a .ije da kacli'e de
+    ---------------------------------------------------------------------- (kacna'u-ind)
                       ro da zo'u da kacna'u nagi'a bu'a
 
 ## Quantification I: {no}, {pa}, ...
