@@ -9,3 +9,7 @@ both celebrate and document it.
 Both ``{tenfa}`` and ``{dugri}`` have exactly the same terbri, just in
 different orders. Both relations are the same as Sanderson's Triangle of
 Power; they relate a base, an exponent, and a power.
+
+# Trigonometry
+
+Can ``{sinso}`` be replaced with ``{tanjo}``?

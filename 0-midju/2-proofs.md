@@ -109,6 +109,36 @@ one and only identity relation. Given our current programme of totally
 ignoring the Boolean truth tables between connectives, we might in fact do
 this, or something similar.
 
+## NFOL N: Identity
+
+Some concepts which universally/categorically identify various objects,
+including relations, are
+[nonfirstorderizable](https://en.wikipedia.org/wiki/Nonfirstorderizability),
+or "NFOL". The idea is that the ability of SOL to quantify over all properties
+in the universe grants us the ability to imagine what a global view of some
+object might be like. As a classic and powerful first example, we can now give
+a redefinition of `{du}` in NFOL terms.
+
+    ro da ro de zo'u:
+
+             da du de
+    ========================== (id-def)
+    ro bu'a zo'u da .o de bu'a
+
+This rule is a second-order *definition*; such rules are not possible within
+first-order logic. There are many reasons to justify this sort of explanation
+as a definition, but the primary reason is that they could be entered into
+Lojban dictionaries. For example, we could define ``{du}`` as:
+
+    ro bu'a zo'u x₁ .o x₂ bu'a
+
+And give any tautology, like ``(id-refl)``, as an example:
+
+    ro da zo'u da du da
+
+Once so defined, ``{du}`` is technically not in terms of any particular
+selbri; rather, it is a global property of *all* selbri!
+
 ## Conversion Operators: {se}
 
 `{se}` is one of what I will call "operators" on selbri; they are cmavo which

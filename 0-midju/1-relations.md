@@ -112,6 +112,11 @@ consequence, but for example, the set of all natural numbers is a small thing,
 as is any set of real numbers, or the category FinSet whose arrows are total
 functions on finite sets.
 
+Once we agree to embrace SOL, then we can consider the
+[NFO](https://en.wikipedia.org/wiki/Nonfirstorderizability) concepts, like
+equality, graph connectivity, the Archimedean property, and Geach-Kaplan
+sentences.
+
 ## Negation
 
 Take a set. We may consider all of the things in the universe which *aren't*

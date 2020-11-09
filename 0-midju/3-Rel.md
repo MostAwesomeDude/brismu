@@ -136,6 +136,22 @@ Looks reasonable. What about the symmetry within `{ckini}`? Can we, say, put
     =================================== (ckini-intel)
     de ckini da pa ka ce'u se bu'a ce'u
 
+## NFOL I: Rewriting selbri
+
+We can actually perform generalized rewriting underneath ``{ka}``. We'll give
+a two-dimensional rule for when we're allowed to do this. The key insight is
+that SOL relations must be able to consider any value; therefore, every
+``{ce'u}`` ranges over ``{ro da}``. Accordingly:
+
+    ro da zo'u:      || ... zo'u:
+                     ||
+    da broda         || ... brodi pa ka ce'u broda
+    ~~~~~~~~ (rule)  || ~~~~~~~~~~~~~~~~~~~~~~~~~~ (rule under ka)
+    da brode         || ... brodi pa ka ce'u brode
+
+This rule is reversible! It is also NFO'd, since we need SO universal
+quantification in order to justify it.
+
 ## Truth, Falsity: {cei'i}, {gai'o}
 
 Truth is not very interesting; in any context, we may conclude an empty,
