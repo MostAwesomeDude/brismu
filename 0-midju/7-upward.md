@@ -3,24 +3,6 @@
 Let's start tackling arbitrary easy gismu. Some/all of this can be merged with
 the new sections in the next chapter.
 
-# Equivalence relations: {mintu}
-
-We can generalize `{du}` to arbitrary equivalence relations with `{mintu}`.
-
-    ro da ro de zo'u:
-
-               da du de
-    ============================== (mintu-intel)
-    da mintu de pa ka ce'u du ce'u
-
-`{mintu}` gets a special rule to enforce equivalence on mintu3.
-
-    ro da ro de zo'u:
-
-    da mintu de pa ka ce'u broda ce'u
-    ================================= (mintu-refl)
-    de mintu da pa ka ce'u broda ce'u
-
 # Example elements: {mupli}
 
 `{mupli}` is a straightforward combination of what we've already seen.
@@ -30,6 +12,8 @@ We can generalize `{du}` to arbitrary equivalence relations with `{mintu}`.
     da ckaji de gi'e cmima di
     ========================= (mupli-intel)
          da mupli de di
+
+What's the difference between `{mupli}` and `{fadni}` here?
 
 # Restrictive Apposition: {po'u}
 
