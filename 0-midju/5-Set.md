@@ -192,8 +192,27 @@ f3=m2, and in that direction, has witnessing relation f4=m3."
     ====================================== (mitfancu-intel)
            da mitfancu ko'a ko'e de
 
-And bijections really are isomorphisms. Maybe that's provable with what we've
-got, but I'll just give it as an axiom:
+Injections are, more generally, monomorphisms. We give the universal property
+for monomorphisms in regular logic: if a monomorphism f sends two objects to
+the same value, then the objects are the same as well.
+
+    ro bu'a poi ficyfancu ko'a ko'e ke'a ku'o ro de ro di zo'u:
+
+    de mintu di pa ka ce'u bu'a ce'u
+    -------------------------------- (ficyfancu-mono)
+                de du di
+
+Similarly, surjections are epimorphisms. Epimorphisms capture existential
+quantifiers.
+
+    ro bu'a poi gairfancu ko'a ko'e ke'a ku'o ro da zo'u:
+
+    su'o de zo'u de bu'a da (gairfancu-epi)
+
+And bijections really are isomorphisms; we can turn them around arbitrarily,
+and a little work will show that in each every case where there's an
+isomorphism, we can use our standard dagger. Maybe that's provable with what
+we've got, but I'll just give it as an axiom:
 
      ro da poi mitfancu ko'a ko'e zo'u da mitfancu ko'a ko'e pa ka ce'u bu'a ce'u
     =============================================================================== (mitfancu-iso)
