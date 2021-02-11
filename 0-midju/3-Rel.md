@@ -10,11 +10,11 @@ inference rules from Appendix B of this paper.
 
 ## Typed restriction: {poi}, {ke'a}
 
-We can add any type to any untyped variable in the prenex. This restriction is
-one-way, and cannot be logically reversed.
+If we have the implication that a first-order value must be typed in order to
+be used, then we can transform the implication into a type restriction.
 
-           ro da zo'u bu'a
-    ------------------------------ (poi-intro)
+    ro da zo'u da brode nagi'a bu'a
+    =============================== (poi-intel)
     ro da poi ke'a brode zo'u bu'a
 
 Why `{bu'a}`? Because we can logically weaken any bridi by adding irrelevant
