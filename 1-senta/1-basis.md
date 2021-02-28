@@ -13,3 +13,7 @@ Power; they relate a base, an exponent, and a power.
 # Trigonometry
 
 Can ``{sinso}`` be replaced with ``{tanjo}``?
+
+# Size relations
+
+``{barda}`` and ``{cmalu}`` are inverses.

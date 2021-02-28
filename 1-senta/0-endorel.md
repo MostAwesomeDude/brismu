@@ -58,7 +58,7 @@ Examples of transitive relations:
   between zmadu1 and zmadu2
 * Similarly, ``{mleca}`` for any particular mleca3 and mleca4
 * ``{barda}`` for any particular barda2
-* ``{cmalu}`` for any particular cmalu3
+* ``{cmalu}`` for any particular cmalu2
 * ``{diklo}`` for any particular diklo3
 * ``{nenri}``
 * ``{nibli}`` for any particular nibli3
