@@ -18,7 +18,8 @@
             src = ./.;
 
             buildInputs = with pkgs; [
-              jq graphviz
+              graphviz jq
+              mdbook
             ];
 
             installPhase = ''
@@ -30,6 +31,7 @@
         devShells.default = pkgs.mkShell {
           name = "brismu-env";
           packages = with pkgs; [
+            mdbook
           ];
         };
       }
