@@ -21,3 +21,7 @@
 - [Places](1-senta/3-places.md)
 - [Spacetime](1-senta/4-spacetime.md)
 - [Modals](1-senta/5-modals.md)
+
+# Appendices
+
+- [Posets](appendices/posets.md)

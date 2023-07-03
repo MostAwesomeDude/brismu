@@ -4,3 +4,13 @@ language = "en"
 multilingual = false
 src = "src"
 title = "brismu: a relational interpretation of Lojban"
+
+[preprocessor.graphviz]
+# Required for including DOT into Markdown.
+after = ["links"]
+
+[output.html]
+
+[output.linkcheck]
+# Spuriously fails often.
+# follow-web-links = true

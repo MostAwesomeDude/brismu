@@ -9,30 +9,34 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
+        brismu = pkgs.stdenv.mkDerivation {
+          name = "brismu";
+          version = "0.0.1";
+
+          src = ./.;
+
+          buildInputs = with pkgs; [
+            graphviz jq
+            mdbook mdbook-graphviz mdbook-linkcheck
+          ];
+
+          buildPhase = ''
+            make
+            mdbook build
+          '';
+
+          installPhase = ''
+            mkdir -p $out/share/
+            cp -r book/ $out/share/
+          '';
+        };
       in {
         packages = {
-          default = pkgs.stdenv.mkDerivation {
-            name = "brismu";
-            version = "0.0.1";
-
-            src = ./.;
-
-            buildInputs = with pkgs; [
-              graphviz jq
-              mdbook
-            ];
-
-            installPhase = ''
-              mkdir -p $out/share/
-              cp dependencies.png $out/share/
-            '';
-          };
+          default = brismu;
         };
         devShells.default = pkgs.mkShell {
           name = "brismu-env";
-          packages = with pkgs; [
-            mdbook
-          ];
+          packages = brismu.buildInputs;
         };
       }
     );
