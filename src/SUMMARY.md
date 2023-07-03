@@ -1,5 +1,7 @@
 # Summary
 
+- [Foreword](foreword.md)
+
 # 0: midju
 
 - [Introduction](0-midju/0-introduction.md)

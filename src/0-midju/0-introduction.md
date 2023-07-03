@@ -1,11 +1,8 @@
 # 0: Introduction
 
-> A category is a deductive system. ~ Lambek, via [Encyclopedia of
-> Philosophy](https://plato.stanford.edu/entries/category-theory/)
-
-"Any deductive system T with objects formulae and morphisms proofs," says the
-[Encyclopedia of
-Philosophy](https://plato.stanford.edu/entries/category-theory/), forms a
+According to the [Encyclopedia of
+Philosophy](https://plato.stanford.edu/entries/category-theory/), "any
+deductive system T with objects formulae and morphisms proofs," forms a
 category. I aim to present a deductive system for Lojban, with a strong focus
 on category-theoretic framing.
 

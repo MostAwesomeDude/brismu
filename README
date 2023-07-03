@@ -1,11 +1,1 @@
-These are notes for a basic interpretation of Lojban using category theory.
-
-In this theory, Lojban is syntax for an allegory or bicategory of relations.
-
-I haven't chosen a license but it'll probably be GFDL or WTFPL.
-
-"alien language" -- la gleki
-
-"sad...pathetic, really" -- la cadgu'a
-
-"no one cares about formalism" -- la xaspeljba
+Enable Nix flakes, then $(nix build).
