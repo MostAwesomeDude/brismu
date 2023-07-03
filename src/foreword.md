@@ -7,6 +7,14 @@ This book is born from notes for a basic interpretation of Lojban using
 category theory. In this theory, Lojban is syntax for an allegory or
 bicategory of relations, forming a fictional universe.
 
+## Coverage
+
+Of the 1343 baseline valsi recognized as selbri (1342 gismu, 1 cmavo), 50
+selbri are defined via formal rules.
+
+In addition, 3 experimental selbri are defined, as well as 6 cnino selbri which
+did not previously exist.
+
 ## Praise from Lojbanists
 
 > "alien language" -- la gleki

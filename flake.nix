@@ -1,14 +1,16 @@
 {
-  description = "Generative agent research";
+  description = "Lojban notes";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    zaha.url = "github:MostAwesomeDude/zaha";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
+  outputs = { self, nixpkgs, flake-utils, zaha }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
+        z = zaha.packages.${system}.default;
         brismu = pkgs.stdenv.mkDerivation {
           name = "brismu";
           version = "0.0.1";
@@ -22,6 +24,8 @@
 
           buildPhase = ''
             make
+            ${z}/bin/zaha union ${z}/share/jbobau/danlu/*.png
+            ${z}/bin/zaha dot latest.png > danlu.dot
             mdbook build
           '';
 
