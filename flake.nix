@@ -19,6 +19,7 @@
 
           buildInputs = with pkgs; [
             graphviz jq
+            metamath
             mdbook mdbook-graphviz mdbook-linkcheck
           ];
 
@@ -40,7 +41,7 @@
         };
         devShells.default = pkgs.mkShell {
           name = "brismu-env";
-          packages = brismu.buildInputs;
+          packages = with pkgs; [ rlwrap ] ++ brismu.buildInputs;
         };
       }
     );
