@@ -12,6 +12,7 @@ dembi: seeds of bean, pea, legume
 pezli: leaf
 xrula: flower, blossom, bloom
 narge: nut
+genja: root
 
 tricu: tree
 srasu: grass
@@ -36,6 +37,8 @@ palma: [exp] palm tree, *Palmae*, *Arecaceae*
 guzme: melon, squash
 figre: fig
 badna: banana, plantain
+patlu: potato
+samcu: cassava, taro, manioc, tapioca, yam
 
 bavmi: barley
 cunmi: millet
@@ -56,6 +59,7 @@ stagi: edible plant, vegetable
 korki: cork, harvested tree bark
 gurni: grain, cereal
 mudri: wood, lumber
+jalna: starch
 
 ### Issues
 
