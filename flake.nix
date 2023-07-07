@@ -25,8 +25,12 @@
 
           buildPhase = ''
             make
+
             ${z}/bin/zaha union ${z}/share/jbobau/danlu/*.png
             ${z}/bin/zaha dot latest.png > danlu.dot
+
+            ${z}/bin/zaha dot ${z}/share/jbobau/danlu/mlatu.png > mlatu.dot
+
             mdbook build
           '';
 
