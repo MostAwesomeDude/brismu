@@ -9,7 +9,7 @@ bicategory of relations, forming a fictional universe.
 
 ## Coverage
 
-Of the 1343 baseline valsi recognized as selbri (1342 gismu, 1 cmavo), 153
+Of the 1343 baseline valsi recognized as selbri (1342 gismu, 1 cmavo), 161
 selbri are partially defined via formal rules.
 
 In addition, 8 experimental selbri are defined, as well as 6 cnino selbri which

@@ -40,6 +40,15 @@ badna: banana, plantain
 patlu: potato
 samcu: cassava, taro, manioc, tapioca, yam
 
+fusra: rot, decay, fermentation
+birje: beer, ale
+jikru: liquor, spirits
+vanju: wine
+xalka: alcohol
+cakla: chocolate, cocoa
+ckafi: brewed coffee
+tcati: brewed tea
+
 bavmi: barley
 cunmi: millet
 mavji: oats
