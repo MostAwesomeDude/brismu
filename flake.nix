@@ -30,6 +30,8 @@
             ${z}/bin/zaha dot latest.png > danlu.dot
 
             ${z}/bin/zaha dot ${z}/share/jbobau/danlu/mlatu.png > mlatu.dot
+            ${z}/bin/zaha dot ${z}/share/jbobau/nu/nu.png > nu.dot
+            ${z}/bin/zaha dot ${z}/share/jbobau/nu/suhu.png > suhu.dot
 
             mdbook build
           '';

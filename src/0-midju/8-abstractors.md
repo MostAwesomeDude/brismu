@@ -84,6 +84,10 @@ as-true-as relation send `{ni}` to *different* `{ka}`.
 
 ## Events: {nu}, {mu'e}, {pu'u}, {za'i}, {zu'o}
 
+```dot process
+{{#include ../../nu.dot}}
+```
+
 Now for tougher food. What is an event? For starters, an event *happens*.
 We'll think of this again in terms of annotations. Let's imagine some sort of
 spacetime coordinates around which the event is happening. Formally, the event
@@ -160,7 +164,9 @@ whether `{ce'u}` are bound, although many folks believe so.
 
 ## Summary of Abstractors
 
-Here's what I know.
+```dot process
+{{#include ../../suhu.dot}}
+```
 
 Abstractor | over selbri or bridi? | Produces/annotated in x1
 -----------|-----------------------|--------------------------------------------------------------
