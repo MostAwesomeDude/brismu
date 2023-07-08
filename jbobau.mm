@@ -4,26 +4,39 @@ $( bridi smuni jbobau $)
 
 $( $t
 htmltitle "brismu bridi";
-htmldef "bridi" as "bridi";
-htmldef "selbri" as "selbri";
-htmldef "sumti" as "sumti";
-htmldef "da" as "da";
-htmldef "de" as "de";
-htmldef "du" as "du";
-htmldef "PA" as "PA";
-htmldef "ro" as "ro";
-htmldef "zo'u" as "zo'u";
-htmldef "prenex" as "prenex";
-htmldef "bu'a" as "bu'a";
-htmldef "SE" as "SE";
-htmldef "se" as "se";
+htmldef "bridi" as "<small>bridi</small> ";
+htmldef "selbri" as "<small>selbri</small> ";
+htmldef "sumti" as "<small>sumti</small> ";
+htmldef "vanbi" as " ";
+htmldef "vabybri" as "⊢ ";
+htmldef "da" as "φ<small>da</small> ";
+htmldef "de" as "χ<small>de</small> ";
+htmldef "di" as "ψ<small>di</small> ";
+htmldef "du" as "=<small>du</small> ";
+htmldef "PA" as "<em>PA</em> ";
+htmldef "ro" as "∀<small>ro</small> ";
+htmldef "zo'u" as ": <small>zo'u</small> ";
+htmldef "bu'a" as "bu'a ";
+htmldef "SE" as "<em>SE</em> ";
+htmldef "se" as "se ";
 $)
 
-$c bridi selbri sumti $.
+$( Various sorts of fragments:
+* vanbi: elements of a prenex
+* selbri: primitive relations
+* sumti: expressions of variables
+* bridi: selbri fully applied to sumti
+* vabybri: vanbi zo'u bridi
+$)
+$c vanbi selbri sumti bridi vabybri $.
 
-$v da de $.
+$( The marker terminating the prenex. $)
+$c zo'u $.
+
+$v da de di $.
 wda $f sumti da $.
 wde $f sumti de $.
+wdi $f sumti di $.
 
 $c du $.
 sbd $a selbri du $.
@@ -31,14 +44,13 @@ sbd $a selbri du $.
 $c PA ro $.
 qda $a PA ro $.
 
-$c prenex zo'u $.
-pz $a prenex zo'u $.
+vrd $a vanbi ro da $.
 
-ax-id-refl $a bridi ro da zo'u da du da $.
+ax-id-refl $a vabybri ro da zo'u da du da $.
 
 ${
-    ax-du-sym.0 $e bridi ro da ro de zo'u da du de $.
-    ax-du-sym $a bridi ro da ro de zo'u de du da $.
+    ax-du-sym.0 $e bridi da du de $.
+    ax-du-sym $a bridi de du da $.
 $}
 
 $v bu'a $.
@@ -58,14 +70,14 @@ ${
 $}
 
 ${
-    ax-se-intro.0 $e bridi ro da ro de zo'u da bu'a de $.
-    ax-se-intro $a bridi ro da ro de zo'u de se bu'a da $.
+    ax-se-intro.0 $e bridi da bu'a de $.
+    ax-se-intro $a bridi de se bu'a da $.
 $}
 
 ${
-    ax-se-elim.0 $e bridi ro da ro de zo'u da se bu'a de $.
-    ax-se-elim $a bridi ro da ro de zo'u de bu'a da $.
+    ax-se-elim.0 $e bridi da se bu'a de $.
+    ax-se-elim $a bridi de bu'a da $.
 $}
 
-du-se $p bridi ro da zo'u da se du da $=
+du-se $p vabybri ro da zo'u da se du da $=
   ? $.
