@@ -34,11 +34,18 @@
             ${z}/bin/zaha dot ${z}/share/jbobau/nu/suhu.png > suhu.dot
 
             mdbook build
+
+            mkdir mm/
+            cp jbobau.mm mm/
+            pushd mm/
+            echo -e 'show statement * /html\nq' | metamath jbobau.mm
+            echo -e 'write theorem_list\nq' | metamath jbobau.mm
+            popd
           '';
 
           installPhase = ''
             mkdir -p $out/share/
-            cp -r book/ $out/share/
+            cp -r book/ mm/ $out/share/
           '';
         };
       in {
