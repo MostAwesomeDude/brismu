@@ -8,19 +8,19 @@ htmldef "bridi" as "<em>bridi</em> ";
 htmldef "selbri" as "<em>selbri</em> ";
 htmldef "sumti" as "<em>sumti</em> ";
 htmldef "vanbi" as " ";
-htmldef "vabybri" as "⊢ ";
+htmldef "vabybri" as "|- ";
 htmldef "vabysu'i" as "...";
 htmldef "da" as "x <small>da</small> ";
 htmldef "de" as "y <small>de</small> ";
 htmldef "di" as "z <small>di</small> ";
 htmldef "du" as "=<small>du</small> ";
 htmldef "PA" as "<em>PA</em> ";
-htmldef "ro" as "∀<small>ro</small> ";
+htmldef "ro" as "forall <small>ro</small> ";
 htmldef "zo'u" as ": <small>zo'u</small> ";
 htmldef "bu'a" as "R <small>bu'a</small> ";
 htmldef "bu'e" as "S <small>bu'e</small> ";
 htmldef "bu'i" as "T <small>bu'i</small> ";
-htmldef "SE" as "<em>SE</em> ";
+htmldef ".inaja" as "-> <small>.inaja</small> ";
 htmldef "se" as "se ";
 $)
 
@@ -82,13 +82,15 @@ $}
 
 ${
     ax-se-intro.0 $e vabybri vabysu'i zo'u da bu'a de $.
-    $( From example 11.1 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
+    $( From example 11.1-2 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
        are equivalent. $)
     ax-se-intro $a vabybri vabysu'i zo'u de se bu'a da $.
 $}
 
 ${
     ax-se-elim.0 $e zo'u da se bu'a de $.
+    $( From example 11.1-2 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
+       are equivalent. $)
     ax-se-elim $a zo'u de bu'a da $.
 $}
 
