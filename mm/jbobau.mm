@@ -82,6 +82,8 @@ $}
 
 ${
     ax-se-intro.0 $e vabybri vabysu'i zo'u da bu'a de $.
+    $( From example 11.1 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
+       are equivalent. $)
     ax-se-intro $a vabybri vabysu'i zo'u de se bu'a da $.
 $}
 

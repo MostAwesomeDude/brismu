@@ -35,11 +35,10 @@
 
             mdbook build
 
-            mkdir mm/
-            cp jbobau.mm mm/
             pushd mm/
             echo -e 'show statement * /html\nq' | metamath jbobau.mm
             echo -e 'write theorem_list\nq' | metamath jbobau.mm
+            echo -e 'write bibliography mmbiblio.html\nq' | metamath jbobau.mm
             sed -i -e 's,iso-8859-1,utf-8,' *.html
             popd
           '';
