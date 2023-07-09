@@ -7,100 +7,87 @@ htmltitle "brismu bridi";
 htmldef "bridi" as "<em>bridi</em> ";
 htmldef "selbri" as "<em>selbri</em> ";
 htmldef "sumti" as "<em>sumti</em> ";
-htmldef "vanbi" as " ";
-htmldef "vabybri" as "|- ";
-htmldef "vabysu'i" as "...";
+htmldef "ko'a" as "k1 <small>ko'a</small> ";
+htmldef "ko'e" as "k2 <small>ko'e</small> ";
+htmldef "broda" as "b1 <small>broda</small> ";
+htmldef "brode" as "b2 <small>brode</small> ";
 htmldef "da" as "x <small>da</small> ";
 htmldef "de" as "y <small>de</small> ";
 htmldef "di" as "z <small>di</small> ";
 htmldef "du" as "=<small>du</small> ";
 htmldef "PA" as "<em>PA</em> ";
-htmldef "ro" as "forall <small>ro</small> ";
-htmldef "zo'u" as ": <small>zo'u</small> ";
 htmldef "bu'a" as "R <small>bu'a</small> ";
 htmldef "bu'e" as "S <small>bu'e</small> ";
 htmldef "bu'i" as "T <small>bu'i</small> ";
-htmldef ".inaja" as "-> <small>.inaja</small> ";
 htmldef "se" as "se ";
 $)
 
 $( Various sorts of fragments:
-* vanbi: elements of a prenex
 * selbri: primitive relations
 * sumti: expressions of variables
 * bridi: selbri fully applied to sumti
-* vabybri: vanbi zo'u bridi
 $)
-$c vanbi selbri sumti bridi vabybri $.
+$c selbri sumti bridi $.
 
-$( The marker terminating the prenex. $)
-$c zo'u $.
+$v ko'a ko'e $.
+wk1 $f sumti ko'a $.
+wk2 $f sumti ko'e $.
+
+$v broda brode $.
+sbb1 $f selbri broda $.
+sbb2 $f selbri brode $.
+
+$c du $.
+$( Equality as a binary relation. $)
+sbd $a selbri du $.
+
+ax-id-refl $a bridi ko'a du ko'a $.
+
+${
+    ax-du-sym.0 $e bridi ko'a du ko'e $.
+    ax-du-sym $a bridi ko'e du ko'a $.
+$}
+
+$c se $.
+
+${
+    sbs.0 $e selbri broda $.
+    sbs $a selbri se broda $.
+$}
+
+${
+    ax-se-intro.0 $e bridi ko'a broda ko'e $.
+    $( From example 11.1-2 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
+       are equivalent. $)
+    ax-se-intro $a bridi ko'e se broda ko'a $.
+$}
+
+${
+    ax-se-invo.0 $e bridi ko'a se se broda ko'e $.
+    ax-se-invo $a bridi ko'a broda ko'e $.
+$}
+
+${
+    se-elim.0 $e bridi ko'a se broda ko'e $.
+    $( From example 11.1-2 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
+       are equivalent.
+       (Contributed by la korvo, 9-Jul-2023.) $)
+    se-elim $p bridi ko'e broda ko'a $=
+      wk2 wk1 sbb1 wk1 wk2 sbb1 sbb1 sbs se-elim.0 ax-se-intro ax-se-invo $.
+$}
+
+$( {du} is invariant under {se}. (Contributed by la korvo, 9-Jul-2023.) $)
+du-se $p bridi ko'a se du ko'a $=
+  wk1 wk1 sbd wk1 ax-id-refl ax-se-intro $.
 
 $v da de di $.
-$( $d da de di $. $)
+$d da de di $.
 wda $f sumti da $.
 wde $f sumti de $.
 wdi $f sumti di $.
-
-$( Ad-hoc variable for prenices. $)
-$v vabysu'i $.
-wv $f sumti vabysu'i $.
-
-$c du $.
-sbd $a selbri du $.
-
-$c PA ro $.
-qda $a PA ro $.
-qrda $a sumti ro da $.
-
-ve $a vanbi zo'u $.
-${
-    vrd.0 $e vanbi $.
-    vrd.1 $e sumti da $.
-    vrd $a vanbi ro da $.
-$}
-
-ax-id-refl $a vabybri ro da zo'u da du da $.
-
-${
-    ax-du-sym.0 $e bridi da du de $.
-    ax-du-sym $a bridi de du da $.
-$}
 
 $v bu'a bu'e bu'i $.
 $d bu'a bu'e bu'i $.
 sbba $f selbri bu'a $.
 sbbe $f selbri bu'e $.
 sbbi $f selbri bu'i $.
-
-$c se $.
-
-${
-    sbs.0 $e selbri bu'a $.
-    sbs $a selbri se bu'a $.
-$}
-
-${
-    ax-se-intro.0 $e vabybri vabysu'i zo'u da bu'a de $.
-    $( From example 11.1-2 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
-       are equivalent. $)
-    ax-se-intro $a vabybri vabysu'i zo'u de se bu'a da $.
-$}
-
-${
-    ax-se-elim.0 $e zo'u da se bu'a de $.
-    $( From example 11.1-2 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
-       are equivalent. $)
-    ax-se-elim $a zo'u de bu'a da $.
-$}
-
-du-se $p vabybri ro da zo'u da se du da $=
-  wda wda wda qrda sbd wda ax-id-refl ax-se-intro $.
-
-$c .inaja $.
-
-${
-    ax-mp.0 $e bridi bu'a $.
-    ax-mp.1 $e bridi bu'a .inaja bu'e $.
-    ax-mp $a bridi bu'e $.
-$}
