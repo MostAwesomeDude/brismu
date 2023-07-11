@@ -5,7 +5,7 @@ that the reader has already consumed an introductory tutorial and a grammar
 reference, I will attempt to focus on the formal side of our budding
 correspondence between Lojban and categorical logic.
 
-## Identity: {du}, {.ije}
+## Identity: {du}
 
 The first selbri we'll define is `{du}`. With `{du}`, we can relate any object
 to itself. How do we talk about this property formally? We'll use [natural

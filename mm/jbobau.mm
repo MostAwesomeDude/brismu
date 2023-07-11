@@ -21,6 +21,9 @@ htmldef "bu'a" as "R <small>bu'a</small> ";
 htmldef "bu'e" as "S <small>bu'e</small> ";
 htmldef "bu'i" as "T <small>bu'i</small> ";
 htmldef "se" as "se ";
+htmldef "ganai" as "if <small>ganai</small> ";
+htmldef "go" as "iff <small>go</small> ";
+htmldef "gi" as "then <small>gi</small> ";
 $)
 
 $(
@@ -44,6 +47,82 @@ wk3 $f sumti ko'i $.
 $v broda brode $.
 sbb1 $f selbri broda $.
 sbb2 $f selbri brode $.
+
+$(
+#*#*#
+Biconditionals I: {go}
+#*#*#
+$)
+
+$c go gi $.
+
+${
+    bgo.0 $e bridi broda $.
+    bgo.1 $e bridi brode $.
+    $( If {broda} and {brode} are bridi, then so is {go broda gi brode}. $)
+    bgo $a bridi go broda gi brode $.
+$}
+
+${
+    ax-go-sym.0 $e bridi go broda gi brode $.
+    $( {go} is symmetric. $)
+    ax-go-sym $a bridi go brode gi broda $.
+$}
+
+$(
+#*#*#
+Implication I: {ganai}
+#*#*#
+$)
+
+$c ganai $.
+
+${
+    bgan.0 $e bridi broda $.
+    bgan.1 $e bridi brode $.
+    $( If {broda} and {brode} are bridi, then so is {ganai broda gi brode}. $)
+    bgan $a bridi ganai broda gi brode $.
+$}
+
+${
+    ax-bi-syl.0 $e bridi go broda gi brode $.
+    $( Biconditional implication may be weakened to unidirectional implication. $)
+    ax-bi-syl $a bridi ganai broda gi brode $.
+$}
+
+${
+    ax-mp.0 $e bridi broda $.
+    ax-mp.1 $e bridi ganai broda gi brode $.
+    $( Because {ganai} encodes a syllogism, it may be eliminated by modus ponens. $)
+    ax-mp $a bridi brode $.
+$}
+
+${
+    bi-rev-syl.0 $e bridi go broda gi brode $.
+    $( The right-hand side of a {go} may also be weakened to a {ganai}.
+       (Contributed by la korvo, 10-Jul-2023.) $)
+    bi-rev-syl $p bridi ganai brode gi broda $=
+      sbb2 sbb1 sbb1 sbb2 bi-rev-syl.0 ax-go-sym ax-bi-syl $.
+$}
+
+${
+    mp-go-lhs.0 $e bridi broda $.
+    mp-go-lhs.1 $e bridi go broda gi brode $.
+    $( Implication with the left-hand side of a biconditional.
+       (Contributed by la korvo, 10-Jul-2023.) $)
+    mp-go-lhs $p bridi brode $=
+      sbb1 sbb2 mp-go-lhs.0 sbb1 sbb2 mp-go-lhs.1 ax-bi-syl ax-mp $.
+$}
+
+${
+    mp-go-rhs.0 $e bridi brode $.
+    mp-go-rhs.1 $e bridi go broda gi brode $.
+    $( Implication with the right-hand side of a biconditional.
+       (Contributed by la korvo, 10-Jul-2023.) $)
+    mp-go-rhs $p bridi broda $=
+      sbb2 sbb1 mp-go-rhs.0 sbb2 sbb1 sbb1 sbb2 mp-go-rhs.1 ax-go-sym ax-bi-syl
+      ax-mp $.
+$}
 
 $(
 #*#*#
@@ -83,12 +162,12 @@ $}
 
 $(
 #*#*#
-Equality: {du}
+Identity: {du}
 #*#*#
 $)
 
 $c du $.
-$( Equality as a binary relation. $)
+$( Identity as a binary relation. {du} is an equivalence relation. $)
 sbd $a selbri du $.
 
 $( Because {du} is an equivalence, it is reflexive. $)
