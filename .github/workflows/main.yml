@@ -1,0 +1,30 @@
+on: [push]
+
+jobs:
+  build:
+    name: Build Nix flake
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: DeterminateSystems/flake-checker-action@v4
+        with:
+          check-outdated: false
+      - uses: DeterminateSystems/nix-installer-action@v3
+      - name: Build Nix flake
+        run: nix build
+      - uses: actions/upload-pages-artifact@v2
+        with:
+          path: result/share/
+  deploy:
+    needs: build
+    name: Deploy GH Pages
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v2
+        id: deployment

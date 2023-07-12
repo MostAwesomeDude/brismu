@@ -1,0 +1,15 @@
+on:
+  pull_request:
+
+jobs:
+  lint:
+    name: Lint and build Nix flake
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: DeterminateSystems/flake-checker-action@v4
+        with:
+          check-outdated: false
+      - uses: DeterminateSystems/nix-installer-action@v3
+      - name: Build Nix flake
+        run: nix build

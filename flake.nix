@@ -46,6 +46,7 @@
           installPhase = ''
             mkdir -p $out/share/
             cp -r book/ mm/ $out/share/
+            cp index.html $out/share/
           '';
         };
       in {
