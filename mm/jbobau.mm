@@ -45,18 +45,33 @@ $( Various sorts of fragments:
 $)
 $c selbri sumti bridi $.
 
+$( A turnstile. Needed to indicate that a bridi is inhabited. $)
+$c |- $.
+
 $v ko'a ko'e ko'i $.
 wk1 $f sumti ko'a $.
 wk2 $f sumti ko'e $.
 wk3 $f sumti ko'i $.
 
 $v broda brode $.
-sbb1 $f selbri broda $.
-sbb2 $f selbri brode $.
+sbb1 $f bridi broda $.
+sbb2 $f bridi brode $.
 
-b1 $a bridi ko'a broda $.
-b2 $a bridi ko'a broda ko'e $.
-b3 $a bridi ko'a broda ko'e ko'i $.
+$v bu'a bu'e bu'i $.
+$d bu'a bu'e bu'i $.
+sbba $f selbri bu'a $.
+sbbe $f selbri bu'e $.
+sbbi $f selbri bu'i $.
+
+$v da de di $.
+$d da de di $.
+wda $f sumti da $.
+wde $f sumti de $.
+wdi $f sumti di $.
+
+bu $a bridi ko'a bu'a $.
+bb $a bridi ko'a bu'a ko'e $.
+bt $a bridi ko'a bu'a ko'e ko'i $.
 
 $(
 #*#*#
@@ -66,17 +81,13 @@ $)
 
 $c go gi $.
 
-${
-    bgo.0 $e bridi broda $.
-    bgo.1 $e bridi brode $.
-    $( If {broda} and {brode} are bridi, then so is {go broda gi brode}. $)
-    bgo $a bridi go broda gi brode $.
-$}
+$( If {broda} and {brode} are bridi, then so is {go broda gi brode}. $)
+bgo $a bridi go broda gi brode $.
 
 ${
-    ax-go-sym.0 $e bridi go broda gi brode $.
+    ax-go-sym.0 $e |- bridi go broda gi brode $.
     $( {go} is symmetric. $)
-    ax-go-sym $a bridi go brode gi broda $.
+    ax-go-sym $a |- bridi go brode gi broda $.
 $}
 
 $(
@@ -87,49 +98,45 @@ $)
 
 $c ganai $.
 
-${
-    bgan.0 $e bridi broda $.
-    bgan.1 $e bridi brode $.
-    $( If {broda} and {brode} are bridi, then so is {ganai broda gi brode}. $)
-    bgan $a bridi ganai broda gi brode $.
-$}
+$( If {broda} and {brode} are bridi, then so is {ganai broda gi brode}. $)
+bgan $a bridi ganai broda gi brode $.
 
 ${
-    ax-bi-syl.0 $e bridi go broda gi brode $.
+    ax-bi-syl.0 $e |- bridi go broda gi brode $.
     $( Biconditional implication may be weakened to unidirectional implication. $)
-    ax-bi-syl $a bridi ganai broda gi brode $.
+    ax-bi-syl $a |- bridi ganai broda gi brode $.
 $}
 
 ${
-    ax-mp.0 $e bridi broda $.
-    ax-mp.1 $e bridi ganai broda gi brode $.
+    ax-mp.0 $e |- bridi broda $.
+    ax-mp.1 $e |- bridi ganai broda gi brode $.
     $( Because {ganai} encodes a syllogism, it may be eliminated by modus ponens. $)
-    ax-mp $a bridi brode $.
+    ax-mp $a |- bridi brode $.
 $}
 
 ${
-    bi-rev-syl.0 $e bridi go broda gi brode $.
+    bi-rev-syl.0 $e |- bridi go broda gi brode $.
     $( The right-hand side of a {go} may also be weakened to a {ganai}.
        (Contributed by la korvo, 10-Jul-2023.) $)
-    bi-rev-syl $p bridi ganai brode gi broda $=
+    bi-rev-syl $p |- bridi ganai brode gi broda $=
       sbb2 sbb1 sbb1 sbb2 bi-rev-syl.0 ax-go-sym ax-bi-syl $.
 $}
 
 ${
-    mp-go-lhs.0 $e bridi broda $.
-    mp-go-lhs.1 $e bridi go broda gi brode $.
+    mp-go-lhs.0 $e |- bridi broda $.
+    mp-go-lhs.1 $e |- bridi go broda gi brode $.
     $( Implication with the left-hand side of a biconditional.
        (Contributed by la korvo, 10-Jul-2023.) $)
-    mp-go-lhs $p bridi brode $=
+    mp-go-lhs $p |- bridi brode $=
       sbb1 sbb2 mp-go-lhs.0 sbb1 sbb2 mp-go-lhs.1 ax-bi-syl ax-mp $.
 $}
 
 ${
-    mp-go-rhs.0 $e bridi brode $.
-    mp-go-rhs.1 $e bridi go broda gi brode $.
+    mp-go-rhs.0 $e |- bridi brode $.
+    mp-go-rhs.1 $e |- bridi go broda gi brode $.
     $( Implication with the right-hand side of a biconditional.
        (Contributed by la korvo, 10-Jul-2023.) $)
-    mp-go-rhs $p bridi broda $=
+    mp-go-rhs $p |- bridi broda $=
       sbb2 sbb1 mp-go-rhs.0 sbb2 sbb1 sbb1 sbb2 mp-go-rhs.1 ax-go-sym ax-bi-syl
       ax-mp $.
 $}
@@ -146,9 +153,9 @@ $c .e $.
 sje $a sumti ko'a .e ko'e $.
 
 $( Forethought version of example 12.2-5 from [CLL] p. 14. $)
-ax-e-intel $a bridi go ge ko'a broda ko'i gi ko'e broda ko'i gi ko'a .e ko'e broda ko'i $.
+ax-e-intel $a |- bridi go ge ko'a bu'a ko'i gi ko'e bu'a ko'i gi ko'a .e ko'e bu'a ko'i $.
 $( From example 12.2-5 of [CLL] p. 14. $)
-ax-je-intel $a bridi go ge ko'a broda ko'e gi ko'a brode ko'e gi ko'a broda je brode ko'e $.
+ax-je-intel $a |- bridi go ge ko'a bu'a ko'e gi ko'a bu'e ko'e gi ko'a bu'a je bu'e ko'e $.
 
 $(
 #*#*#
@@ -158,32 +165,29 @@ $)
 
 $c se $.
 
-${
-    sbs.0 $e selbri broda $.
-    $( If {broda} is a selbri, then so is {se broda}. $)
-    sbs $a selbri se broda $.
-$}
+$( If {bu'a} is a selbri, then so is {se bu'a}. $)
+sbs $a selbri se bu'a $.
 
 ${
-    ax-se-intro.0 $e bridi ko'a broda ko'e $.
+    ax-se-intro.0 $e |- bridi ko'a bu'a ko'e $.
     $( From example 11.1-2 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
        are equivalent. $)
-    ax-se-intro $a bridi ko'e se broda ko'a $.
+    ax-se-intro $a |- bridi ko'e se bu'a ko'a $.
 $}
 
 ${
-    ax-se-invo.0 $e bridi ko'a se se broda ko'e $.
+    ax-se-invo.0 $e |- bridi ko'a se se bu'a ko'e $.
     $( {se} is an involution. $)
-    ax-se-invo $a bridi ko'a broda ko'e $.
+    ax-se-invo $a |- bridi ko'a bu'a ko'e $.
 $}
 
 ${
-    se-elim.0 $e bridi ko'a se broda ko'e $.
+    se-elim.0 $e |- bridi ko'a se bu'a ko'e $.
     $( From example 11.1-2 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
        are equivalent.
        (Contributed by la korvo, 9-Jul-2023.) $)
-    se-elim $p bridi ko'e broda ko'a $=
-      wk2 wk1 sbb1 wk1 wk2 sbb1 sbb1 sbs se-elim.0 ax-se-intro ax-se-invo $.
+    se-elim $p |- bridi ko'e bu'a ko'a $=
+      wk2 wk1 sbba wk1 wk2 sbba sbs se-elim.0 ax-se-intro ax-se-invo $.
 $}
 
 $(
@@ -197,49 +201,26 @@ $( Identity as a binary relation. {du} is an equivalence relation. $)
 sbd $a selbri du $.
 
 $( Because {du} is an equivalence, it is reflexive. $)
-ax-id-refl $a bridi ko'a du ko'a $.
+ax-id-refl $a |- bridi ko'a du ko'a $.
 
 ${
-    ax-du-sym.0 $e bridi ko'a du ko'e $.
+    ax-du-sym.0 $e |- bridi ko'a du ko'e $.
     $( Because {du} is an equivalence, it is symmetric. $)
-    ax-du-sym $a bridi ko'e du ko'a $.
+    ax-du-sym $a |- bridi ko'e du ko'a $.
 $}
 
 ${
-    ax-du-trans.0 $e bridi ko'a du ko'e $.
-    ax-du-trans.1 $e bridi ko'e du ko'i $.
+    ax-du-trans.0 $e |- bridi ko'a du ko'e $.
+    ax-du-trans.1 $e |- bridi ko'e du ko'i $.
     $( Because {du} is an equivalence, it is transitive. $)
-    ax-du-trans $a bridi ko'a du ko'i $.
-$}
-
-$( {se du} is reflexive. (Contributed by la korvo, 9-Jul-2023.) $)
-se-du-refl $p bridi ko'a se du ko'a $=
-  wk1 wk1 sbd wk1 ax-id-refl ax-se-intro $.
-
-${
-    se-du-sym.0 $e bridi ko'a se du ko'e $.
-    $( {se du} is symmetric.
-       (Contributed by la korvo, 9-Jul-2023.) $)
-    se-du-sym $p bridi ko'e se du ko'a $=
-      wk1 wk2 sbd wk2 wk1 wk1 wk2 sbd se-du-sym.0 se-elim ax-du-sym ax-se-intro
-      $.
+    ax-du-trans $a |- bridi ko'a du ko'i $.
 $}
 
 ${
-    se-du-trans.0 $e bridi ko'a se du ko'e $.
-    se-du-trans.1 $e bridi ko'e se du ko'i $.
-    $( {se du} is transitive.
-       (Contributed by la korvo, 9-Jul-2023.) $)
-    se-du-trans $p bridi ko'a se du ko'i $=
-      wk3 wk1 sbd wk3 wk2 wk1 wk2 wk3 sbd se-du-trans.1 se-elim wk1 wk2 sbd
-      se-du-trans.0 se-elim ax-du-trans ax-se-intro $.
-$}
-
-${
-    se-du-elim.0 $e bridi ko'a se du ko'e $.
+    se-du-elim.0 $e |- bridi ko'a se du ko'e $.
     $( {se du} may be replaced with {du}.
        (Contributed by la korvo, 9-Jul-2023.) $)
-    se-du-elim $p bridi ko'a du ko'e $=
+    se-du-elim $p |- bridi ko'a du ko'e $=
       wk2 wk1 wk1 wk2 sbd se-du-elim.0 se-elim ax-du-sym $.
 $}
 
@@ -251,14 +232,24 @@ $)
 
 $c pa ka ce'u ckaji ckini $.
 
+sc $a sumti ce'u $.
+
+$( If {bu'a} is a selbri, then wrapping it with {pa ka} yields sumti. $)
+spku $a sumti pa ka ko'a bu'a $.
+spkb $a sumti pa ka ko'a bu'a ko'e $.
+spkt $a sumti pa ka ko'a bu'a ko'e ko'i $.
+
 $( Based on example 4.1-2 of [CLL] p. 11. $)
-ax-ckaji-intel $a bridi go ko'a broda ko'e gi ko'a ckaji pa ka ce'u broda ko'e $.
-ax-ckini-intel $a bridi go ko'a broda ko'e gi ko'a ckini ko'e pa ka ce'u broda ce'u $.
+ax-ckaji-intel $a |- bridi go ko'a bu'a ko'e gi ko'a ckaji pa ka ce'u bu'a ko'e $.
+ax-ckini-intel $a |- bridi go ko'a bu'a ko'e gi ko'a ckini ko'e pa ka ce'u bu'a ce'u $.
 
 ${
-    ckini-se.0 $e bridi ko'a ckini ko'e pa ka ce'u broda ce'u $.
+    ckini-se.0 $e |- bridi ko'a ckini ko'e pa ka ce'u bu'a ce'u $.
     $( {se} can be inserted underneath ckini3. $)
-    ckini-se $p bridi ko'e ckini ko'a pa ka ce'u se broda ce'u $= ? $.
+    ckini-se $p |- bridi ko'e ckini ko'a pa ka ce'u se bu'a ce'u $=
+      wk2 wk1 sbba sbs bb ? wk1 wk2 sbba wk1 wk2 sbba bb ? ckini-se.0 wk1 wk2
+      sbba ax-ckini-intel mp-go-rhs ax-se-intro wk2 wk1 sbba sbs ax-ckini-intel
+      mp-go-lhs $.
 $}
 
 $(
@@ -273,11 +264,11 @@ $c li no $.
 sl0 $a sumti li no $.
 sl1 $a sumti li pa $.
 
-ax-nat-zero $a bridi li no kacna'u $.
+ax-nat-zero $a |- bridi li no kacna'u $.
 
 ${
-    ax-succ-succ.0 $e bridi ko'a .e ko'e kacli'e ko'i $.
-    ax-succ-succ $a bridi ko'a du ko'e $.
+    ax-succ-succ.0 $e |- bridi ko'a .e ko'e kacli'e ko'i $.
+    ax-succ-succ $a |- bridi ko'a du ko'e $.
 $}
 
 $(
@@ -285,15 +276,3 @@ $(
 Uncategorized
 #*#*#
 $)
-
-$v da de di $.
-$d da de di $.
-wda $f sumti da $.
-wde $f sumti de $.
-wdi $f sumti di $.
-
-$v bu'a bu'e bu'i $.
-$d bu'a bu'e bu'i $.
-sbba $f selbri bu'a $.
-sbbe $f selbri bu'e $.
-sbbi $f selbri bu'i $.
