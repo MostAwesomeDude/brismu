@@ -22,8 +22,14 @@ htmldef "bu'e" as "S <small>bu'e</small> ";
 htmldef "bu'i" as "T <small>bu'i</small> ";
 htmldef "se" as "se ";
 htmldef "ganai" as "if <small>ganai</small> ";
-htmldef "go" as "iff <small>go</small> ";
+htmldef "ge" as "both <small>ge</small> ";
 htmldef "gi" as "then <small>gi</small> ";
+htmldef "go" as "iff <small>go</small> ";
+htmldef ".e" as "& <small>.e</small> ";
+htmldef "no" as "0 ";
+htmldef "pa" as "1 ";
+htmldef "kacna'u" as "in N <small>kacna'u</small> ";
+htmldef "kacli'e" as "+1 = <small>kacli'e</small> ";
 $)
 
 $(
@@ -47,6 +53,10 @@ wk3 $f sumti ko'i $.
 $v broda brode $.
 sbb1 $f selbri broda $.
 sbb2 $f selbri brode $.
+
+b1 $a bridi ko'a broda $.
+b2 $a bridi ko'a broda ko'e $.
+b3 $a bridi ko'a broda ko'e ko'i $.
 
 $(
 #*#*#
@@ -123,6 +133,22 @@ ${
       sbb2 sbb1 mp-go-rhs.0 sbb2 sbb1 sbb1 sbb2 mp-go-rhs.1 ax-go-sym ax-bi-syl
       ax-mp $.
 $}
+
+$(
+#*#*#
+Conjunctions: {.e}, {je}, {ge}
+#*#*#
+$)
+
+$c je ge $.
+
+$c .e $.
+sje $a sumti ko'a .e ko'e $.
+
+$( Forethought version of example 12.2-5 from [CLL] p. 14. $)
+ax-e-intel $a bridi go ge ko'a broda ko'i gi ko'e broda ko'i gi ko'a .e ko'e broda ko'i $.
+$( From example 12.2-5 of [CLL] p. 14. $)
+ax-je-intel $a bridi go ge ko'a broda ko'e gi ko'a brode ko'e gi ko'a broda je brode ko'e $.
 
 $(
 #*#*#
@@ -215,6 +241,43 @@ ${
        (Contributed by la korvo, 9-Jul-2023.) $)
     se-du-elim $p bridi ko'a du ko'e $=
       wk2 wk1 wk1 wk2 sbd se-du-elim.0 se-elim ax-du-sym $.
+$}
+
+$(
+#*#*#
+Internal hom: {ka}, {ckaji}, {ckini}
+#*#*#
+$)
+
+$c pa ka ce'u ckaji ckini $.
+
+$( Based on example 4.1-2 of [CLL] p. 11. $)
+ax-ckaji-intel $a bridi go ko'a broda ko'e gi ko'a ckaji pa ka ce'u broda ko'e $.
+ax-ckini-intel $a bridi go ko'a broda ko'e gi ko'a ckini ko'e pa ka ce'u broda ce'u $.
+
+${
+    ckini-se.0 $e bridi ko'a ckini ko'e pa ka ce'u broda ce'u $.
+    $( {se} can be inserted underneath ckini3. $)
+    ckini-se $p bridi ko'e ckini ko'a pa ka ce'u se broda ce'u $= ? $.
+$}
+
+$(
+#*#*#
+Natural numbers: {kacna'u}, {kacli'e}
+#*#*#
+$)
+
+$c kacna'u kacli'e $.
+$c li no $.
+
+sl0 $a sumti li no $.
+sl1 $a sumti li pa $.
+
+ax-nat-zero $a bridi li no kacna'u $.
+
+${
+    ax-succ-succ.0 $e bridi ko'a .e ko'e kacli'e ko'i $.
+    ax-succ-succ $a bridi ko'a du ko'e $.
 $}
 
 $(
