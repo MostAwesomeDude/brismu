@@ -16,6 +16,15 @@ are defined. Of the 8 classic articles (LE), 2 are defined.
 In addition, 8 experimental selbri are defined, as well as 6 cnino selbri which
 did not previously exist.
 
+## Credits
+
+The bulk of this work was gathered by la korvo. [la
+poros](https://pcy.ulyssis.be/) fixed some typos. Many Lojbanists, particularly
+la ilmen and la selpa'i, contributed valuable insights about the logical lore
+of Lojbanistan. The derived rules are from a variety of sources, but *CLL* is
+the main inspiration, and thus we credit its authors and editors.  A full
+bibliography is upcoming.
+
 ## Praise from Lojbanists
 
 > "alien language" -- la gleki
