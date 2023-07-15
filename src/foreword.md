@@ -18,12 +18,18 @@ did not previously exist.
 
 ## Credits
 
-The bulk of this work was gathered by la korvo. [la
-poros](https://pcy.ulyssis.be/) fixed some typos. Many Lojbanists, particularly
-la ilmen and la selpa'i, contributed valuable insights about the logical lore
-of Lojbanistan. The derived rules are from a variety of sources, but *CLL* is
-the main inspiration, and thus we credit its authors and editors.  A full
-bibliography is upcoming.
+The bulk of this work was gathered by la korvo. I greet and thank the following
+Lojbanists for input and insights:
+
+* la bremenli
+* la guskant
+* la ilmen
+* [la poros](https://pcy.ulyssis.be/)
+* la selpa'i
+
+The derived rules are from a variety of sources, but *CLL* is the main
+inspiration, and thus we credit its authors and editors.  A full bibliography
+is upcoming.
 
 ## Praise from Lojbanists
 
