@@ -13,6 +13,9 @@ htmldef "ko'e" as "k2 <small>ko'e</small> ";
 htmldef "ko'i" as "k3 <small>ko'i</small> ";
 htmldef "broda" as "b1 <small>broda</small> ";
 htmldef "brode" as "b2 <small>brode</small> ";
+htmldef "brodi" as "b3 <small>brodi</small> ";
+htmldef "brodo" as "b4 <small>brodo</small> ";
+htmldef "brodu" as "b5 <small>brodu</small> ";
 htmldef "da" as "x <small>da</small> ";
 htmldef "de" as "y <small>de</small> ";
 htmldef "di" as "z <small>di</small> ";
@@ -58,9 +61,12 @@ wk1 $f sumti ko'a $.
 wk2 $f sumti ko'e $.
 wk3 $f sumti ko'i $.
 
-$v broda brode $.
+$v broda brode brodi brodo brodu $.
 sbb1 $f bridi broda $.
 sbb2 $f bridi brode $.
+sbb3 $f bridi brodi $.
+sbb4 $f bridi brodo $.
+sbb5 $f bridi brodu $.
 
 $v bu'a bu'e bu'i $.
 $d bu'a bu'e bu'i $.
@@ -89,10 +95,39 @@ $c go gi $.
 $( If {broda} and {brode} are bridi, then so is {go broda gi brode}. $)
 bgo $a bridi go broda gi brode $.
 
+$( {go} is reflexive. $)
+ax-go-refl $a |- go broda gi broda $.
+
 ${
     ax-go-sym.0 $e |- go broda gi brode $.
     $( {go} is symmetric. $)
     ax-go-sym $a |- go brode gi broda $.
+$}
+
+${
+    ax-go-trans.0 $e |- go broda gi brode $.
+    ax-go-trans.1 $e |- go brode gi brodi $.
+    $( {go} is transitive. $)
+    ax-go-trans $a |- go brode gi brodi $.
+$}
+
+${
+    ax-bi.0 $e |- broda $.
+    ax-bi.1 $e |- go broda gi brode $.
+    $( Because {go} encodes a syllogism, it may be eliminated by modus ponens.
+       Due to the nature of relational logic, it will be simpler to assume that
+       the biconditional connective is primitive and to derive directed modus
+       ponens as a special case. $)
+    ax-bi $a |- brode $.
+$}
+
+${
+    bi-rev.0 $e |- broda $.
+    bi-rev.1 $e |- go brode gi broda $.
+    $( Modus ponens in the other direction.
+       (Contributed by la korvo, 16-Jul-2023.) $)
+    bi-rev $p |- brode $=
+      sbb1 sbb2 bi-rev.0 sbb2 sbb1 bi-rev.1 ax-go-sym ax-bi $.
 $}
 
 $(
@@ -164,6 +199,35 @@ ax-je-intel $a |- go ge ko'a bu'a ko'e gi ko'a bu'e ko'e gi ko'a bu'a je bu'e ko
 
 $(
 #*#*#
+Biconditionals II: {.o}, {jo}
+#*#*#
+$)
+
+$c jo $.
+
+$c .o $.
+sjo $a sumti ko'a .o ko'e $.
+
+$( By analogy with forethought version of example 12.2-5 from [CLL] p. 14. $)
+ax-o-intel $a |- go go ko'a bu'a gi ko'e bu'a gi ko'a .o ko'e bu'a $.
+$( By analogy with example 12.2-5 of [CLL] p. 14. $)
+ax-jo-intel $a |- go go ko'a bu'a ko'e gi ko'a bu'e ko'e gi ko'a bu'a jo bu'e ko'e $.
+
+$( {.o} is symmetric. $)
+o-sym-new $p |- go ko'a .o ko'e bu'a gi ko'e .o ko'a bu'a $= ? $.
+
+${
+    o-sym.0 $e |- ko'a .o ko'e bu'a $.
+    $( {.o} is symmetric.
+       (Contributed by la korvo, 16-Jul-2023.) $)
+    o-sym $p |- ko'e .o ko'a bu'a $=
+      wk2 sbba bu wk1 sbba bu bgo wk2 wk1 sjo sbba bu wk1 sbba bu wk2 sbba bu
+      wk1 sbba bu wk2 sbba bu bgo wk1 wk2 sjo sbba bu o-sym.0 wk1 wk2 sbba
+      ax-o-intel mp-go-rhs ax-go-sym wk2 wk1 sbba ax-o-intel mp-go-lhs $.
+$}
+
+$(
+#*#*#
 Conversion: {se}
 #*#*#
 $)
@@ -197,13 +261,75 @@ $}
 
 $(
 #*#*#
+Universal quantifiers I: {ro}
+#*#*#
+$)
+
+$c ro zo'u $.
+
+$( XXX occurs checks are missing! $)
+
+${
+    brb.0 $e bridi broda $.
+    $( Syntax for second-order universal quantification. $)
+    brb $a bridi ro bu'a zo'u broda $.
+$}
+
+${
+    ax-ro-inst-u.0 $e selbri bu'a $.
+    ax-ro-inst-u.1 $e |- ro bu'e zo'u ko'a bu'e $.
+    $( {ro bu'a} may be instantiated with any selbri. As
+       example 13.3 of [CLL] p. 16 notes, this will be of limited use, and is
+       included largely to allow for a second-order definition of equality. $)
+    ax-ro-inst-u $a |- ko'a bu'a $.
+$}
+
+${
+    ax-ro-mp.0 $e |- ro bu'a zo'u broda $.
+    ax-ro-mp.1 $e |- ganai broda gi brode $.
+    $( Modus ponens under {ro bu'a}. $)
+    ax-ro-mp $a |- ro bu'a zo'u brode $.
+$}
+
+${
+    ro-bi.0 $e |- ro bu'a zo'u broda $.
+    ro-bi.1 $e |- go broda gi brode $.
+    $( Biconditional modus ponens under {ro bu'a}.
+       (Contributed by la korvo, 16-Jul-2023.) $)
+    ro-bi $p |- ro bu'a zo'u brode $=
+      sbb1 sbb2 sbba ro-bi.0 sbb1 sbb2 ro-bi.1 ax-bi-syl ax-ro-mp $.
+$}
+
+$(
+#*#*#
 Identity: {du}
 #*#*#
 $)
 
 $c du $.
-$( Identity as a binary relation. {du} is an equivalence relation. $)
+$( Identity as a binary relation. $)
 sbdu $a selbri du $.
+
+$( A second-order characterization of identity which is non-first-order-izable. $)
+df-du $a |- go ko'a du ko'e gi ro bu'a zo'u ko'a .o ko'e bu'a $.
+
+${
+    du-sym.0 $e |- ko'a du ko'e $.
+    $( {du} is symmetric. $)
+    du-sym $p |- ko'e du ko'a $=
+      ? ? ? ? ? ? ? du-sym.0 ? ? ? df-du mp-go-lhs ? ax-ro-mp ? ? ? df-du
+      mp-go-rhs $.
+$}
+
+$( {du} is reflexive. $)
+du-refl $p |- ko'a du ko'a $= ? $.
+
+${
+    du-trans.0 $e |- ko'a du ko'e $.
+    du-trans.1 $e |- ko'e du ko'i $.
+    $( {du} is transitive. $)
+    du-trans $p |- ko'a du ko'i $= ? $.
+$}
 
 $( Because {du} is an equivalence, it is reflexive. $)
 ax-id-refl $a |- ko'a du ko'a $.
