@@ -32,4 +32,6 @@
 
 # Appendices
 
+- [Bibliography](appendices/bibliography.md)
 - [Posets](appendices/posets.md)
+- [Size issues](appendices/size-issues.md)

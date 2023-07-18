@@ -191,7 +191,6 @@ sje $a sumti ko'a .e ko'e $.
 sbje $a selbri bu'a je bu'e $.
 bge $a bridi ge broda gi brode $.
 
-
 $( Definition of {.e} in terms of {ge}. Forethought version of example 12.2-5
    from [CLL] p. 14. $)
 df-e $a |- go ko'a .e ko'e bu'a ko'i gi ge ko'a bu'a ko'i gi ko'e bu'a ko'i $.
@@ -387,6 +386,24 @@ sbdu $a selbri du $.
 
 $( A second-order characterization of identity which is non-first-order-izable. $)
 df-du $a |- go ko'a du ko'e gi ro bu'a zo'u ko'a .o ko'e bu'a $.
+
+${
+    dui.0 $e |- ko'a du ko'e $.
+    $( Inference form of ~df-du
+       (Contributed by la korvo, 18-Jul-2023.) $)
+    dui $p |- ro bu'a zo'u ko'a .o ko'e bu'a $=
+      wk1 wk2 sbdu bb wk1 wk2 sjo sbba bu sbba wk1 wk2 sjo sbba bu brb dui.0
+      wk1 wk2 sbba df-du bi $.
+$}
+
+${
+    duri.0 $e |- ro bu'a zo'u ko'a .o ko'e bu'a $.
+    $( Reverse inference form of ~df-du
+       (Contributed by la korvo, 18-Jul-2023.) $)
+    duri $p |- ko'a du ko'e $=
+      wk1 wk2 sjo sbba bu sbba wk1 wk2 sjo sbba bu brb wk1 wk2 sbdu bb duri.0
+      wk1 wk2 sbba df-du bi-rev $.
+$}
 
 ${
     du-sym.0 $e |- ko'a du ko'e $.
