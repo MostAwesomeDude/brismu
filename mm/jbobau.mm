@@ -120,26 +120,7 @@ ${
     ax-go-trans.0 $e |- go broda gi brode $.
     ax-go-trans.1 $e |- go brode gi brodi $.
     $( {go} is transitive. $)
-    ax-go-trans $a |- go brode gi brodi $.
-$}
-
-${
-    ax-bi.0 $e |- broda $.
-    ax-bi.1 $e |- go broda gi brode $.
-    $( Because {go} encodes a syllogism, it may be eliminated by modus ponens.
-       Due to the nature of relational logic, it will be simpler to assume that
-       the biconditional connective is primitive and to derive directed modus
-       ponens as a special case. $)
-    ax-bi $a |- brode $.
-$}
-
-${
-    bi-rev.0 $e |- broda $.
-    bi-rev.1 $e |- go brode gi broda $.
-    $( Modus ponens in the other direction.
-       (Contributed by la korvo, 16-Jul-2023.) $)
-    bi-rev $p |- brode $=
-      sbb1 sbb2 bi-rev.0 sbb2 sbb1 bi-rev.1 ax-go-sym ax-bi $.
+    ax-go-trans $a |- go broda gi brodi $.
 $}
 
 $(
@@ -153,11 +134,7 @@ $c ganai $.
 $( If {broda} and {brode} are bridi, then so is {ganai broda gi brode}. $)
 bgan $a bridi ganai broda gi brode $.
 
-${
-    ax-bi-syl.0 $e |- go broda gi brode $.
-    $( Biconditional implication may be weakened to unidirectional implication. $)
-    ax-bi-syl $a |- ganai broda gi brode $.
-$}
+df-ganai $a |- ganai go broda gi brode gi ganai broda gi brode $.
 
 ${
     ax-mp.0 $e |- broda $.
@@ -167,12 +144,30 @@ ${
 $}
 
 ${
+    ganaii.0 $e |- go broda gi brode $.
+    $( Biconditional implication may be weakened to unidirectional implication.
+       Inference form of ~df-ganai
+       (Contributed by la korvo, 17-Jul-2023.) $)
+    ganaii $p |- ganai broda gi brode $=
+      sbb1 sbb2 bgo sbb1 sbb2 bgan ganaii.0 sbb1 sbb2 df-ganai ax-mp $.
+$}
+
+${
     bi.0 $e |- broda $.
     bi.1 $e |- go broda gi brode $.
-    $( Provable version of ~ax-bi, using ~ax-mp and ~ax-bi-syl as a basis.
+    $( Provable version of (now removed) ax-bi, using ~ax-mp and ~df-ganai as a basis.
        (Contributed by la korvo, 16-Jul-2023.) $)
     bi $p |- brode $=
-      sbb1 sbb2 bi.0 sbb1 sbb2 bi.1 ax-bi-syl ax-mp $.
+      sbb1 sbb2 bi.0 sbb1 sbb2 bi.1 ganaii ax-mp $.
+$}
+
+${
+    bi-rev.0 $e |- broda $.
+    bi-rev.1 $e |- go brode gi broda $.
+    $( Modus ponens in the other direction.
+       (Contributed by la korvo, 16-Jul-2023.) $)
+    bi-rev $p |- brode $=
+      sbb1 sbb2 bi-rev.0 sbb2 sbb1 bi-rev.1 ax-go-sym bi $.
 $}
 
 ${
@@ -180,26 +175,7 @@ ${
     $( The right-hand side of a {go} may also be weakened to a {ganai}.
        (Contributed by la korvo, 10-Jul-2023.) $)
     bi-rev-syl $p |- ganai brode gi broda $=
-      sbb2 sbb1 sbb1 sbb2 bi-rev-syl.0 ax-go-sym ax-bi-syl $.
-$}
-
-${
-    mp-go-lhs.0 $e |- broda $.
-    mp-go-lhs.1 $e |- go broda gi brode $.
-    $( Implication with the left-hand side of a biconditional.
-       (Contributed by la korvo, 10-Jul-2023.) $)
-    mp-go-lhs $p |- brode $=
-      sbb1 sbb2 mp-go-lhs.0 sbb1 sbb2 mp-go-lhs.1 ax-bi-syl ax-mp $.
-$}
-
-${
-    mp-go-rhs.0 $e |- brode $.
-    mp-go-rhs.1 $e |- go broda gi brode $.
-    $( Implication with the right-hand side of a biconditional.
-       (Contributed by la korvo, 10-Jul-2023.) $)
-    mp-go-rhs $p |- broda $=
-      sbb2 sbb1 mp-go-rhs.0 sbb2 sbb1 sbb1 sbb2 mp-go-rhs.1 ax-go-sym ax-bi-syl
-      ax-mp $.
+      sbb2 sbb1 sbb1 sbb2 bi-rev-syl.0 ax-go-sym ganaii $.
 $}
 
 $(
@@ -277,7 +253,6 @@ ax-o-intel $a |- go go ko'a bu'a gi ko'e bu'a gi ko'a .o ko'e bu'a $.
 $( Definition of {jo} in terms of {go}. By analogy with example 12.2-5 of [CLL]
    p. 14. $)
 df-jo $a |- go ko'a bu'a jo bu'e ko'e gi go ko'a bu'a ko'e gi ko'a bu'e ko'e $.
-ax-jo-intel $a |- go go ko'a bu'a ko'e gi ko'a bu'e ko'e gi ko'a bu'a jo bu'e ko'e $.
 
 ${
     oi.0 $e |- ko'a .o ko'e bu'a ko'i $.
@@ -314,12 +289,10 @@ o-sym $p |- go ko'a .o ko'e bu'a gi ko'e .o ko'a bu'a $= ? $.
 
 ${
     o-symi.0 $e |- ko'a .o ko'e bu'a $.
-    $( Inference form of ~o-sym.
+    $( Inference form of ~o-sym
        (Contributed by la korvo, 16-Jul-2023.) $)
     o-symi $p |- ko'e .o ko'a bu'a $=
-      wk2 sbba bu wk1 sbba bu bgo wk2 wk1 sjo sbba bu wk1 sbba bu wk2 sbba bu
-      wk1 sbba bu wk2 sbba bu bgo wk1 wk2 sjo sbba bu o-symi.0 wk1 wk2 sbba
-      ax-o-intel mp-go-rhs ax-go-sym wk2 wk1 sbba ax-o-intel mp-go-lhs $.
+      wk1 wk2 sjo sbba bu wk2 wk1 sjo sbba bu o-symi.0 wk1 wk2 sbba o-sym bi $.
 $}
 
 $(
@@ -339,7 +312,8 @@ df-se $a |- go ko'e se bu'a ko'a gi ko'a bu'a ko'e $.
 
 ${
     sei.0 $e |- ko'e se bu'a ko'a $.
-    $( Inference form of ~df-se
+    $( From example 11.1-2 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
+       are equivalent. Inference form of ~df-se
        (Contributed by la korvo, 17-Jul-2023.) $)
     sei $p |- ko'a bu'a ko'e $=
       wk2 wk1 sbba sbs bb wk1 wk2 sbba bb sei.0 wk1 wk2 sbba df-se bi $.
@@ -347,33 +321,17 @@ $}
 
 ${
     seri.0 $e |- ko'a bu'a ko'e $.
-    $( Reverse inference form of ~df-se
+    $( From example 11.1-2 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
+       are equivalent. Reverse inference form of ~df-se
        (Contributed by la korvo, 17-Jul-2023.) $)
     seri $p |- ko'e se bu'a ko'a $=
       wk1 wk2 sbba bb wk2 wk1 sbba sbs bb seri.0 wk1 wk2 sbba df-se bi-rev $.
-$}
-
-
-${
-    ax-se-intro.0 $e |- ko'a bu'a ko'e $.
-    $( From example 11.1-2 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
-       are equivalent. $)
-    ax-se-intro $a |- ko'e se bu'a ko'a $.
 $}
 
 ${
     ax-se-invo.0 $e |- ko'a se se bu'a ko'e $.
     $( {se} is an involution. $)
     ax-se-invo $a |- ko'a bu'a ko'e $.
-$}
-
-${
-    se-elim.0 $e |- ko'a se bu'a ko'e $.
-    $( From example 11.1-2 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
-       are equivalent.
-       (Contributed by la korvo, 9-Jul-2023.) $)
-    se-elim $p |- ko'e bu'a ko'a $=
-      wk2 wk1 sbba wk1 wk2 sbba sbs se-elim.0 ax-se-intro ax-se-invo $.
 $}
 
 $(
@@ -414,7 +372,7 @@ ${
     $( Biconditional modus ponens under {ro bu'a}.
        (Contributed by la korvo, 16-Jul-2023.) $)
     ro-bi $p |- ro bu'a zo'u brode $=
-      sbb1 sbb2 sbba ro-bi.0 sbb1 sbb2 ro-bi.1 ax-bi-syl ax-ro-mp $.
+      sbb1 sbb2 sbba ro-bi.0 sbb1 sbb2 ro-bi.1 ganaii ax-ro-mp $.
 $}
 
 $(
@@ -434,8 +392,8 @@ ${
     du-sym.0 $e |- ko'a du ko'e $.
     $( {du} is symmetric. $)
     du-sym $p |- ko'e du ko'a $=
-      ? ? ? ? ? ? ? du-sym.0 ? ? ? df-du mp-go-lhs ? ax-ro-mp ? ? ? df-du
-      mp-go-rhs $.
+      ? ? ? ? ? ? ? du-sym.0 ? ? ? df-du bi ? ax-ro-mp ? ? ? df-du
+      bi-rev $.
 $}
 
 $( {du} is reflexive. $)
@@ -469,7 +427,7 @@ ${
     $( {se du} may be replaced with {du}.
        (Contributed by la korvo, 9-Jul-2023.) $)
     se-du-elim $p |- ko'a du ko'e $=
-      wk2 wk1 wk1 wk2 sbdu se-du-elim.0 se-elim ax-du-sym $.
+      wk2 wk1 wk2 wk1 sbdu se-du-elim.0 sei ax-du-sym $.
 $}
 
 $(
@@ -535,16 +493,13 @@ ${
       bi-rev $.
 $}
 
-ax-ckaji-intel $a |- go ko'a bu'a ko'e gi ko'a ckaji pa ka ce'u bu'a ko'e $.
-ax-ckini-intel $a |- go ko'a bu'a ko'e gi ko'a ckini ko'e pa ka ce'u bu'a ce'u $.
-
 ${
     ckini-se.0 $e |- ko'a ckini ko'e pa ka ce'u bu'a ce'u $.
     $( {se} can be inserted underneath ckini3.
        (Contributed by la korvo, 12-Jul-2023.) $)
     ckini-se $p |- ko'e ckini ko'a pa ka ce'u se bu'a ce'u $=
-      ( sbs bb sc spkb sbckini ax-ckini-intel mp-go-rhs ax-se-intro mp-go-lhs
-      bt ) BACEZFBAGGOHINABCABCFABGGCHINDABCJKLBAOJM $.
+      wk2 wk1 sbba sbs wk1 wk2 sbba wk1 wk2 sbba ckini-se.0 ckinii seri ckiniri
+      $.
 $}
 
 $(
