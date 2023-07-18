@@ -6,3 +6,4 @@ with open("mm/jbobau.mm") as handle:
 c = Counter(vc[v] for v in dfs)
 print("Grammatical class | # of formal definitions"); print("---|---")
 for cls in c: print(cls, "|", c[cls])
+print("total", "|", sum(c.values()))
