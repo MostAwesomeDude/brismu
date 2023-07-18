@@ -2,6 +2,18 @@ $( jbobau.mm $)
 
 $( bridi smuni jbobau $)
 
+$( Conventions:
+
+* "ax-" starts axioms
+* "df-" starts definitions
+  * e.g. definition of {du} is "df-du"
+  * definitions are of the form {go broda gi brode}, where {broda} has the
+    valsi to be defined
+* inferences of {go} have same theorem name, but end with "i"
+* reverse inferences end with "ri"
+* deductions where everything starts {ganai broda gi} end with "d"
+$)
+
 $( $t
 htmltitle "brismu bridi";
 htmldef "bridi" as "<em>bridi</em> ";
@@ -155,6 +167,15 @@ ${
 $}
 
 ${
+    bi.0 $e |- broda $.
+    bi.1 $e |- go broda gi brode $.
+    $( Provable version of ~ax-bi, using ~ax-mp and ~ax-bi-syl as a basis.
+       (Contributed by la korvo, 16-Jul-2023.) $)
+    bi $p |- brode $=
+      sbb1 sbb2 bi.0 sbb1 sbb2 bi.1 ax-bi-syl ax-mp $.
+$}
+
+${
     bi-rev-syl.0 $e |- go broda gi brode $.
     $( The right-hand side of a {go} may also be weakened to a {ganai}.
        (Contributed by la korvo, 10-Jul-2023.) $)
@@ -191,11 +212,51 @@ $c je ge $.
 
 $c .e $.
 sje $a sumti ko'a .e ko'e $.
+sbje $a selbri bu'a je bu'e $.
+bge $a bridi ge broda gi brode $.
 
-$( Forethought version of example 12.2-5 from [CLL] p. 14. $)
-ax-e-intel $a |- go ge ko'a bu'a ko'i gi ko'e bu'a ko'i gi ko'a .e ko'e bu'a ko'i $.
-$( From example 12.2-5 of [CLL] p. 14. $)
-ax-je-intel $a |- go ge ko'a bu'a ko'e gi ko'a bu'e ko'e gi ko'a bu'a je bu'e ko'e $.
+
+$( Definition of {.e} in terms of {ge}. Forethought version of example 12.2-5
+   from [CLL] p. 14. $)
+df-e $a |- go ko'a .e ko'e bu'a ko'i gi ge ko'a bu'a ko'i gi ko'e bu'a ko'i $.
+$( Definition of {je} in terms of {ge}. From example 12.2-5 of [CLL] p. 14. $)
+df-je $a |- go ko'a bu'a je bu'e ko'e gi ge ko'a bu'a ko'e gi ko'a bu'e ko'e $.
+
+${
+    ei.0 $e |- ko'a .e ko'e bu'a ko'i $.
+    $( Inference form of ~df-e
+       (Contributed by la korvo, 17-Jul-2023.) $)
+    ei $p |- ge ko'a bu'a ko'i gi ko'e bu'a ko'i $=
+      wk1 wk2 sje wk3 sbba bb wk1 wk3 sbba bb wk2 wk3 sbba bb bge ei.0 wk1 wk2
+      wk3 sbba df-e bi $.
+$}
+
+${
+    eri.0 $e |- ge ko'a bu'a ko'i gi ko'e bu'a ko'i $.
+    $( Reverse inference form of ~df-e
+       (Contributed by la korvo, 17-Jul-2023.) $)
+    eri $p |- ko'a .e ko'e bu'a ko'i $=
+      wk1 wk3 sbba bb wk2 wk3 sbba bb bge wk1 wk2 sje wk3 sbba bb eri.0 wk1 wk2
+      wk3 sbba df-e bi-rev $.
+$}
+
+${
+    jei.0 $e |- ko'a bu'a je bu'e ko'e $.
+    $( Inference form of ~df-je
+       (Contributed by la korvo, 17-Jul-2023.) $)
+    jei $p |- ge ko'a bu'a ko'e gi ko'a bu'e ko'e $=
+      wk1 wk2 sbba sbbe sbje bb wk1 wk2 sbba bb wk1 wk2 sbbe bb bge jei.0 wk1
+      wk2 sbba sbbe df-je bi $.
+$}
+
+${
+    jeri.0 $e |- ge ko'a bu'a ko'e gi ko'a bu'e ko'e $.
+    $( Reverse inference form of ~df-je
+       (Contributed by la korvo, 17-Jul-2023.) $)
+    jeri $p |- ko'a bu'a je bu'e ko'e $=
+      wk1 wk2 sbba bb wk1 wk2 sbbe bb bge wk1 wk2 sbba sbbe sbje bb jeri.0 wk1
+      wk2 sbba sbbe df-je bi-rev $.
+$}
 
 $(
 #*#*#
@@ -206,23 +267,58 @@ $)
 $c jo $.
 
 $c .o $.
+sbjo $a selbri bu'a jo bu'e $.
 sjo $a sumti ko'a .o ko'e $.
 
-$( By analogy with forethought version of example 12.2-5 from [CLL] p. 14. $)
+$( Definition of {.o} in terms of {go}. By analogy with forethought version of
+   example 12.2-5 from [CLL] p. 14. $)
+df-o $a |- go ko'a .o ko'e bu'a gi go ko'a bu'a gi ko'e bu'a $.
 ax-o-intel $a |- go go ko'a bu'a gi ko'e bu'a gi ko'a .o ko'e bu'a $.
-$( By analogy with example 12.2-5 of [CLL] p. 14. $)
+$( Definition of {jo} in terms of {go}. By analogy with example 12.2-5 of [CLL]
+   p. 14. $)
+df-jo $a |- go ko'a bu'a jo bu'e ko'e gi go ko'a bu'a ko'e gi ko'a bu'e ko'e $.
 ax-jo-intel $a |- go go ko'a bu'a ko'e gi ko'a bu'e ko'e gi ko'a bu'a jo bu'e ko'e $.
 
-$( {.o} is symmetric. $)
-o-sym-new $p |- go ko'a .o ko'e bu'a gi ko'e .o ko'a bu'a $= ? $.
+${
+    oi.0 $e |- ko'a .o ko'e bu'a ko'i $.
+    $( Inference form of ~df-o $)
+    oi $p |- go ko'a bu'a ko'i gi ko'e bu'a ko'i $= ? $.
+$}
 
 ${
-    o-sym.0 $e |- ko'a .o ko'e bu'a $.
-    $( {.o} is symmetric.
+    ori.0 $e |- go ko'a bu'a ko'i gi ko'e bu'a ko'i $.
+    $( Reverse inference form of ~df-o $)
+    ori $p |- ko'a .o ko'e bu'a ko'i $= ? $.
+$}
+
+${
+    joi.0 $e |- ko'a bu'a jo bu'e ko'e $.
+    $( Inference form of ~df-jo
+       (Contributed by la korvo, 17-Jul-2023.) $)
+    joi $p |- go ko'a bu'a ko'e gi ko'a bu'e ko'e $=
+      wk1 wk2 sbba sbbe sbjo bb wk1 wk2 sbba bb wk1 wk2 sbbe bb bgo joi.0 wk1
+      wk2 sbba sbbe df-jo bi $.
+$}
+
+${
+    jori.0 $e |- go ko'a bu'a ko'e gi ko'a bu'e ko'e $.
+    $( Reverse inference form of ~df-jo
+       (Contributed by la korvo, 17-Jul-2023.) $)
+    jori $p |- ko'a bu'a jo bu'e ko'e $=
+      wk1 wk2 sbba bb wk1 wk2 sbbe bb bgo wk1 wk2 sbba sbbe sbjo bb jori.0 wk1
+      wk2 sbba sbbe df-jo bi-rev $.
+$}
+
+$( {.o} is symmetric. $)
+o-sym $p |- go ko'a .o ko'e bu'a gi ko'e .o ko'a bu'a $= ? $.
+
+${
+    o-symi.0 $e |- ko'a .o ko'e bu'a $.
+    $( Inference form of ~o-sym.
        (Contributed by la korvo, 16-Jul-2023.) $)
-    o-sym $p |- ko'e .o ko'a bu'a $=
+    o-symi $p |- ko'e .o ko'a bu'a $=
       wk2 sbba bu wk1 sbba bu bgo wk2 wk1 sjo sbba bu wk1 sbba bu wk2 sbba bu
-      wk1 sbba bu wk2 sbba bu bgo wk1 wk2 sjo sbba bu o-sym.0 wk1 wk2 sbba
+      wk1 sbba bu wk2 sbba bu bgo wk1 wk2 sjo sbba bu o-symi.0 wk1 wk2 sbba
       ax-o-intel mp-go-rhs ax-go-sym wk2 wk1 sbba ax-o-intel mp-go-lhs $.
 $}
 
@@ -236,6 +332,27 @@ $c se $.
 
 $( If {bu'a} is a selbri, then so is {se bu'a}. $)
 sbs $a selbri se bu'a $.
+
+$( Definition of {se} as a swap of terbri. Implied by example 11.1-2 of [CLL]
+   p. 5. $)
+df-se $a |- go ko'e se bu'a ko'a gi ko'a bu'a ko'e $.
+
+${
+    sei.0 $e |- ko'e se bu'a ko'a $.
+    $( Inference form of ~df-se
+       (Contributed by la korvo, 17-Jul-2023.) $)
+    sei $p |- ko'a bu'a ko'e $=
+      wk2 wk1 sbba sbs bb wk1 wk2 sbba bb sei.0 wk1 wk2 sbba df-se bi $.
+$}
+
+${
+    seri.0 $e |- ko'a bu'a ko'e $.
+    $( Reverse inference form of ~df-se
+       (Contributed by la korvo, 17-Jul-2023.) $)
+    seri $p |- ko'e se bu'a ko'a $=
+      wk1 wk2 sbba bb wk2 wk1 sbba sbs bb seri.0 wk1 wk2 sbba df-se bi-rev $.
+$}
+
 
 ${
     ax-se-intro.0 $e |- ko'a bu'a ko'e $.
@@ -379,7 +496,45 @@ $( {ckini} is often found with this conjugation. $)
 bckini $p bridi ko'a ckini ko'e pa ka ce'u bu'a ce'u $=
   wk1 wk2 sc sc sbba spkb sbckini bt $.
 
-$( Based on example 4.1-2 of [CLL] p. 11. $)
+$( Definition of {ckaji} from {ka}. Based on example 4.1-2 of [CLL] p. 11. $)
+df-ckaji $a |- go ko'a ckaji pa ka ce'u bu'a ko'e gi ko'a bu'a ko'e $.
+df-ckini $a |- go ko'a ckini ko'e pa ka ce'u bu'a ce'u gi ko'a bu'a ko'e $.
+
+${
+    ckajii.0 $e |- ko'a ckaji pa ka ce'u bu'a ko'e $.
+    $( Inference form of ~df-ckaji
+       (Contributed by la korvo, 17-Jul-2023.) $)
+    ckajii $p |- ko'a bu'a ko'e $=
+      wk1 sc sbba spku wk2 sbckaji bt wk1 wk2 sbba bb ckajii.0 wk1 wk2 sbba
+      df-ckaji bi $.
+$}
+
+${
+    ckajiri.0 $e |- ko'a bu'a ko'e $.
+    $( Reverse inference form of ~df-ckaji
+       (Contributed by la korvo, 17-Jul-2023.) $)
+    ckajiri $p |- ko'a ckaji pa ka ce'u bu'a ko'e $=
+      wk1 wk2 sbba bb wk1 sc sbba spku wk2 sbckaji bt ckajiri.0 wk1 wk2 sbba
+      df-ckaji bi-rev $.
+$}
+
+${
+    ckinii.0 $e |- ko'a ckini ko'e pa ka ce'u bu'a ce'u $.
+    $( Inference form of ~df-ckini
+       (Contributed by la korvo, 17-Jul-2023.) $)
+    ckinii $p |- ko'a bu'a ko'e $=
+      wk1 wk2 sbba bckini wk1 wk2 sbba bb ckinii.0 wk1 wk2 sbba df-ckini bi $.
+$}
+
+${
+    ckiniri.0 $e |- ko'a bu'a ko'e $.
+    $( Reverse inference form of ~df-ckini
+       (Contributed by la korvo, 17-Jul-2023.) $)
+    ckiniri $p |- ko'a ckini ko'e pa ka ce'u bu'a ce'u $=
+      wk1 wk2 sbba bb wk1 wk2 sbba bckini ckiniri.0 wk1 wk2 sbba df-ckini
+      bi-rev $.
+$}
+
 ax-ckaji-intel $a |- go ko'a bu'a ko'e gi ko'a ckaji pa ka ce'u bu'a ko'e $.
 ax-ckini-intel $a |- go ko'a bu'a ko'e gi ko'a ckini ko'e pa ka ce'u bu'a ce'u $.
 
