@@ -18,7 +18,7 @@
           src = ./.;
 
           buildInputs = with pkgs; [
-            graphviz jq
+            graphviz jq python3
             metamath
             mdbook mdbook-graphviz mdbook-linkcheck
           ];
@@ -33,6 +33,8 @@
             ${z}/bin/zaha dot ${z}/share/jbobau/nu/nu.png > nu.dot
             ${z}/bin/zaha dot ${z}/share/jbobau/nu/suhu.png > suhu.dot
 
+            python3 coverage.py > src/coverage.md
+
             mdbook build
 
             pushd mm/
@@ -45,8 +47,8 @@
 
           installPhase = ''
             mkdir -p $out/share/
-            cp -r book/ mm/ $out/share/
-            cp index.html $out/share/
+            cp -r mm/* $out/share/
+            cp -r book/* $out/share/
           '';
         };
       in {

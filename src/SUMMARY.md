@@ -4,7 +4,6 @@
 
 # 0: midju
 
-- [Introduction](0-midju/0-introduction.md)
 - [Relations](0-midju/1-relations.md)
 - [Proofs](0-midju/2-proofs.md)
 - [Rel](0-midju/3-Rel.md)
@@ -35,3 +34,4 @@
 - [Bibliography](appendices/bibliography.md)
 - [Posets](appendices/posets.md)
 - [Size issues](appendices/size-issues.md)
+- [FAQ](appendices/faq.md)

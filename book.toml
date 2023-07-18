@@ -10,7 +10,3 @@ title = "brismu: a relational interpretation of Lojban"
 after = ["links"]
 
 [output.html]
-
-[output.linkcheck]
-# Spuriously fails often.
-# follow-web-links = true
