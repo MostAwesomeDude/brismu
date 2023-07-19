@@ -296,7 +296,7 @@ $}
 
 $(
 #*#*#
-Conversion: {se}
+Conversion I: {se}
 #*#*#
 $)
 
@@ -328,9 +328,11 @@ ${
 $}
 
 ${
-    ax-se-invo.0 $e |- ko'a se se bu'a ko'e $.
-    $( {se} is an involution. $)
-    ax-se-invo $a |- ko'a bu'a ko'e $.
+    se-invo.0 $e |- ko'a se se bu'a ko'e $.
+    $( {se} is an involution.
+       (Contributed by la korvo, 18-Jul-2023.) $)
+    se-invo $p |- ko'a bu'a ko'e $=
+      wk1 wk2 sbba wk2 wk1 sbba sbs se-invo.0 sei sei $.
 $}
 
 $(
@@ -540,6 +542,57 @@ $}
 
 $(
 #*#*#
-Uncategorized
+Boolean predicates: {cei'i}
 #*#*#
 $)
+
+$c cei'i $.
+bceihi $a bridi cei'i $.
+
+$( The predicate which is always true. $)
+df-ceihi $a |- go cei'i gi ko'a du ko'a $.
+
+$( {cei'i} is always true.
+   (Contributed by la korvo, 18-Jul-2023.) $)
+ceihi $p |- cei'i $=
+  wk1 wk1 sbdu bb bceihi wk1 ax-id-refl wk1 df-ceihi bi-rev $.
+
+$(
+#*#*#
+Conversion II: {te}
+#*#*#
+$)
+
+$c te $.
+
+$( If {bu'a} is a selbri, then so is {te bu'a}. $)
+sbt $a selbri te bu'a $.
+
+$( Definition of {te} as a swap of terbri. $)
+df-te $a |- go ko'i te bu'a ko'e ko'a gi ko'a bu'a ko'e ko'i $.
+
+${
+    tei.0 $e |- ko'i te bu'a ko'e ko'a $.
+    $( Inference form of ~df-te
+       (Contributed by la korvo, 18-Jul-2023.) $)
+    tei $p |- ko'a bu'a ko'e ko'i $=
+      wk3 wk2 wk1 sbba sbt bt wk1 wk2 wk3 sbba bt tei.0 wk1 wk2 wk3 sbba df-te
+      bi $.
+$}
+
+${
+    teri.0 $e |- ko'a bu'a ko'e ko'i $.
+    $( Reverse inference form of ~df-te
+       (Contributed by la korvo, 18-Jul-2023.) $)
+    teri $p |- ko'i te bu'a ko'e ko'a $=
+      wk1 wk2 wk3 sbba bt wk3 wk2 wk1 sbba sbt bt teri.0 wk1 wk2 wk3 sbba df-te
+      bi-rev $.
+$}
+
+${
+    te-invo.0 $e |- ko'a te te bu'a ko'e ko'i $.
+    $( {te} is an involution.
+       (Contributed by la korvo, 18-Jul-2023.) $)
+    te-invo $p |- ko'a bu'a ko'e ko'i $=
+      wk1 wk2 wk3 sbba wk3 wk2 wk1 sbba sbt te-invo.0 tei tei $.
+$}

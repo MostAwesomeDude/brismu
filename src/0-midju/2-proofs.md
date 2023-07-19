@@ -5,19 +5,12 @@ that the reader has already consumed an introductory tutorial and a grammar
 reference, I will attempt to focus on the formal side of our budding
 correspondence between Lojban and categorical logic.
 
-## Identity: {du}
+## Identity: du
 
-The first selbri we'll define is `{du}`. With `{du}`, we can relate any object
-to itself. How do we talk about this property formally? We'll use [natural
-deduction](https://en.wikipedia.org/wiki/Natural_deduction), which is a common
-style of formal proof. The idea is to start from some assumptions, and apply
-some rules, coming to some conclusions.
+The first defined selbri we'll discuss is `{du}`. With `{du}`, we can relate
+any object to itself:
 
-To start, let's give an axiom for `{du}`. An axiom is an assumption that we
-can always make. I'll put this axiom in a block by itself, but I'm also going
-to give it a petname in parentheses so that we can refer to it later easily.
-
-    ro da zo'u da du da (id-refl) (bicat-equality)
+    ko'a du ko'a (id-refl) (bicat-equality)
 
 "id" is short for "identity", and that's precisely what `{du}` does. "refl" is
 short for "reflexive", which is one of the three properties of [equivalence
@@ -36,40 +29,16 @@ logic](https://en.wikipedia.org/wiki/Regular_category#Regular_logic_and_regular_
 requires a single prenex to be configured for each implication rule. So, for
 most rules, we'll configure one prenex for two bridi bodies.
 
-Don't worry about `{ro}` yet. For now, we'll insist that every prenex variable
-is universally quantified; `{ro}` really does mean every single value that we
-possibly might consider. We'll clarify this later.
-
 Let's continue with `{du}`. The second property is called "symmetry", and it
-means that we can swap the sumti without changing the bridi. To show what a
-swap looks like, we'll introduce rules. A rule has a prenex, and then an
-assumption and a conclusion, separated by a bar.
+means that we can swap the sumti without changing the bridi:
 
-    ro da ro de zo'u:
+    go ko'a du ko'e gi ko'e du ko'a (id-sym) (bicat-equality)
 
-    da du de
-    ======== (id-sym) (bicat-equality)
-    de du da
-
-Here I've drawn a double bar to show which part of the rule is which; I will
-sometimes also draw single bars. The double bar is reversible; it can be
-turned upside down to gain another rule. For `{du}` this is unsurprising, but
-some double bars later on may feel confusing at first. I encourage the reader
-to take their time and carefully examine the diagrams to make sure that they
-can read each step in a proof.
-
-I could have written that rule in this way, but later on, you'll appreciate
-the separated prenex for legibility.
-
-    ro da ro de zo'u da du de
-    ========================= (id-sym) (bicat-equality)
-    ro da ro de zo'u de du da
-
-In relational logic, many rules are reversible. This is an instance of the
-[microcosm principle](https://ncatlab.org/nlab/show/microcosm+principle),
-where algebraic structures tend to show up within their own categorified
-presentations. We will eventually show that rules can be manipulated within
-Lojban itself.
+Note that `{go}` is also symmetric! In relational logic, many rules are
+reversible. This is an instance of the [microcosm
+principle](https://ncatlab.org/nlab/show/microcosm+principle), where algebraic
+structures tend to show up within their own categorified presentations. We will
+eventually show that rules can be manipulated within Lojban itself.
 
 ## Conjunction: {ge}, {gi}
 
