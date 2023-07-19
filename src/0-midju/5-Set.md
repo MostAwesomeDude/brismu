@@ -1,12 +1,7 @@
 # 5: Set Theory
 
 At this point, we are ready to give the axioms for set theory. We will be
-using [ZF](https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory),
-and using relational facts from [Relational Set
-Theory](https://www.researchgate.net/publication/226561376_Relational_set_theory).
-
-Note: The shape of each axiom is also influenced by [Rethinking Set
-Theory](https://arxiv.org/abs/1212.6543) and categorical set theory.
+using [ZF](https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory).
 
 ## Articles N
 

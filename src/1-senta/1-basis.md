@@ -14,6 +14,9 @@ Power; they relate a base, an exponent, and a power.
 
 Can ``{sinso}`` be replaced with ``{tanjo}``?
 
+The community lujvo ``{dutsinso}``, for cosine, could be defined in terms of
+``{sinso}`` sine.
+
 # Size relations
 
 ``{barda}`` and ``{cmalu}`` are inverses.

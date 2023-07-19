@@ -248,7 +248,6 @@ sjo $a sumti ko'a .o ko'e $.
 $( Definition of {.o} in terms of {go}. By analogy with forethought version of
    example 12.2-5 from [CLL] p. 14. $)
 df-o $a |- go ko'a .o ko'e bu'a gi go ko'a bu'a gi ko'e bu'a $.
-ax-o-intel $a |- go go ko'a bu'a gi ko'e bu'a gi ko'a .o ko'e bu'a $.
 $( Definition of {jo} in terms of {go}. By analogy with example 12.2-5 of [CLL]
    p. 14. $)
 df-jo $a |- go ko'a bu'a jo bu'e ko'e gi go ko'a bu'a ko'e gi ko'a bu'e ko'e $.
@@ -596,3 +595,16 @@ ${
     te-invo $p |- ko'a bu'a ko'e ko'i $=
       wk1 wk2 wk3 sbba wk3 wk2 wk1 sbba sbt te-invo.0 tei tei $.
 $}
+
+$(
+#*#*#
+Logarithms: {dugri}
+#*#*#
+$)
+
+$c dugri tenfa $.
+sbdugri $a selbri dugri $.
+sbtenfa $a selbri tenfa $.
+
+$( {dugri} is a permutation of {tenfa}. $)
+df-dugri $a |- go ko'a dugri ko'e ko'i gi ko'a te se tenfa ko'e ko'i $.

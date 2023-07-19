@@ -42,6 +42,13 @@ are informally defined. Of the 8 classic articles (LE), 2 are informally defined
 In addition, 8 experimental selbri are informally defined, as well as 6 cnino
 selbri which did not previously exist.
 
+### Essential theorems
+
+Theorem | Formalized | Proved
+---|---|---
+cei'i | yes | yes: [ceihi](ceihi.html)
+lo broda ku broda | somewhat (prose, not Metamath) | no
+
 ### Formal coverage
 
 {{#include coverage.md}}

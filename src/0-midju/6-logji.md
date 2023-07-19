@@ -11,8 +11,8 @@ the outer layer which hosts the classical logic inside.
 
 Relational logic is infamously squishy and gooey, with genuine witnesses to
 contradiction being rare. Nonetheless, there's at least one, based on the
-characteristic functions: a selbri either does, or does not, relate given
-terbri.
+characteristic functions: a selbri cannot simultaneously relate given terbri
+and also not relate them.
 
     ro da poi ke'a broda ro de poi broda ke'a zo'u:
 
