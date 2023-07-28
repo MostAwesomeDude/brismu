@@ -16,40 +16,65 @@ $)
 
 $( $t
 htmltitle "brismu bridi";
+htmlcss "<style type='text/css'>" +
+        ".sumti { color: darkgreen; }" +
+        ".selbri { color: blue; }" +
+        ".bridi { color: brown; }" +
+        ".gismu { color: blue; }" +
+        ".lujvo { color: blue; }" +
+        "</style>";
+htmlvarcolor "<span class='sumti'>sumti</span> " +
+             "<span class='selbri'>selbri</span> " +
+             "<span class='bridi'>bridi</span> ";
+
+htmldef "|-" as '&#8866; ';
 htmldef "bridi" as "<em>bridi</em> ";
 htmldef "selbri" as "<em>selbri</em> ";
 htmldef "sumti" as "<em>sumti</em> ";
 htmldef "PA" as "<em>PA</em> ";
-htmldef "ko'a" as "k1 <small>ko'a</small> ";
-htmldef "ko'e" as "k2 <small>ko'e</small> ";
-htmldef "ko'i" as "k3 <small>ko'i</small> ";
-htmldef "broda" as "b1 <small>broda</small> ";
-htmldef "brode" as "b2 <small>brode</small> ";
-htmldef "brodi" as "b3 <small>brodi</small> ";
-htmldef "brodo" as "b4 <small>brodo</small> ";
-htmldef "brodu" as "b5 <small>brodu</small> ";
-htmldef "da" as "x <small>da</small> ";
-htmldef "de" as "y <small>de</small> ";
-htmldef "di" as "z <small>di</small> ";
-htmldef "du" as "= <small>du</small> ";
-htmldef "bu'a" as "R <small>bu'a</small> ";
-htmldef "bu'e" as "S <small>bu'e</small> ";
-htmldef "bu'i" as "T <small>bu'i</small> ";
-htmldef "se" as "se ";
-htmldef "ganai" as "if <small>ganai</small> ";
-htmldef "ge" as "both <small>ge</small> ";
-htmldef "gi" as "then <small>gi</small> ";
-htmldef "go" as "iff <small>go</small> ";
-htmldef ".e" as "& <small>.e</small> ";
-htmldef "li" as "# <small>li</small> ";
+htmldef "ko'a" as "<span class='sumti'>ko'a</span> ";
+htmldef "ko'e" as "<span class='sumti'>ko'e</span> ";
+htmldef "ko'i" as "<span class='sumti'>ko'i</span> ";
+htmldef "broda" as "<span class='bridi'>broda</span> ";
+htmldef "brode" as "<span class='bridi'>brode</span> ";
+htmldef "brodi" as "<span class='bridi'>brodi</span> ";
+htmldef "brodo" as "<span class='bridi'>brodo</span> ";
+htmldef "brodu" as "<span class='bridi'>brodu</span> ";
+htmldef "da" as "<small>da</small> ";
+htmldef "de" as "<small>de</small> ";
+htmldef "di" as "<small>di</small> ";
+htmldef "du" as "<span class='selbri'>du</span> ";
+htmldef "cei'i" as "<span class='selbri'>cei'i</span> ";
+htmldef "gai'o" as "<span class='selbri'>gai'o</span> ";
+htmldef "bu'a" as "<span class='selbri'>bu'a</span> ";
+htmldef "bu'e" as "<span class='selbri'>bu'e</span> ";
+htmldef "bu'i" as "<span class='selbri'>bu'i</span> ";
+htmldef "zo'u" as "<small>zo'u</small> ";
+htmldef "se" as "<small>se</small> ";
+htmldef "te" as "<small>te</small> ";
+htmldef "ganai" as "<small>ganai</small> ";
+htmldef "ge" as "<small>ge</small> ";
+htmldef "gi" as "<small>gi</small> ";
+htmldef "je" as "<small>je</small> ";
+htmldef "jo" as "<small>jo</small> ";
+htmldef "go" as "<small>go</small> ";
+htmldef ".e" as "<small>.e</small> ";
+htmldef ".o" as "<small>.o</small> ";
+htmldef "li" as "<small>li</small> ";
 htmldef "no" as "0 ";
 htmldef "pa" as "1 ";
-htmldef "ckaji" as "in <small>ckaji</small> ";
-htmldef "ckini" as "in <small>ckini</small> ";
-htmldef "ka" as "\ <small>ka</small> ";
-htmldef "ce'u" as "_ <small>ce'u</small> ";
-htmldef "kacna'u" as "in N <small>kacna'u</small> ";
-htmldef "kacli'e" as "+1 = <small>kacli'e</small> ";
+htmldef "ro" as "<small>ro</small> ";
+htmldef "ckaji" as "<span class='gismu'>ckaji</span> ";
+htmldef "ckini" as "<span class='gismu'>ckini</span> ";
+htmldef "dugri" as "<span class='gismu'>dugri</span> ";
+htmldef "prami" as "<span class='gismu'>prami</span> ";
+htmldef "tenfa" as "<span class='gismu'>tenfa</span> ";
+htmldef "ka" as "<small>ka</small> ";
+htmldef "ce'u" as "<small>ce'u</small> ";
+htmldef "kacna'u" as "<span class='lujvo'>kacna'u</span> ";
+htmldef "kacli'e" as "<span class='lujvo'>kacli'e</span> ";
+htmldef "mi" as "<span class='sumti'>mi</span> ";
+htmldef "do" as "<span class='sumti'>do</span> ";
 $)
 
 $(
@@ -104,13 +129,14 @@ $)
 
 $c ganai gi $.
 
-$( If {broda} and {brode} are bridi, then so is {ganai broda gi brode}. $)
+$( If {` broda `} and {` brode `} are bridi, then so is
+   {` ganai broda gi brode `}. $)
 bgan $a bridi ganai broda gi brode $.
 
 ${
     ax-mp.0 $e |- broda $.
     ax-mp.1 $e |- ganai broda gi brode $.
-    $( Because {ganai} encodes a syllogism, it may be eliminated by modus ponens. $)
+    $( Because {` ganai `} encodes a syllogism, it may be eliminated by modus ponens. $)
     ax-mp $a |- brode $.
 $}
 
@@ -170,22 +196,22 @@ $)
 
 $c go $.
 
-$( If {broda} and {brode} are bridi, then so is {go broda gi brode}. $)
+$( If {` broda `} and {` brode `} are bridi, then so is {` go broda gi brode `}. $)
 bgo $a bridi go broda gi brode $.
 
-$( {go} is reflexive. $)
+$( {` go `} is reflexive. $)
 ax-go-refl $a |- go broda gi broda $.
 
 ${
     ax-go-sym.0 $e |- go broda gi brode $.
-    $( {go} is symmetric. $)
+    $( {` go `} is symmetric. $)
     ax-go-sym $a |- go brode gi broda $.
 $}
 
 ${
     ax-go-trans.0 $e |- go broda gi brode $.
     ax-go-trans.1 $e |- go brode gi brodi $.
-    $( {go} is transitive. $)
+    $( {` go `} is transitive. $)
     ax-go-trans $a |- go broda gi brodi $.
 $}
 
@@ -220,7 +246,7 @@ $}
 
 ${
     bi-rev-syl.0 $e |- go broda gi brode $.
-    $( The right-hand side of a {go} may also be weakened to a {ganai}.
+    $( The right-hand side of a {` go `} may also be weakened to a {` ganai `}.
        (Contributed by la korvo, 10-Jul-2023.) $)
     bi-rev-syl $p |- ganai brode gi broda $=
       sbb2 sbb1 sbb1 sbb2 bi-rev-syl.0 ax-go-sym ganaii $.
@@ -239,8 +265,8 @@ sje $a sumti ko'a .e ko'e $.
 sbje $a selbri bu'a je bu'e $.
 bge $a bridi ge broda gi brode $.
 
-$( Definition of {.e} in terms of {ge}. Forethought version of example 12.2-5
-   from [CLL] p. 14. $)
+$( Definition of {` .e `} in terms of {` ge `}. Forethought version of
+   example 12.2-5 from [CLL] p. 14. $)
 df-e $a |- go ko'a .e ko'e bu'a ko'i gi ge ko'a bu'a ko'i gi ko'e bu'a ko'i $.
 $( Definition of {je} in terms of {ge}. From example 12.2-5 of [CLL] p. 14. $)
 df-je $a |- go ko'a bu'a je bu'e ko'e gi ge ko'a bu'a ko'e gi ko'a bu'e ko'e $.
@@ -293,11 +319,11 @@ $c .o $.
 sbjo $a selbri bu'a jo bu'e $.
 sjo $a sumti ko'a .o ko'e $.
 
-$( Definition of {.o} in terms of {go}. By analogy with forethought version of
-   example 12.2-5 from [CLL] p. 14. $)
+$( Definition of {` .o `} in terms of {` go `}. By analogy with forethought
+   version of example 12.2-5 from [CLL] p. 14. $)
 df-o $a |- go ko'a .o ko'e bu'a gi go ko'a bu'a gi ko'e bu'a $.
-$( Definition of {jo} in terms of {go}. By analogy with example 12.2-5 of [CLL]
-   p. 14. $)
+$( Definition of {` jo `} in terms of {` go `}. By analogy with
+   example 12.2-5 of [CLL] p. 14. $)
 df-jo $a |- go ko'a bu'a jo bu'e ko'e gi go ko'a bu'a ko'e gi ko'a bu'e ko'e $.
 
 ${
@@ -330,7 +356,7 @@ ${
       wk2 sbba sbbe df-jo bi-rev $.
 $}
 
-$( {.o} is symmetric. $)
+$( {` .o `} is symmetric. $)
 o-sym $p |- go ko'a .o ko'e bu'a gi ko'e .o ko'a bu'a $= ? $.
 
 ${
@@ -349,17 +375,17 @@ $)
 
 $c se $.
 
-$( If {bu'a} is a selbri, then so is {se bu'a}. $)
+$( If {` bu'a `} is a selbri, then so is {` se bu'a `}. $)
 sbs $a selbri se bu'a $.
 
-$( Definition of {se} as a swap of terbri. Implied by example 11.1-2 of [CLL]
-   p. 5. $)
+$( Definition of {` se `} as a swap of terbri. Implied by
+   example 11.1-2 of [CLL] p. 5. $)
 df-se $a |- go ko'e se bu'a ko'a gi ko'a bu'a ko'e $.
 
 ${
     sei.0 $e |- ko'e se bu'a ko'a $.
-    $( From example 11.1-2 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
-       are equivalent. Inference form of ~df-se
+    $( From example 11.1-2 of [CLL] p. 5, where {` mi prami do `} and
+       {` do se prami mi `} are equivalent. Inference form of ~df-se
        (Contributed by la korvo, 17-Jul-2023.) $)
     sei $p |- ko'a bu'a ko'e $=
       wk2 wk1 sbba sbs bb wk1 wk2 sbba bb sei.0 wk1 wk2 sbba df-se bi $.
@@ -367,8 +393,8 @@ $}
 
 ${
     seri.0 $e |- ko'a bu'a ko'e $.
-    $( From example 11.1-2 of [CLL] p. 5, where {mi prami do} and {do se prami mi}
-       are equivalent. Reverse inference form of ~df-se
+    $( From example 11.1-2 of [CLL] p. 5, where {` mi prami do `} and
+       {` do se prami mi `} are equivalent. Reverse inference form of ~df-se
        (Contributed by la korvo, 17-Jul-2023.) $)
     seri $p |- ko'e se bu'a ko'a $=
       wk1 wk2 sbba bb wk2 wk1 sbba sbs bb seri.0 wk1 wk2 sbba df-se bi-rev $.
@@ -376,7 +402,7 @@ $}
 
 ${
     se-invo.0 $e |- ko'a se se bu'a ko'e $.
-    $( {se} is an involution.
+    $( {` se `} is an involution.
        (Contributed by la korvo, 18-Jul-2023.) $)
     se-invo $p |- ko'a bu'a ko'e $=
       wk1 wk2 sbba wk2 wk1 sbba sbs se-invo.0 sei sei $.
@@ -401,7 +427,7 @@ $}
 ${
     ax-ro-inst-u.0 $e selbri bu'a $.
     ax-ro-inst-u.1 $e |- ro bu'e zo'u ko'a bu'e $.
-    $( {ro bu'a} may be instantiated with any selbri. As
+    $( {` ro bu'a `} may be instantiated with any selbri. As
        example 13.3 of [CLL] p. 16 notes, this will be of limited use, and is
        included largely to allow for a second-order definition of equality. $)
     ax-ro-inst-u $a |- ko'a bu'a $.
@@ -410,14 +436,14 @@ $}
 ${
     ax-ro-mp.0 $e |- ro bu'a zo'u broda $.
     ax-ro-mp.1 $e |- ganai broda gi brode $.
-    $( Modus ponens under {ro bu'a}. $)
+    $( Modus ponens under {` ro bu'a `}. $)
     ax-ro-mp $a |- ro bu'a zo'u brode $.
 $}
 
 ${
     ro-bi.0 $e |- ro bu'a zo'u broda $.
     ro-bi.1 $e |- go broda gi brode $.
-    $( Biconditional modus ponens under {ro bu'a}.
+    $( Biconditional modus ponens under {` ro bu'a `}.
        (Contributed by la korvo, 16-Jul-2023.) $)
     ro-bi $p |- ro bu'a zo'u brode $=
       sbb1 sbb2 sbba ro-bi.0 sbb1 sbb2 ro-bi.1 ganaii ax-ro-mp $.
@@ -456,41 +482,41 @@ $}
 
 ${
     du-sym.0 $e |- ko'a du ko'e $.
-    $( {du} is symmetric. $)
+    $( {` du `} is symmetric. $)
     du-sym $p |- ko'e du ko'a $=
       ? ? ? ? ? ? ? du-sym.0 ? ? ? df-du bi ? ax-ro-mp ? ? ? df-du
       bi-rev $.
 $}
 
-$( {du} is reflexive. $)
+$( {` du `} is reflexive. $)
 du-refl $p |- ko'a du ko'a $= ? $.
 
 ${
     du-trans.0 $e |- ko'a du ko'e $.
     du-trans.1 $e |- ko'e du ko'i $.
-    $( {du} is transitive. $)
+    $( {` du `} is transitive. $)
     du-trans $p |- ko'a du ko'i $= ? $.
 $}
 
-$( Because {du} is an equivalence, it is reflexive. $)
+$( Because {` du `} is an equivalence, it is reflexive. $)
 ax-id-refl $a |- ko'a du ko'a $.
 
 ${
     ax-du-sym.0 $e |- ko'a du ko'e $.
-    $( Because {du} is an equivalence, it is symmetric. $)
+    $( Because {` du `} is an equivalence, it is symmetric. $)
     ax-du-sym $a |- ko'e du ko'a $.
 $}
 
 ${
     ax-du-trans.0 $e |- ko'a du ko'e $.
     ax-du-trans.1 $e |- ko'e du ko'i $.
-    $( Because {du} is an equivalence, it is transitive. $)
+    $( Because {` du `} is an equivalence, it is transitive. $)
     ax-du-trans $a |- ko'a du ko'i $.
 $}
 
 ${
     se-du-elim.0 $e |- ko'a se du ko'e $.
-    $( {se du} may be replaced with {du}.
+    $( {` se du `} may be replaced with {` du `}.
        (Contributed by la korvo, 9-Jul-2023.) $)
     se-du-elim $p |- ko'a du ko'e $=
       wk2 wk1 wk2 wk1 sbdu se-du-elim.0 sei ax-du-sym $.
@@ -508,19 +534,19 @@ sc $a sumti ce'u $.
 sbckaji $a selbri ckaji $.
 sbckini $a selbri ckini $.
 
-$( If {bu'a} is a selbri, then wrapping it with {pa ka} yields sumti. $)
+$( If {` bu'a `} is a selbri, then wrapping it with {` pa ka `} yields sumti. $)
 spku $a sumti pa ka ko'a bu'a $.
 spkb $a sumti pa ka ko'a bu'a ko'e $.
 spkt $a sumti pa ka ko'a bu'a ko'e ko'i $.
 
-$( {ckaji} is often found with this conjugation. $)
+$( {` ckaji `} is often found with this conjugation. $)
 bckaji $p bridi ko'a ckaji pa ka ce'u bu'a $=
   wk1 sc sbba spku sbckaji bb $.
-$( {ckini} is often found with this conjugation. $)
+$( {` ckini `} is often found with this conjugation. $)
 bckini $p bridi ko'a ckini ko'e pa ka ce'u bu'a ce'u $=
   wk1 wk2 sc sc sbba spkb sbckini bt $.
 
-$( Definition of {ckaji} from {ka}. Based on example 4.1-2 of [CLL] p. 11. $)
+$( Definition of {` ckaji `} from {` ka `}. Based on example 4.1-2 of [CLL] p. 11. $)
 df-ckaji $a |- go ko'a ckaji pa ka ce'u bu'a ko'e gi ko'a bu'a ko'e $.
 df-ckini $a |- go ko'a ckini ko'e pa ka ce'u bu'a ce'u gi ko'a bu'a ko'e $.
 
@@ -561,7 +587,7 @@ $}
 
 ${
     ckini-se.0 $e |- ko'a ckini ko'e pa ka ce'u bu'a ce'u $.
-    $( {se} can be inserted underneath ckini3.
+    $( {` se `} can be inserted underneath ckini3.
        (Contributed by la korvo, 12-Jul-2023.) $)
     ckini-se $p |- ko'e ckini ko'a pa ka ce'u se bu'a ce'u $=
       wk2 wk1 sbba sbs wk1 wk2 sbba wk1 wk2 sbba ckini-se.0 ckinii seri ckiniri
@@ -580,10 +606,12 @@ $c li no $.
 sl0 $a sumti li no $.
 sl1 $a sumti li pa $.
 
+$( Zero is a natural number. $)
 ax-nat-zero $a |- li no kacna'u $.
 
 ${
     ax-succ-succ.0 $e |- ko'a .e ko'e kacli'e ko'i $.
+    $( Successors of natural numbers are also natural numbers. $)
     ax-succ-succ $a |- ko'a du ko'e $.
 $}
 
@@ -596,10 +624,12 @@ $)
 $c cei'i $.
 bceihi $a bridi cei'i $.
 
-$( The predicate which is always true. $)
+$( The predicate which is always true. Note that both sides are relational:
+   the left-hand side definitionally only has one inhabitant, so this
+   definition asserts that {` ko'a du ko'a `} is only true via one path. $)
 df-ceihi $a |- go cei'i gi ko'a du ko'a $.
 
-$( {cei'i} is always true.
+$( {` cei'i `} is always true.
    (Contributed by la korvo, 18-Jul-2023.) $)
 ceihi $p |- cei'i $=
   wk1 wk1 sbdu bb bceihi wk1 ax-id-refl wk1 df-ceihi bi-rev $.
@@ -612,10 +642,10 @@ $)
 
 $c te $.
 
-$( If {bu'a} is a selbri, then so is {te bu'a}. $)
+$( If {` bu'a `} is a selbri, then so is {` te bu'a `}. $)
 sbt $a selbri te bu'a $.
 
-$( Definition of {te} as a swap of terbri. $)
+$( Definition of {` te `} as a swap of terbri. $)
 df-te $a |- go ko'i te bu'a ko'e ko'a gi ko'a bu'a ko'e ko'i $.
 
 ${
@@ -638,7 +668,7 @@ $}
 
 ${
     te-invo.0 $e |- ko'a te te bu'a ko'e ko'i $.
-    $( {te} is an involution.
+    $( {` te `} is an involution.
        (Contributed by la korvo, 18-Jul-2023.) $)
     te-invo $p |- ko'a bu'a ko'e ko'i $=
       wk1 wk2 wk3 sbba wk3 wk2 wk1 sbba sbt te-invo.0 tei tei $.
@@ -654,5 +684,5 @@ $c dugri tenfa $.
 sbdugri $a selbri dugri $.
 sbtenfa $a selbri tenfa $.
 
-$( {dugri} is a permutation of {tenfa}. $)
+$( {` dugri `} is a permutation of {` tenfa `}. $)
 df-dugri $a |- go ko'a dugri ko'e ko'i gi ko'a te se tenfa ko'e ko'i $.
