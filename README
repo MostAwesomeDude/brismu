@@ -1,1 +1,4 @@
 Enable Nix flakes, then $(nix build).
+
+Useful links:
+* https://lojban.github.io/ilmentufa/glosser/glosser.htm

@@ -98,11 +98,77 @@ bt $a bridi ko'a bu'a ko'e ko'i $.
 
 $(
 #*#*#
+Implication I: {ganai}
+#*#*#
+$)
+
+$c ganai gi $.
+
+$( If {broda} and {brode} are bridi, then so is {ganai broda gi brode}. $)
+bgan $a bridi ganai broda gi brode $.
+
+${
+    ax-mp.0 $e |- broda $.
+    ax-mp.1 $e |- ganai broda gi brode $.
+    $( Because {ganai} encodes a syllogism, it may be eliminated by modus ponens. $)
+    ax-mp $a |- brode $.
+$}
+
+$( The principle of simplification. Known as "ax-1" in iset.mm. Known as the
+constant combinator, or "K", in the BHK interpretation. $)
+ax-simp $a |- ganai broda gi ganai brode gi broda $.
+
+${
+    simpi.0 $e |- broda $.
+    $( Inference form of ~ax-simp
+       (Contributed by la korvo, 27-Jul-2023.) $)
+    simpi $p |- ganai brode gi broda $=
+      sbb1 sbb2 sbb1 bgan simpi.0 sbb1 sbb2 ax-simp ax-mp $.
+$}
+
+${
+    simpii.0 $e |- broda $.
+    simpii.1 $e |- brode $.
+    $( Inference form of ~simpi
+       (Contributed by la korvo, 27-Jul-2023.) $)
+    simpii $p |- broda $=
+      sbb2 sbb1 simpii.1 sbb1 sbb2 simpii.0 simpi ax-mp $.
+$}
+
+$( Frege's axiom. $)
+ax-freg $a |- ganai ganai broda gi ganai brode gi brodi gi ganai ganai broda gi brode gi ganai broda gi brodi $.
+
+${
+    fregi.0 $e |- ganai broda gi ganai brode gi brodi $.
+    $( Inference form of ~ax-freg
+       (Contributed by la korvo, 27-Jul-2023.) $)
+    fregi $p |- ganai ganai broda gi brode gi ganai broda gi brodi $=
+      sbb1 sbb2 sbb3 bgan bgan sbb1 sbb2 bgan sbb1 sbb3 bgan bgan fregi.0 sbb1
+      sbb2 sbb3 ax-freg ax-mp $.
+$}
+
+${
+    mpd.0 $e |- ganai broda gi brode $.
+    mpd.1 $e |- ganai broda gi ganai brode gi brodi $.
+    $( Deductive form of ~ax-mp
+       (Contributed by la korvo, 27-Jul-2023.) $)
+    mpd $p |- ganai broda gi brodi $=
+      ( bgan fregi ax-mp ) ABFACFDABCEGH $.
+$}
+
+$( The principle of identity. This is distantly related to, but not the same
+   as, the identity relation ~df-du
+   (Contributed by la korvo, 27-Jul-2023.) $)
+id $p |- ganai broda gi broda $=
+  ( sbb2 bgan ax-simp mpd ) ABACZAABDAFDE $.
+
+$(
+#*#*#
 Biconditionals I: {go}
 #*#*#
 $)
 
-$c go gi $.
+$c go $.
 
 $( If {broda} and {brode} are bridi, then so is {go broda gi brode}. $)
 bgo $a bridi go broda gi brode $.
@@ -123,25 +189,7 @@ ${
     ax-go-trans $a |- go broda gi brodi $.
 $}
 
-$(
-#*#*#
-Implication I: {ganai}
-#*#*#
-$)
-
-$c ganai $.
-
-$( If {broda} and {brode} are bridi, then so is {ganai broda gi brode}. $)
-bgan $a bridi ganai broda gi brode $.
-
 df-ganai $a |- ganai go broda gi brode gi ganai broda gi brode $.
-
-${
-    ax-mp.0 $e |- broda $.
-    ax-mp.1 $e |- ganai broda gi brode $.
-    $( Because {ganai} encodes a syllogism, it may be eliminated by modus ponens. $)
-    ax-mp $a |- brode $.
-$}
 
 ${
     ganaii.0 $e |- go broda gi brode $.
