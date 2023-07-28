@@ -47,6 +47,7 @@ selbri which did not previously exist.
 Theorem | Formalized | Proved
 ---|---|---
 cei'i | yes | yes: [ceihi](ceihi.html)
+ko'a du ko'a | yes | no; [du-refl](du-refl.html) is incomplete
 lo broda ku broda | somewhat (prose, not Metamath) | no
 
 ### Formal coverage

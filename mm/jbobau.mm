@@ -53,11 +53,14 @@ htmldef "zo'u" as "<small>zo'u</small> ";
 htmldef "se" as "<small>se</small> ";
 htmldef "te" as "<small>te</small> ";
 htmldef "ganai" as "<small>ganai</small> ";
+htmldef "ga" as "<small>ga</small> ";
 htmldef "ge" as "<small>ge</small> ";
 htmldef "gi" as "<small>gi</small> ";
+htmldef "ja" as "<small>ja</small> ";
 htmldef "je" as "<small>je</small> ";
 htmldef "jo" as "<small>jo</small> ";
 htmldef "go" as "<small>go</small> ";
+htmldef ".a" as "<small>.a</small> ";
 htmldef ".e" as "<small>.e</small> ";
 htmldef ".o" as "<small>.o</small> ";
 htmldef "li" as "<small>li</small> ";
@@ -188,6 +191,25 @@ $( The principle of identity. This is distantly related to, but not the same
 id $p |- ganai broda gi broda $=
   ( sbb2 bgan ax-simp mpd ) ABACZAABDAFDE $.
 
+${
+    mpi.0 $e |- broda $.
+    mpi.1 $e |- ganai brode gi ganai broda gi brodi $.
+    $( A nested modus ponens. Known as "mpi" in iset.mm.
+       (Contributed by la korvo, 27-Jul-2023.) $)
+    mpi $p |- ganai brode gi brodi $=
+      sbb2 sbb1 sbb3 sbb1 sbb2 mpi.0 simpi mpi.1 mpd $.
+$}
+
+${
+    mp2.0 $e |- broda $.
+    mp2.1 $e |- brode $.
+    mp2.2 $e |- ganai broda gi ganai brode gi brodi $.
+    $( Double modus ponens. Known as "mp2" in iset.mm.
+       (Contributed by la korvo, 27-Jul-2023.) $)
+    mp2 $p |- brodi $=
+      sbb1 sbb3 mp2.0 sbb2 sbb1 sbb3 mp2.1 mp2.2 mpi ax-mp $.
+$}
+
 $(
 #*#*#
 Biconditionals I: {go}
@@ -265,10 +287,47 @@ sje $a sumti ko'a .e ko'e $.
 sbje $a selbri bu'a je bu'e $.
 bge $a bridi ge broda gi brode $.
 
+$( Elimination of {` ge `} on the left. Known as "ax-ia1" in iset.mm. Curry
+   of the left-hand projection. $)
+ax-ge-le $a |- ganai ge broda gi brode gi broda $.
+
+$( Elimination of {` ge `} on the right. Known as "ax-ia2" in iset.mm. Curry
+   of the right-hand projection. $)
+ax-ge-re $a |- ganai ge broda gi brode gi brode $.
+
+$( Introduction of {` ge `}. Known as "ax-ia3" in iset.mm. Curry of the I
+   combinator. $)
+ax-ge-in $a |- ganai broda gi ganai brode gi ge broda gi brode $.
+
+${
+    ge-lei.0 $e |- ge broda gi brode $.
+    $( Inference form of ~ax-ge-le
+       (Contributed by la korvo, 27-Jul-2023.) $)
+    ge-lei $p |- broda $=
+      sbb1 sbb2 bge sbb1 ge-lei.0 sbb1 sbb2 ax-ge-le ax-mp $.
+$}
+
+${
+    ge-rei.0 $e |- ge broda gi brode $.
+    $( Inference form of ~ax-ge-re
+       (Contributed by la korvo, 27-Jul-2023.) $)
+    ge-rei $p |- brode $=
+      sbb1 sbb2 bge sbb2 ge-rei.0 sbb1 sbb2 ax-ge-re ax-mp $.
+$}
+
+${
+    ge-ini.0 $e |- broda $.
+    ge-ini.1 $e |- brode $.
+    $( Inference form of ~ax-ge-in
+       (Contributed by la korvo, 27-Jul-2023.) $)
+    ge-ini $p |- ge broda gi brode $=
+      sbb1 sbb2 sbb1 sbb2 bge ge-ini.0 ge-ini.1 sbb1 sbb2 ax-ge-in mp2 $.
+$}
+
 $( Definition of {` .e `} in terms of {` ge `}. Forethought version of
    example 12.2-5 from [CLL] p. 14. $)
 df-e $a |- go ko'a .e ko'e bu'a ko'i gi ge ko'a bu'a ko'i gi ko'e bu'a ko'i $.
-$( Definition of {je} in terms of {ge}. From example 12.2-5 of [CLL] p. 14. $)
+$( Definition of {` je `} in terms of {` ge `}. From example 12.2-5 of [CLL] p. 14. $)
 df-je $a |- go ko'a bu'a je bu'e ko'e gi ge ko'a bu'a ko'e gi ko'a bu'e ko'e $.
 
 ${
@@ -306,6 +365,45 @@ ${
       wk1 wk2 sbba bb wk1 wk2 sbbe bb bge wk1 wk2 sbba sbbe sbje bb jeri.0 wk1
       wk2 sbba sbbe df-je bi-rev $.
 $}
+
+$(
+#*#*#
+Disjunctions: {.a}, {ja}, {ga}
+#*#*#
+$)
+
+$c .a ja ga $.
+sbja $a selbri bu'a ja bu'e $.
+sja $a sumti ko'a .a ko'e $.
+bga $a bridi ga broda gi brode $.
+
+$( Definition of {` ga `} in terms of {` go `}, {` ganai `}, and {` ge `}. Known as
+   "ax-io" in iset.mm. $)
+df-ga $a |- go ganai ga brode gi brodi gi broda gi ge ganai brode gi broda gi ganai brodi gi broda $.
+
+${
+    gai.0 $e |- ganai ga brode gi brodi gi broda $.
+    $( Inference form of ~df-ga
+       (Contributed by la korvo, 28-Jul-2023.) $)
+    gai $p |- ge ganai brode gi broda gi ganai brodi gi broda $=
+      sbb2 sbb3 bga sbb1 bgan sbb2 sbb1 bgan sbb3 sbb1 bgan bge gai.0 sbb1 sbb2
+      sbb3 df-ga bi $.
+$}
+
+${
+    gari.0 $e |- ge ganai brode gi broda gi ganai brodi gi broda $.
+    $( Reverse inference form of ~df-ga
+       (Contributed by la korvo, 28-Jul-2023.) $)
+    gari $p |- ganai ga brode gi brodi gi broda $=
+      sbb2 sbb1 bgan sbb3 sbb1 bgan bge sbb2 sbb3 bga sbb1 bgan gari.0 sbb1
+      sbb2 sbb3 df-ga bi-rev $.
+$}
+
+$( Definition of {` .a `} in terms of {` ga `}. Forethought version of
+   example 12.2-5 from [CLL] p. 14. $)
+df-a $a |- go ko'a .a ko'e bu'a ko'i gi ga ko'a bu'a ko'i gi ko'e bu'a ko'i $.
+$( Definition of {` ja `} in terms of {` ga `}. From example 12.2-5 of [CLL] p. 14. $)
+df-ja $a |- go ko'a bu'a ja bu'e ko'e gi ga ko'a bu'a ko'e gi ko'a bu'e ko'e $.
 
 $(
 #*#*#
