@@ -17,4 +17,4 @@ print("---|---|---")
 lines = [f"{cls} | metavariable | {dff[cls]}" for cls in dff]
 lines.extend(f"{cls} | constant | {dfc[cls]}" for cls in dfc)
 for line in sorted(lines): print(line)
-print("total", "| - |", count, "%0.2f%%" % (count * 100 / 2529))
+print("total", "| - |", count, "(%0.2f%%)" % (count * 100 / 2529))
