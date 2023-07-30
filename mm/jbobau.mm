@@ -12,6 +12,7 @@ $( Conventions:
 * inferences of {go} have same theorem name, but end with "i"
 * reverse inferences end with "ri"
 * deductions where everything starts {ganai broda gi} end with "d"
+* Operators commute, relations are symmetric
 $)
 
 $( $t
@@ -212,79 +213,11 @@ $}
 
 $(
 #*#*#
-Biconditionals I: {go}
+Conjunctions I: {ge}
 #*#*#
 $)
 
-$c go $.
-
-$( If {` broda `} and {` brode `} are bridi, then so is {` go broda gi brode `}. $)
-bgo $a bridi go broda gi brode $.
-
-$( {` go `} is reflexive. $)
-ax-go-refl $a |- go broda gi broda $.
-
-${
-    ax-go-sym.0 $e |- go broda gi brode $.
-    $( {` go `} is symmetric. $)
-    ax-go-sym $a |- go brode gi broda $.
-$}
-
-${
-    ax-go-trans.0 $e |- go broda gi brode $.
-    ax-go-trans.1 $e |- go brode gi brodi $.
-    $( {` go `} is transitive. $)
-    ax-go-trans $a |- go broda gi brodi $.
-$}
-
-df-ganai $a |- ganai go broda gi brode gi ganai broda gi brode $.
-
-${
-    ganaii.0 $e |- go broda gi brode $.
-    $( Biconditional implication may be weakened to unidirectional implication.
-       Inference form of ~df-ganai
-       (Contributed by la korvo, 17-Jul-2023.) $)
-    ganaii $p |- ganai broda gi brode $=
-      sbb1 sbb2 bgo sbb1 sbb2 bgan ganaii.0 sbb1 sbb2 df-ganai ax-mp $.
-$}
-
-${
-    bi.0 $e |- broda $.
-    bi.1 $e |- go broda gi brode $.
-    $( Provable version of (now removed) ax-bi, using ~ax-mp and ~df-ganai as a basis.
-       (Contributed by la korvo, 16-Jul-2023.) $)
-    bi $p |- brode $=
-      sbb1 sbb2 bi.0 sbb1 sbb2 bi.1 ganaii ax-mp $.
-$}
-
-${
-    bi-rev.0 $e |- broda $.
-    bi-rev.1 $e |- go brode gi broda $.
-    $( Modus ponens in the other direction.
-       (Contributed by la korvo, 16-Jul-2023.) $)
-    bi-rev $p |- brode $=
-      sbb1 sbb2 bi-rev.0 sbb2 sbb1 bi-rev.1 ax-go-sym bi $.
-$}
-
-${
-    bi-rev-syl.0 $e |- go broda gi brode $.
-    $( The right-hand side of a {` go `} may also be weakened to a {` ganai `}.
-       (Contributed by la korvo, 10-Jul-2023.) $)
-    bi-rev-syl $p |- ganai brode gi broda $=
-      sbb2 sbb1 sbb1 sbb2 bi-rev-syl.0 ax-go-sym ganaii $.
-$}
-
-$(
-#*#*#
-Conjunctions: {.e}, {je}, {ge}
-#*#*#
-$)
-
-$c je ge $.
-
-$c .e $.
-sje $a sumti ko'a .e ko'e $.
-sbje $a selbri bu'a je bu'e $.
+$c ge $.
 bge $a bridi ge broda gi brode $.
 
 $( Elimination of {` ge `} on the left. Known as "ax-ia1" in iset.mm. Curry
@@ -323,6 +256,124 @@ ${
     ge-ini $p |- ge broda gi brode $=
       sbb1 sbb2 sbb1 sbb2 bge ge-ini.0 ge-ini.1 sbb1 sbb2 ax-ge-in mp2 $.
 $}
+
+$(
+#*#*#
+Biconditionals I: {go}
+#*#*#
+$)
+
+$c go $.
+
+$( If {` broda `} and {` brode `} are bridi, then so is {` go broda gi brode `}. $)
+bgo $a bridi go broda gi brode $.
+
+$( Definition of {` go `} in terms of {` ganai `} and {` ge `}. This is the
+   standard definition of the biconditional connective in higher-order
+   intuitionistic logic. This can be justified intuitionistically; see
+   "df-bi" and "bijust" in iset.mm. $)
+df-go $a |-
+  ge
+    ganai go broda gi brode
+    gi ge ganai broda gi brode gi ganai brode gi broda
+  gi
+    ganai ge ganai broda gi brode gi ganai brode gi broda
+    gi go broda gi brode $.
+
+${
+    goli.0 $e |- go broda gi brode $.
+    $( Inference form of left side of ~df-go
+       (Contributed by la korvo, 29-Jul-2023.) $)
+    goli $p |- ge ganai broda gi brode gi ganai brode gi broda $=
+      sbb1 sbb2 bgo sbb1 sbb2 bgan sbb2 sbb1 bgan bge goli.0 sbb1 sbb2 bgo sbb1
+      sbb2 bgan sbb2 sbb1 bgan bge bgan sbb1 sbb2 bgan sbb2 sbb1 bgan bge sbb1
+      sbb2 bgo bgan sbb1 sbb2 df-go ge-lei ax-mp $.
+$}
+
+${
+    golili.0 $e |- go broda gi brode $.
+    $( Biconditional implication may be weakened to unidirectional implication.
+       Inference form of left side of ~goli
+       (Contributed by la korvo, 17-Jul-2023.)
+       (Shortened by la korvo, 29-Jul-2023.) $)
+    golili $p |- ganai broda gi brode $=
+      sbb1 sbb2 bgan sbb2 sbb1 bgan sbb1 sbb2 golili.0 goli ge-lei $.
+$}
+
+${
+    gori.0 $e |- ge ganai broda gi brode gi ganai brode gi broda $.
+    $( Inference form of right side of ~df-go
+       (Contributed by la korvo, 30-Jul-2023.) $)
+    gori $p |- go broda gi brode $=
+      sbb1 sbb2 bgan sbb2 sbb1 bgan bge sbb1 sbb2 bgo gori.0 sbb1 sbb2 bgo sbb1
+      sbb2 bgan sbb2 sbb1 bgan bge bgan sbb1 sbb2 bgan sbb2 sbb1 bgan bge sbb1
+      sbb2 bgo bgan sbb1 sbb2 df-go ge-rei ax-mp $.
+$}
+
+${
+    gorii.0 $e |- ganai broda gi brode $.
+    gorii.1 $e |- ganai brode gi broda $.
+    $( Inference form of right side of ~gori
+       (Contributed by la korvo, 30-Jul-2023.) $)
+    gorii $p |- go broda gi brode $=
+      sbb1 sbb2 sbb1 sbb2 bgan sbb2 sbb1 bgan gorii.0 gorii.1 ge-ini gori $.
+$}
+
+$( {` go `} is reflexive.
+   (Contributed by la korvo, 30-Jul-2023.) $)
+go-refl $p |- go broda gi broda $=
+  sbb1 sbb1 sbb1 id sbb1 id gorii $.
+
+${
+    ax-go-sym.0 $e |- go broda gi brode $.
+    $( {` go `} is symmetric. $)
+    ax-go-sym $a |- go brode gi broda $.
+$}
+
+${
+    ax-go-trans.0 $e |- go broda gi brode $.
+    ax-go-trans.1 $e |- go brode gi brodi $.
+    $( {` go `} is transitive. $)
+    ax-go-trans $a |- go broda gi brodi $.
+$}
+
+${
+    bi.0 $e |- broda $.
+    bi.1 $e |- go broda gi brode $.
+    $( Like modus ponens ~ax-mp but for biconditionals.
+       (Contributed by la korvo, 16-Jul-2023.) $)
+    bi $p |- brode $=
+      sbb1 sbb2 bi.0 sbb1 sbb2 bi.1 golili ax-mp $.
+$}
+
+${
+    bi-rev.0 $e |- broda $.
+    bi-rev.1 $e |- go brode gi broda $.
+    $( Modus ponens in the other direction.
+       (Contributed by la korvo, 16-Jul-2023.) $)
+    bi-rev $p |- brode $=
+      sbb1 sbb2 bi-rev.0 sbb2 sbb1 bi-rev.1 ax-go-sym bi $.
+$}
+
+${
+    bi-rev-syl.0 $e |- go broda gi brode $.
+    $( The right-hand side of a {` go `} may also be weakened to a {` ganai `}.
+       (Contributed by la korvo, 10-Jul-2023.) $)
+    bi-rev-syl $p |- ganai brode gi broda $=
+      sbb2 sbb1 sbb1 sbb2 bi-rev-syl.0 ax-go-sym golili $.
+$}
+
+$(
+#*#*#
+Conjunctions II: {.e}, {je}
+#*#*#
+$)
+
+$c je $.
+
+$c .e $.
+sje $a sumti ko'a .e ko'e $.
+sbje $a selbri bu'a je bu'e $.
 
 $( Definition of {` .e `} in terms of {` ge `}. Forethought version of
    example 12.2-5 from [CLL] p. 14. $)
@@ -544,7 +595,7 @@ ${
     $( Biconditional modus ponens under {` ro bu'a `}.
        (Contributed by la korvo, 16-Jul-2023.) $)
     ro-bi $p |- ro bu'a zo'u brode $=
-      sbb1 sbb2 sbba ro-bi.0 sbb1 sbb2 ro-bi.1 ganaii ax-ro-mp $.
+      sbb1 sbb2 sbba ro-bi.0 sbb1 sbb2 ro-bi.1 golili ax-ro-mp $.
 $}
 
 $(

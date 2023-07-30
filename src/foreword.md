@@ -47,10 +47,15 @@ selbri which did not previously exist.
 Theorem | Formalized | Proved
 ---|---|---
 cei'i | yes | yes: [ceihi](ceihi.html)
+ganai broda gi broda | yes | yes: [id](id.html)
+go broda gi broda | yes | yes: [go-refl](go-refl.html)
 ko'a du ko'a | yes | no; [du-refl](du-refl.html) is incomplete
 lo broda ku broda | somewhat (prose, not Metamath) | no
 
 ### Formal coverage
+
+Put another way, there are around 2529 baseline valsi to consider, and the
+following table shows how many valsi have been formalized.
 
 {{#include coverage.md}}
 
