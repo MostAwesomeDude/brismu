@@ -5,15 +5,24 @@ $( bridi smuni jbobau $)
 $( Conventions:
 
 * "ax-" starts axioms
+  * conclusions which are along the same lines as axioms should not start with
+    "ax-"; compare ~ax-mp and ~mpi and ~mpd or ~ax-freg and ~fregi and ~fregd
 * "df-" starts definitions
-  * e.g. definition of {du} is "df-du"
-  * definitions are generally of the form {go broda gi brode}, where {broda}
-    contains the defined valsi
-* inferences of {ganai}/{go}/{ge} have same theorem name, but end with "i"
-* reverse inferences end with "ri"
-* deductions where everything starts {ganai broda gi} end with "d"
-* Lemmas end with "lem", or "lem0", "lem1", etc.
-* Operators commute, relations are symmetric
+  * e.g. definition of {du} is ~df-du
+  * definitions are generally of the form {GA broda gi brode}, where {broda}
+    contains the defined valsi, {GA} may be one of {ganai}, {go}, {ge}
+* Inferences and deductions have systematic names
+  * {ganai} can always be converted to inference form; use ~ax-mp and append
+    "i", as in ~ax-simp and ~simpi
+  * {go} can have forwards and backwards inferences with "i" and "ri", as in
+    ~ei and ~eri for ~df-e
+  * {ge} may have inferences which conclude the left-hand or right-hand
+  * components with "li" and "ri", as in ~goli and ~gori for ~df-go
+  * most inferences admit some deductive form as well, usually by applying
+    ~syl and appending "d", as in ~mpd for ~ax-mp
+* Lemmas append "-lem", as in ~ge-com-lem and ~ge-com
+  * Multiple lemmas append "-lem0", "-lem1", etc.
+* Operators commute "-com", relations are symmetric "-sym"
 $)
 
 $( $t
@@ -196,10 +205,29 @@ id $p |- ganai broda gi broda $=
 ${
     syl.0 $e |- ganai broda gi brode $.
     syl.1 $e |- ganai brode gi brodi $.
-    $( The quintessential syllogism.
+    $( The quintessential syllogism. This inference is a standard workhorse
+       for producing deductive forms.
        (Contributed by la korvo, 30-Jul-2023.) $)
     syl $p |- ganai broda gi brodi $=
       sbb1 sbb2 sbb3 syl.0 sbb2 sbb3 bgan sbb1 syl.1 simpi mpd $.
+$}
+
+${
+    fregd.0 $e |- ganai broda gi ganai brode gi ganai brodi gi brodo $.
+    $( Deductive form of ~ax-freg
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    fregd $p |- ganai broda gi
+                  ganai ganai brode gi brodi gi ganai brode gi brodo $=
+      ( bgan ax-freg syl ) ABCDFFBCFBDFFEBCDGH $.
+$}
+
+${
+    mpdd.0 $e |- ganai broda gi ganai brode gi brodi $.
+    mpdd.1 $e |- ganai broda gi ganai brode gi ganai brodi gi brodo $.
+    $( Nested form of ~mpd
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    mpdd $p |- ganai broda gi ganai brode gi brodo $=
+      ( bgan fregd mpd ) ABCGBDGEABCDFHI $.
 $}
 
 ${
@@ -210,6 +238,25 @@ ${
     sylcom $p |- ganai broda gi ganai brode gi brodo $=
       sbb1 sbb2 sbb3 bgan sbb2 sbb4 bgan sylcom.0 sbb2 sbb3 sbb4 sylcom.1 fregi
       syl $.
+$}
+
+${
+    syl6.0 $e |- ganai broda gi ganai brode gi brodi $.
+    syl6.1 $e |- ganai brodi gi brodo $.
+    $( A syllogism replacing consequents.
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    syl6 $p |- ganai broda gi ganai brode gi brodo $=
+      ( bgan simpi sylcom ) ABCDECDGBFHI $.
+$}
+
+${
+    syl6c.0 $e |- ganai broda gi ganai brode gi brodi $.
+    syl6c.1 $e |- ganai broda gi ganai brode gi brodo $.
+    syl6c.2 $e |- ganai brodi gi ganai brodo gi brodu $.
+    $( A contractive variant of ~syl6
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    syl6c $p |- ganai broda gi ganai brode gi brodu $=
+      ( bgan syl6 mpdd ) ABDEGABCDEIFHJK $.
 $}
 
 ${
@@ -324,11 +371,27 @@ ${
 $}
 
 ${
+    ge-led.0 $e |- ganai broda gi ge brode gi brodi $.
+    $( Deductive form of ~ax-ge-le
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    ge-led $p |- ganai broda gi brode $=
+      ( bge ax-ge-le syl ) ABCEBDBCFG $.
+$}
+
+${
     ge-rei.0 $e |- ge broda gi brode $.
     $( Inference form of ~ax-ge-re
        (Contributed by la korvo, 27-Jul-2023.) $)
     ge-rei $p |- brode $=
       sbb1 sbb2 bge sbb2 ge-rei.0 sbb1 sbb2 ax-ge-re ax-mp $.
+$}
+
+${
+    ge-red.0 $e |- ganai broda gi ge brode gi brodi $.
+    $( Deductive form of ~ax-ge-re
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    ge-red $p |- ganai broda gi brodi $=
+      ( bge ax-ge-re syl ) ABCECDBCFG $.
 $}
 
 ${
@@ -340,6 +403,11 @@ ${
       sbb1 sbb2 sbb1 sbb2 bge ge-ini.0 ge-ini.1 sbb1 sbb2 ax-ge-in mp2 $.
 $}
 
+$( ~ax-ge-in with swapped antecedents.
+   (Contributed by la korvo, 31-Jul-2023.) $)
+ge-in-swap12 $p |- ganai broda gi ganai brode gi ge brode gi broda $=
+  ( bge ax-ge-in ganai-swap12 ) BABACBADE $.
+
 ${
     cur.0 $e |- ganai broda gi ganai brode gi brodi $.
     $( The natural curry (or "import") for any well-formed statement. Known as
@@ -349,10 +417,24 @@ ${
       ( bge ax-ge-le ax-ge-re sylc ) ABEABCABFABGDH $.
 $}
 
-$( ~ax-ge-in with swapped antecedents.
-   (Contributed by la korvo, 31-Jul-2023.) $)
-ge-in-swap12 $p |- ganai broda gi ganai brode gi ge brode gi broda $=
-  ( bge ax-ge-in ganai-swap12 ) BABACBADE $.
+${
+    uncur.0 $e |- ganai ge broda gi brode gi brodi $.
+    $( The natural uncurry (or "export") for any well-formed statement. Known
+       as "ex" in iset.mm.
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    uncur $p |- ganai broda gi ganai brode gi brodi $=
+      ( bge ax-ge-in syl6 ) ABABECABFDG $.
+$}
+
+${
+    syl2anc.0 $e |- ganai broda gi brode $.
+    syl2anc.1 $e |- ganai broda gi brodi $.
+    syl2anc.2 $e |- ganai ge brode gi brodi gi brodo $.
+    $( A contracting syllogism.
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    syl2anc $p |- ganai broda gi brodo $=
+      ( uncur sylc ) ABCDEFBCDGHI $.
+$}
 
 $(
 #*#*#
@@ -415,6 +497,24 @@ ${
     gorii $p |- go broda gi brode $=
       sbb1 sbb2 sbb1 sbb2 bgan sbb2 sbb1 bgan gorii.0 gorii.1 ge-ini gori $.
 $}
+
+$( Property of biconditionals.
+   (Contributed by la korvo, 31-Jul-2023.) $)
+bi1 $p |- ganai go broda gi brode gi ganai broda gi brode $=
+  ( bgo bgan bge df-go ge-lei ge-led ) ABCZABDZBADZIJKEZDLIDABFGH $.
+
+$( Property of biconditionals.
+   (Contributed by la korvo, 31-Jul-2023.) $)
+bi2 $p |- ganai go broda gi brode gi ganai brode gi broda $=
+  ( bgo bgan bge df-go ge-lei ge-red ) ABCZABDZBADZIJKEZDLIDABFGH $.
+
+$( Property of biconditionals.
+   (Contributed by la korvo, 31-Jul-2023.) $)
+bi3 $p |- ganai
+  ganai broda gi brode
+  gi ganai ganai brode gi broda
+    gi go broda gi brode $=
+  ( bgan bgo bge df-go ge-rei uncur ) ABCZBACZABDZKIJEZCLKCABFGH $.
 
 $( {` go `} is reflexive.
    (Contributed by la korvo, 30-Jul-2023.) $)
@@ -556,6 +656,54 @@ ${
       sbb2 sbb1 bgan sbb3 sbb1 bgan bge sbb2 sbb3 bga sbb1 bgan gari.0 sbb1
       sbb2 sbb3 df-ga bi-rev $.
 $}
+
+$( Introduce {` ga `} with the antecedent on the left. Known as "orc" in
+   iset.mm.
+   (Contributed by la korvo, 31-Jul-2023.) $)
+ga-lin $p |- ganai broda gi ga broda gi brode $=
+  ( bga bgan bge id df-ga bi ge-lei ) AABCZDZBJDZJJDKLEJFJABGHI $.
+
+$( Introduce {` ga `} with the antecedent on the right. Known as "olc" in
+   iset.mm.
+   (Contributed by la korvo, 31-Jul-2023.) $)
+ga-rin $p |- ganai broda gi ga brode gi broda $=
+  ( bga bgan bge id df-ga bi ge-rei ) BBACZDZAJDZJJDKLEJFJBAGHI $.
+
+$(
+  mpbi: bi
+  a2d: fregd
+  mpdd
+  syl6
+  syl6c
+  pm2.43i: ganai-abs
+  simpli: ge-lei
+  simpri: ge-rei
+  ex: uncur
+  syl2anc
+* mpancom
+* mpan
+  impbii: gorii
+  bi1
+  bi2
+  bi3
+  biimpi: bi-rev-syl
+* biimpri
+* impbidd
+* impbid21d
+* impbid
+* bicom1
+* bicomi
+* pm3.44
+* mp2an
+  jaob: df-ga
+  orc: ga-lin
+  olc: ga-rin
+* jaoi
+* pm1.4
+$)
+
+$( {` ga `} commutes. $)
+ga-com $p |- go ga broda gi brode gi ga brode gi broda $= ? $.
 
 $( Definition of {` .a `} in terms of {` ga `}. Forethought version of
    example 12.2-5 from [CLL] p. 14. $)
