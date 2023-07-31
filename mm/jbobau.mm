@@ -7,11 +7,12 @@ $( Conventions:
 * "ax-" starts axioms
 * "df-" starts definitions
   * e.g. definition of {du} is "df-du"
-  * definitions are of the form {go broda gi brode}, where {broda} has the
-    valsi to be defined
-* inferences of {go} have same theorem name, but end with "i"
+  * definitions are generally of the form {go broda gi brode}, where {broda}
+    contains the defined valsi
+* inferences of {ganai}/{go}/{ge} have same theorem name, but end with "i"
 * reverse inferences end with "ri"
 * deductions where everything starts {ganai broda gi} end with "d"
+* Lemmas end with "lem", or "lem0", "lem1", etc.
 * Operators commute, relations are symmetric
 $)
 
@@ -193,6 +194,88 @@ id $p |- ganai broda gi broda $=
   ( sbb2 bgan ax-simp mpd ) ABACZAABDAFDE $.
 
 ${
+    syl.0 $e |- ganai broda gi brode $.
+    syl.1 $e |- ganai brode gi brodi $.
+    $( The quintessential syllogism.
+       (Contributed by la korvo, 30-Jul-2023.) $)
+    syl $p |- ganai broda gi brodi $=
+      sbb1 sbb2 sbb3 syl.0 sbb2 sbb3 bgan sbb1 syl.1 simpi mpd $.
+$}
+
+${
+    sylcom.0 $e |- ganai broda gi ganai brode gi brodi $.
+    sylcom.1 $e |- ganai brode gi ganai brodi gi brodo $.
+    $( A syllogism which shuffles antecedents.
+       (Contributed by la korvo, 30-Jul-2023.) $)
+    sylcom $p |- ganai broda gi ganai brode gi brodo $=
+      sbb1 sbb2 sbb3 bgan sbb2 sbb4 bgan sylcom.0 sbb2 sbb3 sbb4 sylcom.1 fregi
+      syl $.
+$}
+
+${
+    simpd.0 $e |- ganai broda gi brode $.
+    $( Deductive form of ~ax-simp
+       (Contributed by la korvo, 30-Jul-2023.) $)
+    simpd $p |- ganai broda gi ganai brodi gi brode $=
+      sbb1 sbb2 sbb3 sbb2 bgan simpd.0 sbb2 sbb3 ax-simp syl $.
+$}
+
+${
+    syl5com.0 $e |- ganai broda gi brode $.
+    syl5com.1 $e |- ganai brodi gi ganai brode gi brodo $.
+    $( A syllogism which shuffles antecedents.
+       (Contributed by la korvo, 30-Jul-2023.) $)
+    syl5com $p |- ganai broda gi ganai brodi gi brodo $=
+      sbb1 sbb3 sbb2 sbb4 sbb1 sbb2 sbb3 syl5com.0 simpd syl5com.1 sylcom $.
+$}
+
+${
+    ganai-swap12.0 $e |- ganai broda gi ganai brode gi brodi $.
+    $( Naturally swap the first and second antecedents in an internalized
+       inference.
+       (Contributed by la korvo, 30-Jul-2023.) $)
+    ganai-swap12 $p |- ganai brode gi ganai broda gi brodi $=
+      sbb2 sbb2 sbb1 sbb3 sbb2 id ganai-swap12.0 syl5com $.
+$}
+
+${
+    syl5.0 $e |- ganai broda gi brode $.
+    syl5.1 $e |- ganai brodi gi ganai brode gi brodo $.
+    $( A syllogism which shuffles antecedents.
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    syl5 $p |- ganai brodi gi ganai broda gi brodo $=
+      sbb1 sbb3 sbb4 sbb1 sbb2 sbb3 sbb4 syl5.0 syl5.1 syl5com ganai-swap12 $.
+$}
+
+${
+    syl2im.0 $e |- ganai broda gi brode $.
+    syl2im.1 $e |- ganai brodi gi brodo $.
+    syl2im.2 $e |- ganai brode gi ganai brodo gi brodu $.
+    $( Replace two antecedents in parallel.
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    syl2im $p |- ganai broda gi ganai brodi gi brodu $=
+      ( bgan syl5 syl ) ABCEIFCDBEGHJK $.
+$}
+
+${
+    ganai-abs.0 $e |- ganai broda gi ganai broda gi brode $.
+    $( Absorb a redundant antecedent.
+       (Contributed by la korvo, 30-Jul-2023.) $)
+    ganai-abs $p |- ganai broda gi brode $=
+      sbb1 sbb1 sbb2 sbb1 id ganai-abs.0 mpd $.
+$}
+
+${
+    sylc.0 $e |- ganai broda gi brode $.
+    sylc.1 $e |- ganai broda gi brodi $.
+    sylc.2 $e |- ganai brode gi ganai brodi gi brodo $.
+    $( A contracting syllogism.
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    sylc $p |- ganai broda gi brodo $=
+      ( syl2im ganai-abs ) ADABACDEFGHI $.
+$}
+
+${
     mpi.0 $e |- broda $.
     mpi.1 $e |- ganai brode gi ganai broda gi brodi $.
     $( A nested modus ponens. Known as "mpi" in iset.mm.
@@ -256,6 +339,20 @@ ${
     ge-ini $p |- ge broda gi brode $=
       sbb1 sbb2 sbb1 sbb2 bge ge-ini.0 ge-ini.1 sbb1 sbb2 ax-ge-in mp2 $.
 $}
+
+${
+    cur.0 $e |- ganai broda gi ganai brode gi brodi $.
+    $( The natural curry (or "import") for any well-formed statement. Known as
+       "imp" in iset.mm.
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    cur $p |- ganai ge broda gi brode gi brodi $=
+      ( bge ax-ge-le ax-ge-re sylc ) ABEABCABFABGDH $.
+$}
+
+$( ~ax-ge-in with swapped antecedents.
+   (Contributed by la korvo, 31-Jul-2023.) $)
+ge-in-swap12 $p |- ganai broda gi ganai brode gi ge brode gi broda $=
+  ( bge ax-ge-in ganai-swap12 ) BABACBADE $.
 
 $(
 #*#*#
@@ -416,6 +513,16 @@ ${
       wk1 wk2 sbba bb wk1 wk2 sbbe bb bge wk1 wk2 sbba sbbe sbje bb jeri.0 wk1
       wk2 sbba sbbe df-je bi-rev $.
 $}
+
+$( {` ge `} is commutative in one direction. Lemma for ~ge-com
+   (Contributed by la korvo, 31-Jul-2023.) $)
+ge-com-lem $p |- ganai ge broda gi brode gi ge brode gi broda $=
+  ( bge ge-in-swap12 cur ) ABBACABDE $.
+
+$( {` ge `} is commutative.
+   (Contributed by la korvo, 31-Jul-2023.) $)
+ge-com $p |- go ge broda gi brode gi ge brode gi broda $=
+  ( bge ge-com-lem gorii ) ABCBACABDBADE $.
 
 $(
 #*#*#
