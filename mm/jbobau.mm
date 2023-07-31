@@ -436,6 +436,34 @@ ${
       ( uncur sylc ) ABCDEFBCDGHI $.
 $}
 
+${
+    mpancom.0 $e |- ganai broda gi brode $.
+    mpancom.1 $e |- ganai ge brode gi broda gi brodi $.
+    $( A variant of ~mpan
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    mpancom $p |- ganai broda gi brodi $=
+      ( id syl2anc ) ABACDAFEG $.
+$}
+
+${
+    mpan.0 $e |- broda $.
+    mpan.1 $e |- ganai ge broda gi brode gi brodi $.
+    $( An inference eliminating a conjunction from the antecedent.
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    mpan $p |- ganai brode gi brodi $=
+      ( simpi mpancom ) BACABDFEG $.
+$}
+
+${
+    mp2an.0 $e |- broda $.
+    mp2an.1 $e |- brode $.
+    mp2an.2 $e |- ganai ge broda gi brode gi brodi $.
+    $( An inference eliminating a conjunction from the antecedent.
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    mp2an $p |- brodi $=
+      ( mpan ax-mp ) BCEABCDFGH $.
+$}
+
 $(
 #*#*#
 Biconditionals I: {go}
@@ -516,15 +544,49 @@ bi3 $p |- ganai
     gi go broda gi brode $=
   ( bgan bgo bge df-go ge-rei uncur ) ABCZBACZABDZKIJEZCLKCABFGH $.
 
+${
+    goriidd.0 $e |- ganai broda gi ganai brode gi ganai brodi gi brodo $.
+    goriidd.1 $e |- ganai broda gi ganai brode gi ganai brodo gi brodi $.
+    $( Double deduction form of ~gorii
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    goriidd $p |- ganai broda gi ganai brode gi go brodi gi brodo $=
+      ( bgan bgo bi3 syl6c ) ABCDGDCGCDHEFCDIJ $.
+$}
+
+${
+    goriid-lem.0 $e |- ganai brode gi ganai brodi gi brodo $.
+    goriid-lem.1 $e |- ganai broda gi ganai brodo gi brodi $.
+    $( Lemma for ~goriid known as "impbid21d" in iset.mm.
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    goriid-lem $p |- ganai broda gi ganai brode gi go brodi gi brodo $=
+      ( bgan simpi simpd goriidd ) ABCDBCDGGAEHADCGBFIJ $.
+$}
+
+${
+    goriid.0 $e |- ganai broda gi ganai brode gi brodi $.
+    goriid.1 $e |- ganai broda gi ganai brodi gi brode $.
+    $( Deduction form of ~gorii
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    goriid $p |- ganai broda gi go brode gi brodi $=
+      ( bgo goriid-lem ganai-abs ) ABCFAABCDEGH $.
+$}
+
 $( {` go `} is reflexive.
    (Contributed by la korvo, 30-Jul-2023.) $)
 go-refl $p |- go broda gi broda $=
   sbb1 sbb1 sbb1 id sbb1 id gorii $.
 
+$( {` go `} commutes.
+   (Contributed by la korvo, 31-Jul-2023.) $)
+go-com $p |- ganai go broda gi brode gi go brode gi broda $=
+  ( bgo bi2 bi1 goriid ) ABCBAABDABEF $.
+
 ${
-    ax-go-sym.0 $e |- go broda gi brode $.
-    $( {` go `} is symmetric. $)
-    ax-go-sym $a |- go brode gi broda $.
+    go-comi.0 $e |- go broda gi brode $.
+    $( Inference form of ~go-com
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    go-comi $p |- go brode gi broda $=
+      ( bgo go-com ax-mp ) ABDBADCABEF $.
 $}
 
 ${
@@ -549,7 +611,7 @@ ${
     $( Modus ponens in the other direction.
        (Contributed by la korvo, 16-Jul-2023.) $)
     bi-rev $p |- brode $=
-      sbb1 sbb2 bi-rev.0 sbb2 sbb1 bi-rev.1 ax-go-sym bi $.
+      sbb1 sbb2 bi-rev.0 sbb2 sbb1 bi-rev.1 go-comi bi $.
 $}
 
 ${
@@ -557,7 +619,7 @@ ${
     $( The right-hand side of a {` go `} may also be weakened to a {` ganai `}.
        (Contributed by la korvo, 10-Jul-2023.) $)
     bi-rev-syl $p |- ganai brode gi broda $=
-      sbb2 sbb1 sbb1 sbb2 bi-rev-syl.0 ax-go-sym golili $.
+      sbb2 sbb1 sbb1 sbb2 bi-rev-syl.0 go-comi golili $.
 $}
 
 $(
@@ -614,7 +676,7 @@ ${
       wk2 sbba sbbe df-je bi-rev $.
 $}
 
-$( {` ge `} is commutative in one direction. Lemma for ~ge-com
+$( Lemma for ~ge-com showing that {` ge `} is commutative in one direction.
    (Contributed by la korvo, 31-Jul-2023.) $)
 ge-com-lem $p |- ganai ge broda gi brode gi ge brode gi broda $=
   ( bge ge-in-swap12 cur ) ABBACABDE $.
@@ -648,6 +710,12 @@ ${
       sbb3 df-ga bi $.
 $}
 
+$( Reverse implication of ~df-ga
+   (Contributed by la korvo, 31-Jul-2023.) $)
+gar $p |- ganai ge ganai brode gi broda gi ganai brodi gi broda
+  gi ganai ga brode gi brodi gi broda $=
+  ( bga bgan bge df-ga bi-rev-syl ) BCDAEBAECAEFABCGH $.
+
 ${
     gari.0 $e |- ge ganai brode gi broda gi ganai brodi gi broda $.
     $( Reverse inference form of ~df-ga
@@ -669,41 +737,24 @@ $( Introduce {` ga `} with the antecedent on the right. Known as "olc" in
 ga-rin $p |- ganai broda gi ga brode gi broda $=
   ( bga bgan bge id df-ga bi ge-rei ) BBACZDZAJDZJJDKLEJFJBAGHI $.
 
-$(
-  mpbi: bi
-  a2d: fregd
-  mpdd
-  syl6
-  syl6c
-  pm2.43i: ganai-abs
-  simpli: ge-lei
-  simpri: ge-rei
-  ex: uncur
-  syl2anc
-* mpancom
-* mpan
-  impbii: gorii
-  bi1
-  bi2
-  bi3
-  biimpi: bi-rev-syl
-* biimpri
-* impbidd
-* impbid21d
-* impbid
-* bicom1
-* bicomi
-* pm3.44
-* mp2an
-  jaob: df-ga
-  orc: ga-lin
-  olc: ga-rin
-* jaoi
-* pm1.4
-$)
+${
+    garii.0 $e |- ganai broda gi brode $.
+    garii.1 $e |- ganai brodi gi brode $.
+    $( Nested inference form of ~gar
+       (Contributed by la korvo, 31-Jul-2023.) $)
+    garii $p |- ganai ga broda gi brodi gi brode $=
+      ( bgan bga gar mp2an ) ABFCBFACGBFDEBACHI $.
+$}
 
-$( {` ga `} commutes. $)
-ga-com $p |- go ga broda gi brode gi ga brode gi broda $= ? $.
+$( Lemma for ~ga-com
+   (Contributed by la korvo, 31-Jul-2023.) $)
+ga-com-lem $p |- ganai ga broda gi brode gi ga brode gi broda $=
+  ( bga ga-rin ga-lin garii ) ABACBABDBAEF $.
+
+$( {` ga `} commutes.
+   (Contributed by la korvo, 31-Jul-2023.) $)
+ga-com $p |- go ga broda gi brode gi ga brode gi broda $=
+  ( bga ga-com-lem gorii ) ABCBACABDBADE $.
 
 $( Definition of {` .a `} in terms of {` ga `}. Forethought version of
    example 12.2-5 from [CLL] p. 14. $)
