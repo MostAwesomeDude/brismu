@@ -10,7 +10,7 @@ jobs:
         with:
           check-outdated: false
       - uses: DeterminateSystems/nix-installer-action@v3
-      - uses: DeterminateSystems/magic-nix-cache-action@v1
+#     - uses: DeterminateSystems/magic-nix-cache-action@v1
       - name: Build Nix flake
         run: nix build
       - name: Fix permissions
