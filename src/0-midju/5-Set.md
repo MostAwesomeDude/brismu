@@ -409,7 +409,7 @@ But zero is not a successor:
     ---------------- (kacli'e-zero)
          gai'o
 
-And the natural numbers have structual equality:
+And the natural numbers have structural equality:
 
     ro da ro de zo'u:
 

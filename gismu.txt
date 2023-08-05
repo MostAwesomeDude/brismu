@@ -77,11 +77,6 @@
  brife bif     bi'e breeze                                    x1 is a breeze/wind/gale from direction x2 with speed x3; x1 blows from x2                       4h  66    (cf. tcima)
  briju bij          office               'bureau'             x1 is an office/bureau/work-place of worker x2 at location x3                                    8c  54    (cf. jibri, gunka)
  brito rit          British                                   x1 reflects British/United Kingdom culture/nationality in aspect x2                              ab  54    (cf. glico, skoto, merko, ropno)
- broda rod          predicate var 1                           1st assignable variable predicate (context determines place structure)                           ad 134    (cf. cmavo list bu'a)
- brode         bo'e predicate var 2                           2nd assignable variable predicate (context determines place structure)                           ad  24 
- brodi              predicate var 3                           3rd assignable variable predicate (context determines place structure)                           ad  10 
- brodo              predicate var 4                           4th assignable variable predicate (context determines place structure)                           ad   5 
- brodu              predicate var 5                           5th assignable variable predicate (context determines place structure)                           ad   5 
  bruna bun     bu'a brother                                   x1 is brother of/fraternal to x2 by bond/tie/standard/parent(s) x3; [not necess. biological]     4b 110    (cf. mensi, tunba, tamne, famti, bersa)
  bu    bus     bu'i word to lerfu                             convert any single word to BY                                                                    -         (cf. cmavo list selma'o BY)
  bu'a  bul          some selbri 1                             logically quantified predicate variable: some selbri 1                                           aq   0    (cf. broda, etc.)

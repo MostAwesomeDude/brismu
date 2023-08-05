@@ -2,7 +2,9 @@ $( jbobau.mm $)
 
 $( bridi smuni jbobau $)
 
-$( Conventions:
+$( !
+
+Conventions:
 
 * "ax-" starts axioms
   * conclusions which are along the same lines as axioms should not start with
@@ -63,23 +65,30 @@ htmldef "bu'i" as "<span class='selbri'>bu'i</span> ";
 htmldef "zo'u" as "<small>zo'u</small> ";
 htmldef "se" as "<small>se</small> ";
 htmldef "te" as "<small>te</small> ";
-htmldef "ganai" as "<small>ganai</small> ";
 htmldef "ga" as "<small>ga</small> ";
+htmldef "ganai" as "<small>ganai</small> ";
 htmldef "ge" as "<small>ge</small> ";
 htmldef "gi" as "<small>gi</small> ";
+htmldef "go" as "<small>go</small> ";
+htmldef "gonai" as "<small>gonai</small> ";
 htmldef "ja" as "<small>ja</small> ";
+htmldef "janai" as "<small>janai</small> ";
 htmldef "je" as "<small>je</small> ";
 htmldef "jo" as "<small>jo</small> ";
-htmldef "go" as "<small>go</small> ";
+htmldef "jonai" as "<small>jonai</small> ";
 htmldef ".a" as "<small>.a</small> ";
+htmldef ".anai" as "<small>.anai</small> ";
 htmldef ".e" as "<small>.e</small> ";
 htmldef ".o" as "<small>.o</small> ";
+htmldef ".onai" as "<small>.onai</small> ";
 htmldef "li" as "<small>li</small> ";
 htmldef "no" as "0 ";
 htmldef "pa" as "1 ";
 htmldef "ro" as "<small>ro</small> ";
+htmldef "ce" as "<small>ce</small> ";
 htmldef "ckaji" as "<span class='gismu'>ckaji</span> ";
 htmldef "ckini" as "<span class='gismu'>ckini</span> ";
+htmldef "cmima" as "<span class='gismu'>cmima</span> ";
 htmldef "dugri" as "<span class='gismu'>dugri</span> ";
 htmldef "prami" as "<span class='gismu'>prami</span> ";
 htmldef "tenfa" as "<span class='gismu'>tenfa</span> ";
@@ -92,9 +101,22 @@ htmldef "do" as "<span class='sumti'>do</span> ";
 $)
 
 $(
+#####
+LOGICAL CONNECTIVES
+#####
+
+We start by internalizing five standard logical connectives: {` ganai `},
+{` ge `}, {` go `}, {` ga `}, and {` gonai `}. We will use these connectives
+to provide a basic logical framework for defining selbri and proving bridi.
+$)
+
+$(
 #*#*#
 Basic syntax
 #*#*#
+
+Before logic, we must define some basic elements of syntax: bridi, selbri,
+and sumti.
 $)
 
 $( Various sorts of fragments:
@@ -1141,3 +1163,58 @@ sbtenfa $a selbri tenfa $.
 
 $( {` dugri `} is a permutation of {` tenfa `}. $)
 df-dugri $a |- go ko'a dugri ko'e ko'i gi ko'a te se tenfa ko'e ko'i $.
+
+$(
+#*#*#
+Pairing: {ce}
+#*#*#
+$)
+
+$c ce cmima $.
+sbcmima $a selbri cmima $.
+sce $a sumti ko'a ce ko'e $.
+
+$( Tentative definition of {` ce `}. $)
+df-ce $a |- go ko'a cmima ko'e ce ko'i gi ga ko'a du ko'e gi ko'a du ko'i $.
+
+${
+    cei.0 $e |- ko'a cmima ko'e ce ko'i $.
+    $( Inference form of ~df-ce
+       (Contributed by la korvo, 5-Aug-2023.) $)
+    cei $p |- ga ko'a du ko'e gi ko'a du ko'i $=
+      ( sce sbcmima bb sbdu bga df-ce bi ) ABCEFGABHGACHGIDABCJK $.
+$}
+
+${
+    ceri.0 $e |- ga ko'a du ko'e gi ko'a du ko'i $.
+    $( Reverse inference form of ~df-ce
+       (Contributed by la korvo, 5-Aug-2023.) $)
+    ceri $p |- ko'a cmima ko'e ce ko'i $=
+      ( sbdu bb bga sce sbcmima df-ce bi-rev ) ABEFACEFGABCHIFDABCJK $.
+$}
+
+${
+    ceri-lin.0 $e |- ko'a du ko'e $.
+    $( Inference from composition of ~ga-lin and ~ceri
+       (Contributed by la korvo, 5-Aug-2023.) $)
+    ceri-lin $p |- ko'a cmima ko'e ce ko'i $=
+      ( sbdu bb bga ga-lin ax-mp ceri ) ABCABEFZKACEFZGDKLHIJ $.
+$}
+
+${
+    ceri-rin.0 $e |- ko'a du ko'i $.
+    $( Inference from composition of ~ga-rin and ~ceri
+       (Contributed by la korvo, 5-Aug-2023.) $)
+    ceri-rin $p |- ko'a cmima ko'e ce ko'i $=
+      ( sbdu bb bga ga-rin ax-mp ceri ) ABCACEFZABEFZKGDKLHIJ $.
+$}
+
+$( Assertion for left-hand component of a {` ce `} union.
+   (Contributed by la korvo, 5-Aug-2023.) $)
+ce-left $p |- ko'a cmima ko'a ce ko'e $=
+  ( ax-id-refl ceri-lin ) AABACD $.
+
+$( Assertion for right-hand component of a {` ce `} union.
+   (Contributed by la korvo, 5-Aug-2023.) $)
+ce-right $p |- ko'e cmima ko'a ce ko'e $=
+  ( ax-id-refl ceri-rin ) BABBCD $.
