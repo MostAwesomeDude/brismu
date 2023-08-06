@@ -33,8 +33,8 @@ htmlcss "<style type='text/css'>" +
         ".sumti { color: darkgreen; }" +
         ".selbri { color: blue; }" +
         ".bridi { color: brown; }" +
-        ".gismu { color: blue; }" +
-        ".lujvo { color: blue; }" +
+        ".gismu { color: olive; }" +
+        ".lujvo { color: teal; }" +
         "</style>";
 htmlvarcolor "<span class='sumti'>sumti</span> " +
              "<span class='selbri'>selbri</span> " +
@@ -53,9 +53,9 @@ htmldef "brode" as "<span class='bridi'>brode</span> ";
 htmldef "brodi" as "<span class='bridi'>brodi</span> ";
 htmldef "brodo" as "<span class='bridi'>brodo</span> ";
 htmldef "brodu" as "<span class='bridi'>brodu</span> ";
-htmldef "da" as "<small>da</small> ";
-htmldef "de" as "<small>de</small> ";
-htmldef "di" as "<small>di</small> ";
+htmldef "da" as "<span class='selbri'>da</span> ";
+htmldef "de" as "<span class='selbri'>de</span> ";
+htmldef "di" as "<span class='selbri'>di</span> ";
 htmldef "du" as "<span class='selbri'>du</span> ";
 htmldef "cei'i" as "<span class='selbri'>cei'i</span> ";
 htmldef "gai'o" as "<span class='selbri'>gai'o</span> ";
@@ -91,6 +91,7 @@ htmldef "ckini" as "<span class='gismu'>ckini</span> ";
 htmldef "cmima" as "<span class='gismu'>cmima</span> ";
 htmldef "dugri" as "<span class='gismu'>dugri</span> ";
 htmldef "prami" as "<span class='gismu'>prami</span> ";
+htmldef "simsa" as "<span class='gismu'>simsa</span> ";
 htmldef "tenfa" as "<span class='gismu'>tenfa</span> ";
 htmldef "ka" as "<small>ka</small> ";
 htmldef "ce'u" as "<small>ce'u</small> ";
@@ -896,9 +897,27 @@ $c ro zo'u $.
 $( XXX occurs checks are missing! $)
 
 ${
+    brd.0 $e bridi broda $.
+    $( Syntax for first-order universal quantification. $)
+    brd $a bridi ro da zo'u broda $.
+$}
+
+${
     brb.0 $e bridi broda $.
     $( Syntax for second-order universal quantification. $)
     brb $a bridi ro bu'a zo'u broda $.
+$}
+
+${
+    ax-gen1.0 $e |- broda $.
+    $( Axiom of first-order generalization. $)
+    ax-gen1 $a |- ro da zo'u broda $.
+$}
+
+${
+    ax-gen2.0 $e |- broda $.
+    $( Axiom of second-order generalization. $)
+    ax-gen2 $a |- ro bu'a zo'u broda $.
 $}
 
 ${
@@ -1001,31 +1020,45 @@ $}
 
 $(
 #*#*#
-Internal hom: {ka}, {ckaji}, {ckini}
+Internal hom: {ka}, {ckaji}, {ckini}, {simsa}
 #*#*#
+
+The internal hom is the syntax which internalizes relations. We define
+{` ka `} abstractions as well as several useful gismu for accessing the
+contents of those abstractions.
 $)
 
-$c pa ka ce'u ckaji ckini $.
+$(
+=-=-=
+{ka}
+=-=-=
+$)
+
+$c pa ka ce'u $.
 
 sc $a sumti ce'u $.
-sbckaji $a selbri ckaji $.
-sbckini $a selbri ckini $.
 
 $( If {` bu'a `} is a selbri, then wrapping it with {` pa ka `} yields sumti. $)
 spku $a sumti pa ka ko'a bu'a $.
 spkb $a sumti pa ka ko'a bu'a ko'e $.
 spkt $a sumti pa ka ko'a bu'a ko'e ko'i $.
 
+$(
+=-=-=
+{ckaji}
+=-=-=
+$)
+
+$c ckaji $.
+
+sbckaji $a selbri ckaji $.
+
 $( {` ckaji `} is often found with this conjugation. $)
 bckaji $p bridi ko'a ckaji pa ka ce'u bu'a $=
   wk1 sc sbba spku sbckaji bb $.
-$( {` ckini `} is often found with this conjugation. $)
-bckini $p bridi ko'a ckini ko'e pa ka ce'u bu'a ce'u $=
-  wk1 wk2 sc sc sbba spkb sbckini bt $.
 
 $( Definition of {` ckaji `} from {` ka `}. Based on example 4.1-2 of [CLL] p. 11. $)
 df-ckaji $a |- go ko'a ckaji pa ka ce'u bu'a ko'e gi ko'a bu'a ko'e $.
-df-ckini $a |- go ko'a ckini ko'e pa ka ce'u bu'a ce'u gi ko'a bu'a ko'e $.
 
 ${
     ckajii.0 $e |- ko'a ckaji pa ka ce'u bu'a ko'e $.
@@ -1044,6 +1077,22 @@ ${
       wk1 wk2 sbba bb wk1 sc sbba spku wk2 sbckaji bt ckajiri.0 wk1 wk2 sbba
       df-ckaji bi-rev $.
 $}
+
+$(
+=-=-=
+{ckini}
+=-=-=
+$)
+
+$c ckini $.
+
+sbckini $a selbri ckini $.
+
+$( {` ckini `} is often found with this conjugation. $)
+bckini $p bridi ko'a ckini ko'e pa ka ce'u bu'a ce'u $=
+  wk1 wk2 sc sc sbba spkb sbckini bt $.
+
+df-ckini $a |- go ko'a ckini ko'e pa ka ce'u bu'a ce'u gi ko'a bu'a ko'e $.
 
 ${
     ckinii.0 $e |- ko'a ckini ko'e pa ka ce'u bu'a ce'u $.
@@ -1069,6 +1118,64 @@ ${
     ckini-se $p |- ko'e ckini ko'a pa ka ce'u se bu'a ce'u $=
       wk2 wk1 sbba sbs wk1 wk2 sbba wk1 wk2 sbba ckini-se.0 ckinii seri ckiniri
       $.
+$}
+
+$(
+=-=-=
+{simsa}
+=-=-=
+$)
+
+$c simsa $.
+
+sbsimsa $a selbri simsa $.
+
+$( {` simsa `} is often found with this conjugation.
+   (Contributed by la korvo, 6-Aug-2023.) $)
+bsimsa $p bridi ko'a simsa ko'e pa ka ce'u bu'a $=
+  ( sc spku sbsimsa bt ) ABDCEFG $.
+
+df-simsa $a |- go ko'a simsa ko'e pa ka ce'u bu'a gi ge ko'a bu'a gi ko'e bu'a $.
+
+${
+    simsai.0 $e |- ko'a simsa ko'e pa ka ce'u bu'a $.
+    $( Inference form of ~df-simsa
+       (Contributed by la korvo, 6-Aug-2023.) $)
+    simsai $p |- ge ko'a bu'a gi ko'e bu'a $=
+      ( bsimsa bu bge df-simsa bi ) ABCEACFBCFGDABCHI $.
+$}
+
+${
+    simsail.0 $e |- ko'a simsa ko'e pa ka ce'u bu'a $.
+    $( Inference form of ~df-simsa
+       (Contributed by la korvo, 6-Aug-2023.) $)
+    simsail $p |- ko'a bu'a $=
+      ( bu simsai ge-lei ) ACEBCEABCDFG $.
+$}
+
+${
+    simsair.0 $e |- ko'a simsa ko'e pa ka ce'u bu'a $.
+    $( Inference form of ~df-simsa
+       (Contributed by la korvo, 6-Aug-2023.) $)
+    simsair $p |- ko'e bu'a $=
+      ( bu simsai ge-rei ) ACEBCEABCDFG $.
+$}
+
+${
+    simsari.0 $e |- ge ko'a bu'a gi ko'e bu'a $.
+    $( Reverse inference form of ~df-simsa
+       (Contributed by la korvo, 6-Aug-2023.) $)
+    simsari $p |- ko'a simsa ko'e pa ka ce'u bu'a $=
+      ( bu bge bsimsa df-simsa bi-rev ) ACEBCEFABCGDABCHI $.
+$}
+
+${
+    simsarii.0 $e |- ko'a bu'a $.
+    simsarii.1 $e |- ko'e bu'a $.
+    $( Reverse inference form of ~df-simsa
+       (Contributed by la korvo, 6-Aug-2023.) $)
+    simsarii $p |- ko'a simsa ko'e pa ka ce'u bu'a $=
+      ( bu ge-ini simsari ) ABCACFBCFDEGH $.
 $}
 
 $(
