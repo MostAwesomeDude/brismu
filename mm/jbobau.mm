@@ -25,6 +25,11 @@ Conventions:
 * Lemmas append "-lem", as in ~ge-com-lem and ~ge-com
   * Multiple lemmas append "-lem0", "-lem1", etc.
 * Operators commute "-com", relations are symmetric "-sym"
+
+References to iset.mm are not just for comparison and contrast, but for
+borrowing; many minor lemmas can be proven by reusing steps from iset.mm.
+Formally, there's a functor from a fragment of iset.mm to jbobau.mm.
+
 $)
 
 $( $t
@@ -81,6 +86,8 @@ htmldef ".anai" as "<small>.anai</small> ";
 htmldef ".e" as "<small>.e</small> ";
 htmldef ".o" as "<small>.o</small> ";
 htmldef ".onai" as "<small>.onai</small> ";
+htmldef "na" as "<small>na</small> ";
+htmldef "naku" as "<small>naku</small> ";
 htmldef "li" as "<small>li</small> ";
 htmldef "no" as "0 ";
 htmldef "pa" as "1 ";
@@ -791,30 +798,60 @@ Biconditionals II: {.o}, {jo}
 #*#*#
 $)
 
-$c jo $.
+$(
+=-=-=
+{.o}
+=-=-=
+$)
 
 $c .o $.
-sbjo $a selbri bu'a jo bu'e $.
 sjo $a sumti ko'a .o ko'e $.
 
 $( Definition of {` .o `} in terms of {` go `}. By analogy with forethought
    version of example 12.2-5 from [CLL] p. 14. $)
 df-o $a |- go ko'a .o ko'e bu'a gi go ko'a bu'a gi ko'e bu'a $.
+
+$( XXX bridi tails $)
+
+${
+    oi.0 $e |- ko'a .o ko'e bu'a $.
+    $( Inference form of ~df-o
+       (Contributed by la korvo, 9-Aug-2023.) $)
+    oi $p |- go ko'a bu'a gi ko'e bu'a $=
+      ( sjo bu bgo df-o bi ) ABECFACFBCFGDABCHI $.
+$}
+
+${
+    ori.0 $e |- go ko'a bu'a gi ko'e bu'a $.
+    $( Reverse inference form of ~df-o
+       (Contributed by la korvo, 9-Aug-2023.) $)
+    ori $p |- ko'a .o ko'e bu'a $=
+      ( bu bgo sjo df-o bi-rev ) ACEBCEFABGCEDABCHI $.
+$}
+
+$( {` .o `} commutes. $)
+o-com $p |- go ko'a .o ko'e bu'a gi ko'e .o ko'a bu'a $= ? $.
+
+${
+    o-comi.0 $e |- ko'a .o ko'e bu'a $.
+    $( Inference form of ~o-com
+       (Contributed by la korvo, 16-Jul-2023.) $)
+    o-comi $p |- ko'e .o ko'a bu'a $=
+      wk1 wk2 sjo sbba bu wk2 wk1 sjo sbba bu o-comi.0 wk1 wk2 sbba o-com bi $.
+$}
+
+$(
+=-=-=
+{jo}
+=-=-=
+$)
+
+$c jo $.
+sbjo $a selbri bu'a jo bu'e $.
+
 $( Definition of {` jo `} in terms of {` go `}. By analogy with
    example 12.2-5 of [CLL] p. 14. $)
 df-jo $a |- go ko'a bu'a jo bu'e ko'e gi go ko'a bu'a ko'e gi ko'a bu'e ko'e $.
-
-${
-    oi.0 $e |- ko'a .o ko'e bu'a ko'i $.
-    $( Inference form of ~df-o $)
-    oi $p |- go ko'a bu'a ko'i gi ko'e bu'a ko'i $= ? $.
-$}
-
-${
-    ori.0 $e |- go ko'a bu'a ko'i gi ko'e bu'a ko'i $.
-    $( Reverse inference form of ~df-o $)
-    ori $p |- ko'a .o ko'e bu'a ko'i $= ? $.
-$}
 
 ${
     joi.0 $e |- ko'a bu'a jo bu'e ko'e $.
@@ -832,17 +869,6 @@ ${
     jori $p |- ko'a bu'a jo bu'e ko'e $=
       wk1 wk2 sbba bb wk1 wk2 sbbe bb bgo wk1 wk2 sbba sbbe sbjo bb jori.0 wk1
       wk2 sbba sbbe df-jo bi-rev $.
-$}
-
-$( {` .o `} is symmetric. $)
-o-sym $p |- go ko'a .o ko'e bu'a gi ko'e .o ko'a bu'a $= ? $.
-
-${
-    o-symi.0 $e |- ko'a .o ko'e bu'a $.
-    $( Inference form of ~o-sym
-       (Contributed by la korvo, 16-Jul-2023.) $)
-    o-symi $p |- ko'e .o ko'a bu'a $=
-      wk1 wk2 sjo sbba bu wk2 wk1 sjo sbba bu o-symi.0 wk1 wk2 sbba o-sym bi $.
 $}
 
 $(
@@ -1020,6 +1046,155 @@ $}
 
 $(
 #*#*#
+Boolean predicates: {cei'i}
+#*#*#
+$)
+
+$c cei'i $.
+bceihi $a bridi cei'i $.
+
+$( The predicate which is always true. Note that both sides are relational:
+   the left-hand side definitionally only has one inhabitant, so this
+   definition asserts that {` ko'a du ko'a `} is only true via one path. $)
+df-ceihi $a |- go cei'i gi ko'a du ko'a $.
+
+$( {` cei'i `} is always true.
+   (Contributed by la korvo, 18-Jul-2023.) $)
+ceihi $p |- cei'i $=
+  wk1 wk1 sbdu bb bceihi wk1 ax-id-refl wk1 df-ceihi bi-rev $.
+
+$(
+#*#*#
+Negation I: {gai'o}, {naku}
+#*#*#
+
+Lojban classically contains a {` na `} which may slide around in a prenex and
+between connectives. To be constructive, we will more carefully introduce
+{` naku `} negation within the prenex first, and then justify various
+simplifications and rearrangements.
+$)
+
+$c gai'o naku $.
+
+bgaiho $a bridi gai'o $.
+
+${
+    bnk.0 $e bridi broda $.
+    $( Syntax for negation over an empty row of quantifiers. $)
+    bnk $a bridi naku zo'u broda $.
+$}
+
+$( Traditional definition of intuitionistic negation. $)
+df-naku $a |- go naku zo'u broda gi ganai broda gi gai'o $.
+
+${
+    nakui.0 $e |- naku zo'u broda $.
+    $( Inference form of ~df-naku
+       (Contributed by la korvo, 9-Aug-2023.) $)
+    nakui $p |- ganai broda gi gai'o $=
+      ( bnk bgaiho bgan df-naku bi ) AACADEBAFG $.
+$}
+
+${
+    nakuii.0 $e |- naku zo'u broda $.
+    nakuii.1 $e |- broda $.
+    $( Inference form of ~df-naku
+       (Contributed by la korvo, 9-Aug-2023.) $)
+    nakuii $p |- gai'o $=
+      ( bgaiho nakui ax-mp ) ADCABEF $.
+$}
+
+${
+    nakuri.0 $e |- ganai broda gi gai'o $.
+    $( Reverse inference form of ~df-naku
+       (Contributed by la korvo, 9-Aug-2023.) $)
+    nakuri $p |- naku zo'u broda $=
+      ( bgaiho bgan bnk df-naku bi-rev ) ACDAAEBAFG $.
+$}
+
+$( {` gai'o `} is uninhabited.
+   (Contributed by la korvo, 9-Aug-2023.) $)
+na-gaiho $p |- naku zo'u gai'o $=
+  ( bgaiho id nakuri ) AABC $.
+
+$( The principle of self-defeating objects. If an object's existence would
+   imply that it doesn't exist -- usually via contradiction -- then it doesn't
+   exist. As a special case, if some tuple's membership in a relation would
+   imply non-membership in that relation, then it's not a member. For a survey
+   of this principle across maths, see [Tao]. This is known as "ax-in1" in
+   iset.mm. $)
+ax-sdo $a |- ganai ganai broda gi naku zo'u broda gi naku zo'u broda $.
+
+${
+    sdoi.0 $e |- ganai broda gi naku zo'u broda $.
+    $( Inference form of ~ax-sdo
+       (Contributed by la korvo, 9-Aug-2023.) $)
+    sdoi $p |- naku zo'u broda $=
+      ( bnk bgan ax-sdo ax-mp ) AAACZDGBAEF $.
+$}
+
+$(
+#*#*#
+Mutual exclusion I: {gonai}
+#*#*#
+
+The final of our five essential connectives.
+$)
+
+$c gonai $.
+bgon $a bridi gonai broda gi brode $.
+
+$( Standard constructive definition of mutual exclusion ("the exclusive OR"),
+   based on the mnemonic given to computer scientists in the USA and UK:
+   "It's cake or tea, but not cake and tea." This is also the definition used
+   in "df-xor" of iset.mm. $)
+df-gonai $a |- go gonai broda gi brode
+  gi ge ga broda gi brode gi naku zo'u ge broda gi brode $.
+
+${
+    gonaii.0 $e |- gonai broda gi brode $.
+    $( Inference form of ~df-gonai
+       (Contributed by la korvo, 8-Aug-2023.) $)
+    gonaii $p |- ge ga broda gi brode gi naku zo'u ge broda gi brode $=
+      ( bgon bga bge bnk df-gonai bi ) ABDABEABFZJGFCABHI $.
+$}
+
+${
+    gonaiil.0 $e |- gonai broda gi brode $.
+    $( Inference form of ~df-gonai
+       (Contributed by la korvo, 8-Aug-2023.) $)
+    gonaiil $p |- ga broda gi brode $=
+      ( bga bge bnk gonaii ge-lei ) ABDABEZIFABCGH $.
+$}
+
+${
+    gonaiir.0 $e |- gonai broda gi brode $.
+    $( Inference form of ~df-gonai
+       (Contributed by la korvo, 8-Aug-2023.) $)
+    gonaiir $p |- naku zo'u ge broda gi brode $=
+      ( bga bge bnk gonaii ge-rei ) ABDABEZIFABCGH $.
+$}
+
+${
+    gonairi.0 $e |- ge ga broda gi brode gi naku zo'u ge broda gi brode $.
+    $( Reverse inference form of ~df-gonai
+       (Contributed by la korvo, 8-Aug-2023.) $)
+    gonairi $p |- gonai broda gi brode $=
+      ( bga bge bnk bgon df-gonai bi-rev ) ABDABEZJFEABGCABHI $.
+$}
+
+$(
+#####
+NON-LOGICAL CONNECTIVES
+#####
+
+We build the various non-logical connectives, which express combinations of
+elements of relations beyond truth tables. In particular, we develop the
+notion of set membership.
+$)
+
+$(
+#*#*#
 Internal hom: {ka}, {ckaji}, {ckini}, {simsa}
 #*#*#
 
@@ -1180,46 +1355,6 @@ $}
 
 $(
 #*#*#
-Natural numbers: {kacna'u}, {kacli'e}
-#*#*#
-$)
-
-$c kacna'u kacli'e $.
-$c li no $.
-
-sl0 $a sumti li no $.
-sl1 $a sumti li pa $.
-
-$( Zero is a natural number. $)
-ax-nat-zero $a |- li no kacna'u $.
-
-${
-    ax-succ-succ.0 $e |- ko'a .e ko'e kacli'e ko'i $.
-    $( Successors of natural numbers are also natural numbers. $)
-    ax-succ-succ $a |- ko'a du ko'e $.
-$}
-
-$(
-#*#*#
-Boolean predicates: {cei'i}
-#*#*#
-$)
-
-$c cei'i $.
-bceihi $a bridi cei'i $.
-
-$( The predicate which is always true. Note that both sides are relational:
-   the left-hand side definitionally only has one inhabitant, so this
-   definition asserts that {` ko'a du ko'a `} is only true via one path. $)
-df-ceihi $a |- go cei'i gi ko'a du ko'a $.
-
-$( {` cei'i `} is always true.
-   (Contributed by la korvo, 18-Jul-2023.) $)
-ceihi $p |- cei'i $=
-  wk1 wk1 sbdu bb bceihi wk1 ax-id-refl wk1 df-ceihi bi-rev $.
-
-$(
-#*#*#
 Conversion II: {te}
 #*#*#
 $)
@@ -1257,19 +1392,6 @@ ${
     te-invo $p |- ko'a bu'a ko'e ko'i $=
       wk1 wk2 wk3 sbba wk3 wk2 wk1 sbba sbt te-invo.0 tei tei $.
 $}
-
-$(
-#*#*#
-Logarithms: {dugri}
-#*#*#
-$)
-
-$c dugri tenfa $.
-sbdugri $a selbri dugri $.
-sbtenfa $a selbri tenfa $.
-
-$( {` dugri `} is a permutation of {` tenfa `}. $)
-df-dugri $a |- go ko'a dugri ko'e ko'i gi ko'a te se tenfa ko'e ko'i $.
 
 $(
 #*#*#
@@ -1325,3 +1447,47 @@ $( Assertion for right-hand component of a {` ce `} union.
    (Contributed by la korvo, 5-Aug-2023.) $)
 ce-right $p |- ko'e cmima ko'a ce ko'e $=
   ( ax-id-refl ceri-rin ) BABBCD $.
+
+$(
+#####
+NUMBERS
+#####
+
+We define the standard gadgets of number theory.
+$)
+
+$(
+#*#*#
+Natural numbers: {kacna'u}, {kacli'e}
+#*#*#
+$)
+
+$( XXX NFO $)
+
+$c kacna'u kacli'e $.
+$c li no $.
+
+sl0 $a sumti li no $.
+sl1 $a sumti li pa $.
+
+$( Zero is a natural number. $)
+ax-nat-zero $a |- li no kacna'u $.
+
+${
+    ax-succ-succ.0 $e |- ko'a .e ko'e kacli'e ko'i $.
+    $( Successors of natural numbers are also natural numbers. $)
+    ax-succ-succ $a |- ko'a du ko'e $.
+$}
+
+$(
+#*#*#
+Logarithms: {dugri}
+#*#*#
+$)
+
+$c dugri tenfa $.
+sbdugri $a selbri dugri $.
+sbtenfa $a selbri tenfa $.
+
+$( {` dugri `} is a permutation of {` tenfa `}. $)
+df-dugri $a |- go ko'a dugri ko'e ko'i gi ko'a te se tenfa ko'e ko'i $.
