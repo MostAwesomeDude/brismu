@@ -92,6 +92,7 @@ htmldef "li" as "<small>li</small> ";
 htmldef "no" as "0 ";
 htmldef "pa" as "1 ";
 htmldef "ro" as "<small>ro</small> ";
+htmldef "su'o" as "<small>su'o</small> ";
 htmldef "ce" as "<small>ce</small> ";
 htmldef "ckaji" as "<span class='gismu'>ckaji</span> ";
 htmldef "ckini" as "<span class='gismu'>ckini</span> ";
@@ -1466,6 +1467,7 @@ $( XXX NFO $)
 
 $c kacna'u kacli'e $.
 $c li no $.
+$c su'o $.
 
 sl0 $a sumti li no $.
 sl1 $a sumti li pa $.
@@ -1478,6 +1480,17 @@ ${
     $( Successors of natural numbers are also natural numbers. $)
     ax-succ-succ $a |- ko'a du ko'e $.
 $}
+
+$( The induction axiom for second-order arithmetic. $)
+ax-nat-ind $a |- ganai
+  ge li no bu'a
+  gi ro da zo'u
+    ganai da bu'a
+    gi su'o de zo'u
+      ge da kacli'e de
+      gi de bu'a
+  gi ro da zo'u da bu'a $.
+
 
 $(
 #*#*#
