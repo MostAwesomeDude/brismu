@@ -2,13 +2,13 @@ from collections import Counter
 import json, re
 
 VALSI = r"[\w']+"
-DF = re.compile(rf"df-({VALSI}) +\$a")
+DF = re.compile(rf"df-({VALSI})(-{VALSI})* +\$a")
 F = re.compile(rf"\$f +{VALSI} ({VALSI})")
 
 with open("valsi-class.json") as handle: vc = json.load(handle)
 with open("mm/jbobau.mm") as handle: db = handle.read()
 
-dfc = Counter(vc[v] for v in DF.findall(db))
+dfc = Counter(vc[v[0]] for v in DF.findall(db))
 dff = Counter(vc[v] for v in F.findall(db))
 count = sum(dfc.values()) + sum(dff.values())
 

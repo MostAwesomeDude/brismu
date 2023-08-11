@@ -88,6 +88,9 @@ htmldef ".o" as "<small>.o</small> ";
 htmldef ".onai" as "<small>.onai</small> ";
 htmldef "na" as "<small>na</small> ";
 htmldef "naku" as "<small>naku</small> ";
+htmldef "poi" as "<small>poi</small> ";
+htmldef "ke'a" as "<small>ke'a</small> ";
+htmldef "ku'o" as "<small>ku'o</small> ";
 htmldef "li" as "<small>li</small> ";
 htmldef "no" as "0 ";
 htmldef "pa" as "1 ";
@@ -1475,6 +1478,48 @@ $( The axiom of existence: at least one element exists in the universe. This
 ax-ex $a |- su'o da zo'u da du de $.
 
 $(
+#*#*#
+Relative clauses I: {poi}, {ke'a}, {ku'o}
+#*#*#
+$)
+
+$c poi ke'a ku'o $.
+
+${
+    brdp.0 $e bridi ro da zo'u broda $.
+    $( Restriction for first-order universal quantification. $)
+    brdp $a bridi ro da poi ke'a bu'a ku'o zo'u broda $.
+$}
+
+${
+    bsdp.0 $e bridi su'o da zo'u broda $.
+    $( Restriction for first-order universal quantification. $)
+    bsdp $a bridi su'o da poi ke'a bu'a ku'o zo'u broda $.
+$}
+
+$( Definition of {` ro da poi `} quantifiers as restricted first-order
+   universal quantifiers. $)
+df-poi-ro $a |-
+  go ro da poi ke'a bu'a ku'o zo'u broda
+  gi ro da zo'u ganai da bu'a gi broda $.
+
+${
+    poi-roi.0 $e |- ro da poi ke'a bu'a ku'o zo'u broda $.
+    $( Inference form of ~df-poi-ro
+       (Contributed by la korvo, 11-Aug-2023.) $)
+    poi-roi $p |- ro da zo'u ganai da bu'a gi broda $=
+      ( brd brdp bu bgan df-poi-ro bi ) ABCACAEFCBGAHZCKEDABCIJ $.
+$}
+
+${
+    poi-rori.0 $e |- ro da zo'u ganai da bu'a gi broda $.
+    $( Inference form of ~df-poi-ro
+       (Contributed by la korvo, 11-Aug-2023.) $)
+    poi-rori $p |- ro da poi ke'a bu'a ku'o zo'u broda $=
+      ( bu bgan brd brdp df-poi-ro bi-rev ) CBEAFZCKGABCACAGHDABCIJ $.
+$}
+
+$(
 #####
 NUMBERS
 #####
@@ -1516,7 +1561,7 @@ ax-nat-ind $a |- ganai
     gi su'o de zo'u
       ge da kacli'e de
       gi de bu'a
-  gi ro da zo'u ganai da kacna'u gi da bu'a $.
+  gi ro da poi ke'a kacna'u ku'o zo'u da bu'a $.
 
 ${
     nat-indi.0 $e |- ge li no bu'a
@@ -1527,9 +1572,9 @@ ${
           gi de bu'a $.
     $( Inference form of ~ax-nat-ind
        (Contributed by la korvo, 10-Aug-2023.) $)
-    nat-indi $p |- ro da zo'u ganai da kacna'u gi da bu'a $=
-      ( sl0 bu bkaclihe bb bge bsd bgan brd bkacnahu ax-nat-ind ax-mp ) EAFBAFZ
-      BCGHCAFIZCQJKZBRLIBMFPKZBSLDABCNO $.
+    nat-indi $p |- ro da poi ke'a kacna'u ku'o zo'u da bu'a $=
+      ( sl0 bu bkaclihe bb bge bsd bgan brd bkacnahu brdp ax-nat-ind ax-mp ) EA
+      FBAFZBCGHCAFIZCRJKZBSLIQMBQBQLNDABCOP $.
 $}
 
 ${
@@ -1541,7 +1586,7 @@ ${
         gi de bu'a $.
     $( Inference form of ~ax-nat-ind
        (Contributed by la korvo, 10-Aug-2023.) $)
-    nat-indii $p |- ro da zo'u ganai da kacna'u gi da bu'a $=
+    nat-indii $p |- ro da poi ke'a kacna'u ku'o zo'u da bu'a $=
       ( sl0 bu bkaclihe bb bge bsd bgan brd ge-ini nat-indi ) ABCFAGBAGBCHICAGJ
       ZCPKLZBQMDENO $.
 $}
