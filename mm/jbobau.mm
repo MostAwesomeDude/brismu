@@ -1450,6 +1450,31 @@ ce-right $p |- ko'e cmima ko'a ce ko'e $=
   ( ax-id-refl ceri-rin ) BABBCD $.
 
 $(
+#*#*#
+Existential quantifiers I: {su'o}
+#*#*#
+$)
+
+$c su'o $.
+
+${
+    bsd.0 $e bridi broda $.
+    $( Syntax for first-order existential quantification. $)
+    bsd $a bridi su'o da zo'u broda $.
+$}
+
+${
+    bsb.0 $e bridi broda $.
+    $( Syntax for second-order existential quantification. $)
+    bsb $a bridi su'o bu'a zo'u broda $.
+$}
+
+$( The axiom of existence: at least one element exists in the universe. This
+   is necessary if we want to exclude the trivial empty model. This is "ax-i9"
+   in iset.mm. $)
+ax-ex $a |- su'o da zo'u da du de $.
+
+$(
 #####
 NUMBERS
 #####
@@ -1467,7 +1492,9 @@ $( XXX NFO $)
 
 $c kacna'u kacli'e $.
 $c li no $.
-$c su'o $.
+
+bkacnahu $a selbri kacna'u $.
+bkaclihe $a selbri kacli'e $.
 
 sl0 $a sumti li no $.
 sl1 $a sumti li pa $.
@@ -1489,8 +1516,35 @@ ax-nat-ind $a |- ganai
     gi su'o de zo'u
       ge da kacli'e de
       gi de bu'a
-  gi ro da zo'u da bu'a $.
+  gi ro da zo'u ganai da kacna'u gi da bu'a $.
 
+${
+    nat-indi.0 $e |- ge li no bu'a
+      gi ro da zo'u
+        ganai da bu'a
+        gi su'o de zo'u
+          ge da kacli'e de
+          gi de bu'a $.
+    $( Inference form of ~ax-nat-ind
+       (Contributed by la korvo, 10-Aug-2023.) $)
+    nat-indi $p |- ro da zo'u ganai da kacna'u gi da bu'a $=
+      ( sl0 bu bkaclihe bb bge bsd bgan brd bkacnahu ax-nat-ind ax-mp ) EAFBAFZ
+      BCGHCAFIZCQJKZBRLIBMFPKZBSLDABCNO $.
+$}
+
+${
+    nat-indii.0 $e |- li no bu'a $.
+    nat-indii.1 $e |- ro da zo'u
+      ganai da bu'a
+      gi su'o de zo'u
+        ge da kacli'e de
+        gi de bu'a $.
+    $( Inference form of ~ax-nat-ind
+       (Contributed by la korvo, 10-Aug-2023.) $)
+    nat-indii $p |- ro da zo'u ganai da kacna'u gi da bu'a $=
+      ( sl0 bu bkaclihe bb bge bsd bgan brd ge-ini nat-indi ) ABCFAGBAGBCHICAGJ
+      ZCPKLZBQMDENO $.
+$}
 
 $(
 #*#*#
@@ -1504,3 +1558,19 @@ sbtenfa $a selbri tenfa $.
 
 $( {` dugri `} is a permutation of {` tenfa `}. $)
 df-dugri $a |- go ko'a dugri ko'e ko'i gi ko'a te se tenfa ko'e ko'i $.
+
+${
+    dugrii.0 $e |- ko'a dugri ko'e ko'i $.
+    $( Inference form of ~df-dugri
+       (Contributed by la korvo, 9-Aug-2023.) $)
+    dugrii $p |- ko'a te se tenfa ko'e ko'i $=
+      ( sbdugri bt sbtenfa sbs sbt df-dugri bi ) ABCEFABCGHIFDABCJK $.
+$}
+
+${
+    dugriri.0 $e |- ko'a te se tenfa ko'e ko'i $.
+    $( Inference form of ~df-dugri
+       (Contributed by la korvo, 9-Aug-2023.) $)
+    dugriri $p |- ko'a dugri ko'e ko'i $=
+      ( sbtenfa sbs sbt bt sbdugri df-dugri bi-rev ) ABCEFGHABCIHDABCJK $.
+$}
