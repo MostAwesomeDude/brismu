@@ -58,12 +58,10 @@
  binonovo  PA*      8004                                      number/quantity: 8004, without comma
  bo        BO       short scope link                          short scope joiner; joins various constructs with shortest scope and right grouping
  boi       BOI      end number or lerfu                       elidable terminator: terminate numeral or letteral string
- bu        BU       word to lerfu                             convert any single word to BY
  bu'o      UI7      start emotion                             attitudinal contour: start emotion - continue emotion - end emotion
  bu'ocu'i  UI*7     continue emotion                          attitudinal contour: start emotion - continue emotion - end emotion
  bu'onai   UI*7     end emotion                               attitudinal contour: start emotion - continue emotion - end emotion
  bu'u      FAhA3    coincident with                           location tense relation/direction; coincident with/at the same place as; space equivalent of ca
- by        BY2      b                                         letteral for b
  ca        PU       during                                    time tense relation/direction: is [selbri]; during/simultaneous with [sumti]; present tense
  ca ma     PU*      when?                                     sumti question asking for a time/date/event; simultaneous with what?
  ca'a      CAhA     actually is                               modal aspect: actuality/ongoing event
@@ -111,7 +109,6 @@
  cu'o      MOI      probability selbri                        convert number to probability selbri; event x1 has probability (n) of occurring under cond. x2
  cu'u      BAI      as said by                                cusku modal, 1st place (attribution/quotation)    as said by source ...; used for quotation
  cu'u ko'a BAI*     as said by it-1                           tagged sumti: can be used for embedded: it-1 said, "...", with editorial unquote and insert
- cy        BY2      c                                         letteral for c
  da'a      PA4      all except                                digit/number: all except n; all but n; default 1
  da'amoi   MOI*     is penultimate among                      quantified selbri: converts all-but-(1) to ordinal selbri; x1 is penultimate among x2 by rule x3
  da'aremoi MOI*     is antepenultimate                        quantified selbri: converts all-but-2 to ordinal selbri; x1 is antepenult. among x2 by rule x3
@@ -152,7 +149,6 @@
  du'i      BAI      as much as                                dunli modal, 1st place (equalled by)              equally; as much as ...
  du'o      BAI      according to                              djuno modal, 1st place (info source)            authoritatively; according to ...; known by ...
  du'u      NU       bridi abstract                            abstractor: predication/bridi abstractor; x1 is predication [bridi] expressed in sentence x2
- dy        BY2      d                                         letteral for d
 .e'a       UI1      permission                                attitudinal: granting permission - prohibiting                                                            (cf. curmi)
 .e'anai    UI*1     prohibition                               attitudinal: permission - prohibition
 .e'e       UI1      competence                                attitudinal: competence - incompetence/inability                                                          (cf. kakne, certu)
@@ -173,7 +169,6 @@
  fa'a      FAhA4    towards point                             location tense relation/direction; arriving at/directly towards ...
  fa'e      BAI      reverse of                                fatne modal, 1st place                            backwards; reverse of ...
  fa'i      VUhU2    reciprocal of                             unary mathematical operator: reciprocal; multiplicative inverse; [1/a]
- fa'o      FAhO     end of text                               unconditional end of text; outside regular grammar; used for computer input
  fa'u      JOI      and respectively                          non-logical connective: respectively; unmixed ordered distributed association
  fai       FA       extra sumti place                         sumti place tag: tag a sumti moved out of numbered place structure; used in modal conversions
  fau       BAI      in the event of                           fasnu modal, 1st place (non-causal)               in the event of ...
@@ -214,9 +209,7 @@
  fu'inai   UI*5     difficult                                 attitudinal modifier: easy - difficult
  fu'o      FUhO     end indicator scope                       end indicator long scope; terminates scope of all active indicators
  fu'u      VUhU0    unspecif operator                         n-ary mathematical operator: elliptical/unspecified mathematical expression (mex) operator
- fy        BY2      f                                         letteral for f
  ga'a      BAI      to observer                               zgana modal, 1st place                            to observer ... ; witnessed by ...
- ga'e      BY1      upper-case shift                          upper-case letteral shift
  ga'i      UI5      hauteur                                   attitudinal modifier/honorific: hauteur - equal rank - meekness; used with one of lower rank              (cf. gapru, cnita)
  ga'icu'i  UI*5     equal rank                                attitudinal modifier/honorific: hauteur - equal rank - meekness; used with one of equal rank
  ga'inai   UI*5     meekness                                  attitudinal modifier/honorific: hauteur - equal rank - meekness; used with one of higher rank
@@ -227,7 +220,6 @@
  ge'a      VUhU0    null operator                             mathematical operator: null mathematical expression (mex) operator (used in >2-ary ops)
  ge'e      UI6      unspecif emotion                          attitudinal: elliptical/unspecified/non-specific emotion; no particular feeling
  ge'i      GA       fore conn ?                               logical connective: forethought all but tanru-internal connective question (with gi)
- ge'o      BY1      Greek shift                               shift letterals to Greek alphabet
  ge'u      GEhU     end relative phrase                       elidable terminator: end relative/modal phrases; usually elidable in non-complex phrases
  gei       VUhU2    exponential notation                      trinary mathematical operator: order of magnitude/value/base; [b * (c to the a power)]
  gi        GI       connective medial                         logical connective: all but tanru-internal forethought connective medial marker
@@ -254,7 +246,6 @@
  gu'o      GUhA     fore tanru iff                            logical connective: tanru-internal forethought biconditional/iff/if-and-only-if (with gi)
  gu'onai   GUhA*    fore tanru xor                            logical connective: tanru-internal forethought exclusive or (with gi); Latin 'aut'
  gu'u      GUhA     fore tanru whether                        logical connective: tanru-internal forethought whether-or-not (with gi)
- gy        BY2      g                                         letteral for g
 .i         I        sentence link                             sentence link/continuation; continuing sentences on same topic; normally elided for new speakers
 .i'a       UI1      acceptance                                attitudinal: acceptance - blame                                                                           (cf. nalna'e, nalpro, no'epro, nalzugjdi)
 .i'anai    UI*1     blame                                     attitudinal: acceptance - blame
@@ -303,7 +294,6 @@
  je'e      COI      roger                                     vocative: roger (ack) - negative acknowledge; used to acknowledge offers and thanks
  je'enai   COI*     negative acknowledge                      vocative: roger (ack) - negative acknowledge; I didn't hear you
  je'i      JA       tanru conn ?                              logical connective: tanru-internal afterthought conn question
- je'o      BY1      Hebrew shift                              shift letterals to Hebrew alphabet
  je'u      UI3      truth                                     discursive: truth - falsity                                                                               (cf. jetnu)
  je'unai   UI*3     falsity                                   discursive: truth - falsity
  jei       NU       truth abstract                            abstractor: truth-value abstractor; x1 is truth value of [bridi] under epistemology x2
@@ -319,7 +309,6 @@
  jo'a      UI3a     metalinguistic yes                        discursive: metalinguistic affirmer                                                                       (cf. drani)
  jo'e      JOI      union                                     non-logical connective: union of sets
  jo'i      JOhI     array                                     join mathematical expression (mex) operands into an array
- jo'o      BY1      Arabic shift                              shift letterals to Arabic alphabet
  jo'u      JOI      in common with                            non-logical connective: in common with; along with (unmixed)
  joi       JOI      in a mass with                            non-logical connective: mixed conjunction; "and" meaning "mixed together", forming a mass
  joibu     BY*      &                                         letteral: ampersand character; especially used in standing for a mixed connective
@@ -336,7 +325,6 @@
  ju'onai   UI*5     impossibility                             attitudinal modifier: certainty - uncertainty - impossibility
  ju'opei   UI*6     how certain?                              attitudinal: certainty question
  ju'u      VUhU2    number base                               binary mathematical operator: number base; [a interpreted in the base b]
- jy        BY2      j                                         letteral for j
  ka        NU       property abstract                         abstractor: property/quality abstractor (-ness); x1 is quality/property exhibited by [bridi]
  ka'a      BAI      gone to by                                klama modal, 1st place                            gone to by ...
  ka'e      CAhA     innately capable of                       modal aspect: innate capability; possibly unrealized
@@ -371,14 +359,12 @@
  ku'i      UI3b     however                                   discursive: however/but/in contrast                                                                       (cf. karbi, dukti, nalpanra)
  ku'o      KUhO     end relative clause                       elidable terminator: end NOI relative clause; always elidable, but preferred in complex clauses
  ku'u      BAI      in culture                                kulnu modal, 1st place                            in culture ...
- ky        BY2      k                                         letteral for k
  la        LA       that named                                name descriptor: the one(s) called ... ; takes name or selbri description
  la'a      UI3      probability                               discursive: probability - improbability                                                                   (cf. lakne)
  la'anai   UI*3     improbability                             discursive: probability - improbability
  la'e      LAhE     the referent of                           the referent of (indirect pointer); uses the referent of a sumti as the desired sumti
  la'edi'u  KOhA*    last utterance it                         pro-sumti: the referent of the last utterance; the state described: "IT was fun"
  la'i      LA       the set of named                          name descriptor: the set of those named ... ; takes name or selbri description
- la'o      ZOI      the non-Lojban named                      delimited non-Lojban name; the resulting quote sumti is treated as a name
  la'u      BAI      quantifying                               klani modal, 1st place (amount)                   quantifying ...; being a quantity of ...
  la'u ma   BAI*     in what quantity?                         sumti question asking for a quantity; how many?
  lai       LA       the mass of named                         name descriptor: the mass of individual(s) named ... ; takes name or selbri description
@@ -398,7 +384,6 @@
  le'o      UI5      aggressive                                attitudinal modifier: aggressive - passive - defensive                                                    (cf. gunta, bandu)
  le'ocu'i  UI*5     passive                                   attitudinal modifier: aggressive - passive - defensive
  le'onai   UI*5     defensive                                 attitudinal modifier: aggressive - passive - defensive
- le'u      LEhU     end error quote                           end quote of questionable or out-of-context text; not elidable
  ledo      LE*      your described as                         possessive/associative descriptor: the one(s) described as, of yours
  lei       LE       the mass described                        non-veridical descriptor: the mass of individual(s) described as ...
  leko'a    LE*      it-1's described as                       possessive/associative descriptor: the one(s) described as, of it-1's
@@ -417,11 +402,9 @@
  li'o      UI3a     omitted text                              discursive: omitted text (quoted material)
  li'u      LIhU     end quote                                 elidable terminator: end grammatical quotation; seldom elidable except at end of text
  lo        LE       the really is                             veridical descriptor: the one(s) that really is(are) ...
- lo'a      BY1      Lojban shift                              shift letterals to Lojban (Roman) alphabet
  lo'e      LE       the typical                               veridical descriptor: the typical one(s) who really is(are) ...
  lo'i      LE       the set really is                         veridical descriptor: the set of those that really are ..., treated as a set
  lo'o      LOhO     end mex sumti                             elidable terminator: end math express.(mex) sumti; end mex-to-sumti conversion; usually elidable
- lo'u      LOhU     error quote                               start questionable/out-of-context quote; text should be Lojban words, but needn't be grammatical
  loi       LE       the mass really is                        veridical descriptor: the mass of individual(s) that is(are) ...
  lu        LU       quote                                     start grammatical quotation; quoted text should be grammatical on its own
  lu'a      LAhE     the individuals of                        the members of the set/components of the mass; converts another description type to individuals
@@ -429,7 +412,6 @@
  lu'i      LAhE     the set composed of                       the set with members; converts another description type to a set of the members
  lu'o      LAhE     the mass composed of                      the mass composed of; converts another description type to a mass composed of the members
  lu'u      LUhU     end sumti qualifiers                      elidable terminator: end of sumti qualifiers; usually elidable except before a sumti
- ly        BY2      l                                         letteral for l
  ma        KOhA7    sumti ?                                   pro-sumti: sumti question (what/who/how/why/etc.); appropriately fill in sumti blank
  ma'a      KOhA3    we with you                               pro-sumti: me/we the speaker(s)/author(s) & you the listener(s) & others unspecified
  ma'e      BAI      material object                           marji modal, 1st place                            material in object/substance ...
@@ -499,9 +481,7 @@
  mumoi     MOI*     is fifth among                            quantified selbri: convert 5 to ordinal selbri; x1 is fifth among x2 ordered by rule x3
  muno      PA*      50                                        number/quantity: 50 [fifty]
  munono    PA*      500                                       number/quantity: 500 [five hundred]
- my        BY2      m                                         letteral for m
  na        NA       bridi negator                             bridi contradictory negator; scope is an entire bridi; logically negates in some cmavo compounds
- na'a      BY1      cancel shifts                             cancel all letteral shifts
  na'e      NAhE     scalar contrary                           contrary scalar negator: other than ...; not ...; a scale or set is implied
  na'efa'a  FAhA*    not towards point                         space direction: not towards specified point, contrary negation; direction modal
  na'epu'i  CAhA*    has never                                 modal aspect: has never, and perhaps cannot; other-than-demonstrated-ability
@@ -547,7 +527,6 @@
  nu'i      NUhI     start fore termset                        start forethought termset construct; marks start of place structure set with logical connection
  nu'o      CAhA     can but has not                           modal aspect: can but has not; unrealized potential
  nu'u      NUhU     end fore termset                          elidable terminator: end forethought termset; usually elidable except with following sumti
- ny        BY2      n                                         letteral for n
 .o'a       UI1      pride                                     attitudinal: pride - modesty/humility - shame                                                             (cf. jgira, cumla, ckeji)
 .o'acu'i   UI*1     modesty                                   attitudinal: pride - modesty/humility - shame
 .o'anai    UI*1     shame                                     attitudinal: pride - modesty/humility - shame
@@ -653,7 +632,6 @@
  puze'u    PU*      for an era in past                        time tense: for a long interval some time in the past; (tense/modal)
  puzi      PU*      a short time before                       time tense: a short time before; (tense/modal)
  puzu      PU*      a long time before                        time tense: a long time before; (tense/modal)
- py        BY2      p                                         letteral for p
  ra        KOhA5    recent sumti                              pro-sumti: a recent sumti before the last one, as determined by back-counting rules
  ra'a      BAI      pertained to by                           srana modal, 1st place                            pertained to by ... (generally more specific)
  ra'e      PA3      repeating decimal                         digit/number: repeating digits (of a decimal) follow
@@ -713,10 +691,7 @@
  ru'e      CAI      weak emotion                              attitudinal: weak intensity attitude modifier
  ru'i      TAhE     continuously                              tense interval modifier: continuously; subjective tense/modal; defaults as time tense
  ru'inai   TAhE*    occasionally                              tense interval modifier: occasional/intermittent/discontinuous; defaults as time tense
- ru'o      BY1      Cyrillic shift                            shift letterals to Cyrillic alphabet
  ru'u      FAhA2    surrounding                               location tense relation/direction; surrounding/annular ...
- ry        BY2      r                                         letteral for r
- sa        SA       erase utterance                           erase complete or partial utterance; next word shows how much erasing to do
  sa'a      UI3a     editorial insertion                       discursive: material inserted by editor/narrator (bracketed text)                                         (cf. setca)
  sa'e      UI3      precisely speaking                        discursive: precisely speaking - loosely speaking                                                         (cf. satci, jibni)
  sa'enai   UI*3     loosely speaking                          discursive: precisely speaking - loosely speaking
@@ -729,7 +704,6 @@
  se        SE       2nd conversion                            2nd conversion; switch 1st/2nd places
  se'a      UI5      self-sufficiency                          attitudinal modifier: self-sufficiency - dependency                                                       (cf. sezysei, kantcu)
  se'anai   UI*5     dependency                                attitudinal modifier: self-sufficiency - dependency
- se'e      BY1      character code                            following digits code a character (in ASCII, Unicode, etc.)
  se'i      UI5      self-oriented                             attitudinal modifier: self-oriented - other-oriented                                                      (cf. sevzi, drata)
  se'inai   UI*5     other-oriented                            attitudinal modifier: self-oriented - other-oriented
  se'o      UI2      I know internally                         evidential: I know by internal experience (dream, vision, or personal revelation)                         (cf. senva)
@@ -807,7 +781,6 @@
  seva'u    BAI*     with beneficiary                          xamgu modal, 2nd place beneficiary case tag       for the benefit of...; with beneficiary ...
  sezau     BAI*     approving                                 zanru modal, 2nd place                            approvingly; approving ...
  sezu'e    BAI*     goalfully acting at                       zukte modal, 2nd place                            purposefully; goalfully acting at ...
- si        SI       erase word                                erase the last Lojban word, treating non-Lojban text as a single word
  si'a      UI3b     similarly                                 discursive: similarly                                                                                     (cf. simsa, panra)
  si'e      MOI      portion selbri                            convert number to portion selbri; x1 is an (n)th portion of mass/totality x2; (cf. gunma)
  si'i      VUhU4    sigma summation                           trinary mathematical operator: [sigma summation of a using variable b over range c]
@@ -831,7 +804,6 @@
  sonono    PA*      900                                       number/quantity: 900 [nine hundred]
  sosoce'i  PA*      99 percent                                number/quantity: 99% (number)
  sozepimu  PA*      97.5                                      number/quantity:  97.5
- su        SU       erase discourse                           erase to start of discourse or text; drop subject or start over
  su'a      UI2      I generalize                              evidential: I generalize - I particularize; discursive: abstractly - concretely                           (cf. sucta, sucni'i)
  su'anai   UI*2     I particularize                           evidential: I generalize - I particularize; discursive: abstractly - concretely
  su'e      PA4      at most                                   digit/number: at most (all); no more than
@@ -840,7 +812,6 @@
  su'oremei MOI*     is plural                                 quantified selbri: convert at least 2 to cardinal selbri; x1 is a set with plural membership x2
  su'oremoi MOI*     is at least second                        quantified selbri: convert at least 2 to ordinal selbri; x1 is at-least-2nd among x2 by rule x3
  su'u      NU       unspecif abstract                         abstractor: generalized abstractor (how); x1 is [bridi] as a non-specific abstraction of type x2
- sy        BY2      s                                         letteral for s
  ta        KOhA6    that there                                pro-sumti: that there; nearby demonstrative it; indicated thing/place near listener
  ta'a      COI      interruption                              vocative: interruption
  ta'e      TAhE     habitually                                tense interval modifier: habitually; subjective tense/modal; defaults as time tense
@@ -911,7 +882,6 @@
  ti'o      SEI      mex precedence                            mathematical expression (mex) operator precedence (discursive)
  ti'u      BAI      associated with time                      tcika modal, 1st place (for letters)              associated with time ... ; attach time stamp
  to        TO       start parenthesis                         left parenthesis; start of parenthetical note which must be grammatical Lojban text
- to'a      BY1      lower-case shift                          lower-case letteral shift
  to'e      NAhE     polar opposite                            polar opposite scalar negator
  to'i      TO       editorial unquote                         open editorial unquote (within a quote); contains grammatical text; mark with editorial insert
  to'o      FAhA4    away from point                           location tense relation/direction; departing from/directly away from ...
@@ -924,7 +894,6 @@
  tu'i      BAI      associated with site                      stuzi modal, 1st place (used to situate letters)  associated with site ... ; label with location
  tu'o      PA5      null operand                              digit/number: null operand (used in unary operations); a non-specific/elliptical number
  tu'u      TUhU     end text scope                            elidable terminator: end multiple utterance scope; seldom elidable
- ty        BY2      t                                         letteral for t
 .u         A        sumti whether                             logical connective: sumti afterthought whether-or-not
 .u'a       UI1      gain                                      attitudinal: gain - loss                                                                                  (cf. jinga, selne'u, prali, cirko)
 .u'anai    UI*1     loss                                      attitudinal: gain - loss
@@ -1008,7 +977,6 @@
  vu'i      LAhE     the sequence of                           sumti qualifier: the sequence made from set or composed of elements/components; order is vague
  vu'o      VUhO     long scope relative                       joins relative clause/phrase to complete complex or logically connected sumti in afterthought
  vu'u      VUhU1    minus                                     n-ary mathematical operator: minus; subtraction operator; [(((a - b) - c) - ...)]
- vy        BY2      v                                         letteral for v
  xa        PA1      6                                         digit/number: 6 (digit) [six]
  xaki'o    PA*      6,000                                     number/quantity: 6,000 expressed with comma
  xamoi     MOI*     is sixth among                            quantified selbri: convert 6 to ordinal selbri; x1 is sixth among x2 ordered by rule x3
@@ -1021,9 +989,7 @@
  xi        XI       subscript                                 subscript; attaches a numer of letteral string following as a subscript onto grammar structures
  xo        PA5      number ?                                  digit/number: number/digit/lerfu question
  xu        UI6      true-false ?                              discursive: true-false question
- xy        BY2      x                                         letteral for x
 .y         Y        hesitation                                hesitation noise; maintains the floor while speaker decides what to say next
-.y'y       BY2      '                                         letteral for '
 .ybu       BY*      y                                         letteral for y
  za        ZI       medium time                               time tense distance: medium distance in time
  za'a      UI2      I observe                                 evidential: I observe                                                                                     (cf. zgana, lanli)
@@ -1042,7 +1008,6 @@
  ze'i      ZEhA     short time interval                       time tense interval: an instantaneous/tiny/short amount of time
  ze'o      FAhA4    outward                                   location tense relation/direction; beyond/outward/receding from ...
  ze'u      ZEhA     long time interval                        time tense interval: a long amount of time
- zei       ZEI      lujvo glue                                joins preceding and following words into a lujvo
  zeki'o    PA*      7,000                                     number/quantity: 7,000 expressed with comma
  zemoi     MOI*     is seventh among                          quantified selbri: convert 7 to ordinal selbri; x1 is seventh among x2 ordered by rule x3
  zeno      PA*      70                                        number/quantity: 70 [seventy]
@@ -1050,7 +1015,6 @@
  zi        ZI       short time                                time tense distance: instantaneous-to-short distance in time
  zi'e      ZIhE     rel clause joiner                         joins relative clauses which apply to the same sumti
  zi'o      KOhA7    nonexistent it                            pro-sumti: fills a sumti place, deleting it from selbri place structure;changes selbri semantics
- zo        ZO       1-word quote                              quote next word only; quotes a single Lojban word (not a cmavo compound or tanru)
  zo'a      FAhA4    tangential to                             location tense relation/direction; tangential to/passing by ...
  zo'e      KOhA7    unspecif it                               pro-sumti: an elliptical/unspecified value; has some value which makes bridi true
  zo'i      FAhA4    inward                                    location tense relation/direction; nearer than .../inward/approaching from ...
@@ -1059,7 +1023,6 @@
  zo'ocu'i  UI*5     dully                                     attitudinal modifier: humorously - dully - seriously
  zo'onai   UI*5     seriously                                 attitudinal modifier: humorously - dully - seriously
  zo'u      ZOhU     end prenex                                marks end of logical prenex quantifiers/topic identification and start of sentence bridi
- zoi       ZOI      non-Lojban quote                          delimited non-Lojban quotation; the result treated as a block of text
  zu        ZI       long time                                 time tense distance: long distance in time
  zu'a      FAhA2    on the left of                            location tense relation/direction; leftwards/to the left of ...
  zu'e      BAI      with actor                                zukte modal, 1st place (purposed agent)           with goal-seeking actor ...
@@ -1067,4 +1030,3 @@
  zu'o      NU1      activity abstract                         abstractor: activity (event) abstractor; x1 is abstract activity of [bridi] composed of x2
  zu'u      UI3      on the one hand                           discursive: on the one hand - on the other hand                                                           (cf. karbi, frica. dukti)
  zu'unai   UI*3     on the other hand                         discursive: on the one hand - on the other hand
- zy        BY2      z                                         letteral for z

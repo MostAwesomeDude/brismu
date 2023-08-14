@@ -1,5 +1,16 @@
 # Relations
 
+## Summary
+
+Here is a high-level summary of our analogy between logic and Lojban:
+
+Lojban | Set theory | Allegory / dagger-category theory
+---|---|---
+selbri/2 | binary relation | arrow ("morphism")
+lo cmima | element | arrow from zero object
+lo selcmi | inhabited set | object with incoming/outgoing arrows
+selbri/1 | subset / injection | monomorphism
+
 ## What is a relation?
 
 Mathematically, a [binary

@@ -33,6 +33,7 @@
 # Appendices
 
 - [Bibliography](appendices/bibliography.md)
+- [Informal Lojban](appendices/informal.md)
 - [Posets](appendices/posets.md)
 - [Size issues](appendices/size-issues.md)
 - [FAQ](appendices/faq.md)

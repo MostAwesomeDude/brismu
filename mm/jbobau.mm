@@ -128,15 +128,22 @@ Basic syntax
 #*#*#
 
 Before logic, we must define some basic elements of syntax: bridi, selbri,
-and sumti.
+and sumti. We will also embrace some experimental concepts not named in the
+baseline valsi, but exposed in the baseline grammar: prenexes and bridi-tails.
 $)
 
 $( Various sorts of fragments:
 * "sb" for selbri: primitive relations
 * "s" for sumti: expressions of variables
 * "b" for bridi: selbri fully applied to sumti
+* "p" for prenex: row of bound sumti preceding bridi
+* "t" for bridi-tail: selbri plus appended sumti
+
+We adopt the experimental lujvo {brirebla} and {brili'e} for tagging
+bridi-tails and prenexes respectively. We are not adopting their smuni, just
+their lerfu and rafsi.
 $)
-$c selbri sumti bridi $.
+$c selbri sumti bridi brirebla brili'e $.
 
 $( A turnstile. Needed to indicate that a bridi is inhabited. $)
 $c |- $.
