@@ -823,7 +823,7 @@ $}
 
 $(
 #*#*#
-Disjunctions: {.a}, {ja}, {ga}
+Disjunctions: {.a}, {ja}, {ga}, {gi'a}
 #*#*#
 $)
 
@@ -914,8 +914,36 @@ ${
 $}
 
 $(
+=-=-=
+{gi'a}
+=-=-=
+$)
+
+$c gi'a $.
+tgiha $a brirebla bo'a gi'a bo'e $.
+
+$( Definition of {` gi'a `} in terms of {` ga `}. $)
+df-giha $a |- go ko'a bo'a gi'a bo'e gi ga ko'a bo'a gi ko'a bo'e $.
+
+${
+    gihai.0 $e |- ko'a bo'a gi'a bo'e $.
+    $( Inference form of ~df-giha
+       (Contributed by la korvo, 14-Aug-2023.) $)
+    gihai $p |- ga ko'a bo'a gi ko'a bo'e $=
+      ( tgiha btb bga df-giha bi ) ABCEFABFACFGDABCHI $.
+$}
+
+${
+    gihari.0 $e |- ga ko'a bo'a gi ko'a bo'e $.
+    $( Inference form of ~df-giha
+       (Contributed by la korvo, 14-Aug-2023.) $)
+    gihari $p |- ko'a bo'a gi'a bo'e $=
+      ( btb bga tgiha df-giha bi-rev ) ABEACEFABCGEDABCHI $.
+$}
+
+$(
 #*#*#
-Biconditionals II: {.o}, {jo}
+Biconditionals II: {.o}, {jo}, {gi'o}
 #*#*#
 $)
 
@@ -993,6 +1021,34 @@ ${
     jori $p |- ko'a bu'a jo bu'e ko'e $=
       wk1 wk2 sbba bb wk1 wk2 sbbe bb bgo wk1 wk2 sbba sbbe sbjo bb jori.0 wk1
       wk2 sbba sbbe df-jo bi-rev $.
+$}
+
+$(
+=-=-=
+{gi'o}
+=-=-=
+$)
+
+$c gi'o $.
+tgiho $a brirebla bo'a gi'o bo'e $.
+
+$( Definition of {` gi'o `} in terms of {` go `}. $)
+df-giho $a |- go ko'a bo'a gi'o bo'e gi go ko'a bo'a gi ko'a bo'e $.
+
+${
+    gihoi.0 $e |- ko'a bo'a gi'o bo'e $.
+    $( Inference form of ~df-giho
+       (Contributed by la korvo, 14-Aug-2023.) $)
+    gihoi $p |- go ko'a bo'a gi ko'a bo'e $=
+      ( tgiho btb bgo df-giho bi ) ABCEFABFACFGDABCHI $.
+$}
+
+${
+    gihori.0 $e |- go ko'a bo'a gi ko'a bo'e $.
+    $( Inference form of ~df-giho
+       (Contributed by la korvo, 14-Aug-2023.) $)
+    gihori $p |- ko'a bo'a gi'o bo'e $=
+      ( btb bgo tgiho df-giho bi-rev ) ABEACEFABCGEDABCHI $.
 $}
 
 $(
@@ -1305,6 +1361,34 @@ ${
        (Contributed by la korvo, 8-Aug-2023.) $)
     gonairi $p |- gonai broda gi brode $=
       ( bga bge bnk bgon df-gonai bi-rev ) ABDABEZJFEABGCABHI $.
+$}
+
+$(
+=-=-=
+{gi'onai}
+=-=-=
+$)
+
+$c gi'onai $.
+tgihonai $a brirebla bo'a gi'onai bo'e $.
+
+$( Definition of {` gi'onai `} in terms of {` gonai `}. $)
+df-gihonai $a |- go ko'a bo'a gi'onai bo'e gi gonai ko'a bo'a gi ko'a bo'e $.
+
+${
+    gihonaii.0 $e |- ko'a bo'a gi'onai bo'e $.
+    $( Inference form of ~df-gihonai
+       (Contributed by la korvo, 14-Aug-2023.) $)
+    gihonaii $p |- gonai ko'a bo'a gi ko'a bo'e $=
+      ( tgihonai btb bgon df-gihonai bi ) ABCEFABFACFGDABCHI $.
+$}
+
+${
+    gihonairi.0 $e |- gonai ko'a bo'a gi ko'a bo'e $.
+    $( Inference form of ~df-gihonai
+       (Contributed by la korvo, 14-Aug-2023.) $)
+    gihonairi $p |- ko'a bo'a gi'onai bo'e $=
+      ( btb bgon tgihonai df-gihonai bi-rev ) ABEACEFABCGEDABCHI $.
 $}
 
 $(
