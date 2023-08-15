@@ -37,6 +37,7 @@ htmltitle "brismu bridi";
 htmlcss "<style type='text/css'>" +
         ".sumti { color: darkgreen; }" +
         ".selbri { color: blue; }" +
+        ".brirebla { color: darkblue; }" +
         ".bridi { color: brown; }" +
         ".gismu { color: olive; }" +
         ".lujvo { color: teal; }" +
@@ -49,6 +50,7 @@ htmldef "|-" as '&#8866; ';
 htmldef "bridi" as "<em>bridi</em> ";
 htmldef "selbri" as "<em>selbri</em> ";
 htmldef "sumti" as "<em>sumti</em> ";
+htmldef "brirebla" as "<em>brirebla</em> ";
 htmldef "PA" as "<em>PA</em> ";
 htmldef "ko'a" as "<span class='sumti'>ko'a</span> ";
 htmldef "ko'e" as "<span class='sumti'>ko'e</span> ";
@@ -67,6 +69,11 @@ htmldef "gai'o" as "<span class='selbri'>gai'o</span> ";
 htmldef "bu'a" as "<span class='selbri'>bu'a</span> ";
 htmldef "bu'e" as "<span class='selbri'>bu'e</span> ";
 htmldef "bu'i" as "<span class='selbri'>bu'i</span> ";
+htmldef "bo'a" as "<span class='brirebla'>bo'a</span> ";
+htmldef "bo'e" as "<span class='brirebla'>bo'e</span> ";
+htmldef "bo'i" as "<span class='brirebla'>bo'i</span> ";
+htmldef "bo'o" as "<span class='brirebla'>bo'o</span> ";
+htmldef "bo'u" as "<span class='brirebla'>bo'u</span> ";
 htmldef "zo'u" as "<small>zo'u</small> ";
 htmldef "se" as "<small>se</small> ";
 htmldef "te" as "<small>te</small> ";
@@ -160,6 +167,13 @@ sbb3 $f bridi brodi $.
 sbb4 $f bridi brodo $.
 sbb5 $f bridi brodu $.
 
+$v bo'a bo'e bo'i bo'o bo'u $.
+tb1 $f brirebla bo'a $.
+tb2 $f brirebla bo'e $.
+tb3 $f brirebla bo'i $.
+tb4 $f brirebla bo'o $.
+tb5 $f brirebla bo'u $.
+
 $v bu'a bu'e bu'i $.
 $d bu'a bu'e bu'i $.
 sbba $f selbri bu'a $.
@@ -172,9 +186,30 @@ wda $f sumti da $.
 wde $f sumti de $.
 wdi $f sumti di $.
 
-bu $a bridi ko'a bu'a $.
-bb $a bridi ko'a bu'a ko'e $.
-bt $a bridi ko'a bu'a ko'e ko'i $.
+$( Any selbri is a valid brirebla. $)
+tsb $a brirebla bu'a $.
+
+${
+    tss.0 $e brirebla bo'a $.
+    $( Any brirebla can have an additional trailing sumti. $)
+    tss $a brirebla bo'a ko'a $.
+$}
+
+$( Build a bridi from a sumti and brirebla. $)
+btb $a bridi ko'a bo'a $.
+
+$( Normal form for unary selbri.
+   (Contributed by la korvo, 14-Aug-2023.) $)
+bu $p bridi ko'a bu'a $=
+  ( tsb btb ) ABCD $.
+$( Normal form for binary selbri.
+   (Contributed by la korvo, 14-Aug-2023.) $)
+bb $p bridi ko'a bu'a ko'e $=
+  ( tsb tss btb ) ABCDZGEF $.
+$( Normal form for ternary selbri.
+   (Contributed by la korvo, 14-Aug-2023.) $)
+bt $p bridi ko'a bu'a ko'e ko'i $=
+  ( tsb tss btb ) ACBDEZHFZIFG $.
 
 $(
 #*#*#
@@ -677,26 +712,24 @@ sbje $a selbri bu'a je bu'e $.
 
 $( Definition of {` .e `} in terms of {` ge `}. Forethought version of
    example 12.2-5 from [CLL] p. 14. $)
-df-e $a |- go ko'a .e ko'e bu'a ko'i gi ge ko'a bu'a ko'i gi ko'e bu'a ko'i $.
+df-e $a |- go ko'a .e ko'e bo'a gi ge ko'a bo'a gi ko'e bo'a $.
 $( Definition of {` je `} in terms of {` ge `}. From example 12.2-5 of [CLL] p. 14. $)
 df-je $a |- go ko'a bu'a je bu'e ko'e gi ge ko'a bu'a ko'e gi ko'a bu'e ko'e $.
 
 ${
-    ei.0 $e |- ko'a .e ko'e bu'a ko'i $.
+    ei.0 $e |- ko'a .e ko'e bo'a $.
     $( Inference form of ~df-e
        (Contributed by la korvo, 17-Jul-2023.) $)
-    ei $p |- ge ko'a bu'a ko'i gi ko'e bu'a ko'i $=
-      wk1 wk2 sje wk3 sbba bb wk1 wk3 sbba bb wk2 wk3 sbba bb bge ei.0 wk1 wk2
-      wk3 sbba df-e bi $.
+    ei $p |- ge ko'a bo'a gi ko'e bo'a $=
+      ( sje btb bge df-e bi ) ABECFACFBCFGDABCHI $.
 $}
 
 ${
-    eri.0 $e |- ge ko'a bu'a ko'i gi ko'e bu'a ko'i $.
+    eri.0 $e |- ge ko'a bo'a gi ko'e bo'a $.
     $( Reverse inference form of ~df-e
        (Contributed by la korvo, 17-Jul-2023.) $)
-    eri $p |- ko'a .e ko'e bu'a ko'i $=
-      wk1 wk3 sbba bb wk2 wk3 sbba bb bge wk1 wk2 sje wk3 sbba bb eri.0 wk1 wk2
-      wk3 sbba df-e bi-rev $.
+    eri $p |- ko'a .e ko'e bo'a $=
+      ( btb bge sje df-e bi-rev ) ACEBCEFABGCEDABCHI $.
 $}
 
 ${
@@ -799,9 +832,25 @@ ga-com $p |- go ga broda gi brode gi ga brode gi broda $=
 
 $( Definition of {` .a `} in terms of {` ga `}. Forethought version of
    example 12.2-5 from [CLL] p. 14. $)
-df-a $a |- go ko'a .a ko'e bu'a ko'i gi ga ko'a bu'a ko'i gi ko'e bu'a ko'i $.
+df-a $a |- go ko'a .a ko'e bo'a gi ga ko'a bo'a gi ko'e bo'a $.
 $( Definition of {` ja `} in terms of {` ga `}. From example 12.2-5 of [CLL] p. 14. $)
 df-ja $a |- go ko'a bu'a ja bu'e ko'e gi ga ko'a bu'a ko'e gi ko'a bu'e ko'e $.
+
+${
+    ai.0 $e |- ko'a .a ko'e bo'a $.
+    $( Inference form of ~df-a
+       (Contributed by la korvo, 14-Aug-2023.) $)
+    ai $p |- ga ko'a bo'a gi ko'e bo'a $=
+      ( sja btb bga df-a bi ) ABECFACFBCFGDABCHI $.
+$}
+
+${
+    ari.0 $e |- ga ko'a bo'a gi ko'e bo'a $.
+    $( Inference form of ~df-a
+       (Contributed by la korvo, 14-Aug-2023.) $)
+    ari $p |- ko'a .a ko'e bo'a $=
+      ( btb bga sja df-a bi-rev ) ACEBCEFABGCEDABCHI $.
+$}
 
 $(
 #*#*#
@@ -820,35 +869,38 @@ sjo $a sumti ko'a .o ko'e $.
 
 $( Definition of {` .o `} in terms of {` go `}. By analogy with forethought
    version of example 12.2-5 from [CLL] p. 14. $)
-df-o $a |- go ko'a .o ko'e bu'a gi go ko'a bu'a gi ko'e bu'a $.
-
-$( XXX bridi tails $)
+df-o $a |- go ko'a .o ko'e bo'a gi go ko'a bo'a gi ko'e bo'a $.
 
 ${
-    oi.0 $e |- ko'a .o ko'e bu'a $.
+    oi.0 $e |- ko'a .o ko'e bo'a $.
     $( Inference form of ~df-o
        (Contributed by la korvo, 9-Aug-2023.) $)
-    oi $p |- go ko'a bu'a gi ko'e bu'a $=
-      ( sjo bu bgo df-o bi ) ABECFACFBCFGDABCHI $.
+    oi $p |- go ko'a bo'a gi ko'e bo'a $=
+      ( sjo btb bgo df-o bi ) ABECFACFBCFGDABCHI $.
 $}
 
 ${
-    ori.0 $e |- go ko'a bu'a gi ko'e bu'a $.
+    ori.0 $e |- go ko'a bo'a gi ko'e bo'a $.
     $( Reverse inference form of ~df-o
        (Contributed by la korvo, 9-Aug-2023.) $)
-    ori $p |- ko'a .o ko'e bu'a $=
-      ( bu bgo sjo df-o bi-rev ) ACEBCEFABGCEDABCHI $.
+    ori $p |- ko'a .o ko'e bo'a $=
+      ( btb bgo sjo df-o bi-rev ) ACEBCEFABGCEDABCHI $.
 $}
 
-$( {` .o `} commutes. $)
-o-com $p |- go ko'a .o ko'e bu'a gi ko'e .o ko'a bu'a $= ? $.
+$( Lemma for ~o-com $)
+o-com-lem $p |- ganai ko'a .o ko'e bo'a gi ko'e .o ko'a bo'a $= ? $.
+
+$( {` .o `} commutes.
+   (Contributed by la korvo, 14-Aug-2023.) $)
+o-com $p |- go ko'a .o ko'e bo'a gi ko'e .o ko'a bo'a $=
+  ( sjo btb o-com-lem gorii ) ABDCEBADCEABCFBACFG $.
 
 ${
-    o-comi.0 $e |- ko'a .o ko'e bu'a $.
+    o-comi.0 $e |- ko'a .o ko'e bo'a $.
     $( Inference form of ~o-com
        (Contributed by la korvo, 16-Jul-2023.) $)
-    o-comi $p |- ko'e .o ko'a bu'a $=
-      wk1 wk2 sjo sbba bu wk2 wk1 sjo sbba bu o-comi.0 wk1 wk2 sbba o-com bi $.
+    o-comi $p |- ko'e .o ko'a bo'a $=
+      ( sjo btb o-com bi ) ABECFBAECFDABCGH $.
 $}
 
 $(
@@ -1224,10 +1276,9 @@ $c pa ka ce'u $.
 
 sc $a sumti ce'u $.
 
-$( If {` bu'a `} is a selbri, then wrapping it with {` pa ka `} yields sumti. $)
-spku $a sumti pa ka ko'a bu'a $.
-spkb $a sumti pa ka ko'a bu'a ko'e $.
-spkt $a sumti pa ka ko'a bu'a ko'e ko'i $.
+$( If {` bo'a `} is a brirebla, then filling its first place with a sumti and
+   wrapping it with {` pa ka `} yields sumti. $)
+spk $a sumti pa ka ko'a bo'a $.
 
 $(
 =-=-=
@@ -1239,9 +1290,10 @@ $c ckaji $.
 
 sbckaji $a selbri ckaji $.
 
-$( {` ckaji `} is often found with this conjugation. $)
+$( {` ckaji `} is often found with this conjugation.
+   (Contributed by la korvo, 14-Aug-2023.) $)
 bckaji $p bridi ko'a ckaji pa ka ce'u bu'a $=
-  wk1 sc sbba spku sbckaji bb $.
+  ( sc tsb spk sbckaji bb ) ACBDEFG $.
 
 $( Definition of {` ckaji `} from {` ka `}. Based on example 4.1-2 of [CLL] p. 11. $)
 df-ckaji $a |- go ko'a ckaji pa ka ce'u bu'a ko'e gi ko'a bu'a ko'e $.
@@ -1251,8 +1303,7 @@ ${
     $( Inference form of ~df-ckaji
        (Contributed by la korvo, 17-Jul-2023.) $)
     ckajii $p |- ko'a bu'a ko'e $=
-      wk1 sc sbba spku wk2 sbckaji bt wk1 wk2 sbba bb ckajii.0 wk1 wk2 sbba
-      df-ckaji bi $.
+      ( sc tsb spk sbckaji bt bb df-ckaji bi ) AECFGBHIABCJDABCKL $.
 $}
 
 ${
@@ -1260,8 +1311,7 @@ ${
     $( Reverse inference form of ~df-ckaji
        (Contributed by la korvo, 17-Jul-2023.) $)
     ckajiri $p |- ko'a ckaji pa ka ce'u bu'a ko'e $=
-      wk1 wk2 sbba bb wk1 sc sbba spku wk2 sbckaji bt ckajiri.0 wk1 wk2 sbba
-      df-ckaji bi-rev $.
+      ( bb sc tsb spk sbckaji bt df-ckaji bi-rev ) ABCEAFCGHBIJDABCKL $.
 $}
 
 $(
@@ -1274,9 +1324,10 @@ $c ckini $.
 
 sbckini $a selbri ckini $.
 
-$( {` ckini `} is often found with this conjugation. $)
+$( {` ckini `} is often found with this conjugation.
+   (Contributed by la korvo, 14-Aug-2023.) $)
 bckini $p bridi ko'a ckini ko'e pa ka ce'u bu'a ce'u $=
-  wk1 wk2 sc sc sbba spkb sbckini bt $.
+  ( sc tsb tss spk sbckini bt ) ABDDCEZJFGHI $.
 
 df-ckini $a |- go ko'a ckini ko'e pa ka ce'u bu'a ce'u gi ko'a bu'a ko'e $.
 
@@ -1319,7 +1370,7 @@ sbsimsa $a selbri simsa $.
 $( {` simsa `} is often found with this conjugation.
    (Contributed by la korvo, 6-Aug-2023.) $)
 bsimsa $p bridi ko'a simsa ko'e pa ka ce'u bu'a $=
-  ( sc spku sbsimsa bt ) ABDCEFG $.
+  ( sc tsb spk sbsimsa bt ) ABDCEFGH $.
 
 df-simsa $a |- go ko'a simsa ko'e pa ka ce'u bu'a gi ge ko'a bu'a gi ko'e bu'a $.
 
