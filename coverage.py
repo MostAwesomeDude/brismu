@@ -8,8 +8,9 @@ F = re.compile(rf"\$f +{VALSI} ({VALSI})")
 with open("valsi-class.json") as handle: vc = json.load(handle)
 with open("mm/jbobau.mm") as handle: db = handle.read()
 
-dfc = Counter(vc[v[0]] for v in DF.findall(db))
-dff = Counter(vc[v] for v in F.findall(db))
+def apos(s): return s.replace("h", "'")
+dfc = Counter(vc[apos(v[0])] for v in DF.findall(db))
+dff = Counter(vc[apos(v)] for v in F.findall(db))
 count = sum(dfc.values()) + sum(dff.values())
 
 print("Grammatical class | Metamath class | # of formal definitions")

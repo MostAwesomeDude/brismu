@@ -83,6 +83,11 @@ htmldef "ge" as "<small>ge</small> ";
 htmldef "gi" as "<small>gi</small> ";
 htmldef "go" as "<small>go</small> ";
 htmldef "gonai" as "<small>gonai</small> ";
+htmldef "gi'a" as "<small>gi'a</small> ";
+htmldef "gi'anai" as "<small>gi'anai</small> ";
+htmldef "gi'e" as "<small>gi'e</small> ";
+htmldef "gi'o" as "<small>gi'o</small> ";
+htmldef "gi'onai" as "<small>gi'onai</small> ";
 htmldef "ja" as "<small>ja</small> ";
 htmldef "janai" as "<small>janai</small> ";
 htmldef "je" as "<small>je</small> ";
@@ -700,21 +705,38 @@ $}
 
 $(
 #*#*#
-Conjunctions II: {.e}, {je}
+Conjunctions II: {.e}, {je}, {gi'e}
 #*#*#
 $)
 
-$c je $.
+$(
+=-=-=
+More facts about {ge}
+=-=-=
+$)
+
+$( Lemma for ~ge-com showing that {` ge `} is commutative in one direction.
+   (Contributed by la korvo, 31-Jul-2023.) $)
+ge-com-lem $p |- ganai ge broda gi brode gi ge brode gi broda $=
+  ( bge ge-in-swap12 cur ) ABBACABDE $.
+
+$( {` ge `} is commutative.
+   (Contributed by la korvo, 31-Jul-2023.) $)
+ge-com $p |- go ge broda gi brode gi ge brode gi broda $=
+  ( bge ge-com-lem gorii ) ABCBACABDBADE $.
+
+$(
+=-=-=
+{.e}
+=-=-=
+$)
 
 $c .e $.
 sje $a sumti ko'a .e ko'e $.
-sbje $a selbri bu'a je bu'e $.
 
 $( Definition of {` .e `} in terms of {` ge `}. Forethought version of
    example 12.2-5 from [CLL] p. 14. $)
 df-e $a |- go ko'a .e ko'e bo'a gi ge ko'a bo'a gi ko'e bo'a $.
-$( Definition of {` je `} in terms of {` ge `}. From example 12.2-5 of [CLL] p. 14. $)
-df-je $a |- go ko'a bu'a je bu'e ko'e gi ge ko'a bu'a ko'e gi ko'a bu'e ko'e $.
 
 ${
     ei.0 $e |- ko'a .e ko'e bo'a $.
@@ -731,6 +753,18 @@ ${
     eri $p |- ko'a .e ko'e bo'a $=
       ( btb bge sje df-e bi-rev ) ACEBCEFABGCEDABCHI $.
 $}
+
+$(
+=-=-=
+{je}
+=-=-=
+$)
+
+$c je $.
+sbje $a selbri bu'a je bu'e $.
+
+$( Definition of {` je `} in terms of {` ge `}. From example 12.2-5 of [CLL] p. 14. $)
+df-je $a |- go ko'a bu'a je bu'e ko'e gi ge ko'a bu'a ko'e gi ko'a bu'e ko'e $.
 
 ${
     jei.0 $e |- ko'a bu'a je bu'e ko'e $.
@@ -750,15 +784,42 @@ ${
       wk2 sbba sbbe df-je bi-rev $.
 $}
 
-$( Lemma for ~ge-com showing that {` ge `} is commutative in one direction.
-   (Contributed by la korvo, 31-Jul-2023.) $)
-ge-com-lem $p |- ganai ge broda gi brode gi ge brode gi broda $=
-  ( bge ge-in-swap12 cur ) ABBACABDE $.
+$(
+=-=-=
+{gi'e}
+=-=-=
+$)
 
-$( {` ge `} is commutative.
-   (Contributed by la korvo, 31-Jul-2023.) $)
-ge-com $p |- go ge broda gi brode gi ge brode gi broda $=
-  ( bge ge-com-lem gorii ) ABCBACABDBADE $.
+$c gi'e $.
+tgihe $a brirebla bo'a gi'e bo'e $.
+
+$( Definition of {` gi'e `} in terms of {` ge `}. $)
+df-gihe $a |- go ko'a bo'a gi'e bo'e gi ge ko'a bo'a gi ko'a bo'e $.
+
+${
+    gihei.0 $e |- ko'a bo'a gi'e bo'e $.
+    $( Inference form of ~df-gihe
+       (Contributed by la korvo, 14-Aug-2023.) $)
+    gihei $p |- ge ko'a bo'a gi ko'a bo'e $=
+      ( tgihe btb bge df-gihe bi ) ABCEFABFACFGDABCHI $.
+$}
+
+${
+    giheri.0 $e |- ge ko'a bo'a gi ko'a bo'e $.
+    $( Inference form of ~df-gihe
+       (Contributed by la korvo, 14-Aug-2023.) $)
+    giheri $p |- ko'a bo'a gi'e bo'e $=
+      ( btb bge tgihe df-gihe bi-rev ) ABEACEFABCGEDABCHI $.
+$}
+
+${
+    giherii.0 $e |- ko'a bo'a $.
+    giherii.1 $e |- ko'a bo'e $.
+    $( Inference form of ~df-gihe
+       (Contributed by la korvo, 14-Aug-2023.) $)
+    giherii $p |- ko'a bo'a gi'e bo'e $=
+      ( btb ge-ini giheri ) ABCABFACFDEGH $.
+$}
 
 $(
 #*#*#
