@@ -1614,39 +1614,36 @@ $}
 $( The induction axiom for second-order arithmetic. $)
 ax-nat-ind $a |- ganai
   ge li no bu'a
-  gi ro da zo'u
-    ganai da bu'a
-    gi su'o de zo'u
+  gi ro da poi ke'a bu'a ku'o zo'u
+    su'o de zo'u
       ge da kacli'e de
       gi de bu'a
   gi ro da poi ke'a kacna'u ku'o zo'u da bu'a $.
 
 ${
     nat-indi.0 $e |- ge li no bu'a
-      gi ro da zo'u
-        ganai da bu'a
-        gi su'o de zo'u
+      gi ro da poi ke'a bu'a ku'o zo'u
+        su'o de zo'u
           ge da kacli'e de
           gi de bu'a $.
     $( Inference form of ~ax-nat-ind
        (Contributed by la korvo, 10-Aug-2023.) $)
     nat-indi $p |- ro da poi ke'a kacna'u ku'o zo'u da bu'a $=
-      ( sl0 bu bkaclihe bb bge bsd bgan brd bkacnahu brdp ax-nat-ind ax-mp ) EA
-      FBAFZBCGHCAFIZCRJKZBSLIQMBQBQLNDABCOP $.
+      ( sl0 bu bkaclihe bb bge bsd brd brdp bkacnahu ax-nat-ind ax-mp ) EAFBCGH
+      CAFIZCPJZABQBQKLIBAFZMBRBRKLDABCNO $.
 $}
 
 ${
     nat-indii.0 $e |- li no bu'a $.
-    nat-indii.1 $e |- ro da zo'u
-      ganai da bu'a
-      gi su'o de zo'u
+    nat-indii.1 $e |- ro da poi ke'a bu'a ku'o zo'u
+      su'o de zo'u
         ge da kacli'e de
         gi de bu'a $.
     $( Inference form of ~ax-nat-ind
        (Contributed by la korvo, 10-Aug-2023.) $)
     nat-indii $p |- ro da poi ke'a kacna'u ku'o zo'u da bu'a $=
-      ( sl0 bu bkaclihe bb bge bsd bgan brd ge-ini nat-indi ) ABCFAGBAGBCHICAGJ
-      ZCPKLZBQMDENO $.
+      ( sl0 bu bkaclihe bb bge bsd brd brdp ge-ini nat-indi ) ABCFAGBCHICAGJZCP
+      KZABQBQLMDENO $.
 $}
 
 $(
