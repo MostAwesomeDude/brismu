@@ -705,6 +705,125 @@ $}
 
 $(
 #*#*#
+Implication II: {.anai}, {janai}, {gi'anai}
+#*#*#
+$)
+
+$(
+=-=-=
+{.anai}
+=-=-=
+$)
+
+$c .anai $.
+sjanai $a sumti ko'a .anai ko'e $.
+
+$( Definition of {` .anai `} in terms of {` ganai `}. By analogy with forethought
+   version of example 12.2-5 from [CLL] p. 14. $)
+df-anai $a |- go ko'a .anai ko'e bo'a gi ganai ko'a bo'a gi ko'e bo'a $.
+
+${
+    anaii.0 $e |- ko'a .anai ko'e bo'a $.
+    $( Inference form of ~df-anai
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    anaii $p |- ganai ko'a bo'a gi ko'e bo'a $=
+      ( sjanai btb bgan df-anai bi ) ABECFACFBCFGDABCHI $.
+$}
+
+${
+    anaiii.0 $e |- ko'a .anai ko'e bo'a $.
+    anaiii.1 $e |- ko'a bo'a $.
+    $( Inference form of ~df-anai
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    anaiii $p |- ko'e bo'a $=
+      ( btb anaii ax-mp ) ACFBCFEABCDGH $.
+$}
+
+${
+    anairi.0 $e |- ganai ko'a bo'a gi ko'e bo'a $.
+    $( Reverse inference form of ~df-anai
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    anairi $p |- ko'a .anai ko'e bo'a $=
+      ( btb bgan sjanai df-anai bi-rev ) ACEBCEFABGCEDABCHI $.
+$}
+
+$(
+=-=-=
+{janai}
+=-=-=
+$)
+
+$c janai $.
+sbjanai $a selbri bu'a janai bu'e $.
+
+$( Definition of {` janai `} in terms of {` ganai `}. By analogy with
+   example 12.2-5 of [CLL] p. 14. $)
+df-janai $a |- go ko'a bu'a janai bu'e ko'e gi ganai ko'a bu'a ko'e gi ko'a bu'e ko'e $.
+
+${
+    janaii.0 $e |- ko'a bu'a janai bu'e ko'e $.
+    $( Inference form of ~df-janai
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    janaii $p |- ganai ko'a bu'a ko'e gi ko'a bu'e ko'e $=
+      ( sbjanai bb bgan df-janai bi ) ABCDFGABCGABDGHEABCDIJ $.
+$}
+
+${
+    janaiii.0 $e |- ko'a bu'a janai bu'e ko'e $.
+    janaiii.1 $e |- ko'a bu'a ko'e $.
+    $( Inference form of ~df-janai
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    janaiii $p |- ko'a bu'e ko'e $=
+      ( bb janaii ax-mp ) ABCGABDGFABCDEHI $.
+$}
+
+${
+    janairi.0 $e |- ganai ko'a bu'a ko'e gi ko'a bu'e ko'e $.
+    $( Reverse inference form of ~df-janai
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    janairi $p |- ko'a bu'a janai bu'e ko'e $=
+      ( bb bgan sbjanai df-janai bi-rev ) ABCFABDFGABCDHFEABCDIJ $.
+$}
+
+$(
+=-=-=
+{gi'anai}
+=-=-=
+$)
+
+$c gi'anai $.
+tgihanai $a brirebla bo'a gi'anai bo'e $.
+
+$( Definition of {` gi'anai `} in terms of {` ganai `}. $)
+df-gihanai $a |- go ko'a bo'a gi'anai bo'e gi ganai ko'a bo'a gi ko'a bo'e $.
+
+${
+    gihanaii.0 $e |- ko'a bo'a gi'anai bo'e $.
+    $( Inference form of ~df-gihanai
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    gihanaii $p |- ganai ko'a bo'a gi ko'a bo'e $=
+      ( tgihanai btb bgan df-gihanai bi ) ABCEFABFACFGDABCHI $.
+$}
+
+${
+    gihanaiii.0 $e |- ko'a bo'a gi'anai bo'e $.
+    gihanaiii.1 $e |- ko'a bo'a $.
+    $( Inference form of ~df-gihanai
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    gihanaiii $p |- ko'a bo'e $=
+      ( btb gihanaii ax-mp ) ABFACFEABCDGH $.
+$}
+
+${
+    gihanairi.0 $e |- ganai ko'a bo'a gi ko'a bo'e $.
+    $( Inference form of ~df-gihanai
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    gihanairi $p |- ko'a bo'a gi'anai bo'e $=
+      ( btb bgan tgihanai df-gihanai bi-rev ) ABEACEFABCGEDABCHI $.
+$}
+
+$(
+#*#*#
 Conjunctions II: {.e}, {je}, {gi'e}
 #*#*#
 $)
@@ -823,13 +942,22 @@ $}
 
 $(
 #*#*#
-Disjunctions: {.a}, {ja}, {ga}, {gi'a}
+Disjunctions: {ga}, {.a}, {ja}, {gi'a}
 #*#*#
+
+Disjunctions are the first connective for which we can introduce all four
+forms simultaneously. The {` ga `} form is fundamental in our syntax, since it
+gives the best scoping; but we define all of the other forms so that we have
+them available for sugar later.
 $)
 
-$c .a ja ga $.
-sbja $a selbri bu'a ja bu'e $.
-sja $a sumti ko'a .a ko'e $.
+$(
+=-=-=
+{ga}
+=-=-=
+$)
+
+$c ga $.
 bga $a bridi ga broda gi brode $.
 
 $( Definition of {` ga `} in terms of {` go `}, {` ganai `}, and {` ge `}. Known as
@@ -891,11 +1019,18 @@ $( {` ga `} commutes.
 ga-com $p |- go ga broda gi brode gi ga brode gi broda $=
   ( bga ga-com-lem gorii ) ABCBACABDBADE $.
 
+$(
+=-=-=
+{.a}
+=-=-=
+$)
+
+$c .a $.
+sja $a sumti ko'a .a ko'e $.
+
 $( Definition of {` .a `} in terms of {` ga `}. Forethought version of
    example 12.2-5 from [CLL] p. 14. $)
 df-a $a |- go ko'a .a ko'e bo'a gi ga ko'a bo'a gi ko'e bo'a $.
-$( Definition of {` ja `} in terms of {` ga `}. From example 12.2-5 of [CLL] p. 14. $)
-df-ja $a |- go ko'a bu'a ja bu'e ko'e gi ga ko'a bu'a ko'e gi ko'a bu'e ko'e $.
 
 ${
     ai.0 $e |- ko'a .a ko'e bo'a $.
@@ -911,6 +1046,48 @@ ${
        (Contributed by la korvo, 14-Aug-2023.) $)
     ari $p |- ko'a .a ko'e bo'a $=
       ( btb bga sja df-a bi-rev ) ACEBCEFABGCEDABCHI $.
+$}
+
+$( Lemma for ~a-com $)
+a-com-lem $p |- ganai ko'a .a ko'e bo'a gi ko'e .a ko'a bo'a $= ? $.
+
+$( {` .a `} commutes. $)
+a-com $p |- go ko'a .a ko'e bo'a gi ko'e .a ko'a bo'a $=
+  ( sja btb a-com-lem gorii ) ABDCEBADCEABCFBACFG $.
+
+${
+    a-comi.0 $e |- ko'a .a ko'e bo'a $.
+    $( Inference form of ~a-com $)
+    a-comi $p |- ko'e .a ko'a bo'a $=
+      ( sja btb a-com bi ) ABECFBAECFDABCGH $.
+$}
+
+$(
+=-=-=
+{ja}
+=-=-=
+$)
+
+$c ja $.
+sbja $a selbri bu'a ja bu'e $.
+
+$( Definition of {` ja `} in terms of {` ga `}. From example 12.2-5 of [CLL] p. 14. $)
+df-ja $a |- go ko'a bu'a ja bu'e ko'e gi ga ko'a bu'a ko'e gi ko'a bu'e ko'e $.
+
+${
+    jai.0 $e |- ko'a bu'a ja bu'e ko'e $.
+    $( Inference form of ~df-ja
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    jai $p |- ga ko'a bu'a ko'e gi ko'a bu'e ko'e $=
+      ( sbja bb bga df-ja bi ) ABCDFGABCGABDGHEABCDIJ $.
+$}
+
+${
+    jari.0 $e |- ga ko'a bu'a ko'e gi ko'a bu'e ko'e $.
+    $( Reverse inference form of ~df-ja
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    jari $p |- ko'a bu'a ja bu'e ko'e $=
+      ( bb bga sbja df-ja bi-rev ) ABCFABDFGABCDHFEABCDIJ $.
 $}
 
 $(
@@ -1182,26 +1359,29 @@ ${
       wk1 wk2 sbba df-du bi-rev $.
 $}
 
-${
-    du-sym.0 $e |- ko'a du ko'e $.
-    $( {` du `} is symmetric. $)
-    du-sym $p |- ko'e du ko'a $=
-      ? ? ? ? ? ? ? du-sym.0 ? ? ? df-du bi ? ax-ro-mp ? ? ? df-du
-      bi-rev $.
-$}
+$( Because {` du `} is an equivalence, it is reflexive. $)
+ax-du-refl $a |- ko'a du ko'a $.
 
-$( {` du `} is reflexive. $)
-du-refl $p |- ko'a du ko'a $= ? $.
+$( {` du `} is reflexive.
+   (Contributed by la korvo, 16-Aug-2023.) $)
+du-refl $p |- ko'a du ko'a $=
+  ( ax-du-refl ) AB $.
+
+${
+    ax-du-trans.0 $e |- ko'a du ko'e $.
+    ax-du-trans.1 $e |- ko'e du ko'i $.
+    $( Because {` du `} is an equivalence, it is transitive. $)
+    ax-du-trans $a |- ko'a du ko'i $.
+$}
 
 ${
     du-trans.0 $e |- ko'a du ko'e $.
     du-trans.1 $e |- ko'e du ko'i $.
-    $( {` du `} is transitive. $)
-    du-trans $p |- ko'a du ko'i $= ? $.
+    $( {` du `} is transitive.
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    du-trans $p |- ko'a du ko'i $=
+      ( ax-du-trans ) ABCDEF $.
 $}
-
-$( Because {` du `} is an equivalence, it is reflexive. $)
-ax-id-refl $a |- ko'a du ko'a $.
 
 ${
     ax-du-sym.0 $e |- ko'a du ko'e $.
@@ -1210,10 +1390,11 @@ ${
 $}
 
 ${
-    ax-du-trans.0 $e |- ko'a du ko'e $.
-    ax-du-trans.1 $e |- ko'e du ko'i $.
-    $( Because {` du `} is an equivalence, it is transitive. $)
-    ax-du-trans $a |- ko'a du ko'i $.
+    du-sym.0 $e |- ko'a du ko'e $.
+    $( {` du `} is symmetric.
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    du-sym $p |- ko'e du ko'a $=
+      ( ax-du-sym ) ABCD $.
 $}
 
 ${
@@ -1241,7 +1422,7 @@ df-ceihi $a |- go cei'i gi ko'a du ko'a $.
 $( {` cei'i `} is always true.
    (Contributed by la korvo, 18-Jul-2023.) $)
 ceihi $p |- cei'i $=
-  wk1 wk1 sbdu bb bceihi wk1 ax-id-refl wk1 df-ceihi bi-rev $.
+  wk1 wk1 sbdu bb bceihi wk1 du-refl wk1 df-ceihi bi-rev $.
 
 $(
 #*#*#
@@ -1315,10 +1496,11 @@ $}
 
 $(
 #*#*#
-Mutual exclusion I: {gonai}
+Mutual exclusion I: {gonai}, {.onai}, {jonai}, {gi'onai}
 #*#*#
 
-The final of our five essential connectives.
+The final of our five essential connectives. As with disjunctions, we can
+introduce all versions of mutual exclusion at once.
 $)
 
 $c gonai $.
@@ -1361,6 +1543,80 @@ ${
        (Contributed by la korvo, 8-Aug-2023.) $)
     gonairi $p |- gonai broda gi brode $=
       ( bga bge bnk bgon df-gonai bi-rev ) ABDABEZJFEABGCABHI $.
+$}
+
+$(
+=-=-=
+{.onai}
+=-=-=
+$)
+
+$c .onai $.
+sjonai $a sumti ko'a .onai ko'e $.
+
+$( Definition of {` .onai `} in terms of {` gonai `}. By analogy with forethought
+   version of example 12.2-5 from [CLL] p. 14. $)
+df-onai $a |- go ko'a .onai ko'e bo'a gi gonai ko'a bo'a gi ko'e bo'a $.
+
+${
+    onaii.0 $e |- ko'a .onai ko'e bo'a $.
+    $( Inference form of ~df-onai
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    onaii $p |- gonai ko'a bo'a gi ko'e bo'a $=
+      ( sjonai btb bgon df-onai bi ) ABECFACFBCFGDABCHI $.
+$}
+
+${
+    onairi.0 $e |- gonai ko'a bo'a gi ko'e bo'a $.
+    $( Reverse inference form of ~df-onai
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    onairi $p |- ko'a .onai ko'e bo'a $=
+      ( btb bgon sjonai df-onai bi-rev ) ACEBCEFABGCEDABCHI $.
+$}
+
+$( Lemma for ~onai-com $)
+onai-com-lem $p |- ganai ko'a .onai ko'e bo'a gi ko'e .onai ko'a bo'a $= ? $.
+
+$( {` .onai `} commutes.
+   (Contributed by la korvo, 16-Aug-2023.) $)
+onai-com $p |- go ko'a .onai ko'e bo'a gi ko'e .onai ko'a bo'a $=
+  ( sjonai btb onai-com-lem gorii ) ABDCEBADCEABCFBACFG $.
+
+${
+    onai-comi.0 $e |- ko'a .onai ko'e bo'a $.
+    $( Inference form of ~onai-com
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    onai-comi $p |- ko'e .onai ko'a bo'a $=
+      ( sjonai btb onai-com bi ) ABECFBAECFDABCGH $.
+$}
+
+$(
+=-=-=
+{jonai}
+=-=-=
+$)
+
+$c jonai $.
+sbjonai $a selbri bu'a jonai bu'e $.
+
+$( Definition of {` jonai `} in terms of {` gonai `}. By analogy with
+   example 12.2-5 of [CLL] p. 14. $)
+df-jonai $a |- go ko'a bu'a jonai bu'e ko'e gi gonai ko'a bu'a ko'e gi ko'a bu'e ko'e $.
+
+${
+    jonaii.0 $e |- ko'a bu'a jonai bu'e ko'e $.
+    $( Inference form of ~df-jonai
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    jonaii $p |- gonai ko'a bu'a ko'e gi ko'a bu'e ko'e $=
+      ( sbjonai bb bgon df-jonai bi ) ABCDFGABCGABDGHEABCDIJ $.
+$}
+
+${
+    jonairi.0 $e |- gonai ko'a bu'a ko'e gi ko'a bu'e ko'e $.
+    $( Reverse inference form of ~df-jonai
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    jonairi $p |- ko'a bu'a jonai bu'e ko'e $=
+      ( bb bgon sbjonai df-jonai bi-rev ) ABCFABDFGABCDHFEABCDIJ $.
 $}
 
 $(
@@ -1648,12 +1904,12 @@ $}
 $( Assertion for left-hand component of a {` ce `} union.
    (Contributed by la korvo, 5-Aug-2023.) $)
 ce-left $p |- ko'a cmima ko'a ce ko'e $=
-  ( ax-id-refl ceri-lin ) AABACD $.
+  ( du-refl ceri-lin ) AABACD $.
 
 $( Assertion for right-hand component of a {` ce `} union.
    (Contributed by la korvo, 5-Aug-2023.) $)
 ce-right $p |- ko'e cmima ko'a ce ko'e $=
-  ( ax-id-refl ceri-rin ) BABBCD $.
+  ( du-refl ceri-rin ) BABBCD $.
 
 $(
 #*#*#
