@@ -88,16 +88,19 @@ htmldef "gi'anai" as "<small>gi'anai</small> ";
 htmldef "gi'e" as "<small>gi'e</small> ";
 htmldef "gi'o" as "<small>gi'o</small> ";
 htmldef "gi'onai" as "<small>gi'onai</small> ";
+htmldef "nagi'a" as "<small>nagi'a</small> ";
 htmldef "ja" as "<small>ja</small> ";
 htmldef "janai" as "<small>janai</small> ";
 htmldef "je" as "<small>je</small> ";
 htmldef "jo" as "<small>jo</small> ";
 htmldef "jonai" as "<small>jonai</small> ";
+htmldef "naja" as "<small>naja</small> ";
 htmldef ".a" as "<small>.a</small> ";
 htmldef ".anai" as "<small>.anai</small> ";
 htmldef ".e" as "<small>.e</small> ";
 htmldef ".o" as "<small>.o</small> ";
 htmldef ".onai" as "<small>.onai</small> ";
+htmldef "na.a" as "<small>na.a</small> ";
 htmldef "na" as "<small>na</small> ";
 htmldef "naku" as "<small>naku</small> ";
 htmldef "poi" as "<small>poi</small> ";
@@ -657,17 +660,22 @@ $( {` go `} is reflexive.
 go-refl $p |- go broda gi broda $=
   sbb1 sbb1 sbb1 id sbb1 id gorii $.
 
-$( {` go `} commutes.
+$( Lemma: {` go `} commutes in one direction.
    (Contributed by la korvo, 31-Jul-2023.) $)
-go-com $p |- ganai go broda gi brode gi go brode gi broda $=
+go-com-lem $p |- ganai go broda gi brode gi go brode gi broda $=
   ( bgo bi2 bi1 goriid ) ABCBAABDABEF $.
+
+$( {` go `} commutes.
+   (Contributed by la korvo, 17-Aug-2023.) $)
+go-com $p |- go go broda gi brode gi go brode gi broda $=
+  ( bgo go-com-lem gorii ) ABCBACABDBADE $.
 
 ${
     go-comi.0 $e |- go broda gi brode $.
     $( Inference form of ~go-com
        (Contributed by la korvo, 31-Jul-2023.) $)
     go-comi $p |- go brode gi broda $=
-      ( bgo go-com ax-mp ) ABDBADCABEF $.
+      ( bgo go-com-lem ax-mp ) ABDBADCABEF $.
 $}
 
 ${
@@ -675,6 +683,15 @@ ${
     ax-go-trans.1 $e |- go brode gi brodi $.
     $( {` go `} is transitive. $)
     ax-go-trans $a |- go broda gi brodi $.
+$}
+
+${
+    go-trans.0 $e |- go broda gi brode $.
+    go-trans.1 $e |- go brode gi brodi $.
+    $( {` go `} is transitive.
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    go-trans $p |- go broda gi brodi $=
+      ( ax-go-trans ) ABCDEF $.
 $}
 
 ${
@@ -705,9 +722,51 @@ $}
 
 $(
 #*#*#
-Implication II: {.anai}, {janai}, {gi'anai}
+Implication II: {na.a}, {.anai}, {naja}, {janai}, {nagi'a}, {gi'anai}
 #*#*#
+
+Unlike the other four connectives, {` ganai `} is not symmetric. As a result,
+Lojban's grammar admits both a left-to-right and right-to-left version of each
+connective for implication.
 $)
+
+$(
+=-=-=
+{na.a}
+=-=-=
+$)
+
+$c na.a $.
+sjnaa $a sumti ko'a na.a ko'e $.
+
+$( Definition of {` na.a `} in terms of {` ganai `}. By analogy with forethought
+   version of example 12.2-5 from [CLL] p. 14. $)
+df-na.a $a |- go ko'a na.a ko'e bo'a gi ganai ko'a bo'a gi ko'e bo'a $.
+
+${
+    naai.0 $e |- ko'a na.a ko'e bo'a $.
+    $( Inference form of ~df-na.a
+       (Contributed by la korvo, 17-Aug-2023.) $)
+    naai $p |- ganai ko'a bo'a gi ko'e bo'a $=
+      ( sjnaa btb bgan df-na.a bi ) ABECFACFBCFGDABCHI $.
+$}
+
+${
+    naaii.0 $e |- ko'a na.a ko'e bo'a $.
+    naaii.1 $e |- ko'a bo'a $.
+    $( Inference form of ~df-na.a
+       (Contributed by la korvo, 17-Aug-2023.) $)
+    naaii $p |- ko'e bo'a $=
+      ( btb naai ax-mp ) ACFBCFEABCDGH $.
+$}
+
+${
+    naari.0 $e |- ganai ko'a bo'a gi ko'e bo'a $.
+    $( Reverse inference form of ~df-na.a
+       (Contributed by la korvo, 17-Aug-2023.) $)
+    naari $p |- ko'a na.a ko'e bo'a $=
+      ( btb bgan sjnaa df-na.a bi-rev ) ACEBCEFABGCEDABCHI $.
+$}
 
 $(
 =-=-=
@@ -720,18 +779,18 @@ sjanai $a sumti ko'a .anai ko'e $.
 
 $( Definition of {` .anai `} in terms of {` ganai `}. By analogy with forethought
    version of example 12.2-5 from [CLL] p. 14. $)
-df-anai $a |- go ko'a .anai ko'e bo'a gi ganai ko'a bo'a gi ko'e bo'a $.
+df-anai $a |- go ko'e .anai ko'a bo'a gi ganai ko'a bo'a gi ko'e bo'a $.
 
 ${
-    anaii.0 $e |- ko'a .anai ko'e bo'a $.
+    anaii.0 $e |- ko'e .anai ko'a bo'a $.
     $( Inference form of ~df-anai
        (Contributed by la korvo, 16-Aug-2023.) $)
     anaii $p |- ganai ko'a bo'a gi ko'e bo'a $=
-      ( sjanai btb bgan df-anai bi ) ABECFACFBCFGDABCHI $.
+      ( sjanai btb bgan df-anai bi ) BAECFACFBCFGDABCHI $.
 $}
 
 ${
-    anaiii.0 $e |- ko'a .anai ko'e bo'a $.
+    anaiii.0 $e |- ko'e .anai ko'a bo'a $.
     anaiii.1 $e |- ko'a bo'a $.
     $( Inference form of ~df-anai
        (Contributed by la korvo, 16-Aug-2023.) $)
@@ -743,8 +802,46 @@ ${
     anairi.0 $e |- ganai ko'a bo'a gi ko'e bo'a $.
     $( Reverse inference form of ~df-anai
        (Contributed by la korvo, 16-Aug-2023.) $)
-    anairi $p |- ko'a .anai ko'e bo'a $=
-      ( btb bgan sjanai df-anai bi-rev ) ACEBCEFABGCEDABCHI $.
+    anairi $p |- ko'e .anai ko'a bo'a $=
+      ( btb bgan sjanai df-anai bi-rev ) ACEBCEFBAGCEDABCHI $.
+$}
+
+$(
+=-=-=
+{naja}
+=-=-=
+$)
+
+$c naja $.
+sbnaja $a selbri bu'a naja bu'e $.
+
+$( Definition of {` naja `} in terms of {` ganai `}. By analogy with
+   example 12.2-5 of [CLL] p. 14. $)
+df-naja $a |- go ko'a bu'a naja bu'e ko'e gi ganai ko'a bu'a ko'e gi ko'a bu'e ko'e $.
+
+${
+    najai.0 $e |- ko'a bu'a naja bu'e ko'e $.
+    $( Inference form of ~df-naja
+       (Contributed by la korvo, 17-Aug-2023.) $)
+    najai $p |- ganai ko'a bu'a ko'e gi ko'a bu'e ko'e $=
+      ( sbnaja bb bgan df-naja bi ) ABCDFGABCGABDGHEABCDIJ $.
+$}
+
+${
+    najaii.0 $e |- ko'a bu'a naja bu'e ko'e $.
+    najaii.1 $e |- ko'a bu'a ko'e $.
+    $( Inference form of ~df-naja
+       (Contributed by la korvo, 17-Aug-2023.) $)
+    najaii $p |- ko'a bu'e ko'e $=
+      ( bb najai ax-mp ) ABCGABDGFABCDEHI $.
+$}
+
+${
+    najari.0 $e |- ganai ko'a bu'a ko'e gi ko'a bu'e ko'e $.
+    $( Reverse inference form of ~df-naja
+       (Contributed by la korvo, 17-Aug-2023.) $)
+    najari $p |- ko'a bu'a naja bu'e ko'e $=
+      ( bb bgan sbnaja df-naja bi-rev ) ABCFABDFGABCDHFEABCDIJ $.
 $}
 
 $(
@@ -758,18 +855,18 @@ sbjanai $a selbri bu'a janai bu'e $.
 
 $( Definition of {` janai `} in terms of {` ganai `}. By analogy with
    example 12.2-5 of [CLL] p. 14. $)
-df-janai $a |- go ko'a bu'a janai bu'e ko'e gi ganai ko'a bu'a ko'e gi ko'a bu'e ko'e $.
+df-janai $a |- go ko'a bu'e janai bu'a ko'e gi ganai ko'a bu'a ko'e gi ko'a bu'e ko'e $.
 
 ${
-    janaii.0 $e |- ko'a bu'a janai bu'e ko'e $.
+    janaii.0 $e |- ko'a bu'e janai bu'a ko'e $.
     $( Inference form of ~df-janai
        (Contributed by la korvo, 16-Aug-2023.) $)
     janaii $p |- ganai ko'a bu'a ko'e gi ko'a bu'e ko'e $=
-      ( sbjanai bb bgan df-janai bi ) ABCDFGABCGABDGHEABCDIJ $.
+      ( sbjanai bb bgan df-janai bi ) ABDCFGABCGABDGHEABCDIJ $.
 $}
 
 ${
-    janaiii.0 $e |- ko'a bu'a janai bu'e ko'e $.
+    janaiii.0 $e |- ko'a bu'e janai bu'a ko'e $.
     janaiii.1 $e |- ko'a bu'a ko'e $.
     $( Inference form of ~df-janai
        (Contributed by la korvo, 16-Aug-2023.) $)
@@ -781,8 +878,45 @@ ${
     janairi.0 $e |- ganai ko'a bu'a ko'e gi ko'a bu'e ko'e $.
     $( Reverse inference form of ~df-janai
        (Contributed by la korvo, 16-Aug-2023.) $)
-    janairi $p |- ko'a bu'a janai bu'e ko'e $=
-      ( bb bgan sbjanai df-janai bi-rev ) ABCFABDFGABCDHFEABCDIJ $.
+    janairi $p |- ko'a bu'e janai bu'a ko'e $=
+      ( bb bgan sbjanai df-janai bi-rev ) ABCFABDFGABDCHFEABCDIJ $.
+$}
+
+$(
+=-=-=
+{nagi'a}
+=-=-=
+$)
+
+$c nagi'a $.
+tnagiha $a brirebla bo'a nagi'a bo'e $.
+
+$( Definition of {` nagi'a `} in terms of {` ganai `}. $)
+df-nagiha $a |- go ko'a bo'a nagi'a bo'e gi ganai ko'a bo'a gi ko'a bo'e $.
+
+${
+    nagihai.0 $e |- ko'a bo'a nagi'a bo'e $.
+    $( Inference form of ~df-nagiha
+       (Contributed by la korvo, 17-Aug-2023.) $)
+    nagihai $p |- ganai ko'a bo'a gi ko'a bo'e $=
+      ( tnagiha btb bgan df-nagiha bi ) ABCEFABFACFGDABCHI $.
+$}
+
+${
+    nagihaii.0 $e |- ko'a bo'a nagi'a bo'e $.
+    nagihaii.1 $e |- ko'a bo'a $.
+    $( Inference form of ~df-nagiha
+       (Contributed by la korvo, 17-Aug-2023.) $)
+    nagihaii $p |- ko'a bo'e $=
+      ( btb nagihai ax-mp ) ABFACFEABCDGH $.
+$}
+
+${
+    nagihari.0 $e |- ganai ko'a bo'a gi ko'a bo'e $.
+    $( Inference form of ~df-nagiha
+       (Contributed by la korvo, 17-Aug-2023.) $)
+    nagihari $p |- ko'a bo'a nagi'a bo'e $=
+      ( btb bgan tnagiha df-nagiha bi-rev ) ABEACEFABCGEDABCHI $.
 $}
 
 $(
@@ -795,18 +929,18 @@ $c gi'anai $.
 tgihanai $a brirebla bo'a gi'anai bo'e $.
 
 $( Definition of {` gi'anai `} in terms of {` ganai `}. $)
-df-gihanai $a |- go ko'a bo'a gi'anai bo'e gi ganai ko'a bo'a gi ko'a bo'e $.
+df-gihanai $a |- go ko'a bo'e gi'anai bo'a gi ganai ko'a bo'a gi ko'a bo'e $.
 
 ${
-    gihanaii.0 $e |- ko'a bo'a gi'anai bo'e $.
+    gihanaii.0 $e |- ko'a bo'e gi'anai bo'a $.
     $( Inference form of ~df-gihanai
        (Contributed by la korvo, 16-Aug-2023.) $)
     gihanaii $p |- ganai ko'a bo'a gi ko'a bo'e $=
-      ( tgihanai btb bgan df-gihanai bi ) ABCEFABFACFGDABCHI $.
+      ( tgihanai btb bgan df-gihanai bi ) ACBEFABFACFGDABCHI $.
 $}
 
 ${
-    gihanaiii.0 $e |- ko'a bo'a gi'anai bo'e $.
+    gihanaiii.0 $e |- ko'a bo'e gi'anai bo'a $.
     gihanaiii.1 $e |- ko'a bo'a $.
     $( Inference form of ~df-gihanai
        (Contributed by la korvo, 16-Aug-2023.) $)
@@ -815,11 +949,11 @@ ${
 $}
 
 ${
-    gihanairi.0 $e |- ganai ko'a bo'a gi ko'a bo'e $.
+    gihanairi.0 $e |- ganai ko'a bo'e gi ko'a bo'a $.
     $( Inference form of ~df-gihanai
        (Contributed by la korvo, 16-Aug-2023.) $)
     gihanairi $p |- ko'a bo'a gi'anai bo'e $=
-      ( btb bgan tgihanai df-gihanai bi-rev ) ABEACEFABCGEDABCHI $.
+      ( btb bgan tgihanai df-gihanai bi-rev ) ACEABEFABCGEDACBHI $.
 $}
 
 $(
@@ -1048,12 +1182,11 @@ ${
       ( btb bga sja df-a bi-rev ) ACEBCEFABGCEDABCHI $.
 $}
 
-$( Lemma for ~a-com $)
-a-com-lem $p |- ganai ko'a .a ko'e bo'a gi ko'e .a ko'a bo'a $= ? $.
-
-$( {` .a `} commutes. $)
+$( {` .a `} commutes.
+   (Contributed by la korvo, 17-Aug-2023.) $)
 a-com $p |- go ko'a .a ko'e bo'a gi ko'e .a ko'a bo'a $=
-  ( sja btb a-com-lem gorii ) ABDCEBADCEABCFBACFG $.
+  ( sja btb bga df-a ga-com go-trans go-comi ) ABDCEACEZBCEZFZBADCEZABCGNMNLKFM
+  BACGLKHIJI $.
 
 ${
     a-comi.0 $e |- ko'a .a ko'e bo'a $.
@@ -1153,13 +1286,11 @@ ${
       ( btb bgo sjo df-o bi-rev ) ACEBCEFABGCEDABCHI $.
 $}
 
-$( Lemma for ~o-com $)
-o-com-lem $p |- ganai ko'a .o ko'e bo'a gi ko'e .o ko'a bo'a $= ? $.
-
 $( {` .o `} commutes.
    (Contributed by la korvo, 14-Aug-2023.) $)
 o-com $p |- go ko'a .o ko'e bo'a gi ko'e .o ko'a bo'a $=
-  ( sjo btb o-com-lem gorii ) ABDCEBADCEABCFBACFG $.
+  ( sjo btb bgo df-o go-com go-trans go-comi ) ABDCEACEZBCEZFZBADCEZABCGNMNLKFM
+  BACGLKHIJI $.
 
 ${
     o-comi.0 $e |- ko'a .o ko'e bo'a $.
@@ -1326,6 +1457,15 @@ ${
        (Contributed by la korvo, 16-Jul-2023.) $)
     ro-bi $p |- ro bu'a zo'u brode $=
       sbb1 sbb2 sbba ro-bi.0 sbb1 sbb2 ro-bi.1 golili ax-ro-mp $.
+$}
+
+${
+    ro-bi-rev.0 $e |- ro bu'a zo'u broda $.
+    ro-bi-rev.1 $e |- go brode gi broda $.
+    $( Biconditional modus ponens under {` ro bu'a `}.
+       (Contributed by la korvo, 16-Aug-2023.) $)
+    ro-bi-rev $p |- ro bu'a zo'u brode $=
+      ( go-comi golili ax-ro-mp ) ABCDABBAEFGH $.
 $}
 
 $(
@@ -1572,22 +1712,6 @@ ${
        (Contributed by la korvo, 16-Aug-2023.) $)
     onairi $p |- ko'a .onai ko'e bo'a $=
       ( btb bgon sjonai df-onai bi-rev ) ACEBCEFABGCEDABCHI $.
-$}
-
-$( Lemma for ~onai-com $)
-onai-com-lem $p |- ganai ko'a .onai ko'e bo'a gi ko'e .onai ko'a bo'a $= ? $.
-
-$( {` .onai `} commutes.
-   (Contributed by la korvo, 16-Aug-2023.) $)
-onai-com $p |- go ko'a .onai ko'e bo'a gi ko'e .onai ko'a bo'a $=
-  ( sjonai btb onai-com-lem gorii ) ABDCEBADCEABCFBACFG $.
-
-${
-    onai-comi.0 $e |- ko'a .onai ko'e bo'a $.
-    $( Inference form of ~onai-com
-       (Contributed by la korvo, 16-Aug-2023.) $)
-    onai-comi $p |- ko'e .onai ko'a bo'a $=
-      ( sjonai btb onai-com bi ) ABECFBAECFDABCGH $.
 $}
 
 $(
