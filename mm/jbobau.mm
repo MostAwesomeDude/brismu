@@ -116,8 +116,10 @@ htmldef "ckaji" as "<span class='gismu'>ckaji</span> ";
 htmldef "ckini" as "<span class='gismu'>ckini</span> ";
 htmldef "cmima" as "<span class='gismu'>cmima</span> ";
 htmldef "dugri" as "<span class='gismu'>dugri</span> ";
+htmldef "kampu" as "<span class='gismu'>kampu</span> ";
 htmldef "prami" as "<span class='gismu'>prami</span> ";
 htmldef "simsa" as "<span class='gismu'>simsa</span> ";
+htmldef "steci" as "<span class='gismu'>steci</span> ";
 htmldef "tenfa" as "<span class='gismu'>tenfa</span> ";
 htmldef "ka" as "<small>ka</small> ";
 htmldef "ce'u" as "<small>ce'u</small> ";
@@ -722,7 +724,7 @@ $}
 
 $(
 #*#*#
-Implication II: {na.a}, {.anai}, {naja}, {janai}, {nagi'a}, {gi'anai}
+Implication II
 #*#*#
 
 Unlike the other four connectives, {` ganai `} is not symmetric. As a result,
@@ -958,7 +960,7 @@ $}
 
 $(
 #*#*#
-Conjunctions II: {.e}, {je}, {gi'e}
+Conjunctions II
 #*#*#
 $)
 
@@ -1253,7 +1255,7 @@ $}
 
 $(
 #*#*#
-Biconditionals II: {.o}, {jo}, {gi'o}
+Biconditionals II
 #*#*#
 $)
 
@@ -1636,11 +1638,17 @@ $}
 
 $(
 #*#*#
-Mutual exclusion I: {gonai}, {.onai}, {jonai}, {gi'onai}
+Mutual exclusion I
 #*#*#
 
 The final of our five essential connectives. As with disjunctions, we can
 introduce all versions of mutual exclusion at once.
+$)
+
+$(
+=-=-=
+{gonai}
+=-=-=
 $)
 
 $c gonai $.
@@ -1783,7 +1791,7 @@ $)
 
 $(
 #*#*#
-Internal hom: {ka}, {ckaji}, {ckini}, {simsa}
+Internal hom I
 #*#*#
 
 The internal hom is the syntax which internalizes relations. We define
@@ -1941,6 +1949,49 @@ ${
 $}
 
 $(
+=-=-=
+{steci}
+=-=-=
+$)
+
+$c cmima $.
+sbcmima $a selbri cmima $.
+
+$c steci $.
+sbsteci $a selbri steci $.
+
+$( Definition of {` steci `} in terms of {` ckaji `} and {` cmima `}. $)
+df-steci $a |-
+  go ko'a steci ko'e ko'i
+  gi ge ko'e ckaji ko'a gi ko'e cmima ko'i $.
+
+${
+    stecii.0 $e |- ko'a steci ko'e ko'i $.
+    $( Inference form of ~df-steci
+       (Contributed by la korvo, 17-Aug-2023.) $)
+    stecii $p |- ge ko'e ckaji ko'a gi ko'e cmima ko'i $=
+      ( sbsteci bt sbckaji bb sbcmima bge df-steci bi ) ABCEFBAGHBCIHJDABCKL $.
+$}
+
+${
+    steciri.0 $e |- ge ko'e ckaji ko'a gi ko'e cmima ko'i $.
+    $( Reverse inference form of ~df-steci
+       (Contributed by la korvo, 17-Aug-2023.) $)
+    steciri $p |- ko'a steci ko'e ko'i $=
+      ( sbckaji bb sbcmima bge sbsteci bt df-steci bi-rev ) BAEFBCGFHABCIJDABCK
+      L $.
+$}
+
+${
+    stecirii.0 $e |- ko'e ckaji ko'a $.
+    stecirii.1 $e |- ko'e cmima ko'i $.
+    $( Reverse inference form of ~df-steci
+       (Contributed by la korvo, 17-Aug-2023.) $)
+    stecirii $p |- ko'a steci ko'e ko'i $=
+      ( sbckaji bb sbcmima ge-ini steciri ) ABCBAFGBCHGDEIJ $.
+$}
+
+$(
 #*#*#
 Conversion II: {te}
 #*#*#
@@ -1986,8 +2037,7 @@ Pairing: {ce}
 #*#*#
 $)
 
-$c ce cmima $.
-sbcmima $a selbri cmima $.
+$c ce $.
 sce $a sumti ko'a ce ko'e $.
 
 $( Tentative definition of {` ce `}. $)
@@ -2071,13 +2121,13 @@ $c poi ke'a ku'o $.
 ${
     brdp.0 $e bridi ro da zo'u broda $.
     $( Restriction for first-order universal quantification. $)
-    brdp $a bridi ro da poi ke'a bu'a ku'o zo'u broda $.
+    brdp $a bridi ro da poi ke'a bo'a ku'o zo'u broda $.
 $}
 
 ${
     bsdp.0 $e bridi su'o da zo'u broda $.
     $( Restriction for first-order universal quantification. $)
-    bsdp $a bridi su'o da poi ke'a bu'a ku'o zo'u broda $.
+    bsdp $a bridi su'o da poi ke'a bo'a ku'o zo'u broda $.
 $}
 
 $( Definition of {` ro da poi `} quantifiers as restricted first-order
@@ -2091,7 +2141,7 @@ ${
     $( Inference form of ~df-poi-ro
        (Contributed by la korvo, 11-Aug-2023.) $)
     poi-roi $p |- ro da zo'u ganai da bu'a gi broda $=
-      ( brd brdp bu bgan df-poi-ro bi ) ABCACAEFCBGAHZCKEDABCIJ $.
+      ( tsb brd brdp bu bgan df-poi-ro bi ) ABECACAFGCBHAIZCLFDABCJK $.
 $}
 
 ${
@@ -2099,7 +2149,45 @@ ${
     $( Inference form of ~df-poi-ro
        (Contributed by la korvo, 11-Aug-2023.) $)
     poi-rori $p |- ro da poi ke'a bu'a ku'o zo'u broda $=
-      ( bu bgan brd brdp df-poi-ro bi-rev ) CBEAFZCKGABCACAGHDABCIJ $.
+      ( bu bgan brd tsb brdp df-poi-ro bi-rev ) CBEAFZCLGABHCACAGIDABCJK $.
+$}
+
+$(
+#*#*#
+Internal hom II: {kampu}
+#*#*#
+$)
+
+$(
+=-=-=
+{kampu}
+=-=-=
+$)
+
+$c kampu $.
+sbkampu $a selbri kampu $.
+
+$( Definition of {` kampu `} in terms of {` ckaji `} and {` cmima `}. $)
+df-kampu $a |-
+  go ko'a kampu ko'e
+  gi ro da poi ke'a cmima ko'e ku'o zo'u da ckaji ko'a $.
+
+${
+    kampui.0 $e |- ko'a kampu ko'e $.
+    $( Inference form of ~df-kampu
+       (Contributed by la korvo, 17-Aug-2023.) $)
+    kampui $p |- ro da poi ke'a cmima ko'e ku'o zo'u da ckaji ko'a $=
+      ( sbkampu bb sbckaji sbcmima tsb tss brd brdp df-kampu bi ) ABEFCAGFZBHIZ
+      PJCOCOKLDABCMN $.
+$}
+
+${
+    kampuri.0 $e |- ro da poi ke'a cmima ko'e ku'o zo'u da ckaji ko'a $.
+    $( Reverse inference form of ~df-kampu
+       (Contributed by la korvo, 17-Aug-2023.) $)
+    kampuri $p |- ko'a kampu ko'e $=
+      ( sbckaji bb sbcmima tsb tss brd brdp sbkampu df-kampu bi-rev ) CAEFZBGHZ
+      PICOCOJKABLFDABCMN $.
 $}
 
 $(
@@ -2154,8 +2242,8 @@ ${
     $( Inference form of ~ax-nat-ind
        (Contributed by la korvo, 10-Aug-2023.) $)
     nat-indi $p |- ro da poi ke'a kacna'u ku'o zo'u da bu'a $=
-      ( sl0 bu bkaclihe bb bge bsd brd brdp bkacnahu ax-nat-ind ax-mp ) EAFBCGH
-      CAFIZCPJZABQBQKLIBAFZMBRBRKLDABCNO $.
+      ( sl0 bu bkaclihe bb bge bsd tsb brd brdp bkacnahu ax-nat-ind ax-mp ) EAF
+      BCGHCAFIZCQJZAKBRBRLMIBAFZNKBSBSLMDABCOP $.
 $}
 
 ${
@@ -2167,8 +2255,8 @@ ${
     $( Inference form of ~ax-nat-ind
        (Contributed by la korvo, 10-Aug-2023.) $)
     nat-indii $p |- ro da poi ke'a kacna'u ku'o zo'u da bu'a $=
-      ( sl0 bu bkaclihe bb bge bsd brd brdp ge-ini nat-indi ) ABCFAGBCHICAGJZCP
-      KZABQBQLMDENO $.
+      ( sl0 bu bkaclihe bb bge bsd tsb brd brdp ge-ini nat-indi ) ABCFAGBCHICAG
+      JZCQKZALBRBRMNDEOP $.
 $}
 
 $(

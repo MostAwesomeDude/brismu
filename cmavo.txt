@@ -489,11 +489,8 @@
  na'o      TAhE     typically                                 tense interval modifier: characteristically/typically; tense/modal; defaults as time tense
  na'onai   TAhE*    atypically                                tense interval modifier: atypically; subjective tense/modal; defaults as time tense
  na'u      NAhU     selbri to operator                        convert selbri to mex operator; used to create less-used operators using le'avla, lujvo, etc.
- na.a      A*       sumti only if                             logical connective: sumti afterthought conditional/only if
- nagi'a    GIhA*    bridi only if                             logical connective: bridi-tail afterthought conditional/only if
  nago'i    GOhA*    deny last bridi                           selbri: repeats preceding bridi while denying it as false; pro-assign values are unchanged
  nai       NAI      negate last word                          attached to cmavo to negate them; various negation-related meanings
- naja      JA*      tanru only if                             logical connective: tanru-internal afterthought conditional/only if
  nau       CUhE     reference point                           tense: refers to current space/time reference absolutely
  ne        GOI      incidental phrase                         non-restrictive relative phrase marker: which incidentally is associated with ...
  ne'a      FAhA3    next to                                   location tense relation/direction; approximating/next to ...
