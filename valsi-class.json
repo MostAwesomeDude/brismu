@@ -39,6 +39,9 @@
     "naku": "NAKU",
     "na": "NA",
     "poi": "NOI",
+    "no": "PA",
+    "pa": "PA",
+    "re": "PA",
     "bu'a": "GOhA",
     "bu'e": "GOhA",
     "bu'i": "GOhA",
@@ -54,7 +57,9 @@
     "cmima": "gismu",
     "dugri": "gismu",
     "kampu": "gismu",
+    "pilji": "gismu",
     "simsa": "gismu",
     "steci": "gismu",
+    "sumji": "gismu",
     "tenfa": "gismu"
 }

@@ -109,6 +109,7 @@ htmldef "ku'o" as "<small>ku'o</small> ";
 htmldef "li" as "<small>li</small> ";
 htmldef "no" as "0 ";
 htmldef "pa" as "1 ";
+htmldef "re" as "2 ";
 htmldef "ro" as "<small>ro</small> ";
 htmldef "su'o" as "<small>su'o</small> ";
 htmldef "ce" as "<small>ce</small> ";
@@ -117,9 +118,11 @@ htmldef "ckini" as "<span class='gismu'>ckini</span> ";
 htmldef "cmima" as "<span class='gismu'>cmima</span> ";
 htmldef "dugri" as "<span class='gismu'>dugri</span> ";
 htmldef "kampu" as "<span class='gismu'>kampu</span> ";
+htmldef "pilji" as "<span class='gismu'>pilji</span> ";
 htmldef "prami" as "<span class='gismu'>prami</span> ";
 htmldef "simsa" as "<span class='gismu'>simsa</span> ";
 htmldef "steci" as "<span class='gismu'>steci</span> ";
+htmldef "sumji" as "<span class='gismu'>sumji</span> ";
 htmldef "tenfa" as "<span class='gismu'>tenfa</span> ";
 htmldef "ka" as "<small>ka</small> ";
 htmldef "ce'u" as "<small>ce'u</small> ";
@@ -1590,6 +1593,20 @@ $}
 $( Traditional definition of intuitionistic negation. $)
 df-naku $a |- go naku zo'u broda gi ganai broda gi gai'o $.
 
+$( Uncurried form of ~df-naku
+   (Contributed by la korvo, 20-Aug-2023.) $)
+naku-uncur $p |- ganai ge naku zo'u broda gi broda gi gai'o $=
+  ( bnk bgaiho bgan df-naku golili cur ) AABZACHACDAEFG $.
+
+${
+    lnc.0 $e |- ge broda gi naku zo'u broda $.
+    $( The law of non-contradiction. No bridi is simultaneously inhabited and
+       uninhabited.
+       (Contributed by la korvo, 20-Aug-2023.) $)
+    lnc $p |- gai'o $=
+      ( bnk bge bgaiho ge-com bi naku-uncur ax-mp ) AACZADZEAJDKBAJFGAHI $.
+$}
+
 ${
     nakui.0 $e |- naku zo'u broda $.
     $( Inference form of ~df-naku
@@ -2200,27 +2217,51 @@ $)
 
 $(
 #*#*#
-Natural numbers: {kacna'u}, {kacli'e}
+Natural numbers
 #*#*#
 $)
 
-$( XXX NFO $)
+$(
+=-=-=
+{kacna'u}
+=-=-=
+$)
 
-$c kacna'u kacli'e $.
+$c kacna'u $.
 $c li no $.
 
 bkacnahu $a selbri kacna'u $.
-bkaclihe $a selbri kacli'e $.
 
 sl0 $a sumti li no $.
-sl1 $a sumti li pa $.
 
 $( Zero is a natural number. $)
 ax-nat-zero $a |- li no kacna'u $.
 
+$(
+=-=-=
+{kacli'e}
+=-=-=
+$)
+
+$c kacli'e $.
+
+bkaclihe $a selbri kacli'e $.
+
+$( Zero is not a successor. $)
+ax-succ-zero $a |- naku zo'u su'o da zo'u da kacli'e li no $.
+
+${
+    succ-zero-ref.0 $e |- su'o da zo'u da kacli'e li no $.
+    $( Refutation of any claimed predecessor to zero.
+       (Contributed by la korvo, 20-Aug-2023.) $)
+    succ-zero-ref $p |- gai'o $=
+      ( sl0 bkaclihe bb bsd ax-succ-zero nakuii ) ACDEZAIFAGBH $.
+$}
+
 ${
     ax-succ-succ.0 $e |- ko'a .e ko'e kacli'e ko'i $.
-    $( Successors of natural numbers are also natural numbers. $)
+    $( Successors of natural numbers are also natural numbers, and each
+       natural number has exactly one successor. $)
     ax-succ-succ $a |- ko'a du ko'e $.
 $}
 
@@ -2257,6 +2298,113 @@ ${
     nat-indii $p |- ro da poi ke'a kacna'u ku'o zo'u da bu'a $=
       ( sl0 bu bkaclihe bb bge bsd tsb brd brdp ge-ini nat-indi ) ABCFAGBCHICAG
       JZCQKZALBRBRMNDEOP $.
+$}
+
+$( Curried form of ~ax-nat-ind
+   (Contributed by la korvo, 20-Aug-2023.) $)
+nat-ind-cur $p |- ganai li no bu'a gi
+  ganai ro da poi ke'a bu'a ku'o zo'u
+    su'o de zo'u
+      ge da kacli'e de
+      gi de bu'a
+  gi ro da poi ke'a kacna'u ku'o zo'u da bu'a $=
+  ( sl0 bu bkaclihe bb bge bsd tsb brd brdp bkacnahu ax-nat-ind uncur ) DAEBCFG
+  CAEHZCPIZAJBQBQKLBAEZMJBRBRKLABCNO $.
+
+$( There are no non-standard natural numbers. This axiom upgrades our
+   arithmetic from BA, "baby arithmetic", to Robinson's Q. $)
+ax-succ-std $a |- ro da poi ke'a kacna'u ku'o zo'u
+  ga da du li no gi su'o de zo'u de kacli'e da $.
+
+sl1 $a sumti li pa $.
+
+$( 1 is the successor of 0. $)
+df-pa-li $a |- li no kacli'e li pa $.
+
+$c re $.
+
+sl2 $a sumti li re $.
+
+$( 2 is the successor of 1. $)
+df-re-li $a |- li pa kacli'e li re $.
+
+$(
+=-=-=
+{sumji}
+=-=-=
+$)
+
+$c sumji $.
+
+bsumji $a selbri sumji $.
+
+$( Every natural number is equal to itself plus zero. $)
+ax-sumji-no $a |- ro da poi ke'a kacna'u ku'o zo'u da sumji da li no $.
+
+${
+    ax-sumji-succ.0 $e |- su'o da zo'u
+      ge ko'i sumji ko'a da gi ko'e kacli'e da $.
+    $( Addition on natural numbers is well-founded and proceeds by successors. $)
+    ax-sumji-succ $a |- su'o da zo'u
+      ge da sumji ko'a ko'e gi da kacli'e ko'i $.
+$}
+
+$(
+=-=-=
+{pilji}
+=-=-=
+$)
+
+$c pilji $.
+
+bpilji $a selbri pilji $.
+
+$( Zero times any natural number is zero. $)
+ax-pilji-no $a |- ro da poi ke'a kacna'u ku'o zo'u li no pilji da li no $.
+
+${
+    ax-pilji-succ.0 $e |- su'o da zo'u
+      ge ko'i pilji ko'a da gi ko'e kacli'e da $.
+    $( Multiplication on natural numbers is well-founded. $)
+    ax-pilji-succ $a |- su'o da zo'u
+      ge ko'i sumji da ko'a gi da pilji ko'a ko'e $.
+$}
+
+$(
+#*#*#
+Existential quantifiers II: {pa da}
+#*#*#
+$)
+
+bpd $a bridi pa da zo'u broda $.
+
+df-pa-da $a |- go pa da zo'u da bo'a
+  gi ge su'o da zo'u da bo'a gi ganai ko'a bo'a gi ko'a du da $.
+
+${
+    pa-dai.0 $e |- pa da zo'u da bo'a $.
+    $( Inference form of ~pa-da
+       (Contributed by la korvo, 20-Aug-2023.) $)
+    pa-dai $p |- ge su'o da zo'u da bo'a gi ganai ko'a bo'a gi ko'a du da $=
+      ( btb bpd bsd sbdu bb bgan bge df-pa-da bi ) CBEZCFNCNGABEACHIJKDABCLM $.
+$}
+
+${
+    pa-dari.0 $e |- ge su'o da zo'u da bo'a gi ganai ko'a bo'a gi ko'a du da $.
+    $( Reverse inference form of ~pa-da
+       (Contributed by la korvo, 20-Aug-2023.) $)
+    pa-dari $p |- pa da zo'u da bo'a $=
+      ( btb bsd sbdu bb bgan bge bpd df-pa-da bi-rev ) CBEZCNFABEACGHIJNCKDABCL
+      M $.
+$}
+
+${
+    pa-darii.0 $e |- su'o da zo'u da bo'a $.
+    pa-darii.1 $e |- ganai ko'a bo'a gi ko'a du da $.
+    $( Reverse inference form of ~pa-da
+       (Contributed by la korvo, 20-Aug-2023.) $)
+    pa-darii $p |- pa da zo'u da bo'a $=
+      ( btb bsd sbdu bb bgan ge-ini pa-dari ) ABCCBFZCMGABFACHIJDEKL $.
 $}
 
 $(
