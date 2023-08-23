@@ -307,7 +307,6 @@
  ji'o      BAI      under direction of                        jitro modal, 1st place (control)                  controlledly; under direction of ...
  ji'u      BAI      based on                                  jicmu modal, 1st place (assumptions);             given that ...; based on ...
  jo'a      UI3a     metalinguistic yes                        discursive: metalinguistic affirmer                                                                       (cf. drani)
- jo'e      JOI      union                                     non-logical connective: union of sets
  jo'i      JOhI     array                                     join mathematical expression (mex) operands into an array
  jo'u      JOI      in common with                            non-logical connective: in common with; along with (unmixed)
  joi       JOI      in a mass with                            non-logical connective: mixed conjunction; "and" meaning "mixed together", forming a mass
@@ -354,7 +353,6 @@
  ko        KOhA3    imperative                                pro-sumti: you (imperative); make it true for you, the listener
  koi       BAI      bounded by                                korbi modal, 1st place (bordered by)              bounded by ...
  ku        KU       end sumti                                 elidable terminator: end description, modal, or negator sumti; often elidable
- ku'a      JOI      intersection                              non-logical connective: intersection of sets
  ku'e      KUhE     end mex forethought                       elidable terminator: end mathematical (mex) forethought (Polish) expression; often elidable
  ku'i      UI3b     however                                   discursive: however/but/in contrast                                                                       (cf. karbi, dukti, nalpanra)
  ku'o      KUhO     end relative clause                       elidable terminator: end NOI relative clause; always elidable, but preferred in complex clauses
@@ -589,7 +587,6 @@
  pi        PA3      decimal point                             digit/number: radix (number base) point; default decimal
  pi'a      VUhU4    matrix of rows                            n-ary mathematical operator: operands are vectors to be treated as matrix rows
  pi'e      PA3      digit separator                           digit/number:separates digits for base >16, not current standard, or variable (e.g. time, date)
- pi'i      VUhU1    times                                     n-ary mathematical operator: times; multiplication operator; [(((a * b) * c) * ...)]
  pi'o      BAI      used by                                   pilno modal, 1st place                            used by ...
  pi'u      JOI      cross product                             non-logical connective: cross product; Cartesian product of sets
  pidu'e    PA*      too much of                               number: too much of
@@ -804,7 +801,6 @@
  su'a      UI2      I generalize                              evidential: I generalize - I particularize; discursive: abstractly - concretely                           (cf. sucta, sucni'i)
  su'anai   UI*2     I particularize                           evidential: I generalize - I particularize; discursive: abstractly - concretely
  su'e      PA4      at most                                   digit/number: at most (all); no more than
- su'i      VUhU1    plus                                      n-ary mathematical operator: plus; addition operator; [(((a + b) + c) + ...)]
  su'o      PA4      at least                                  digit/number: at least (some); no less than
  su'oremei MOI*     is plural                                 quantified selbri: convert at least 2 to cardinal selbri; x1 is a set with plural membership x2
  su'oremoi MOI*     is at least second                        quantified selbri: convert at least 2 to ordinal selbri; x1 is at-least-2nd among x2 by rule x3

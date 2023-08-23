@@ -41,6 +41,7 @@ htmlcss "<style type='text/css'>" +
         ".bridi { color: brown; }" +
         ".gismu { color: olive; }" +
         ".lujvo { color: teal; }" +
+        ".pa { color: orange; }" +
         "</style>";
 htmlvarcolor "<span class='sumti'>sumti</span> " +
              "<span class='selbri'>selbri</span> " +
@@ -107,12 +108,20 @@ htmldef "poi" as "<small>poi</small> ";
 htmldef "ke'a" as "<small>ke'a</small> ";
 htmldef "ku'o" as "<small>ku'o</small> ";
 htmldef "li" as "<small>li</small> ";
-htmldef "no" as "0 ";
-htmldef "pa" as "1 ";
-htmldef "re" as "2 ";
+htmldef "no" as "<span class='pa'>0</span> ";
+htmldef "pa" as "<span class='pa'>1</span> ";
+htmldef "re" as "<span class='pa'>2</span> ";
+htmldef "ku'i'a" as "<span class='pa'>ku'i'a</span> ";
+htmldef "ku'i'e" as "<span class='pa'>ku'i'e</span> ";
+htmldef "ku'i'i" as "<span class='pa'>ku'i'i</span> ";
+htmldef "su'i" as " + ";
+htmldef "pi'i" as " * ";
+htmldef "vu'u" as " - ";
 htmldef "ro" as "<small>ro</small> ";
 htmldef "su'o" as "<small>su'o</small> ";
 htmldef "ce" as "<small>ce</small> ";
+htmldef "jo'e" as "<small>jo'e</small> ";
+htmldef "ku'a" as "<small>ku'a</small> ";
 htmldef "ckaji" as "<span class='gismu'>ckaji</span> ";
 htmldef "ckini" as "<span class='gismu'>ckini</span> ";
 htmldef "cmima" as "<span class='gismu'>cmima</span> ";
@@ -1440,12 +1449,19 @@ ${
 $}
 
 ${
-    ax-ro-inst-u.0 $e selbri bu'a $.
-    ax-ro-inst-u.1 $e |- ro bu'e zo'u ko'a bu'e $.
+    ax-ro-inst-2u.0 $e selbri bu'a $.
+    ax-ro-inst-2u.1 $e |- ro bu'e zo'u ko'a bu'e $.
     $( {` ro bu'a `} may be instantiated with any selbri. As
        example 13.3 of [CLL] p. 16 notes, this will be of limited use, and is
        included largely to allow for a second-order definition of equality. $)
-    ax-ro-inst-u $a |- ko'a bu'a $.
+    ax-ro-inst-2u $a |- ko'a bu'a $.
+$}
+
+${
+    ax-ro-inst-1u.0 $e sumti ko'a $.
+    ax-ro-inst-1u.1 $e |- ro da zo'u da bo'a $.
+    $( {` ro da `} may be instantiated with any sumti. $)
+    ax-ro-inst-1u $a |- ko'a bo'a $.
 $}
 
 ${
@@ -2208,6 +2224,76 @@ ${
 $}
 
 $(
+#*#*#
+Union: {jo'e}
+#*#*#
+$)
+
+$(
+=-=-=
+{jo'e}
+=-=-=
+$)
+
+$c jo'e $.
+
+sjohe $a sumti ko'a jo'e ko'e $.
+
+$( Definition of {` jo'e `} in terms of {` ga `}. $)
+df-johe $a |- go ko'a cmima ko'e jo'e ko'i gi ko'a cmima ko'e .a ko'i $.
+
+${
+    johei.0 $e |- ko'a cmima ko'e jo'e ko'i $.
+    $( Inference form of ~df-johe
+       (Contributed by la korvo, 22-Aug-2023.) $)
+    johei $p |- ko'a cmima ko'e .a ko'i $=
+      ( sjohe sbcmima bb sja df-johe bi ) ABCEFGABCHFGDABCIJ $.
+$}
+
+${
+    joheri.0 $e |- ko'a cmima ko'e .a ko'i $.
+    $( Reverse inference form of ~df-johe
+       (Contributed by la korvo, 22-Aug-2023.) $)
+    joheri $p |- ko'a cmima ko'e jo'e ko'i $=
+      ( sja sbcmima bb sjohe df-johe bi-rev ) ABCEFGABCHFGDABCIJ $.
+$}
+
+$(
+#*#*#
+Intersection: {ku'a}
+#*#*#
+$)
+
+$(
+=-=-=
+{ku'a}
+=-=-=
+$)
+
+$c ku'a $.
+
+skuha $a sumti ko'a ku'a ko'e $.
+
+$( Definition of {` ku'a `} in terms of {` ge `}. $)
+df-kuha $a |- go ko'a cmima ko'e ku'a ko'i gi ko'a cmima ko'e .e ko'i $.
+
+${
+    kuhai.0 $e |- ko'a cmima ko'e ku'a ko'i $.
+    $( Inference form of ~df-kuha
+       (Contributed by la korvo, 22-Aug-2023.) $)
+    kuhai $p |- ko'a cmima ko'e .e ko'i $=
+      ( skuha sbcmima bb sje df-kuha bi ) ABCEFGABCHFGDABCIJ $.
+$}
+
+${
+    kuhari.0 $e |- ko'a cmima ko'e .e ko'i $.
+    $( Reverse inference form of ~df-kuha
+       (Contributed by la korvo, 22-Aug-2023.) $)
+    kuhari $p |- ko'a cmima ko'e ku'a ko'i $=
+      ( sje sbcmima bb skuha df-kuha bi-rev ) ABCEFGABCHFGDABCIJ $.
+$}
+
+$(
 #####
 NUMBERS
 #####
@@ -2351,6 +2437,49 @@ $}
 
 $(
 =-=-=
+{su'i}
+=-=-=
+$)
+
+$c su'i $.
+
+$( Grammar for VUhU and PA. $)
+
+$( Experimental cmavo for "empty digits" which will serve as PA metavariables. $)
+$v ku'i'a ku'i'e ku'i'i $.
+$d ku'i'a ku'i'e ku'i'i $.
+$c PA $.
+
+mkuhiha $f PA ku'i'a $.
+mkuhihe $f PA ku'i'e $.
+mkuhihi $f PA ku'i'i $.
+
+sli $a sumti li ku'i'a $.
+
+msuhi $a PA ku'i'a su'i ku'i'e $.
+
+df-suhi $a |-
+  go li ku'i'a du li ku'i'e su'i ku'i'i
+  gi li ku'i'a sumji li ku'i'e li ku'i'i $.
+
+${
+    suhii.0 $e |- li ku'i'a du li ku'i'e su'i ku'i'i $.
+    $( Inference form of ~df-suhi
+       (Contributed by la korvo, 21-Aug-2023.) $)
+    suhii $p |- li ku'i'a sumji li ku'i'e li ku'i'i $=
+      ( sli msuhi sbdu bb bsumji bt df-suhi bi ) AEZBCFEGHMBECEIJDABCKL $.
+$}
+
+${
+    suhiri.0 $e |- li ku'i'a sumji li ku'i'e li ku'i'i $.
+    $( Reverse inference form of ~df-suhi
+       (Contributed by la korvo, 21-Aug-2023.) $)
+    suhiri $p |- li ku'i'a du li ku'i'e su'i ku'i'i $=
+      ( sli bsumji bt msuhi sbdu bb df-suhi bi-rev ) AEZBECEFGMBCHEIJDABCKL $.
+$}
+
+$(
+=-=-=
 {pilji}
 =-=-=
 $)
@@ -2371,11 +2500,42 @@ ${
 $}
 
 $(
+=-=-=
+{pi'i}
+=-=-=
+$)
+
+$c pi'i $.
+
+mpihi $a PA ku'i'a pi'i ku'i'e $.
+
+df-pihi $a |-
+  go li ku'i'a du li ku'i'e pi'i ku'i'i
+  gi li ku'i'a pilji li ku'i'e li ku'i'i $.
+
+${
+    pihii.0 $e |- li ku'i'a du li ku'i'e pi'i ku'i'i $.
+    $( Inference form of ~df-pihi
+       (Contributed by la korvo, 23-Aug-2023.) $)
+    pihii $p |- li ku'i'a pilji li ku'i'e li ku'i'i $=
+      ( sli mpihi sbdu bb bpilji bt df-pihi bi ) AEZBCFEGHMBECEIJDABCKL $.
+$}
+
+${
+    pihiri.0 $e |- li ku'i'a pilji li ku'i'e li ku'i'i $.
+    $( Reverse inference form of ~df-pihi
+       (Contributed by la korvo, 23-Aug-2023.) $)
+    pihiri $p |- li ku'i'a du li ku'i'e pi'i ku'i'i $=
+      ( sli bpilji bt mpihi sbdu bb df-pihi bi-rev ) AEZBECEFGMBCHEIJDABCKL $.
+$}
+
+$(
 #*#*#
 Existential quantifiers II: {pa da}
 #*#*#
 $)
 
+$( Syntax for uniqueness quantification. $)
 bpd $a bridi pa da zo'u broda $.
 
 df-pa-da $a |- go pa da zo'u da bo'a

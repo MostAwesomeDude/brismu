@@ -29,3 +29,11 @@ These are all rango1.
 * tamji: thumb, big toe
 * tance: tongue
 * degji: finger, digit, toe
+* pimlu: feathers, plumage
+* kerfa: hair, fur
+* nalci: wing
+* calku: shell
+
+## Misc
+
+* skapi: pelt, leather
