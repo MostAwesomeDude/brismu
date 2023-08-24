@@ -24,8 +24,6 @@
           ];
 
           buildPhase = ''
-            make
-
             ${z}/bin/zaha union ${z}/share/jbobau/danlu/*.png
             ${z}/bin/zaha dot latest.png > danlu.dot
 
@@ -33,7 +31,9 @@
             ${z}/bin/zaha dot ${z}/share/jbobau/nu/nu.png > nu.dot
             ${z}/bin/zaha dot ${z}/share/jbobau/nu/suhu.png > suhu.dot
 
-            python3 coverage.py > src/coverage.md
+            python3 gen.py coverage > src/coverage.md
+            python3 gen.py definitions > definitions.json
+            make
 
             mdbook build
 
