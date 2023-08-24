@@ -127,9 +127,11 @@ htmldef "ckini" as "<span class='gismu'>ckini</span> ";
 htmldef "cmima" as "<span class='gismu'>cmima</span> ";
 htmldef "dugri" as "<span class='gismu'>dugri</span> ";
 htmldef "kampu" as "<span class='gismu'>kampu</span> ";
+htmldef "mupli" as "<span class='gismu'>mupli</span> ";
 htmldef "pilji" as "<span class='gismu'>pilji</span> ";
 htmldef "prami" as "<span class='gismu'>prami</span> ";
 htmldef "simsa" as "<span class='gismu'>simsa</span> ";
+htmldef "simxu" as "<span class='gismu'>simxu</span> ";
 htmldef "steci" as "<span class='gismu'>steci</span> ";
 htmldef "sumji" as "<span class='gismu'>sumji</span> ";
 htmldef "tenfa" as "<span class='gismu'>tenfa</span> ";
@@ -2022,6 +2024,100 @@ ${
        (Contributed by la korvo, 17-Aug-2023.) $)
     stecirii $p |- ko'a steci ko'e ko'i $=
       ( sbckaji bb sbcmima ge-ini steciri ) ABCBAFGBCHGDEIJ $.
+$}
+
+$(
+=-=-=
+{mupli}
+=-=-=
+$)
+
+$c mupli $.
+
+sbmupli $a selbri mupli $.
+
+df-mupli $a |-
+  go ko'a mupli ko'e ko'i
+  gi ge ko'a ckaji ko'e gi ko'a cmima ko'i $.
+
+${
+    muplii.0 $e |- ko'a mupli ko'e ko'i $.
+    $( Inference form of ~df-mupli
+       (Contributed by la korvo, 23-Aug-2023.) $)
+    muplii $p |- ge ko'a ckaji ko'e gi ko'a cmima ko'i $=
+      ( sbmupli bt sbckaji bb sbcmima bge df-mupli bi ) ABCEFABGHACIHJDABCKL $.
+$}
+
+${
+    muplili.0 $e |- ko'a mupli ko'e ko'i $.
+    $( Inference form of ~df-mupli
+       (Contributed by la korvo, 23-Aug-2023.) $)
+    muplili $p |- ko'a ckaji ko'e $=
+      ( sbckaji bb sbcmima sbmupli bt bge df-mupli bi ge-lei ) ABEFZACGFZABCHIN
+      OJDABCKLM $.
+$}
+
+${
+    mupliiri.0 $e |- ko'a mupli ko'e ko'i $.
+    $( Inference form of ~df-mupli
+       (Contributed by la korvo, 23-Aug-2023.) $)
+    mupliiri $p |- ko'a cmima ko'i $=
+      ( sbckaji bb sbcmima sbmupli bt bge df-mupli bi ge-rei ) ABEFZACGFZABCHIN
+      OJDABCKLM $.
+$}
+
+${
+    mupliri.0 $e |- ge ko'a ckaji ko'e gi ko'a cmima ko'i $.
+    $( Reverse inference form of ~df-mupli
+       (Contributed by la korvo, 23-Aug-2023.) $)
+    mupliri $p |- ko'a mupli ko'e ko'i $=
+      ( sbckaji bb sbcmima bge sbmupli bt df-mupli bi-rev ) ABEFACGFHABCIJDABCK
+      L $.
+$}
+
+${
+    muplirii.0 $e |- ko'a ckaji ko'e $.
+    muplirii.1 $e |- ko'a cmima ko'i $.
+    $( Reverse inference form of ~df-mupli
+       (Contributed by la korvo, 23-Aug-2023.) $)
+    muplirii $p |- ko'a mupli ko'e ko'i $=
+      ( sbckaji bb sbcmima bge sbmupli bt ge-ini df-mupli bi-rev ) ABFGZACHGZIA
+      BCJKOPDELABCMN $.
+$}
+
+$(
+=-=-=
+{simxu}
+=-=-=
+$)
+
+$c simxu $.
+
+sbsimxu $a selbri simxu $.
+
+$( An alternate definition of {` simxu `} which doesn't use
+   {` poi ke'a cmima `} for element selection. $)
+df-simxu $a |- go ko'a simxu ko'e
+  gi ro da zo'u ro de zo'u ganai da .e de cmima ko'a gi da ckini de ko'e $.
+
+${
+    simxui.0 $e |- ko'a simxu ko'e $.
+    $( Inference form of ~df-simxu
+       (Contributed by la korvo, 23-Aug-2023.) $)
+    simxui $p |- ro da zo'u ro de zo'u
+      ganai da .e de cmima ko'a gi da ckini de ko'e $=
+      ( sbsimxu bb sje sbcmima sbckini bt bgan brd df-simxu bi ) ABFGCDHAIGCDBJ
+      KLZDPMZCQMEABCDNO $.
+$}
+
+${
+    simxuri.0 $e |- ro da zo'u ro de zo'u
+      ganai da .e de cmima ko'a gi da ckini de ko'e $.
+    $( Reverse inference form of ~df-simxu
+       (Contributed by la korvo, 23-Aug-2023.) $)
+    simxuri $p |- ko'a simxu ko'e $=
+      ( sje sbcmima bb sbckini bt bgan brd sbsimxu df-simxu bi-rev ) CDFAGHCDBI
+      JKZDPLZCQLABMHEABCDNO $.
 $}
 
 $(
