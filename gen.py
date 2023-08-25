@@ -5,9 +5,8 @@ LERFU = r"[aeioubcdfg'klmnprstvxyz.]"
 VALSI = rf"{LERFU}+"
 JUFRA = rf"(\s*{VALSI})+"
 DF = re.compile(rf"df-({VALSI})(-{VALSI})*")
-# F = re.compile(rf"\$f +{VALSI} ({VALSI})")
 
-with open("valsi-class.json") as handle: vc = json.load(handle)
+with open("gen-valsi-class.json") as handle: vc = json.load(handle)
 with open("mm/jbobau.mm") as handle: db = handle.read().split()
 
 def apos(s): return s.replace("h", "'")

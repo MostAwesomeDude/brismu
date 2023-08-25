@@ -11,6 +11,14 @@
       let
         pkgs = import nixpkgs { inherit system; };
         z = zaha.packages.${system}.default;
+        cmavo = pkgs.fetchurl {
+          url = "https://lojban.org/publications/wordlists/cmavo.txt";
+          sha256 = "00k4g4b7w1c8fbsh6d7bd02vpybbr3rpjksfrz95vwrz3zb18i2l";
+        };
+        gismu = pkgs.fetchurl {
+          url = "https://lojban.org/publications/wordlists/gismu.txt";
+          sha256 = "1dym3m76kaya8jmdqy6v2v37iykzcas36rym2wkx0ni69zzlrz7j";
+        };
         brismu = pkgs.stdenv.mkDerivation {
           name = "brismu";
           version = "0.0.1";
@@ -31,6 +39,12 @@
             ${z}/bin/zaha dot ${z}/share/jbobau/nu/nu.png > nu.dot
             ${z}/bin/zaha dot ${z}/share/jbobau/nu/suhu.png > suhu.dot
 
+            # Augment valsi listing with baseline data.
+            cp ${cmavo} cmavo.txt
+            cp ${gismu} gismu.txt
+            python3 gen-class.py > gen-valsi-class.json
+
+            # Generate tables and posets from valsi listings.
             python3 gen.py coverage > src/coverage.md
             python3 gen.py definitions > definitions.json
             python3 gen.py metavars > src/metavar-table.md
