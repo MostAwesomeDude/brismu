@@ -239,23 +239,39 @@ $(
 #*#*#
 Implication I: {ganai}
 #*#*#
+
+We start with the most fundamental connective, {` ganai `}, which denotes
+implication. We will build combinators from the SK basis, which is universal
+over parametric combinators. This gives us both an enormous degree of
+flexibility, because we may build any well-typed combinator, as well as
+confidence in correctness, because the SK basis is well-studied.
+
+We also require a single inference-building rule, ~ax-mp .
+
+In terms of category theory, {` ganai broda gi brode `} is an arrow in a
+syntactic category of equivalence classes of bridi, and the bridi
+{` broda `} and {` brode `} are objects. Note that, since we are using
+metavariables to denote bridi, we automatically denote equivalence classes.
 $)
 
 $c ganai gi $.
 
 $( If {` broda `} and {` brode `} are bridi, then so is
-   {` ganai broda gi brode `}. $)
+   {` ganai broda gi brode `}. In terms of category theory, our category of
+   bridi is closed. $)
 bgan $a bridi ganai broda gi brode $.
 
 ${
     ax-mp.0 $e |- broda $.
     ax-mp.1 $e |- ganai broda gi brode $.
-    $( Because {` ganai `} encodes a syllogism, it may be eliminated by modus ponens. $)
+    $( Because {` ganai `} encodes a syllogism, it may be eliminated by modus
+       ponens. In terms of categorical logic, {` broda `} implies {` brode `}
+       and {` broda `} is assumed. $)
     ax-mp $a |- brode $.
 $}
 
 $( The principle of simplification. Known as "ax-1" in iset.mm. Known as the
-constant combinator, or "K", in the BHK interpretation. $)
+   constant combinator, or K, in combinator calculus. $)
 ax-simp $a |- ganai broda gi ganai brode gi broda $.
 
 ${
@@ -275,7 +291,8 @@ ${
       sbb2 sbb1 simpii.1 sbb1 sbb2 simpii.0 simpi ax-mp $.
 $}
 
-$( Frege's axiom. $)
+$( Frege's axiom. Known as "ax-2" in iset.mm. Known as the S combinator in
+   combinator calculus. $)
 ax-freg $a |- ganai ganai broda gi ganai brode gi brodi gi ganai ganai broda gi brode gi ganai broda gi brodi $.
 
 ${
@@ -297,7 +314,8 @@ ${
 $}
 
 $( The principle of identity. This is distantly related to, but not the same
-   as, the identity relation ~df-du
+   as, the identity relation ~df-du . In terms of category theory, this proves
+   that identity arrows exist.
    (Contributed by la korvo, 27-Jul-2023.) $)
 id $p |- ganai broda gi broda $=
   ( sbb2 bgan ax-simp mpd ) ABACZAABDAFDE $.
@@ -306,7 +324,8 @@ ${
     syl.0 $e |- ganai broda gi brode $.
     syl.1 $e |- ganai brode gi brodi $.
     $( The quintessential syllogism. This inference is a standard workhorse
-       for producing deductive forms.
+       for producing deductive forms. In terms of category theory, it composes
+       arrows.
        (Contributed by la korvo, 30-Jul-2023.) $)
     syl $p |- ganai broda gi brodi $=
       sbb1 sbb2 sbb3 syl.0 sbb2 sbb3 bgan sbb1 syl.1 simpi mpd $.
@@ -1813,6 +1832,26 @@ ${
     gihonairi $p |- ko'a bo'a gi'onai bo'e $=
       ( btb bgon tgihonai df-gihonai bi-rev ) ABEACEFABCGEDABCHI $.
 $}
+
+$(
+#*#*#
+Extra connectives
+#*#*#
+$)
+
+$(
+=-=-=
+{ginai}
+=-=-=
+$)
+
+$c ginai $.
+bgagin $a bridi ga broda ginai brode $.
+bgogin $a bridi go broda ginai brode $.
+
+df-ginai-ga $a |- go ga brode ginai broda gi ganai broda gi brode $.
+df-ginai-go $a |- go go broda ginai brode gi gonai broda gi brode $.
+
 
 $(
 #####

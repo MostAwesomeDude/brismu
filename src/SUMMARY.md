@@ -30,6 +30,11 @@
 - [Biology](2-saske/biology.md)
 - [Anatomy](2-saske/anatomy.md)
 
+# Formal Formalities
+
+- [Metavariables](metavars.md)
+- [**Loj**](loj.md)
+
 # Appendices
 
 - [Bibliography](appendices/bibliography.md)

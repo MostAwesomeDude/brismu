@@ -30,7 +30,7 @@ def crack(ts):
     s = 0
     for j, t in enumerate(ts):
         if t in ("ga", "ganai", "ge", "go", "gonai"): s += 1
-        elif t == "gi": s -= 1
+        elif t in ("gi", "ginai"): s -= 1
         if s == 0: return ts[1:j], ts[j + 1:]
     raise ValueError("unbalanced GA/GI brackets")
 
@@ -49,5 +49,9 @@ if cmd == "coverage":
 elif cmd == "definitions":
     d = {k: " ".join(crack(v)[1]) for k, v in dfs.items()}
     json.dump(d, sys.stdout)
+elif cmd == "metavars":
+    print("cmavo | Metamath type")
+    print("---|---")
+    for k, v in sorted(fs.items()): print(f"{v} | {k}")
 else:
     raise ValueError("unknown subcommand")

@@ -33,6 +33,7 @@
 
             python3 gen.py coverage > src/coverage.md
             python3 gen.py definitions > definitions.json
+            python3 gen.py metavars > src/metavar-table.md
             make
 
             mdbook build
