@@ -26,7 +26,7 @@
           src = ./.;
 
           buildInputs = with pkgs; [
-            graphviz jq python3
+            graphviz python3
             metamath
             mdbook mdbook-graphviz mdbook-linkcheck
           ];
@@ -47,8 +47,8 @@
             # Generate tables and posets from valsi listings.
             python3 gen.py coverage > src/coverage.md
             python3 gen.py definitions > definitions.json
+            python3 gen.py dependencies > dependencies.dot
             python3 gen.py metavars > src/metavar-table.md
-            make
 
             mdbook build
 

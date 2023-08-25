@@ -45,12 +45,21 @@ if cmd == "coverage":
     lines.extend(f"{cls} | constant | {dfc[cls]}" for cls in dfc)
     for line in sorted(lines): print(line)
     print("total", "| - |", count, "(%0.2f%%)" % (count * 100 / 2529))
-elif cmd == "definitions":
-    d = {k: " ".join(crack(v)[1]) for k, v in dfs.items()}
-    json.dump(d, sys.stdout)
 elif cmd == "metavars":
     print("cmavo | Metamath type")
     print("---|---")
     for k, v in sorted(fs.items()): print(f"{v} | {k}")
+elif cmd == "definitions":
+    d = {k: " ".join(crack(v)[1]) for k, v in dfs.items()}
+    json.dump(d, sys.stdout)
+elif cmd == "dependencies":
+    mvs = set(fs)
+    print("digraph {")
+    for v1, v in dfs.items():
+        for v2 in set(crack(v)[1]) - mvs:
+            if v2.startswith("."): v2 = v2[1:]
+            if v2 in ("ganai", "gi", v1): continue
+            print(f'"{v1}" -> "{v2}";')
+    print("}")
 else:
     raise ValueError("unknown subcommand")
