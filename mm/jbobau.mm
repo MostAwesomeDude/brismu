@@ -8,14 +8,14 @@ Conventions:
 
 * "ax-" starts axioms
   * conclusions which are along the same lines as axioms should not start with
-    "ax-"; compare ~ax-mp and ~mpi and ~mpd or ~ax-freg and ~fregi and ~fregd
+    "ax-"; compare ~ax-mp and ~mpi and ~mpd or ~ax-s and ~si and ~sd
 * "df-" starts definitions
   * e.g. definition of {du} is ~df-du
   * definitions are generally of the form {GA broda gi brode}, where {broda}
     contains the defined valsi, {GA} may be one of {ganai}, {go}, {ge}
 * Inferences and deductions have systematic names
   * {ganai} can always be converted to inference form; use ~ax-mp and append
-    "i", as in ~ax-simp and ~simpi
+    "i", as in ~ax-k and ~ki
   * {go} can have forwards and backwards inferences with "i" and "ri", as in
     ~ei and ~eri for ~df-e
   * {ge} may have inferences which conclude the left-hand or right-hand
@@ -272,36 +272,36 @@ $}
 
 $( The principle of simplification. Known as "ax-1" in iset.mm. Known as the
    constant combinator, or K, in combinator calculus. $)
-ax-simp $a |- ganai broda gi ganai brode gi broda $.
+ax-k $a |- ganai broda gi ganai brode gi broda $.
 
 ${
-    simpi.0 $e |- broda $.
-    $( Inference form of ~ax-simp
+    ki.0 $e |- broda $.
+    $( Inference form of ~ax-k
        (Contributed by la korvo, 27-Jul-2023.) $)
-    simpi $p |- ganai brode gi broda $=
-      sbb1 sbb2 sbb1 bgan simpi.0 sbb1 sbb2 ax-simp ax-mp $.
+    ki $p |- ganai brode gi broda $=
+      sbb1 sbb2 sbb1 bgan ki.0 sbb1 sbb2 ax-k ax-mp $.
 $}
 
 ${
-    simpii.0 $e |- broda $.
-    simpii.1 $e |- brode $.
-    $( Inference form of ~simpi
+    kii.0 $e |- broda $.
+    kii.1 $e |- brode $.
+    $( Inference form of ~ki
        (Contributed by la korvo, 27-Jul-2023.) $)
-    simpii $p |- broda $=
-      sbb2 sbb1 simpii.1 sbb1 sbb2 simpii.0 simpi ax-mp $.
+    kii $p |- broda $=
+      sbb2 sbb1 kii.1 sbb1 sbb2 kii.0 ki ax-mp $.
 $}
 
 $( Frege's axiom. Known as "ax-2" in iset.mm. Known as the S combinator in
    combinator calculus. $)
-ax-freg $a |- ganai ganai broda gi ganai brode gi brodi gi ganai ganai broda gi brode gi ganai broda gi brodi $.
+ax-s $a |- ganai ganai broda gi ganai brode gi brodi gi ganai ganai broda gi brode gi ganai broda gi brodi $.
 
 ${
-    fregi.0 $e |- ganai broda gi ganai brode gi brodi $.
-    $( Inference form of ~ax-freg
+    si.0 $e |- ganai broda gi ganai brode gi brodi $.
+    $( Inference form of ~ax-s
        (Contributed by la korvo, 27-Jul-2023.) $)
-    fregi $p |- ganai ganai broda gi brode gi ganai broda gi brodi $=
-      sbb1 sbb2 sbb3 bgan bgan sbb1 sbb2 bgan sbb1 sbb3 bgan bgan fregi.0 sbb1
-      sbb2 sbb3 ax-freg ax-mp $.
+    si $p |- ganai ganai broda gi brode gi ganai broda gi brodi $=
+      sbb1 sbb2 sbb3 bgan bgan sbb1 sbb2 bgan sbb1 sbb3 bgan bgan si.0 sbb1
+      sbb2 sbb3 ax-s ax-mp $.
 $}
 
 ${
@@ -310,7 +310,7 @@ ${
     $( Deductive form of ~ax-mp
        (Contributed by la korvo, 27-Jul-2023.) $)
     mpd $p |- ganai broda gi brodi $=
-      ( bgan fregi ax-mp ) ABFACFDABCEGH $.
+      ( bgan si ax-mp ) ABFACFDABCEGH $.
 $}
 
 $( The principle of identity. This is distantly related to, but not the same
@@ -318,7 +318,7 @@ $( The principle of identity. This is distantly related to, but not the same
    that identity arrows exist.
    (Contributed by la korvo, 27-Jul-2023.) $)
 id $p |- ganai broda gi broda $=
-  ( sbb2 bgan ax-simp mpd ) ABACZAABDAFDE $.
+  ( sbb2 bgan ax-k mpd ) ABACZAABDAFDE $.
 
 ${
     syl.0 $e |- ganai broda gi brode $.
@@ -328,16 +328,16 @@ ${
        arrows.
        (Contributed by la korvo, 30-Jul-2023.) $)
     syl $p |- ganai broda gi brodi $=
-      sbb1 sbb2 sbb3 syl.0 sbb2 sbb3 bgan sbb1 syl.1 simpi mpd $.
+      sbb1 sbb2 sbb3 syl.0 sbb2 sbb3 bgan sbb1 syl.1 ki mpd $.
 $}
 
 ${
-    fregd.0 $e |- ganai broda gi ganai brode gi ganai brodi gi brodo $.
-    $( Deductive form of ~ax-freg
+    sd.0 $e |- ganai broda gi ganai brode gi ganai brodi gi brodo $.
+    $( Deductive form of ~ax-s
        (Contributed by la korvo, 31-Jul-2023.) $)
-    fregd $p |- ganai broda gi
+    sd $p |- ganai broda gi
                   ganai ganai brode gi brodi gi ganai brode gi brodo $=
-      ( bgan ax-freg syl ) ABCDFFBCFBDFFEBCDGH $.
+      ( bgan ax-s syl ) ABCDFFBCFBDFFEBCDGH $.
 $}
 
 ${
@@ -346,7 +346,7 @@ ${
     $( Nested form of ~mpd
        (Contributed by la korvo, 31-Jul-2023.) $)
     mpdd $p |- ganai broda gi ganai brode gi brodo $=
-      ( bgan fregd mpd ) ABCGBDGEABCDFHI $.
+      ( bgan sd mpd ) ABCGBDGEABCDFHI $.
 $}
 
 ${
@@ -355,7 +355,7 @@ ${
     $( A syllogism which shuffles antecedents.
        (Contributed by la korvo, 30-Jul-2023.) $)
     sylcom $p |- ganai broda gi ganai brode gi brodo $=
-      sbb1 sbb2 sbb3 bgan sbb2 sbb4 bgan sylcom.0 sbb2 sbb3 sbb4 sylcom.1 fregi
+      sbb1 sbb2 sbb3 bgan sbb2 sbb4 bgan sylcom.0 sbb2 sbb3 sbb4 sylcom.1 si
       syl $.
 $}
 
@@ -365,7 +365,7 @@ ${
     $( A syllogism replacing consequents.
        (Contributed by la korvo, 31-Jul-2023.) $)
     syl6 $p |- ganai broda gi ganai brode gi brodo $=
-      ( bgan simpi sylcom ) ABCDECDGBFHI $.
+      ( bgan ki sylcom ) ABCDECDGBFHI $.
 $}
 
 ${
@@ -379,11 +379,11 @@ ${
 $}
 
 ${
-    simpd.0 $e |- ganai broda gi brode $.
-    $( Deductive form of ~ax-simp
+    kd.0 $e |- ganai broda gi brode $.
+    $( Deductive form of ~ax-k
        (Contributed by la korvo, 30-Jul-2023.) $)
-    simpd $p |- ganai broda gi ganai brodi gi brode $=
-      sbb1 sbb2 sbb3 sbb2 bgan simpd.0 sbb2 sbb3 ax-simp syl $.
+    kd $p |- ganai broda gi ganai brodi gi brode $=
+      sbb1 sbb2 sbb3 sbb2 bgan kd.0 sbb2 sbb3 ax-k syl $.
 $}
 
 ${
@@ -392,7 +392,7 @@ ${
     $( A syllogism which shuffles antecedents.
        (Contributed by la korvo, 30-Jul-2023.) $)
     syl5com $p |- ganai broda gi ganai brodi gi brodo $=
-      sbb1 sbb3 sbb2 sbb4 sbb1 sbb2 sbb3 syl5com.0 simpd syl5com.1 sylcom $.
+      sbb1 sbb3 sbb2 sbb4 sbb1 sbb2 sbb3 syl5com.0 kd syl5com.1 sylcom $.
 $}
 
 ${
@@ -447,7 +447,7 @@ ${
     $( A nested modus ponens. Known as "mpi" in iset.mm.
        (Contributed by la korvo, 27-Jul-2023.) $)
     mpi $p |- ganai brode gi brodi $=
-      sbb2 sbb1 sbb3 sbb1 sbb2 mpi.0 simpi mpi.1 mpd $.
+      sbb2 sbb1 sbb3 sbb1 sbb2 mpi.0 ki mpi.1 mpd $.
 $}
 
 ${
@@ -570,7 +570,7 @@ ${
     $( An inference eliminating a conjunction from the antecedent.
        (Contributed by la korvo, 31-Jul-2023.) $)
     mpan $p |- ganai brode gi brodi $=
-      ( simpi mpancom ) BACABDFEG $.
+      ( ki mpancom ) BACABDFEG $.
 $}
 
 ${
@@ -678,7 +678,7 @@ ${
     $( Lemma for ~goriid known as "impbid21d" in iset.mm.
        (Contributed by la korvo, 31-Jul-2023.) $)
     goriid-lem $p |- ganai broda gi ganai brode gi go brodi gi brodo $=
-      ( bgan simpi simpd goriidd ) ABCDBCDGGAEHADCGBFIJ $.
+      ( bgan ki kd goriidd ) ABCDBCDGGAEHADCGBFIJ $.
 $}
 
 ${
