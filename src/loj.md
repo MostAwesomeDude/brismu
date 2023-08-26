@@ -1,4 +1,4 @@
-# Loj
+# **Loj**
 
 **Loj** is a [category](https://en.wikipedia.org/wiki/Category_theory) formed
 from Lojban syntax. Specifically, it is the poset

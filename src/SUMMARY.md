@@ -4,7 +4,6 @@
 
 # 0: midju
 
-- [Relations](0-midju/1-relations.md)
 - [Proofs](0-midju/2-proofs.md)
 - [Rel](0-midju/3-Rel.md)
 - [bridi](0-midju/4-bridi.md)
@@ -34,6 +33,7 @@
 
 - [Metavariables](metavars.md)
 - [**Loj**](loj.md)
+- [Relations and **Selb**](0-midju/1-relations.md)
 
 # Appendices
 

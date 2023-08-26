@@ -1,4 +1,15 @@
-# Relations
+# Relations and **Selb**
+
+**Selb** is a [locally
+posetal](https://ncatlab.org/nlab/show/locally+posetal+2-category)
+[dagger-category](https://ncatlab.org/nlab/show/dagger+category) formed from
+selbri. Specifically, it is the [bicategory of
+relations](https://ncatlab.org/nlab/show/bicategory+of+relations) over sumti,
+whose:
+
+* objects are classes ("collections", "sets", "masses", etc.) of sumti
+* arrows are selbri
+* transformations are inclusions/subrelations between selbri
 
 ## Summary
 
@@ -6,10 +17,12 @@ Here is a high-level summary of our analogy between logic and Lojban:
 
 Lojban | Set theory | Allegory / dagger-category theory
 ---|---|---
-selbri/2 | binary relation | arrow ("morphism")
+lo selbri (arity 2) | binary relation | arrow ("morphism")
 lo cmima | element | arrow from zero object
 lo selcmi | inhabited set | object with incoming/outgoing arrows
-selbri/1 | subset / injection | monomorphism
+lo selbri (arity 1) | subset / injection | monomorphism
+gai'o | empty relation | bottom arrow
+cei'i | singleton relation | top arrow
 
 ## What is a relation?
 
@@ -20,7 +33,10 @@ objects `(x, y)` in `(X, Y)`. In most cases, it will be useful to imagine that
 the collections are [sets](https://en.wikipedia.org/wiki/Set_(mathematics)), so
 that `x` and `y` are elements of sets `X` and `Y` respectively.
 
-Please, pause for a moment and be sure that you understand the above paragraph.
+Please, pause for a moment and be sure that you understand the above
+paragraph. This is how all finite selbri behave. For example, {mlatu}
+addresses the collection of all cats and cat species, containing ordered pairs
+of cats and species.
 
 ## Properties of relations
 
