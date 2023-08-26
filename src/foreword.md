@@ -55,8 +55,7 @@ lo'i broda ku broda | not really | no
 
 ### Formal coverage
 
-Put another way, there are around 2529 baseline valsi to consider, and the
-following table shows how many valsi have been formalized.
+The following table shows how many valsi have been formalized in Metamath.
 
 {{#include coverage.md}}
 

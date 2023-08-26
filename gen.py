@@ -44,7 +44,9 @@ if cmd == "coverage":
     lines = [f"{cls} | metavariable | {dff[cls]}" for cls in dff]
     lines.extend(f"{cls} | constant | {dfc[cls]}" for cls in dfc)
     for line in sorted(lines): print(line)
-    print("total", "| - |", count, "(%0.2f%%)" % (count * 100 / 2529))
+    total = len(vc)
+    print("total", "| - |", count,
+          "(%0.2f%% of %d)" % (count * 100 / total, total))
 elif cmd == "metavars":
     print("cmavo | Metamath type")
     print("---|---")
