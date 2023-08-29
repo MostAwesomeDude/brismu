@@ -4,7 +4,6 @@
 
 # 0: midju
 
-- [Proofs](0-midju/2-proofs.md)
 - [Rel](0-midju/3-Rel.md)
 - [bridi](0-midju/4-bridi.md)
 - [Set](0-midju/5-Set.md)
@@ -28,12 +27,17 @@
 - [Elements](2-saske/elements.md)
 - [Biology](2-saske/biology.md)
 - [Anatomy](2-saske/anatomy.md)
+- [Geometry](2-saske/geometry.md)
+
+# Philosophy
+
+- [Non-first-order-izability (NFO)](nfo.md)
 
 # Formal Formalities
 
 - [Metavariables](metavars.md)
 - [**Loj**](loj.md)
-- [Relations and **Selb**](0-midju/1-relations.md)
+- [Relations and **Selb**](selb.md)
 
 # Appendices
 

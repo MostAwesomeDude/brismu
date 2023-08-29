@@ -7,32 +7,33 @@ categorized by function. I'm not going to write a paragraph on each one.
 
 These are all rango1.
 
-* stedu: head
-* fepri: lung
-* xance: hand
-* tuple: limb
-* kanla: eye
-* kerlo: ear
 * besna: brain
-* flira: face
-* xedja: jaw
-* risna: heart
-* ciblu: blood
-* livga: liver
 * betfu: abdomen, belly, lower trunk, midsection
-* canti: guts, entrails, intestines, viscera, innards, digestive system
-* cutne: chest, thorax, upper trunk
-* cnebo: neck
-* galxe: throat, gullet
 * bongu: bone, ivory
+* calku: shell
+* canti: guts, entrails, intestines, viscera, innards, digestive system
+* ciblu: blood
+* cidni: knee, elbow, knuckle, hinged joint
+* cnebo: neck
+* cutne: chest, thorax, upper trunk
+* degji: finger, digit, toe
+* fepri: lung
+* flira: face
+* galxe: throat, gullet
 * jamfu: foot
+* kanla: eye
+* kerfa: hair, fur
+* kerlo: ear
+* livga: liver
+* nalci: wing
+* pimlu: feathers, plumage
+* risna: heart
+* stedu: head
 * tamji: thumb, big toe
 * tance: tongue
-* degji: finger, digit, toe
-* pimlu: feathers, plumage
-* kerfa: hair, fur
-* nalci: wing
-* calku: shell
+* tuple: limb
+* xance: hand
+* xedja: jaw
 
 ## Misc
 

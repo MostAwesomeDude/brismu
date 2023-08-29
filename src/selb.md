@@ -23,6 +23,8 @@ lo selcmi | inhabited set | object with incoming/outgoing arrows
 lo selbri (arity 1) | subset / injection | monomorphism
 gai'o | empty relation | bottom arrow
 cei'i | singleton relation | top arrow
+du | identity relation | identity arrow
+se | inversion of relations | dagger
 
 ## What is a relation?
 
@@ -112,10 +114,9 @@ existence of relations which aren't in the universe; this is just a standard
 effect of Gödel's Incompleteness, in that we expect to find a few
 unprovably-extant large objects lurking outside of our formal reach.
 
-Once we agree to embrace SOL, then we can consider the
-[NFO](https://en.wikipedia.org/wiki/Nonfirstorderizability) concepts, like
-identity as equality, graph connectivity, the Archimedean property, and
-Geach-Kaplan sentences.
+Once we agree to embrace SOL, then we can consider the [NFO](nfo.md)
+concepts, like identity as equality, graph connectivity, the Archimedean
+property, and Geach-Kaplan sentences.
 
 ## Negation
 
@@ -146,3 +147,14 @@ result. Later, I'll note when the Axiom of Choice -- which implies the Law of
 Excluded Middle -- first appears. The bitter truth is that the law of excluded
 middle is an addition that we optionally use to collapse a rich open world of
 possibilities into a black-or-white closed world which has many blind spots.
+
+## Interpreting natural deduction
+
+Each logic in natural deduction can be used to give judgements, like "P is
+true." Wikipedia lists "P is possibly true," "P is always true," "P is true at
+a given time," and "P is constructible from the given resources," as other
+examples in other logics. What does relational logic give us? Relational logic
+judgements are of the form "P is true at least once;" we can imagine that a
+bridi is not just true or false, but true for each of the many possible values
+that are being related, and that there may be multiple worlds which provide a
+context in which a statement is true.
