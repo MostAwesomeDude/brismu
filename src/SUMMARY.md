@@ -12,6 +12,7 @@
 - [Abstractors](0-midju/8-abstractors.md)
 - [Adjunctions](0-midju/9-adjunctions.md)
 - [Equivalence Relations](0-midju/equivs.md)
+- [Discursive Logic](0-midju/discursive.md)
 
 # 1: senta
 
@@ -31,6 +32,7 @@
 
 # Philosophy
 
+- [Sets, not Masses](sets-not-masses.md)
 - [Non-first-order-izability (NFO)](nfo.md)
 
 # Formal Formalities
