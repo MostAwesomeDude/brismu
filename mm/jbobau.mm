@@ -128,6 +128,7 @@ htmldef "cmima" as "<span class='gismu'>cmima</span> ";
 htmldef "dugri" as "<span class='gismu'>dugri</span> ";
 htmldef "kampu" as "<span class='gismu'>kampu</span> ";
 htmldef "mupli" as "<span class='gismu'>mupli</span> ";
+htmldef "pagbu" as "<span class='gismu'>pagbu</span> ";
 htmldef "pilji" as "<span class='gismu'>pilji</span> ";
 htmldef "prami" as "<span class='gismu'>prami</span> ";
 htmldef "simsa" as "<span class='gismu'>simsa</span> ";
@@ -137,8 +138,10 @@ htmldef "sumji" as "<span class='gismu'>sumji</span> ";
 htmldef "tenfa" as "<span class='gismu'>tenfa</span> ";
 htmldef "ka" as "<small>ka</small> ";
 htmldef "ce'u" as "<small>ce'u</small> ";
+htmldef "jompau" as "<span class='lujvo'>jompau</span> ";
 htmldef "kacna'u" as "<span class='lujvo'>kacna'u</span> ";
 htmldef "kacli'e" as "<span class='lujvo'>kacli'e</span> ";
+htmldef "kuzypau" as "<span class='lujvo'>kuzypau</span> ";
 htmldef "mi" as "<span class='sumti'>mi</span> ";
 htmldef "do" as "<span class='sumti'>do</span> ";
 $)
@@ -2729,4 +2732,131 @@ ${
        (Contributed by la korvo, 9-Aug-2023.) $)
     dugriri $p |- ko'a dugri ko'e ko'i $=
       ( sbtenfa sbs sbt bt sbdugri df-dugri bi-rev ) ABCEFGHABCIHDABCJK $.
+$}
+
+$(
+#####
+MEREOLOGY
+#####
+
+Mereology is an alternative to set theory. Where set theory focuses on
+elementhood, using {` cmima `}, mereology focuses on parthood, using
+{` pagbu `}.
+$)
+
+$(
+#*#*#
+Parthood
+#*#*#
+$)
+
+$(
+=-=-=
+{pagbu}
+=-=-=
+$)
+
+$c pagbu $.
+
+sbpagbu $a selbri pagbu $.
+
+$( Parthood is reflexive. $)
+ax-pagbu-refl $a |- ko'a pagbu ko'a $.
+
+$( Parthood is antisymmetric. $)
+ax-pagbu-antisym $a |-
+  ganai ge ko'a pagbu ko'e gi ko'e pagbu ko'a
+  gi ko'a du ko'e $.
+
+${
+    pagbu-antisym.0 $e |- ko'a pagbu ko'e $.
+    pagbu-antisym.1 $e |- ko'e pagbu ko'a $.
+    $( Inference form of ~ax-pagbu-antisym
+       (Contributed by la korvo, 4-Sep-2023.) $)
+    pagbu-antisym $p |- ko'a du ko'e $=
+      ( sbpagbu bb bge sbdu ge-ini ax-pagbu-antisym ax-mp ) ABEFZBAEFZGABHFLMCD
+      IABJK $.
+$}
+
+$( Parthood is transitive. $)
+ax-pagbu-trans $a |-
+  ganai ge ko'a pagbu ko'e gi ko'e pagbu ko'i
+  gi ko'a pagbu ko'i $.
+
+${
+    pagbu-trans.0 $e |- ko'a pagbu ko'e $.
+    pagbu-trans.1 $e |- ko'e pagbu ko'i $.
+    $( Inference form of ~ax-pagbu-trans
+       (Contributed by la korvo, 4-Sep-2023.) $)
+    pagbu-trans $p |- ko'a pagbu ko'i $=
+      ( sbpagbu bb bge ge-ini ax-pagbu-trans ax-mp ) ABFGZBCFGZHACFGLMDEIABCJK
+      $.
+$}
+
+$( The universe exists. $)
+ax-pagbu-top $a |- su'o da zo'u ko'a pagbu da $.
+
+$( The empty part exists. $)
+ax-pagbu-bot $a |- su'o da zo'u da pagbu ko'a $.
+
+$(
+=-=-=
+{jompau}
+=-=-=
+$)
+
+$c jompau $.
+sbjompau $a selbri jompau $.
+
+$( Definition of {` jompau `} in terms of {` pagbu `}. $)
+df-jompau $a |-
+  go ko'a jompau ko'e
+  gi su'o da zo'u ge da pagbu ko'a gi da pagbu ko'e $.
+
+${
+    jompaui.0 $e |- ko'a jompau ko'e $.
+    $( Inference form of ~df-jompau
+       (Contributed by la korvo, 4-Sep-2023.) $)
+    jompaui $p |- su'o da zo'u ge da pagbu ko'a gi da pagbu ko'e $=
+      ( sbjompau bb sbpagbu bge bsd df-jompau bi ) ABEFCAGFCBGFHZCLIDABCJK $.
+$}
+
+${
+    jompauri.0 $e |- su'o da zo'u ge da pagbu ko'a gi da pagbu ko'e $.
+    $( Reverse inference form of ~df-jompau
+       (Contributed by la korvo, 4-Sep-2023.) $)
+    jompauri $p |- ko'a jompau ko'e $=
+      ( sbpagbu bb bge bsd sbjompau df-jompau bi-rev ) CAEFCBEFGZCLHABIFDABCJK
+      $.
+$}
+
+$(
+=-=-=
+{kuzypau}
+=-=-=
+$)
+
+$c kuzypau $.
+sbkuzypau $a selbri kuzypau $.
+
+$( Definition of {` kuzypau `} in terms of {` pagbu `}. $)
+df-kuzypau $a |-
+  go ko'a kuzypau ko'e
+  gi su'o da zo'u ge ko'a pagbu da gi ko'e pagbu da $.
+
+${
+    kuzypaui.0 $e |- ko'a kuzypau ko'e $.
+    $( Inference form of ~df-kuzypau
+       (Contributed by la korvo, 4-Sep-2023.) $)
+    kuzypaui $p |- su'o da zo'u ge ko'a pagbu da gi ko'e pagbu da $=
+      ( sbkuzypau bb sbpagbu bge bsd df-kuzypau bi ) ABEFACGFBCGFHZCLIDABCJK $.
+$}
+
+${
+    kuzypauri.0 $e |- su'o da zo'u ge ko'a pagbu da gi ko'e pagbu da $.
+    $( Reverse inference form of ~df-kuzypau
+       (Contributed by la korvo, 4-Sep-2023.) $)
+    kuzypauri $p |- ko'a kuzypau ko'e $=
+      ( sbpagbu bb bge bsd sbkuzypau df-kuzypau bi-rev ) ACEFBCEFGZCLHABIFDABCJ
+      K $.
 $}

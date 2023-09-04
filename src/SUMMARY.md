@@ -37,6 +37,7 @@
 
 # Formal Formalities
 
+- [Nonce valsi](nonce.md)
 - [Metavariables](metavars.md)
 - [**Loj**](loj.md)
 - [Relations and **Selb**](selb.md)
