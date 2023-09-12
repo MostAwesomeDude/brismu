@@ -35,12 +35,16 @@
           ];
 
           buildPhase = ''
+            # Generate DAGs.
             ${z}/bin/zaha union ${z}/share/jbobau/danlu/*.png
             ${z}/bin/zaha dot latest.png > danlu.dot
 
             ${z}/bin/zaha dot ${z}/share/jbobau/danlu/mlatu.png > mlatu.dot
             ${z}/bin/zaha dot ${z}/share/jbobau/nu/nu.png > nu.dot
             ${z}/bin/zaha dot ${z}/share/jbobau/nu/suhu.png > suhu.dot
+
+            # Generate axioms from zaha DAGs.
+            ${z}/bin/zaha edges latest.png | python3 gen-ax.py mm/jbobau.mm
 
             # Augment valsi listing with baseline data.
             cp ${cmavo} cmavo.txt

@@ -2,7 +2,7 @@
 
 ## danlu
 
-The following baseline gismu are related by {kairni'i}.
+The following baseline gismu are related by {ki'irni'i}.
 
 ```dot process
 {{#include ../../danlu.dot}}

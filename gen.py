@@ -9,6 +9,8 @@ DF = re.compile(rf"df-({VALSI})(-{VALSI})*")
 with open("gen-valsi-class.json") as handle: vc = json.load(handle)
 with open("mm/jbobau.mm") as handle: db = handle.read().split()
 
+clss = Counter(vc.values())
+
 def apos(s): return s.replace("h", "'")
 dfs = {}
 fs = {}
@@ -41,12 +43,12 @@ cmd = sys.argv[-1]
 if cmd == "coverage":
     print("Grammatical class | Metamath class | # of formal definitions")
     print("---|---|---")
-    lines = [f"{cls} | metavariable | {dff[cls]}" for cls in dff]
-    lines.extend(f"{cls} | constant | {dfc[cls]}" for cls in dfc)
+    lines = [f"{cls} | metavariable | {dff[cls]} / {clss[cls]}" for cls in dff]
+    lines.extend(f"{cls} | constant | {dfc[cls]} / {clss[cls]}" for cls in dfc)
     for line in sorted(lines): print(line)
     total = len(vc)
-    print("total", "| - |", count,
-          "(%0.2f%% of %d)" % (count * 100 / total, total))
+    print("total", "| - |", count, "/", total,
+          "(%0.2f%%)" % (count * 100 / total))
 elif cmd == "metavars":
     print("cmavo | Metamath type")
     print("---|---")

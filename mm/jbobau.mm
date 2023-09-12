@@ -141,6 +141,7 @@ htmldef "ce'u" as "<small>ce'u</small> ";
 htmldef "jompau" as "<span class='lujvo'>jompau</span> ";
 htmldef "kacna'u" as "<span class='lujvo'>kacna'u</span> ";
 htmldef "kacli'e" as "<span class='lujvo'>kacli'e</span> ";
+htmldef "ki'irni'i" as "<span class='lujvo'>ki'irni'i</span> ";
 htmldef "kuzypau" as "<span class='lujvo'>kuzypau</span> ";
 htmldef "mi" as "<span class='sumti'>mi</span> ";
 htmldef "do" as "<span class='sumti'>do</span> ";
@@ -2860,3 +2861,29 @@ ${
       ( sbpagbu bb bge bsd sbkuzypau df-kuzypau bi-rev ) ACEFBCEFGZCLHABIFDABCJ
       K $.
 $}
+
+$(
+#####
+RELATIONAL LOGIC
+#####
+$)
+
+$(
+#*#*#
+Lattice of Relations
+#*#*#
+$)
+
+$(
+=-=-=
+{ki'irni'i}
+=-=-=
+$)
+
+$c ki'irni'i $.
+sbkihirnihi $a selbri ki'irni'i $.
+
+$( Definition of {` ki'irni'i `} in terms of {` naja `}. $)
+df-kihirnihi $a
+  go pa ka ce'u bu'a ce'u ki'irni'i pa ka ce'u bu'e ce'u
+  gi ko'a bu'a naja bu'e ko'e $.
