@@ -122,6 +122,7 @@ htmldef "su'o" as "<small>su'o</small> ";
 htmldef "ce" as "<small>ce</small> ";
 htmldef "jo'e" as "<small>jo'e</small> ";
 htmldef "ku'a" as "<small>ku'a</small> ";
+htmldef "cu" as "<small>cu</small> ";
 htmldef "ckaji" as "<span class='gismu'>ckaji</span> ";
 htmldef "ckini" as "<span class='gismu'>ckini</span> ";
 htmldef "cmima" as "<span class='gismu'>cmima</span> ";
@@ -141,7 +142,9 @@ htmldef "ce'u" as "<small>ce'u</small> ";
 htmldef "jompau" as "<span class='lujvo'>jompau</span> ";
 htmldef "kacna'u" as "<span class='lujvo'>kacna'u</span> ";
 htmldef "kacli'e" as "<span class='lujvo'>kacli'e</span> ";
+htmldef "ki'irkanxe" as "<span class='lujvo'>ki'irkanxe</span> ";
 htmldef "ki'irni'i" as "<span class='lujvo'>ki'irni'i</span> ";
+htmldef "ki'irvlina" as "<span class='lujvo'>ki'irvlina</span> ";
 htmldef "kuzypau" as "<span class='lujvo'>kuzypau</span> ";
 htmldef "mi" as "<span class='sumti'>mi</span> ";
 htmldef "do" as "<span class='sumti'>do</span> ";
@@ -2324,6 +2327,31 @@ ${
       ( bu bgan brd tsb brdp df-poi-ro bi-rev ) CBEAFZCLGABHCACAGIDABCJK $.
 $}
 
+$c cu $.
+brbc $a bridi ro bu'a cu bu'e $.
+
+$( Definition of {` ro broda `} quantifier as used in colloquial Lojban
+   utterances like {` ro broda cu brode `}. $)
+df-ro-quant $a |-
+  go ro bu'a cu bu'e
+  gi ro da poi ke'a bu'a ku'o zo'u da bu'e $.
+
+${
+    ro-quanti.0 $e |- ro bu'a cu bu'e $.
+    $( Inference form of ~df-ro-quant
+       (Contributed by la korvo, 12-Sep-2023.) $)
+    ro-quanti $p |- ro da poi ke'a bu'a ku'o zo'u da bu'e $=
+      ( brbc bu tsb brd brdp df-ro-quant bi ) ABECBFZAGCLCLHIDABCJK $.
+$}
+
+${
+    ro-quantri.0 $e |- ro da poi ke'a bu'a ku'o zo'u da bu'e $.
+    $( Reverse inference form of ~df-ro-quant
+       (Contributed by la korvo, 12-Sep-2023.) $)
+    ro-quantri $p |- ro bu'a cu bu'e $=
+      ( bu tsb brd brdp brbc df-ro-quant bi-rev ) CBEZAFCLCLGHABIDABCJK $.
+$}
+
 $(
 #*#*#
 Internal hom II: {kampu}
@@ -2884,6 +2912,43 @@ $c ki'irni'i $.
 sbkihirnihi $a selbri ki'irni'i $.
 
 $( Definition of {` ki'irni'i `} in terms of {` naja `}. $)
-df-kihirnihi $a
+df-kihirnihi $a |-
   go pa ka ce'u bu'a ce'u ki'irni'i pa ka ce'u bu'e ce'u
   gi ko'a bu'a naja bu'e ko'e $.
+
+$( {` ki'irni'i `} is transitive. $)
+ax-kihirnihi-trans $a |-
+  ganai ge ko'a ki'irni'i ko'e gi ko'e ki'irni'i ko'i
+  gi ko'a ki'irni'i ko'i $.
+
+$(
+=-=-=
+{ki'irkanxe}
+=-=-=
+$)
+
+$c ki'irkanxe $.
+sbkihirkanxe $a selbri ki'irkanxe $.
+
+$( Definition of {` ki'irkanxe `} $)
+df-kihirkanxe $a |-
+  pa ka ce'u bu'a je bu'e ce'u
+  ki'irkanxe
+  pa ka ce'u bu'a ce'u
+  pa ka ce'u bu'e ce'u $.
+
+$(
+=-=-=
+{ki'irvlina}
+=-=-=
+$)
+
+$c ki'irvlina $.
+sbkihirvlina $a selbri ki'irvlina $.
+
+$( Definition of {` ki'irvlina `} $)
+df-kihirvlina $a |-
+  pa ka ce'u bu'a ja bu'e ce'u
+  ki'irvlina
+  pa ka ce'u bu'a ce'u
+  pa ka ce'u bu'e ce'u $.

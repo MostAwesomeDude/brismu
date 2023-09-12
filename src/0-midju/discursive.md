@@ -14,3 +14,9 @@ still exists. The act of clarifying referents leads to argument over [the
 contents of the universe of
 discourse](https://en.wikipedia.org/wiki/Domain_of_discourse), and so deserves
 its own treatment apart from mathematics and hard sciences.
+
+## Restrictive and non-restrictive clauses
+
+It's not clear what the difference between {noi} and {poi} is, but it is a
+discursive difference: there is no change in logical content, but something is
+denoted to listeners.

@@ -32,7 +32,10 @@ def crack(ts):
     for j, t in enumerate(ts):
         if t in ("ga", "ganai", "ge", "go", "gonai"): s += 1
         elif t in ("gi", "ginai"): s -= 1
-        if s == 0: return ts[1:j], ts[j + 1:]
+        if s == 0:
+            # Not actually cracked!
+            if j == 0: return ts, ts
+            else: return ts[1:j], ts[j + 1:]
     raise ValueError("unbalanced GA/GI brackets")
 
 dfc = Counter(vc[k] for k in dfs)

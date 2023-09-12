@@ -3,68 +3,6 @@
 At this point, we are ready to give the axioms for set theory. We will be
 using [ZF](https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory).
 
-## Articles N
-
-Interwoven with building up sets, we'll build up the ability to quantify. As a
-start, let's see how we can eliminate a prenex. A `{ro}` quantification works
-more or less like in BPFK's formal expansions, but we use `{poi}` instead of
-`{noi}`. What is the difference? Logically, I think, nothing; instead, it's
-about how the search is done through the possible worlds which result. This is
-worth preserving and figuring out more closely, but here we will require all
-restrictions to be `{poi}` because that seems to give a better hint to
-speakers about how to intuitively reason about the quantification.
-
-    ro da poi ke'a broda zo'u da brode
-    ================================== (ro-quant)
-             ro broda cu brode
-
-## The Lattice of Relations: {kairni'i}
-
-Note: As usual, community conventions matter. `{kairpau}` is an alternative
-lujvo to `{kairni'i}` with some usage and a looser definition. I'm not married
-to either lujvo.
-
-There is a lattice of relations. Since relations are subsets of Cartesian
-products, this lattice carries lots of the structure of the poset of subsets.
-Informally, I'll call the central relation of the lattice the
-selbri-implies-selbri relation, and say that some selbri lattice-implies another
-selbri.
-
-We need a word like `{nibli}`, but for `{ka}` instead of `{du}`. I'll give the
-nonce lujvo `{kairni'i}`, with place structure "k1 (ka) is a
-subrelation/tecyselbri of k2 (ka) (arities must match)". This relation is
-transitive:
-
-    ro da poi bridi ke'a ku'o ro de poi bridi ke'a ku'o ro di poi bridi ke'a zo'u:
-
-    da kairni'i de .ije de kairni'i di
-    ================================== (kairni'i-trans)
-              da kairni'i di
-
-Note that it's also typed, because we're operating exclusively on selbri.
-Another property of the lattice is that there are greatest and least
-relations, which we know how to express, if in a slightly awkward fashion.
-
-    ro da poi bridi ke'a zo'u:
-
-    pa ka gai'o kei kairni'i da (kairni'i-zero)
-
-    .i
-
-    da kairni'i pa ka cei'i (kairni'i-one)
-
-We can witness the infima and suprema of the lattice with more nonce lujvo,
-`{kairkanxe}` and `{kairvlina}` respectively. We have a choice of laws,
-somewhat; I'll go with these.
-
-    da kairkanxe da de
-    ================== (kairkanxe-intel)
-      da kairni'i de
-
-    de kairvlina da de
-    ================== (kairvlina-intel)
-      da kairni'i de
-
 ## Functions I: {fancu}, {pagyfancu}, {ficyfancu}, {gairfancu}, {mitfancu}
 
 We won't get far without functions, so we'll ignore the lack of community

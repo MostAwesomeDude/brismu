@@ -13,6 +13,29 @@ jvajvo, because they have components from JOI. They have a simplified place
 structure which only uses the first two places, in line with standard formal
 mereology:
 
-    jompau: x1 and x2 underlap
+    jompau:
+    x1 and x2 underlap
 
-    kuzypau: x1 and x2 overlap
+    kuzypau:
+    x1 and x2 overlap
+
+## Lattice of Relations
+
+To express bicategorical relational logic, we need gismu which are similar to
+{nibli} in structure. {nibli} only operates on {du'u}, though, and we would
+like to operate more directly on {ka} selbri. To facilitate this, we take
+-ki'i- from {ckini} and use it as a modifier, forming {ki'irni'i},
+{ki'irvlina}, and {ki'irkanxe} with the following place structures:
+
+    ki'irni'i:
+    x1 (binary ka) lattice-implies x2 (binary ka)
+
+    ki'irvlina:
+    x1 (binary ka) is the lattice-join/supremum of x2 (binary ka) and x3 (binary ka)
+
+    ki'irkanxe:
+    x1 (binary ka) is the lattice-meet/infimum of x2 (binary ka) and x3 (binary ka)
+
+These lujvo are not jvajvo, and a jvajvo approach probably isn't possible
+given the baseline alone, since {du'u} are like nullary {ka} and {ka} of
+different arity aren't interchangeable.

@@ -79,7 +79,7 @@
         };
         devShells.default = pkgs.mkShell {
           name = "brismu-env";
-          packages = with pkgs; [ rlwrap ] ++ brismu.buildInputs;
+          packages = with pkgs; [ keychain rlwrap ] ++ brismu.buildInputs;
         };
       }
     );
