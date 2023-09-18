@@ -2952,3 +2952,25 @@ df-kihirvlina $a |-
   ki'irvlina
   pa ka ce'u bu'a ce'u
   pa ka ce'u bu'e ce'u $.
+
+$(
+#*#*#
+Functions I
+#*#*#
+$)
+
+$(
+=-=-=
+{pagyfancu}
+=-=-=
+$)
+
+$c pagyfancu $.
+sbpagyfancu $a selbri pagyfancu $.
+
+$( Definition of {` pagbyfancu `} in terms of {` ki'irni'i `}. $)
+df-pagbyfancu $a
+  go su'o da zo'u su'o de zo'u su'o di zo'u
+    da pagyfancu de di pa ka ce'u bu'a ce'u
+  gi pa ka su'o da zo'u ce'u .e ce'u bu'a da
+    cu ki'irni'i pa ka ce'u du ce'u $.
