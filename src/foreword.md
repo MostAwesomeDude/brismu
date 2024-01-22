@@ -68,7 +68,9 @@ Lojbanists for input and insights:
 * la guskant
 * la ilmen
 * [la poros](https://pcy.ulyssis.be/)
+* la selgu'a
 * la selpa'i
+* la tsani
 
 ## Praise from Lojbanists
 
