@@ -150,3 +150,26 @@ Any relation which is transitive and antisymmetric is a partial order.
 Examples of partial orders:
 
 * ``{lidne}`` for any particular lidne3
+
+## Connectedness
+
+A relation is connected if, for all pairs of values x and y, either xRy, yRx,
+or x=y.
+
+## Serial relations
+
+A relation is serial if it is irreflexive, transitive, and connected.
+
+## Lesniewskian
+
+A relation is Lesniewskian if it is transitive and also:
+
+    da broda de
+    -----------
+    da broda da
+
+And:
+
+    da broda de & de broda di
+    -------------------------
+           de broda da
