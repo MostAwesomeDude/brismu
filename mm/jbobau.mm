@@ -123,20 +123,30 @@ htmldef "ce" as "<small>ce</small> ";
 htmldef "jo'e" as "<small>jo'e</small> ";
 htmldef "ku'a" as "<small>ku'a</small> ";
 htmldef "cu" as "<small>cu</small> ";
+htmldef "balvi" as "<span class='gismu'>balvi</span> ";
+htmldef "cabna" as "<span class='gismu'>cabna</span> ";
 htmldef "ckaji" as "<span class='gismu'>ckaji</span> ";
 htmldef "ckini" as "<span class='gismu'>ckini</span> ";
 htmldef "cmima" as "<span class='gismu'>cmima</span> ";
+htmldef "drata" as "<span class='gismu'>drata</span> ";
 htmldef "dugri" as "<span class='gismu'>dugri</span> ";
+htmldef "dunli" as "<span class='gismu'>dunli</span> ";
+htmldef "fatne" as "<span class='gismu'>fatne</span> ";
+htmldef "frica" as "<span class='gismu'>frica</span> ";
 htmldef "kampu" as "<span class='gismu'>kampu</span> ";
+htmldef "mintu" as "<span class='gismu'>mintu</span> ";
 htmldef "mupli" as "<span class='gismu'>mupli</span> ";
+htmldef "nenri" as "<span class='gismu'>nenri</span> ";
 htmldef "pagbu" as "<span class='gismu'>pagbu</span> ";
 htmldef "pilji" as "<span class='gismu'>pilji</span> ";
 htmldef "prami" as "<span class='gismu'>prami</span> ";
+htmldef "purci" as "<span class='gismu'>purci</span> ";
 htmldef "simsa" as "<span class='gismu'>simsa</span> ";
 htmldef "simxu" as "<span class='gismu'>simxu</span> ";
 htmldef "steci" as "<span class='gismu'>steci</span> ";
 htmldef "sumji" as "<span class='gismu'>sumji</span> ";
 htmldef "tenfa" as "<span class='gismu'>tenfa</span> ";
+htmldef "xlane" as "<span class='gismu'>xlane</span> ";
 htmldef "ka" as "<small>ka</small> ";
 htmldef "ce'u" as "<small>ce'u</small> ";
 htmldef "jompau" as "<span class='lujvo'>jompau</span> ";
@@ -146,6 +156,7 @@ htmldef "ki'irkanxe" as "<span class='lujvo'>ki'irkanxe</span> ";
 htmldef "ki'irni'i" as "<span class='lujvo'>ki'irni'i</span> ";
 htmldef "ki'irvlina" as "<span class='lujvo'>ki'irvlina</span> ";
 htmldef "kuzypau" as "<span class='lujvo'>kuzypau</span> ";
+htmldef "pagyfancu" as "<span class='lujvo'>pagyfancu</span> ";
 htmldef "mi" as "<span class='sumti'>mi</span> ";
 htmldef "do" as "<span class='sumti'>do</span> ";
 $)
@@ -2029,6 +2040,9 @@ ${
       ( bu ge-ini simsari ) ABCACFBCFDEGH $.
 $}
 
+$( {` simsa `} is symmetric. $)
+ax-simsa-sym $a |- go ko'a simsa ko'e ko'i gi ko'e simsa ko'a ko'i $.
+
 $(
 =-=-=
 {steci}
@@ -2974,3 +2988,124 @@ df-pagyfancu $a
     da pagyfancu de di pa ka ce'u bu'a ce'u
   gi pa ka su'o da zo'u ce'u .e ce'u bu'a da
     cu ki'irni'i pa ka ce'u du ce'u $.
+
+$(
+#*#*#
+Assorted claims
+#*#*#
+$)
+
+$(
+=-=-=
+{dunli}
+=-=-=
+$)
+
+$c dunli $.
+sbdunli $a selbri dunli $.
+
+$( Because modal x1 and modal x2 of {` dunli `} are definitionally
+   interchangeable, {` dunli `} itself is symmetric. $)
+ax-dunli-sym $a |- go ko'a dunli ko'e ko'i gi ko'e dunli ko'a ko'i $.
+
+$(
+=-=-=
+{mintu}
+=-=-=
+$)
+
+$c mintu $.
+sbmintu $a selbri mintu $.
+
+$( Because x1 and x2 of {` mintu `} are definitionally interchangeable, it is
+   symmetric. $)
+ax-mintu-sym $a |- go ko'a mintu ko'e ko'i gi ko'e mintu ko'a ko'i $.
+
+$(
+=-=-=
+{drata}
+=-=-=
+$)
+
+$c drata $.
+sbdrata $a selbri drata $.
+
+$( {` drata `} is irreflexive. $)
+ax-drata-irrefl $a |- naku zo'u ko'a drata ko'a ko'e $.
+
+$(
+=-=-=
+{frica}
+=-=-=
+$)
+
+$c frica $.
+sbfrica $a selbri frica $.
+
+$( {` frica `} is irreflexive. $)
+ax-frica-irrefl $a |- naku zo'u ko'a frica ko'a ko'e $.
+
+$(
+=-=-=
+{nenri}
+=-=-=
+$)
+
+$c nenri $.
+sbnenri $a selbri nenri $.
+
+$( {` nenri `} is transitive. $)
+ax-nenri-trans $a |-
+  ganai ge ko'a nenri ko'e gi ko'e nenri ko'i
+  gi ko'a nenri ko'i $.
+
+$(
+=-=-=
+{fatne}
+=-=-=
+$)
+
+$c fatne $.
+sbfatne $a selbri fatne $.
+
+$( {` fatne `} is symmetric. $)
+ax-fatne-sym $a |- go ko'a fatne ko'e gi ko'e fatne ko'a $.
+
+$(
+=-=-=
+{cabna}
+=-=-=
+$)
+
+$c cabna $.
+sbcabna $a selbri cabna $.
+
+$( {` cabna `} is symmetric. $)
+ax-cabna-sym $a |- go ko'a cabna ko'e gi ko'e cabna ko'a $.
+
+$(
+=-=-=
+{xlane}
+=-=-=
+$)
+
+$c xlane $.
+sbxlane $a selbri xlane $.
+
+$( {` xlane `} is symmetric. $)
+ax-xlane-sym $a |- go ko'a xlane ko'e gi ko'e xlane ko'a $.
+
+$(
+=-=-=
+{balvi}, {purci}
+=-=-=
+$)
+
+$c balvi $.
+sbbalvi $a selbri balvi $.
+
+$c purci $.
+sbpurci $a selbri purci $.
+
+$( {` balvi `} and {` purci `} are each other's daggers. $)
+ax-balvi-purci $a |- go ko'a balvi ko'e gi ko'e purci ko'a $.

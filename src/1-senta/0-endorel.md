@@ -17,9 +17,9 @@ Still, were there any, they'd get the following formal rule.
 
     ro da ro de zo'u:
 
-    da broda de
-    ----------- (broda is reflexive)
      da du de
+    ----------- (broda is reflexive)
+    da broda de
 
 For any gismu which is reflexive, just substitute into the above rule.
 
