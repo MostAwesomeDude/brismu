@@ -87,6 +87,8 @@ These gismu refer to elements.
 * cnisa: lead
 * margu: mercury
 * nikle: nickel
+* rijno: silver
+* solji: gold
 * sliri: sulfur
 * tinci: tin
 * tirse: iron
