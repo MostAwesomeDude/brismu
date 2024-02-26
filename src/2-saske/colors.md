@@ -6,6 +6,7 @@ Colors are described by the following class schema:
     skari2: colors
     skari3: photoreceptors
     skari4: physical environments
+
     xinmo2: skari2
 
 A color is a ratio of red, green, and blue. Exact ratios are yet to be

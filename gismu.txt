@@ -958,7 +958,6 @@
  rapli rap          repeat                                    x1 [action] repeats/is repeated for a total of x2 (quantity) occurrences                         1h  32    [practice (= rapyzu'e, rapxelcli, rapyzukmo'i)]; (cf. cmavo list roi, cafne, krefu, fukpi, pilji, xruti)
  rarna rar          natural                                   x1 is natural/spontaneous/instinctive, not [consciously] caused by person(s)                     6c  31    (cf. rutni, jinzi, nurma, stati)
  ratcu              rat                                       x1 is a rat of species/breed x2                                                                  ai  51    (cf. smacu)
- ratni rat          atom                                      x1 is an atom of element/atomic number x2 of isotope number/atomic weight x3                     a    4    (cf. kantu for a basic unit of a property or activity; selci for a basic physical subunit, generally of a mass)
  re    rel          2                                         digit/number: 2 (digit)                                                                          3a   0
  rebla reb          tail                                      x1 is a/the tail/appendix [body-part] of x2; [metaphor: trailing, following portion/appendage]   ai   9    (cf. nalci, pimlu, se lidne, trixe, birka, jimca)
  rectu rec     re'u meat                 'flesh'              x1 is a quantity of/contains meat/flesh from source/animal x2                                    5b  30    (cf. sluji)
@@ -1171,7 +1170,6 @@
  surla sur          relax                                     x1 relaxes/rests/is at ease in/by doing/being x2 (activity)                                      9c  34    (cf. dunku, tatpi, cando, vreta)
  sutra sut          fast                 'swift'              x1 is fast/swift/quick/hastes/rapid at doing/being/bringing about x2 (event/state)               4f 142    (cf. masno)
  ta    taz          that there                                pro-sumti: that there; nearby demonstrative it; indicated thing/place near listener              1d   0
- tabno tab          carbon                                    x1 is a quantity of/contains/is made of carbon/graphite/[diamond]/charcoal; x1 is organic        ag   1    (cf. kolme)
  tabra              trumpet              'brass'              x1 is a horn/trumpet/trombone/bugle [brass-wind/lip-reed musical instrument]                     ak   1    (cf. zgike)
  tadji              method                                    x1 [process] is a method/technique/approach/means for doing x2 (event) under conditions x3       8f  37    [also practice/way/mode; style/manner/conduct (= tratadji); pattern (= montadji, tadjymo'a, or platadji, tadjypla)]; (cf. ciste, pruce, zukte, pluta, cmavo list tai)
  tadni tad          study                                     x1 studies/is a student of x2; x1 is a scholar; (adjective:) x1 is scholarly                     1h 115    (cf. ckule, cilre, ctuca)
@@ -1362,7 +1360,6 @@
  xruki xuk          turkey                                    x1 is a turkey [food/bird] of species/breed x2                                                   ai   9    (cf. cipni)
  xrula rul          flower                                    x1 is a/the flower/blossom/bloom [body-part] of plant/species x2; (adjective:) x1 is floral      aj  27    (cf. spati)
  xruti     xru      return                                    x1 (agent) returns x2 to origin/earlier state x3 from x4; x1 moves/gives x2 back to x3 from x4   7f  49    [x2 goes back/reverts/[retreats] to x3 (= se'ixru for agent self-returning to a previous location/situation: renumber places in the lujvo); (x3 may be a location or a person or an event/situation; the latter may also be expressed with krefu or rapli and a causative like rinka/rikygau)]; (cf. benji, krefu, rapli, rinka)
- xukmi xum     xu'i chemical                                  x1 is an instance of substance/chemical/drug x2 (individual or mass) with purity x3              ah   2    (cf. curve, cidro, marna, nimre)
  xurdo xur     xu'o Urdu                                      x1 reflects Urdu language/culture/nationality in aspect x2                                       ab   1    (cf. kisto, srito, xindo)
  xusra xus     xu'a assert                                    x1 (agent) asserts/claims/declares x2 (du'u) is true [can be used for epistemology of authority] 3j  91    [also: x1 states/says that/affirms/purports to know that x2]; (cf. natfe which is propositional and non-agentive, nupre)
  xutla xul          smooth                                    x1 is smooth/even/[soft/silky] in texture/regularity                                             6f   4    (cf. plita, rufsu, tengu, dikni, pinta, sakli, spali)

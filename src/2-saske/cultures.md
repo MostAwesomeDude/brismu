@@ -15,9 +15,11 @@ longstanding and widespread practice in many cultures.
 There should be a class for kulnu1:
 
     kulnu1: cultures
+    kulnu2: people
+
     culture1: events
     culture2: observations
-    kulnu2: people
+
     rutni1: artifacts
     rutni2: kulnu2
 
@@ -33,10 +35,13 @@ There could further be a class for tutra1:
 
     tutra1: territories
     tutra2: ???
+
     natmi1: nations
     natmi2: kulnu2
+
     jecta1: governments
     jecta2: tutra1
+
     gugde1: countries
     gugde2: kulnu2
     gugde3: tutra1
