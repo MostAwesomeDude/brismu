@@ -25,6 +25,8 @@
 
 # 2: saske
 
+- [Classes of gismu](2-saske/classes.md)
+- [Colors](2-saske/colors.md)
 - [Elements](2-saske/elements.md)
 - [Biology](2-saske/biology.md)
 - [Anatomy](2-saske/anatomy.md)
