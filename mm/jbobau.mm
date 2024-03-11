@@ -131,6 +131,7 @@ htmldef "cmima" as "<span class='gismu'>cmima</span> ";
 htmldef "drata" as "<span class='gismu'>drata</span> ";
 htmldef "dugri" as "<span class='gismu'>dugri</span> ";
 htmldef "dunli" as "<span class='gismu'>dunli</span> ";
+htmldef "fatci" as "<span class='gismu'>fatci</span> ";
 htmldef "fatne" as "<span class='gismu'>fatne</span> ";
 htmldef "frica" as "<span class='gismu'>frica</span> ";
 htmldef "kampu" as "<span class='gismu'>kampu</span> ";
@@ -147,8 +148,10 @@ htmldef "steci" as "<span class='gismu'>steci</span> ";
 htmldef "sumji" as "<span class='gismu'>sumji</span> ";
 htmldef "tenfa" as "<span class='gismu'>tenfa</span> ";
 htmldef "xlane" as "<span class='gismu'>xlane</span> ";
+htmldef "du'u" as "<small>du'u</small> ";
 htmldef "ka" as "<small>ka</small> ";
 htmldef "ce'u" as "<small>ce'u</small> ";
+htmldef "kei" as "<small>kei</small> ";
 htmldef "jompau" as "<span class='lujvo'>jompau</span> ";
 htmldef "kacna'u" as "<span class='lujvo'>kacna'u</span> ";
 htmldef "kacli'e" as "<span class='lujvo'>kacli'e</span> ";
@@ -2473,6 +2476,57 @@ ${
     kuhari $p |- ko'a cmima ko'e ku'a ko'i $=
       ( sje sbcmima bb skuha df-kuha bi-rev ) ABCEFGABCHFGDABCIJ $.
 $}
+
+$(
+#*#*#
+Internal bridi: {du'u}, {fatci}
+#*#*#
+$)
+
+$(
+=-=-=
+{du'u}
+=-=-=
+$)
+
+$c du'u kei $.
+
+$( If {` broda `} is a bridi, then {` pa du'u `} captures it as a sumti. $)
+sdu $a sumti pa du'u broda kei $.
+
+$(
+=-=-=
+{fatci}
+=-=-=
+$)
+
+$c fatci $.
+
+sbfatci $a selbri fatci $.
+
+$( Definition of {` fatci `} in terms of {` du'u `}. $)
+df-fatci $a |- go pa du'u broda kei fatci gi broda $.
+
+${
+    fatcii.0 $e |- pa du'u broda kei fatci $.
+    $( Inference form of ~df-fatci
+       (Contributed by la korvo, 10-Mar-2024.) $)
+    fatcii $p |- broda $=
+      ( sdu sbfatci bu df-fatci bi ) ACDEABAFG $.
+$}
+
+${
+    fatciri.0 $e |- broda $.
+    $( Reverse inference form of ~df-fatci
+       (Contributed by la korvo, 10-Mar-2024.) $)
+    fatciri $p |- pa du'u broda kei fatci $=
+      ( sdu sbfatci bu df-fatci bi-rev ) AACDEBAFG $.
+$}
+
+$( {` cei'i `} is absolutely true when abstracted.
+   (Contributed by la korvo, 10-Mar-2024.) $)
+fatci-ceihi $p |- pa du'u cei'i kei fatci $=
+  ( bceihi ceihi fatciri ) ABC $.
 
 $(
 #####
