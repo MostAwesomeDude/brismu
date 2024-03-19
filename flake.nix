@@ -43,8 +43,11 @@
             ${z}/bin/zaha dot ${z}/share/jbobau/nu/nu.png > nu.dot
             ${z}/bin/zaha dot ${z}/share/jbobau/nu/suhu.png > suhu.dot
 
-            # Generate axioms from zaha DAGs.
-            ${z}/bin/zaha edges latest.png | python3 gen-ax.py mm/jbobau.mm
+            # Generate ontology axioms from zaha DAGs.
+            ${z}/bin/zaha edges latest.png > edges1.json
+            ${z}/bin/zaha edges ${z}/share/jbobau/spati.png > edges2.json
+            ${pkgs.jq}/bin/jq -s '.[0] * .[1]' edges{1,2}.json > edges.json
+            <edges.json python3 gen-ax.py mm/jbobau.mm
 
             # Augment valsi listing with baseline data.
             cp ${cmavo} cmavo.txt

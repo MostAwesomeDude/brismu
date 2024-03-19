@@ -55,24 +55,28 @@ lo'i broda ku broda | not really | no
 
 ### Formal coverage
 
-The following table shows how many valsi have been formalized in Metamath.
+The following table shows how many valsi have been formalized in handwritten
+Metamath, not including automatically-generated rules.
 
 {{#include coverage.md}}
 
 ### Ontology coverage
 
 The following table shows how many selbri have been ontologized: given partial
-meaning relative to other selbri, but not formally defined.
+meaning relative to other selbri, but not necessarily formally defined.
 
 Class | Count
 ---|---
 animals | 41
+assorted | 10
+chemical elements | 13
 colors | 14
 cultures | 57
+formalized | 14
 groups of chemical elements | 4
-chemical elements | 13
 molecules | 1
-Total | 130 / 1342
+plants | 13
+Total | 168 / 1342 (12.52%)
 
 ## Credits
 
