@@ -59,6 +59,21 @@ The following table shows how many valsi have been formalized in Metamath.
 
 {{#include coverage.md}}
 
+### Ontology coverage
+
+The following table shows how many selbri have been ontologized: given partial
+meaning relative to other selbri, but not formally defined.
+
+Class | Count
+---|---
+animals | 41
+colors | 14
+cultures | 57
+groups of chemical elements | 4
+chemical elements | 13
+molecules | 1
+Total | 130 / 1342
+
 ## Credits
 
 The bulk of this work was gathered by la korvo. I greet and thank the following
