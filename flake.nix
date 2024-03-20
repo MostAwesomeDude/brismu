@@ -47,7 +47,7 @@
             ${z}/bin/zaha edges latest.png > edges1.json
             ${z}/bin/zaha edges ${z}/share/jbobau/spati.png > edges2.json
             ${pkgs.jq}/bin/jq -s '.[0] * .[1]' edges{1,2}.json > edges.json
-            <edges.json python3 gen-ax.py mm/jbobau.mm
+            python3 gen-ax.py edges.json classes.json mm/jbobau.mm
 
             # Augment valsi listing with baseline data.
             cp ${cmavo} cmavo.txt

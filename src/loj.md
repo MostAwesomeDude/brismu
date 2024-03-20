@@ -33,3 +33,11 @@ Metamath statement | Lojban bridi | What it means
     => {pa du'u broda kei du pa du'u brode}
 * Implication, conjunction, disjunction should form a lattice
   * Missing ge-ind: deductive form of ax-ge-in
+  * And also a distributive lattice?
+    * {ge broda gi ga brode gi brodi} => {ga ge broda gi brode gi brodi}
+  * Easy implications of being a lattice:
+    * Idempotence: {ge/ga broda gi broda} => {broda}
+    * Commutativity: {ge/ga broda gi brode} => {ge/ga brode gi broda}
+    * Associativity: {ge/ga broda gi ge/ga brode gi brodi}
+      => {ge/ga ge/ga broda gi brode gi brodi}
+    * Absorption: {ge/ga broda gi ga/ge broda gi brode} => {broda}

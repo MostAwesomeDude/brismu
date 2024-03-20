@@ -52,10 +52,12 @@ htmldef "bridi" as "<em>bridi</em> ";
 htmldef "selbri" as "<em>selbri</em> ";
 htmldef "sumti" as "<em>sumti</em> ";
 htmldef "brirebla" as "<em>brirebla</em> ";
+htmldef "skaselbri" as "<em>skaselbri</em> ";
 htmldef "PA" as "<em>PA</em> ";
 htmldef "ko'a" as "<span class='sumti'>ko'a</span> ";
 htmldef "ko'e" as "<span class='sumti'>ko'e</span> ";
 htmldef "ko'i" as "<span class='sumti'>ko'i</span> ";
+htmldef "ko'o" as "<span class='sumti'>ko'o</span> ";
 htmldef "broda" as "<span class='bridi'>broda</span> ";
 htmldef "brode" as "<span class='bridi'>brode</span> ";
 htmldef "brodi" as "<span class='bridi'>brodi</span> ";
@@ -142,12 +144,14 @@ htmldef "pagbu" as "<span class='gismu'>pagbu</span> ";
 htmldef "pilji" as "<span class='gismu'>pilji</span> ";
 htmldef "prami" as "<span class='gismu'>prami</span> ";
 htmldef "purci" as "<span class='gismu'>purci</span> ";
+htmldef "skari" as "<span class='gismu'>skari</span> ";
 htmldef "simsa" as "<span class='gismu'>simsa</span> ";
 htmldef "simxu" as "<span class='gismu'>simxu</span> ";
 htmldef "steci" as "<span class='gismu'>steci</span> ";
 htmldef "sumji" as "<span class='gismu'>sumji</span> ";
 htmldef "tenfa" as "<span class='gismu'>tenfa</span> ";
 htmldef "xlane" as "<span class='gismu'>xlane</span> ";
+htmldef "xinmo" as "<span class='gismu'>xinmo</span> ";
 htmldef "du'u" as "<small>du'u</small> ";
 htmldef "ka" as "<small>ka</small> ";
 htmldef "ce'u" as "<small>ce'u</small> ";
@@ -200,10 +204,11 @@ $c selbri sumti bridi brirebla brili'e $.
 $( A turnstile. Needed to indicate that a bridi is inhabited. $)
 $c |- $.
 
-$v ko'a ko'e ko'i $.
+$v ko'a ko'e ko'i ko'o $.
 wk1 $f sumti ko'a $.
 wk2 $f sumti ko'e $.
 wk3 $f sumti ko'i $.
+wk4 $f sumti ko'o $.
 
 $v broda brode brodi brodo brodu $.
 sbb1 $f bridi broda $.
@@ -255,6 +260,10 @@ $( Normal form for ternary selbri.
    (Contributed by la korvo, 14-Aug-2023.) $)
 bt $p bridi ko'a bu'a ko'e ko'i $=
   ( tsb tss btb ) ACBDEZHFZIFG $.
+$( Normal form for quaternary selbri.
+   (Contributed by la korvo, 19-Mar-2024.) $)
+bq $p bridi ko'a bu'a ko'e ko'i ko'o $=
+  ( tsb tss btb ) ADCBEFZIGZJGZKGH $.
 
 $(
 #*#*#
@@ -3163,3 +3172,42 @@ sbpurci $a selbri purci $.
 
 $( {` balvi `} and {` purci `} are each other's daggers. $)
 ax-balvi-purci $a |- go ko'a balvi ko'e gi ko'e purci ko'a $.
+
+$(
+#*#*#
+Ontological classes
+#*#*#
+$)
+
+$(
+=-=-=
+Colors: {skari}
+=-=-=
+
+The schema for colors classifies one type, the colors ({` skaselbri `}).
+$)
+
+$c skari skaselbri $.
+sbskari $a selbri skari $.
+
+$( Colors are extensionally defined in terms of {` skari `}. $)
+ax-skari-ckaji $a |- ganai ko'a skari ko'e ko'i ko'o gi ko'a ckaji ko'e $.
+
+${
+    sbska.0 $e skaselbri bu'a $.
+    $( All {` skaselbri `} are {` selbri `}. $)
+    sbska $a selbri bu'a $.
+$}
+
+${
+    skaselbri.0 $e skaselbri bu'a $.
+    $( To be colored is to appear colored in a certain context. $)
+    df-skaselbri $a |- go ko'a bu'a
+      gi su'o da zo'u su'o de zo'u ko'a skari pa ka ce'u bu'a kei da de $.
+$}
+
+$c xinmo $.
+
+$( Definitionally, xinmo2 is drawn from skari2. $)
+ax-xinmo2-skari2 $a |- ganai ko'a se xinmo ko'e
+  gi su'o da zo'u su'o de zo'u su'o di zo'u ko'a se skari da de di $.
