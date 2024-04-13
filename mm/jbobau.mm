@@ -137,6 +137,7 @@ htmldef "fatci" as "<span class='gismu'>fatci</span> ";
 htmldef "fatne" as "<span class='gismu'>fatne</span> ";
 htmldef "frica" as "<span class='gismu'>frica</span> ";
 htmldef "kampu" as "<span class='gismu'>kampu</span> ";
+htmldef "mapti" as "<span class='gismu'>mapti</span> ";
 htmldef "mintu" as "<span class='gismu'>mintu</span> ";
 htmldef "mupli" as "<span class='gismu'>mupli</span> ";
 htmldef "nenri" as "<span class='gismu'>nenri</span> ";
@@ -3057,6 +3058,19 @@ $(
 Assorted claims
 #*#*#
 $)
+
+$(
+=-=-=
+{mapti}
+=-=-=
+$)
+
+$c mapti $.
+sbmapti $a selbri mapti $.
+
+$( Under postulated definitions of la xorxes and la korvo, {` mapti `} is a
+   subrelation of {` ckini `}. $)
+ax-mapti-ckini $a |- ganai ko'a mapti ko'e ko'i gi ko'a ckini ko'e ko'i $.
 
 $(
 =-=-=
