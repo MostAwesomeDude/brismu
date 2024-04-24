@@ -112,6 +112,7 @@ Animal clades are nested according to the za'a diagram.
 * gurni: grain, cereal
 * mudri: wood, lumber
 * jalna: starch
+* fibra: [exp] fiber
 
 ### Issues
 
