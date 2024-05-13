@@ -151,6 +151,9 @@ Examples of partial orders:
 
 * ``{lidne}`` for any particular lidne3
 
+It is possible that {lidne} is defined as "there is an arrow from x1 to x2 in
+partial order x3", which would be a remarkably powerful and general relation.
+
 ## Connectedness
 
 A relation is connected if, for all pairs of values x and y, either xRy, yRx,

@@ -36,7 +36,6 @@
  bapu      PU*      will have been                            time tense: will have been; (tense/modal)
  bau       BAI      in language                               bangu modal, 1st place                            in language ...
  be        BE       link sumti                                sumti link to attach sumti (default x2) to a selbri; used in descriptions
- be'a      FAhA1    north of                                  location tense relation/direction; north of
  be'e      COI      request to send                           vocative: request to send/speak
  be'i      BAI      sent by                                   benji modal, 1st place (sender)                   sent by ...
  be'o      BEhO     end linked sumti                          elidable terminator: end linked sumti in specified description
@@ -68,7 +67,6 @@
  ca'e      UI2      I define                                  evidential: I define                                                                                      (cf. mitcu'a, mitsmu)
  ca'i      BAI      by authority of                           catni modal, 1st place                            by authority of ...
  ca'o      ZAhO     continuative                              interval event contour: during ...; continuative                                    |-----|
- ca'u      FAhA2    in front of                               location tense relation/direction; forwards/to the front of ...
  caba'o    ZAhO*    has been                                  time tense: has been, is now in the aftermath of; (tense/modal)
  caca'a    PU*      currently is                              time tense: present actuality; modal aspect
  caca'o    ZAhO*    is now                                    time tense: is now/simultaneously, is now in the middle of; (tense/modal)
@@ -142,7 +140,6 @@
  doi       DOI      vocative marker                           generic vocative marker; identifies intended listener; elidable after COI
  doido'u   DOI*     O You!                                    generic vocative address to intended listener;
  du        GOhA     same identity as                          identity selbri; = sign; x1 identically equals x2, x3, etc.; attached sumti refer to same thing
- du'a      FAhA1    east of                                   location tense relation/direction; east of
  du'e      PA4      too many                                  digit/number: too many; subjective
  du'emei   MOI*     is too many                               quantifier selbri: convert too many to cardinal selbri; x1 is a set with too many members x2
  du'eroi   ROI*     too many times                            tense interval modifier: too many times objective tense, defaults as time tense
@@ -214,7 +211,6 @@
  ga'icu'i  UI*5     equal rank                                attitudinal modifier/honorific: hauteur - equal rank - meekness; used with one of equal rank
  ga'inai   UI*5     meekness                                  attitudinal modifier/honorific: hauteur - equal rank - meekness; used with one of higher rank
  ga'o      GAhO     inclusive interval                        closed interval bracket marker; mod. intervals in non-logical connectives; include boundaries
- ga'u      FAhA2    above                                     location tense relation/direction; upwards/up from ...
  gai       PA2      hex digit C                               digit/number: hex digit C (decimal 12) [twelve]
  gau       BAI      with active agent                         gasnu modal, 1st place agent/actor case tag       with active agent ...
  ge'a      VUhU0    null operator                             mathematical operator: null mathematical expression (mex) operator (used in >2-ary ops)
@@ -494,10 +490,8 @@
  ne'a      FAhA3    next to                                   location tense relation/direction; approximating/next to ...
  ne'i      FAhA3    within                                    location tense relation/direction; within/inside of/into ...
  ne'o      VUhU3    factorial                                 unary mathematical operator: factorial; a!
- ne'u      FAhA1    south of                                  location tense relation/direction; south of
  nei       GOhA     current bridi                             pro-bridi: repeats the current bridi
  ni        NU       amount abstract                           abstractor: quantity/amount abstractor; x1 is quantity/amount of [bridi] measured on scale x2
- ni'a      FAhA2    below                                     location tense relation/direction; downwards/down from ...
  ni'e      NIhE     selbri to operand                         convert selbri to mex operand; used to create new non-numerical quantifiers; e.g. "herd" of oxen
  ni'i      BAI      because of logic                          nibli modal, 1st place                            logically; logically because ...
  ni'i ma   BAI*     by what logic?                            sumti question asking for a logical proof; why?
@@ -663,7 +657,6 @@
  ri'enai   UI*5     restraint of emotion                      attitudinal modifier: release of emotion - emotion restraint
  ri'i      BAI      experienced by                            lifri modal, 1st place patient/passive case tag; happens to...,experienced by...,with passive...
  ri'o      VUhU4    integral                                  trinary mathematical operator: [integral of a with respect to b over range c]
- ri'u      FAhA2    on the right of                           location tense relation/direction; rightwards/to the right of ...
  ro        PA4      each                                      digit/number: each, all
  ro'a      UI4      social                                    emotion category/modifier: social - antisocial                                                            (cf. jikca)
  ro'anai   UI*4     antisocial                                emotion category/modifier: social - antisocial
@@ -869,7 +862,6 @@
  teva'u    BAI*     goodness standard                         xamgu modal, 3rd place                            good/beneficial by standard ...
  tezu'e    BAI*     with goal                                 zukte modal, 3rd place                            purposefully; (as an action) with goal ...
  ti        KOhA6    this here                                 pro-sumti: this here; immediate demonstrative it; indicated thing/place near speaker
- ti'a      FAhA2    behind                                    location tense relation/direction; rearwards/to the rear of ...
  ti'e      UI2      I hear                                    evidential: I hear (hearsay)                                                                              (cf. tirna, sitna, tcidu)
  ti'i      BAI      suggested by                              stidi modal, 1st place                            suggested by ...; proposed by ...
  ti'o      SEI      mex precedence                            mathematical expression (mex) operator precedence (discursive)
@@ -964,7 +956,6 @@
  vono      PA*      40                                        number/quantity: 40 [forty]
  vonono    PA*      400                                       number/quantity: 400 [four hundred]
  vu        VA       yonder at                                 location tense distance: far from ... ; yonder at ... ; a long distance from ...
- vu'a      FAhA1    west of                                   location tense relation/direction; west of
  vu'e      UI5      virtue                                    attitudinal modifier: virtue - sin                                                                        (cf. vrude, zungi)
  vu'enai   UI*5     sin                                       attitudinal modifier: virtue - sin
  vu'i      LAhE     the sequence of                           sumti qualifier: the sequence made from set or composed of elements/components; order is vague
@@ -1017,7 +1008,6 @@
  zo'onai   UI*5     seriously                                 attitudinal modifier: humorously - dully - seriously
  zo'u      ZOhU     end prenex                                marks end of logical prenex quantifiers/topic identification and start of sentence bridi
  zu        ZI       long time                                 time tense distance: long distance in time
- zu'a      FAhA2    on the left of                            location tense relation/direction; leftwards/to the left of ...
  zu'e      BAI      with actor                                zukte modal, 1st place (purposed agent)           with goal-seeking actor ...
  zu'i      KOhA7    typical it                                pro-sumti: the typical sumti value for this place in this relationship; affects truth value
  zu'o      NU1      activity abstract                         abstractor: activity (event) abstractor; x1 is abstract activity of [bridi] composed of x2

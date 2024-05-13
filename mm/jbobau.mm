@@ -126,16 +126,20 @@ htmldef "jo'e" as "<small>jo'e</small> ";
 htmldef "ku'a" as "<small>ku'a</small> ";
 htmldef "cu" as "<small>cu</small> ";
 htmldef "balvi" as "<span class='gismu'>balvi</span> ";
+htmldef "berti" as "<span class='gismu'>berti</span> ";
 htmldef "cabna" as "<span class='gismu'>cabna</span> ";
 htmldef "ckaji" as "<span class='gismu'>ckaji</span> ";
 htmldef "ckini" as "<span class='gismu'>ckini</span> ";
 htmldef "cmima" as "<span class='gismu'>cmima</span> ";
+htmldef "cnita" as "<span class='gismu'>cnita</span> ";
+htmldef "crane" as "<span class='gismu'>crane</span> ";
 htmldef "drata" as "<span class='gismu'>drata</span> ";
 htmldef "dugri" as "<span class='gismu'>dugri</span> ";
 htmldef "dunli" as "<span class='gismu'>dunli</span> ";
 htmldef "fatci" as "<span class='gismu'>fatci</span> ";
 htmldef "fatne" as "<span class='gismu'>fatne</span> ";
 htmldef "frica" as "<span class='gismu'>frica</span> ";
+htmldef "gapru" as "<span class='gismu'>gapru</span> ";
 htmldef "kampu" as "<span class='gismu'>kampu</span> ";
 htmldef "mapti" as "<span class='gismu'>mapti</span> ";
 htmldef "mintu" as "<span class='gismu'>mintu</span> ";
@@ -144,14 +148,22 @@ htmldef "nenri" as "<span class='gismu'>nenri</span> ";
 htmldef "pagbu" as "<span class='gismu'>pagbu</span> ";
 htmldef "pilji" as "<span class='gismu'>pilji</span> ";
 htmldef "prami" as "<span class='gismu'>prami</span> ";
+htmldef "pritu" as "<span class='gismu'>pritu</span> ";
 htmldef "purci" as "<span class='gismu'>purci</span> ";
-htmldef "skari" as "<span class='gismu'>skari</span> ";
+htmldef "rinka" as "<span class='gismu'>rinka</span> ";
 htmldef "simsa" as "<span class='gismu'>simsa</span> ";
 htmldef "simxu" as "<span class='gismu'>simxu</span> ";
+htmldef "skari" as "<span class='gismu'>skari</span> ";
+htmldef "snanu" as "<span class='gismu'>snanu</span> ";
 htmldef "steci" as "<span class='gismu'>steci</span> ";
+htmldef "stici" as "<span class='gismu'>stici</span> ";
+htmldef "stuna" as "<span class='gismu'>stuna</span> ";
 htmldef "sumji" as "<span class='gismu'>sumji</span> ";
 htmldef "tenfa" as "<span class='gismu'>tenfa</span> ";
+htmldef "trixe" as "<span class='gismu'>trixe</span> ";
 htmldef "xlane" as "<span class='gismu'>xlane</span> ";
+htmldef "xlane" as "<span class='gismu'>xlane</span> ";
+htmldef "zunle" as "<span class='gismu'>zunle</span> ";
 htmldef "xinmo" as "<span class='gismu'>xinmo</span> ";
 htmldef "du'u" as "<small>du'u</small> ";
 htmldef "ka" as "<small>ka</small> ";
@@ -2970,6 +2982,112 @@ $}
 
 $(
 #####
+SPACE & SPACETIME
+#####
+$)
+
+$(
+#*#*#
+Two-dimensional Euclidean space
+#*#*#
+$)
+
+$(
+=-=-=
+Compass directions
+=-=-=
+$)
+
+$c berti snanu stici stuna $.
+
+sbberti $a selbri berti $.
+sbsnanu $a selbri snanu $.
+sbstici $a selbri stici $.
+sbstuna $a selbri stuna $.
+
+$( Northward and southward are opposite. $)
+ax-berti-snanu $a |- go ko'a berti ko'e ko'i gi ko'e snanu ko'a ko'i $.
+
+$( Westward and eastward are opposite. $)
+ax-stici-stuna $a |- go ko'a stici ko'e ko'i gi ko'e stuna ko'a ko'i $.
+
+$(
+#*#*#
+Three-dimensional Euclidean space
+#*#*#
+$)
+
+$(
+=-=-=
+Spatial directions
+=-=-=
+$)
+
+$c crane trixe zunle pritu gapru cnita $.
+
+sbcrane $a selbri crane $.
+sbtrixe $a selbri trixe $.
+sbzunle $a selbri zunle $.
+sbpritu $a selbri pritu $.
+sbgapru $a selbri gapru $.
+sbcnita $a selbri cnita $.
+
+$( Forward and backward are opposite. $)
+ax-crane-trixe $a |- go ko'a crane ko'e ko'i gi ko'e trixe ko'a ko'i $.
+
+$( Leftward and rightward are opposite. $)
+ax-zunle-pritu $a |- go ko'a zunle ko'e ko'i gi ko'e pritu ko'a ko'i $.
+
+$( Upward and downward are opposite. $)
+ax-gapru-cnita $a |- go ko'a gapru ko'e ko'i gi ko'e cnita ko'a ko'i $.
+
+$(
+#*#*#
+Minkowski spacetime
+#*#*#
+$)
+
+$(
+=-=-=
+{cabna}
+=-=-=
+$)
+
+$c cabna $.
+sbcabna $a selbri cabna $.
+
+$( {` cabna `} is symmetric. $)
+ax-cabna-sym $a |- go ko'a cabna ko'e gi ko'e cabna ko'a $.
+
+$(
+=-=-=
+{xlane}
+=-=-=
+$)
+
+$c xlane $.
+sbxlane $a selbri xlane $.
+
+$( {` xlane `} is symmetric. $)
+ax-xlane-sym $a |- go ko'a xlane ko'e gi ko'e xlane ko'a $.
+
+$(
+=-=-=
+{balvi}, {purci}
+=-=-=
+$)
+
+$c balvi $.
+sbbalvi $a selbri balvi $.
+
+$c purci $.
+sbpurci $a selbri purci $.
+
+$( {` balvi `} and {` purci `} are each other's daggers. $)
+ax-balvi-purci $a |- go ko'a balvi ko'e gi ko'e purci ko'a $.
+
+$(
+#####
 RELATIONAL LOGIC
 #####
 $)
@@ -3150,42 +3268,15 @@ ax-fatne-sym $a |- go ko'a fatne ko'e gi ko'e fatne ko'a $.
 
 $(
 =-=-=
-{cabna}
+{rinka}
 =-=-=
 $)
 
-$c cabna $.
-sbcabna $a selbri cabna $.
+$c rinka $.
+sbrinka $a selbri rinka $.
 
-$( {` cabna `} is symmetric. $)
-ax-cabna-sym $a |- go ko'a cabna ko'e gi ko'e cabna ko'a $.
-
-$(
-=-=-=
-{xlane}
-=-=-=
-$)
-
-$c xlane $.
-sbxlane $a selbri xlane $.
-
-$( {` xlane `} is symmetric. $)
-ax-xlane-sym $a |- go ko'a xlane ko'e gi ko'e xlane ko'a $.
-
-$(
-=-=-=
-{balvi}, {purci}
-=-=-=
-$)
-
-$c balvi $.
-sbbalvi $a selbri balvi $.
-
-$c purci $.
-sbpurci $a selbri purci $.
-
-$( {` balvi `} and {` purci `} are each other's daggers. $)
-ax-balvi-purci $a |- go ko'a balvi ko'e gi ko'e purci ko'a $.
+$( Physical causation implies spatiotemporal causation. $)
+ax-rinka-balvi $a |- ganai ko'a rinka ko'e ko'i gi ko'a balvi ko'e $.
 
 $(
 #*#*#
