@@ -28,3 +28,5 @@ insist on it being any particular value.
 * {natfe}: x1 contradicts x2; not clear whether symmetric
 * {kanxe}: x1 is the conjunction of x2 and x3
 * {vlina}: x1 is the disjunction of x2 or x3
+* {sigda} [exp]: x1 is the material implication x2 => x3
+* {tsida} [exp]: x1 is the material biimplication x2 <=> x3

@@ -141,16 +141,20 @@ htmldef "fatne" as "<span class='gismu'>fatne</span> ";
 htmldef "frica" as "<span class='gismu'>frica</span> ";
 htmldef "gapru" as "<span class='gismu'>gapru</span> ";
 htmldef "kampu" as "<span class='gismu'>kampu</span> ";
+htmldef "kanxe" as "<span class='gismu'>kanxe</span> ";
 htmldef "mapti" as "<span class='gismu'>mapti</span> ";
 htmldef "mintu" as "<span class='gismu'>mintu</span> ";
 htmldef "mupli" as "<span class='gismu'>mupli</span> ";
+htmldef "natfe" as "<span class='gismu'>natfe</span> ";
 htmldef "nenri" as "<span class='gismu'>nenri</span> ";
+htmldef "nibli" as "<span class='gismu'>nibli</span> ";
 htmldef "pagbu" as "<span class='gismu'>pagbu</span> ";
 htmldef "pilji" as "<span class='gismu'>pilji</span> ";
 htmldef "prami" as "<span class='gismu'>prami</span> ";
 htmldef "pritu" as "<span class='gismu'>pritu</span> ";
 htmldef "purci" as "<span class='gismu'>purci</span> ";
 htmldef "rinka" as "<span class='gismu'>rinka</span> ";
+htmldef "sigda" as "<span class='gismu'>sigda</span> ";
 htmldef "simsa" as "<span class='gismu'>simsa</span> ";
 htmldef "simxu" as "<span class='gismu'>simxu</span> ";
 htmldef "skari" as "<span class='gismu'>skari</span> ";
@@ -161,6 +165,8 @@ htmldef "stuna" as "<span class='gismu'>stuna</span> ";
 htmldef "sumji" as "<span class='gismu'>sumji</span> ";
 htmldef "tenfa" as "<span class='gismu'>tenfa</span> ";
 htmldef "trixe" as "<span class='gismu'>trixe</span> ";
+htmldef "tsida" as "<span class='gismu'>tsida</span> ";
+htmldef "vlina" as "<span class='gismu'>vlina</span> ";
 htmldef "xlane" as "<span class='gismu'>xlane</span> ";
 htmldef "xlane" as "<span class='gismu'>xlane</span> ";
 htmldef "zunle" as "<span class='gismu'>zunle</span> ";
@@ -2513,8 +2519,8 @@ $)
 
 $c du'u kei $.
 
-$( If {` broda `} is a bridi, then {` pa du'u `} captures it as a sumti. $)
-sdu $a sumti pa du'u broda kei $.
+$( If {` broda `} is a bridi, then {` su'o du'u `} captures it as a sumti. $)
+sdu $a sumti su'o du'u broda kei $.
 
 $(
 =-=-=
@@ -2527,10 +2533,10 @@ $c fatci $.
 sbfatci $a selbri fatci $.
 
 $( Definition of {` fatci `} in terms of {` du'u `}. $)
-df-fatci $a |- go pa du'u broda kei fatci gi broda $.
+df-fatci $a |- go su'o du'u broda kei fatci gi broda $.
 
 ${
-    fatcii.0 $e |- pa du'u broda kei fatci $.
+    fatcii.0 $e |- su'o du'u broda kei fatci $.
     $( Inference form of ~df-fatci
        (Contributed by la korvo, 10-Mar-2024.) $)
     fatcii $p |- broda $=
@@ -2541,14 +2547,98 @@ ${
     fatciri.0 $e |- broda $.
     $( Reverse inference form of ~df-fatci
        (Contributed by la korvo, 10-Mar-2024.) $)
-    fatciri $p |- pa du'u broda kei fatci $=
+    fatciri $p |- su'o du'u broda kei fatci $=
       ( sdu sbfatci bu df-fatci bi-rev ) AACDEBAFG $.
 $}
 
 $( {` cei'i `} is absolutely true when abstracted.
    (Contributed by la korvo, 10-Mar-2024.) $)
-fatci-ceihi $p |- pa du'u cei'i kei fatci $=
+fatci-ceihi $p |- su'o du'u cei'i kei fatci $=
   ( bceihi ceihi fatciri ) ABC $.
+
+$(
+=-=-=
+{nibli}
+=-=-=
+$)
+
+$c nibli $.
+
+sbnibli $a selbri nibli $.
+
+$( {` nibli `} internalizes implication. $)
+df-nibli $a |-
+  go su'o du'u broda kei nibli su'o du'u brode kei
+  gi ganai broda gi brode $.
+
+$(
+=-=-=
+{sigda}
+=-=-=
+$)
+
+$c sigda $.
+
+sbsigda $a selbri sigda $.
+
+$( {` sigda `} internalizes implication. $)
+df-sigda $a |-
+  su'o du'u ganai broda gi brode kei
+  sigda
+  su'o du'u broda kei
+  su'o du'u brode kei $.
+
+$(
+=-=-=
+{tsida}
+=-=-=
+$)
+
+$c tsida $.
+
+sbtsida $a selbri tsida $.
+
+$( {` tsida `} internalizes biimplication. $)
+df-tsida $a |-
+  su'o du'u go broda gi brode kei
+  tsida
+  su'o du'u broda kei
+  su'o du'u brode kei $.
+
+$(
+=-=-=
+{kanxe}
+=-=-=
+$)
+
+$c kanxe $.
+
+sbkanxe $a selbri kanxe $.
+
+$( {` kanxe `} internalizes conjunction. $)
+df-kanxe $a |-
+  su'o du'u ge broda gi brode kei
+  kanxe
+  su'o du'u broda kei
+  su'o du'u brode kei $.
+
+$(
+=-=-=
+{vlina}
+=-=-=
+$)
+
+$c vlina $.
+
+sbvlina $a selbri vlina $.
+
+$( {` vlina `} internalizes disjunction. $)
+df-vlina $a |-
+  su'o du'u ga broda gi brode kei
+  vlina
+  su'o du'u broda kei
+  su'o du'u brode kei $.
+
 
 $(
 #####
