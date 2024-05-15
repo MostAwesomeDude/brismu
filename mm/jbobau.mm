@@ -1932,13 +1932,13 @@ $(
 =-=-=
 $)
 
-$c pa ka ce'u $.
+$c pa ka ce'u kei $.
 
 sc $a sumti ce'u $.
 
 $( If {` bo'a `} is a brirebla, then filling its first place with a sumti and
    wrapping it with {` pa ka `} yields sumti. $)
-spk $a sumti pa ka ko'a bo'a $.
+spk $a sumti pa ka ko'a bo'a kei $.
 
 $(
 =-=-=
@@ -1952,26 +1952,26 @@ sbckaji $a selbri ckaji $.
 
 $( {` ckaji `} is often found with this conjugation.
    (Contributed by la korvo, 14-Aug-2023.) $)
-bckaji $p bridi ko'a ckaji pa ka ce'u bu'a $=
-  ( sc tsb spk sbckaji bb ) ACBDEFG $.
+bckaji $p bridi ko'a ckaji pa ka ce'u bo'a kei $=
+  ( sc spk sbckaji bb ) ACBDEF $.
 
 $( Definition of {` ckaji `} from {` ka `}. Based on example 4.1-2 of [CLL] p. 11. $)
-df-ckaji $a |- go ko'a ckaji pa ka ce'u bu'a ko'e gi ko'a bu'a ko'e $.
+df-ckaji $a |- go ko'a ckaji pa ka ce'u bo'a kei gi ko'a bo'a $.
 
 ${
-    ckajii.0 $e |- ko'a ckaji pa ka ce'u bu'a ko'e $.
+    ckajii.0 $e |- ko'a ckaji pa ka ce'u bo'a kei $.
     $( Inference form of ~df-ckaji
        (Contributed by la korvo, 17-Jul-2023.) $)
-    ckajii $p |- ko'a bu'a ko'e $=
-      ( sc tsb spk sbckaji bt bb df-ckaji bi ) AECFGBHIABCJDABCKL $.
+    ckajii $p |- ko'a bo'a $=
+      ( bckaji btb df-ckaji bi ) ABDABECABFG $.
 $}
 
 ${
-    ckajiri.0 $e |- ko'a bu'a ko'e $.
+    ckajiri.0 $e |- ko'a bo'a $.
     $( Reverse inference form of ~df-ckaji
        (Contributed by la korvo, 17-Jul-2023.) $)
-    ckajiri $p |- ko'a ckaji pa ka ce'u bu'a ko'e $=
-      ( bb sc tsb spk sbckaji bt df-ckaji bi-rev ) ABCEAFCGHBIJDABCKL $.
+    ckajiri $p |- ko'a ckaji pa ka ce'u bo'a kei $=
+      ( btb bckaji df-ckaji bi-rev ) ABDABECABFG $.
 $}
 
 $(
@@ -1986,13 +1986,13 @@ sbckini $a selbri ckini $.
 
 $( {` ckini `} is often found with this conjugation.
    (Contributed by la korvo, 14-Aug-2023.) $)
-bckini $p bridi ko'a ckini ko'e pa ka ce'u bu'a ce'u $=
+bckini $p bridi ko'a ckini ko'e pa ka ce'u bu'a ce'u kei $=
   ( sc tsb tss spk sbckini bt ) ABDDCEZJFGHI $.
 
-df-ckini $a |- go ko'a ckini ko'e pa ka ce'u bu'a ce'u gi ko'a bu'a ko'e $.
+df-ckini $a |- go ko'a ckini ko'e pa ka ce'u bu'a ce'u kei gi ko'a bu'a ko'e $.
 
 ${
-    ckinii.0 $e |- ko'a ckini ko'e pa ka ce'u bu'a ce'u $.
+    ckinii.0 $e |- ko'a ckini ko'e pa ka ce'u bu'a ce'u kei $.
     $( Inference form of ~df-ckini
        (Contributed by la korvo, 17-Jul-2023.) $)
     ckinii $p |- ko'a bu'a ko'e $=
@@ -2003,16 +2003,16 @@ ${
     ckiniri.0 $e |- ko'a bu'a ko'e $.
     $( Reverse inference form of ~df-ckini
        (Contributed by la korvo, 17-Jul-2023.) $)
-    ckiniri $p |- ko'a ckini ko'e pa ka ce'u bu'a ce'u $=
+    ckiniri $p |- ko'a ckini ko'e pa ka ce'u bu'a ce'u kei $=
       wk1 wk2 sbba bb wk1 wk2 sbba bckini ckiniri.0 wk1 wk2 sbba df-ckini
       bi-rev $.
 $}
 
 ${
-    ckini-se.0 $e |- ko'a ckini ko'e pa ka ce'u bu'a ce'u $.
+    ckini-se.0 $e |- ko'a ckini ko'e pa ka ce'u bu'a ce'u kei $.
     $( {` se `} can be inserted underneath ckini3.
        (Contributed by la korvo, 12-Jul-2023.) $)
-    ckini-se $p |- ko'e ckini ko'a pa ka ce'u se bu'a ce'u $=
+    ckini-se $p |- ko'e ckini ko'a pa ka ce'u se bu'a ce'u kei $=
       wk2 wk1 sbba sbs wk1 wk2 sbba wk1 wk2 sbba ckini-se.0 ckinii seri ckiniri
       $.
 $}
@@ -2029,13 +2029,13 @@ sbsimsa $a selbri simsa $.
 
 $( {` simsa `} is often found with this conjugation.
    (Contributed by la korvo, 6-Aug-2023.) $)
-bsimsa $p bridi ko'a simsa ko'e pa ka ce'u bu'a $=
+bsimsa $p bridi ko'a simsa ko'e pa ka ce'u bu'a kei $=
   ( sc tsb spk sbsimsa bt ) ABDCEFGH $.
 
-df-simsa $a |- go ko'a simsa ko'e pa ka ce'u bu'a gi ge ko'a bu'a gi ko'e bu'a $.
+df-simsa $a |- go ko'a simsa ko'e pa ka ce'u bu'a kei gi ge ko'a bu'a gi ko'e bu'a $.
 
 ${
-    simsai.0 $e |- ko'a simsa ko'e pa ka ce'u bu'a $.
+    simsai.0 $e |- ko'a simsa ko'e pa ka ce'u bu'a kei $.
     $( Inference form of ~df-simsa
        (Contributed by la korvo, 6-Aug-2023.) $)
     simsai $p |- ge ko'a bu'a gi ko'e bu'a $=
@@ -2043,7 +2043,7 @@ ${
 $}
 
 ${
-    simsail.0 $e |- ko'a simsa ko'e pa ka ce'u bu'a $.
+    simsail.0 $e |- ko'a simsa ko'e pa ka ce'u bu'a kei $.
     $( Inference form of ~df-simsa
        (Contributed by la korvo, 6-Aug-2023.) $)
     simsail $p |- ko'a bu'a $=
@@ -2051,7 +2051,7 @@ ${
 $}
 
 ${
-    simsair.0 $e |- ko'a simsa ko'e pa ka ce'u bu'a $.
+    simsair.0 $e |- ko'a simsa ko'e pa ka ce'u bu'a kei $.
     $( Inference form of ~df-simsa
        (Contributed by la korvo, 6-Aug-2023.) $)
     simsair $p |- ko'e bu'a $=
@@ -2062,7 +2062,7 @@ ${
     simsari.0 $e |- ge ko'a bu'a gi ko'e bu'a $.
     $( Reverse inference form of ~df-simsa
        (Contributed by la korvo, 6-Aug-2023.) $)
-    simsari $p |- ko'a simsa ko'e pa ka ce'u bu'a $=
+    simsari $p |- ko'a simsa ko'e pa ka ce'u bu'a kei $=
       ( bu bge bsimsa df-simsa bi-rev ) ACEBCEFABCGDABCHI $.
 $}
 
@@ -2071,7 +2071,7 @@ ${
     simsarii.1 $e |- ko'e bu'a $.
     $( Reverse inference form of ~df-simsa
        (Contributed by la korvo, 6-Aug-2023.) $)
-    simsarii $p |- ko'a simsa ko'e pa ka ce'u bu'a $=
+    simsarii $p |- ko'a simsa ko'e pa ka ce'u bu'a kei $=
       ( bu ge-ini simsari ) ABCACFBCFDEGH $.
 $}
 
@@ -2525,7 +2525,7 @@ $(
 =-=-=
 $)
 
-$c du'u kei $.
+$c du'u $.
 
 $( If {` broda `} is a bridi, then {` pa du'u `} captures it as a sumti. $)
 sdu $a sumti pa du'u broda kei $.
@@ -2543,19 +2543,19 @@ sceho $a sumti ko'a ce'o ko'e $.
 sbbridi $a selbri bridi $.
 
 df-bridi-u $a |- pa du'u ko'a bu'a kei
-  bridi pa ka ce'u bu'a
+  bridi pa ka ce'u bu'a kei
   ko'a $.
 
 df-bridi-b $a |- pa du'u ko'a bu'a ko'e kei
-  bridi pa ka ce'u bu'a ce'u
+  bridi pa ka ce'u bu'a ce'u kei
   ko'a ce'o ko'e $.
 
 df-bridi-t $a |- pa du'u ko'a bu'a ko'e ko'i kei
-  bridi pa ka ce'u bu'a ce'u ce'u
+  bridi pa ka ce'u bu'a ce'u ce'u kei
   ko'a ce'o ko'e ce'o ko'i $.
 
 df-bridi-q $a |- pa du'u ko'a bu'a ko'e ko'i ko'o kei
-  bridi pa ka ce'u bu'a ce'u ce'u ce'u
+  bridi pa ka ce'u bu'a ce'u ce'u ce'u kei
   ko'a ce'o ko'e ce'o ko'i ce'o ko'o $.
 
 sbselbri $a selbri selbri $.
@@ -3239,7 +3239,7 @@ sbkihirnihi $a selbri ki'irni'i $.
 
 $( Definition of {` ki'irni'i `} in terms of {` naja `}. $)
 df-kihirnihi $a |-
-  go pa ka ce'u bu'a ce'u ki'irni'i pa ka ce'u bu'e ce'u
+  go pa ka ce'u bu'a ce'u kei ki'irni'i pa ka ce'u bu'e ce'u kei
   gi ko'a bu'a naja bu'e ko'e $.
 
 $( {` ki'irni'i `} is transitive. $)
@@ -3258,10 +3258,10 @@ sbkihirkanxe $a selbri ki'irkanxe $.
 
 $( Definition of {` ki'irkanxe `} $)
 df-kihirkanxe $a |-
-  pa ka ce'u bu'a je bu'e ce'u
+  pa ka ce'u bu'a je bu'e ce'u kei
   ki'irkanxe
-  pa ka ce'u bu'a ce'u
-  pa ka ce'u bu'e ce'u $.
+  pa ka ce'u bu'a ce'u kei
+  pa ka ce'u bu'e ce'u kei $.
 
 $(
 =-=-=
@@ -3274,10 +3274,10 @@ sbkihirvlina $a selbri ki'irvlina $.
 
 $( Definition of {` ki'irvlina `} $)
 df-kihirvlina $a |-
-  pa ka ce'u bu'a ja bu'e ce'u
+  pa ka ce'u bu'a ja bu'e ce'u kei
   ki'irvlina
-  pa ka ce'u bu'a ce'u
-  pa ka ce'u bu'e ce'u $.
+  pa ka ce'u bu'a ce'u kei
+  pa ka ce'u bu'e ce'u kei $.
 
 $(
 #*#*#
@@ -3297,9 +3297,9 @@ sbpagyfancu $a selbri pagyfancu $.
 $( Definition of {` pagyfancu `} in terms of {` ki'irni'i `}. $)
 df-pagyfancu $a
   go su'o da zo'u su'o de zo'u su'o di zo'u
-    da pagyfancu de di pa ka ce'u bu'a ce'u
-  gi pa ka su'o da zo'u ce'u .e ce'u bu'a da
-    cu ki'irni'i pa ka ce'u du ce'u $.
+    da pagyfancu de di pa ka ce'u bu'a ce'u kei
+  gi pa ka su'o da zo'u ce'u .e ce'u bu'a da kei
+    ki'irni'i pa ka ce'u du ce'u kei $.
 
 $(
 #*#*#
