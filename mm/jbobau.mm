@@ -122,11 +122,13 @@ htmldef "vu'u" as " - ";
 htmldef "ro" as "<small>ro</small> ";
 htmldef "su'o" as "<small>su'o</small> ";
 htmldef "ce" as "<small>ce</small> ";
+htmldef "ce'o" as "<small>ce'o</small> ";
 htmldef "jo'e" as "<small>jo'e</small> ";
 htmldef "ku'a" as "<small>ku'a</small> ";
 htmldef "cu" as "<small>cu</small> ";
 htmldef "balvi" as "<span class='gismu'>balvi</span> ";
 htmldef "berti" as "<span class='gismu'>berti</span> ";
+htmldef "bridi" as "<span class='gismu'>bridi</span> ";
 htmldef "cabna" as "<span class='gismu'>cabna</span> ";
 htmldef "ckaji" as "<span class='gismu'>ckaji</span> ";
 htmldef "ckini" as "<span class='gismu'>ckini</span> ";
@@ -183,6 +185,7 @@ htmldef "ki'irni'i" as "<span class='lujvo'>ki'irni'i</span> ";
 htmldef "ki'irvlina" as "<span class='lujvo'>ki'irvlina</span> ";
 htmldef "kuzypau" as "<span class='lujvo'>kuzypau</span> ";
 htmldef "pagyfancu" as "<span class='lujvo'>pagyfancu</span> ";
+htmldef "selbri" as "<span class='lujvo'>selbri</span> ";
 htmldef "mi" as "<span class='sumti'>mi</span> ";
 htmldef "do" as "<span class='sumti'>do</span> ";
 $)
@@ -1919,7 +1922,8 @@ Internal hom I
 
 The internal hom is the syntax which internalizes relations. We define
 {` ka `} abstractions as well as several useful gismu for accessing the
-contents of those abstractions.
+contents of those abstractions. Our approach uses {` pa ka `} quantification
+in acknowledgement of isomorphism-invariance.
 $)
 
 $(
@@ -2507,8 +2511,12 @@ $}
 
 $(
 #*#*#
-Internal bridi: {du'u}, {fatci}
+Internal bridi
 #*#*#
+
+The abstractor {` du'u `} contains any {` ka `} abstractions which are closed.
+Our reasoning for {` pa ka `} quantification extends to {` pa du'u `}
+quantification.
 $)
 
 $(
@@ -2519,8 +2527,40 @@ $)
 
 $c du'u kei $.
 
-$( If {` broda `} is a bridi, then {` su'o du'u `} captures it as a sumti. $)
-sdu $a sumti su'o du'u broda kei $.
+$( If {` broda `} is a bridi, then {` pa du'u `} captures it as a sumti. $)
+sdu $a sumti pa du'u broda kei $.
+
+$(
+=-=-=
+{bridi}
+=-=-=
+$)
+
+$c ce'o $.
+
+sceho $a sumti ko'a ce'o ko'e $.
+
+sbbridi $a selbri bridi $.
+
+df-bridi-u $a |- pa du'u ko'a bu'a kei
+  bridi pa ka ce'u bu'a
+  ko'a $.
+
+df-bridi-b $a |- pa du'u ko'a bu'a ko'e kei
+  bridi pa ka ce'u bu'a ce'u
+  ko'a ce'o ko'e $.
+
+df-bridi-t $a |- pa du'u ko'a bu'a ko'e ko'i kei
+  bridi pa ka ce'u bu'a ce'u ce'u
+  ko'a ce'o ko'e ce'o ko'i $.
+
+df-bridi-q $a |- pa du'u ko'a bu'a ko'e ko'i ko'o kei
+  bridi pa ka ce'u bu'a ce'u ce'u ce'u
+  ko'a ce'o ko'e ce'o ko'i ce'o ko'o $.
+
+sbselbri $a selbri selbri $.
+
+df-selbri $a |- go ko'a selbri ko'e ko'i gi ko'a se bridi ko'e ko'i $.
 
 $(
 =-=-=
@@ -2533,10 +2573,10 @@ $c fatci $.
 sbfatci $a selbri fatci $.
 
 $( Definition of {` fatci `} in terms of {` du'u `}. $)
-df-fatci $a |- go su'o du'u broda kei fatci gi broda $.
+df-fatci $a |- go pa du'u broda kei fatci gi broda $.
 
 ${
-    fatcii.0 $e |- su'o du'u broda kei fatci $.
+    fatcii.0 $e |- pa du'u broda kei fatci $.
     $( Inference form of ~df-fatci
        (Contributed by la korvo, 10-Mar-2024.) $)
     fatcii $p |- broda $=
@@ -2547,13 +2587,13 @@ ${
     fatciri.0 $e |- broda $.
     $( Reverse inference form of ~df-fatci
        (Contributed by la korvo, 10-Mar-2024.) $)
-    fatciri $p |- su'o du'u broda kei fatci $=
+    fatciri $p |- pa du'u broda kei fatci $=
       ( sdu sbfatci bu df-fatci bi-rev ) AACDEBAFG $.
 $}
 
 $( {` cei'i `} is absolutely true when abstracted.
    (Contributed by la korvo, 10-Mar-2024.) $)
-fatci-ceihi $p |- su'o du'u cei'i kei fatci $=
+fatci-ceihi $p |- pa du'u cei'i kei fatci $=
   ( bceihi ceihi fatciri ) ABC $.
 
 $(
@@ -2568,7 +2608,7 @@ sbnibli $a selbri nibli $.
 
 $( {` nibli `} internalizes implication. $)
 df-nibli $a |-
-  go su'o du'u broda kei nibli su'o du'u brode kei
+  go pa du'u broda kei nibli pa du'u brode kei
   gi ganai broda gi brode $.
 
 $(
@@ -2583,10 +2623,10 @@ sbsigda $a selbri sigda $.
 
 $( {` sigda `} internalizes implication. $)
 df-sigda $a |-
-  su'o du'u ganai broda gi brode kei
+  pa du'u ganai broda gi brode kei
   sigda
-  su'o du'u broda kei
-  su'o du'u brode kei $.
+  pa du'u broda kei
+  pa du'u brode kei $.
 
 $(
 =-=-=
@@ -2600,10 +2640,10 @@ sbtsida $a selbri tsida $.
 
 $( {` tsida `} internalizes biimplication. $)
 df-tsida $a |-
-  su'o du'u go broda gi brode kei
+  pa du'u go broda gi brode kei
   tsida
-  su'o du'u broda kei
-  su'o du'u brode kei $.
+  pa du'u broda kei
+  pa du'u brode kei $.
 
 $(
 =-=-=
@@ -2617,10 +2657,10 @@ sbkanxe $a selbri kanxe $.
 
 $( {` kanxe `} internalizes conjunction. $)
 df-kanxe $a |-
-  su'o du'u ge broda gi brode kei
+  pa du'u ge broda gi brode kei
   kanxe
-  su'o du'u broda kei
-  su'o du'u brode kei $.
+  pa du'u broda kei
+  pa du'u brode kei $.
 
 $(
 =-=-=
@@ -2634,10 +2674,10 @@ sbvlina $a selbri vlina $.
 
 $( {` vlina `} internalizes disjunction. $)
 df-vlina $a |-
-  su'o du'u ga broda gi brode kei
+  pa du'u ga broda gi brode kei
   vlina
-  su'o du'u broda kei
-  su'o du'u brode kei $.
+  pa du'u broda kei
+  pa du'u brode kei $.
 
 
 $(

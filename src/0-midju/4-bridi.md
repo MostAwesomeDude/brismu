@@ -26,21 +26,10 @@ elements, but is in entirely the wrong selma'o.
 
     ...
 
-# Ternary relations: {te}, {bridi}, {du'u}
+# Ternary relations: {bridi}, {du'u}
 
 This entire section rests on whether `{bridi}` is semantic or syntactic; that
 is, whether it operates on live sets and values, or Lojban ASTs.
-
-We need to internalize relations, and for that we'll need `{bridi}`. First, we
-need to define ternary relations. All of our existing rules work on the first
-two sumti of ternary relations, and we'll define `{te}` to access the
-otherwise-inaccessible third sumti.
-
-    ro da ro de ro di zo'u:
-
-     da broda de di
-    ================= (te-intel)
-    di te broda de da
 
 At last, we can define `{bridi}`. First, let's relate it to other selbri.
 `{bridi}` internalizes the rule of `{ckaji}` and `{ckini}`, which instantiate
@@ -61,19 +50,14 @@ result for every pair in the selbri; on the bottom of the rule, we have one
 result for every pair in the Cartesian product (the full relation), and also a
 `{du'u}` indicating whether or not the pair is also in the selbri.
 
-And once more, for ternary relations:
-
-    ro da poi ke'a broda ro de poi broda ke'a ro di poi broda fi ke'a zo'u:
-
-                                     da broda de di
-    ============================================================================= (bridi-intel-3)
-    pa du'u da broda de di kei bridi pa ka ce'u broda ce'u ce'u kei da ce'o de di
-
-Whew. This has been a lot of foundational work, hasn't it? But we're almost
-done with the basics. We've got a pretty good understanding of bridi and
-selbri now, and all that's left is terbri.
-
 Reactions have been mixed, to say the least, to this approach. la gleki opines
 that terbri do not work this way. However, CLL insists that selbri and bridi
 and `{bridi}` work this way. The main contention is what parts of the bridi
 are syntactic and which are semantic, since Lojban does support text literals.
+
+For posterity: selbri are syntactic representations of semantic equivalence
+classes. This gives us isomorphism-invariance; any particular {pa du'u} really
+does only have one class of equivalent bridi underneath it. This has
+consequences for discursive logic, in that {lo du'u mlatu} should be taken as
+a vague pattern which the listener must disambiguate from context, and not as
+a literal reference to an equivalence class of logical sentences.
