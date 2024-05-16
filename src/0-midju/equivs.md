@@ -8,8 +8,15 @@
 * mintu
   * Comes with several axioms which we can take for now
     * x du y <=> x mintu y pa ka ce'u du ce'u
+      * ...might have misunderstood, might be: pa ka ce'u du
+      * "no standards place"
   * Might generalize to equivalence relations
     * Given equiv broda, x broda y <=> x mintu y pa ka broda
+  * Shows up in gismu.txt!
+    * x lazmi'u y <=> x mintu y pa ka ce'u cmima da poi lanzu
+    * Note: lanzu1 is therefore set, not mass!
+    * This is unary {ka}; I would have used {simsa} instead of {mintu}
+      * Maybe {mintu} is the right choice for binary {ka}?
 * mapti
   * Still no real confidence in what's going on, mapti3 usually omitted
   * Best guess: bijection!

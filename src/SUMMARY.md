@@ -26,10 +26,11 @@
 # 2: saske
 
 - [Classes of gismu](2-saske/classes.md)
+- [Anatomy](2-saske/anatomy.md)
+- [Biology](2-saske/biology.md)
 - [Colors](2-saske/colors.md)
 - [Elements](2-saske/elements.md)
-- [Biology](2-saske/biology.md)
-- [Anatomy](2-saske/anatomy.md)
+- [Families](2-saske/families.md)
 - [Geometry](2-saske/geometry.md)
 - [SI Units](2-saske/units.md)
 
