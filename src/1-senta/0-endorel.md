@@ -153,6 +153,8 @@ Examples of partial orders:
 
 It is possible that {lidne} is defined as "there is an arrow from x1 to x2 in
 partial order x3", which would be a remarkably powerful and general relation.
+Similarly, {porsi} might be "x1 (poset) is the partial order arising from
+order x2 (binary ka) upon set x3".
 
 ## Connectedness
 

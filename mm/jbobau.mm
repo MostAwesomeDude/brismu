@@ -147,6 +147,8 @@ htmldef "frica" as "<span class='gismu'>frica</span> ";
 htmldef "gapru" as "<span class='gismu'>gapru</span> ";
 htmldef "kampu" as "<span class='gismu'>kampu</span> ";
 htmldef "kanxe" as "<span class='gismu'>kanxe</span> ";
+htmldef "kinfi" as "<span class='gismu'>kinfi</span> ";
+htmldef "kinra" as "<span class='gismu'>kinra</span> ";
 htmldef "mapti" as "<span class='gismu'>mapti</span> ";
 htmldef "mintu" as "<span class='gismu'>mintu</span> ";
 htmldef "mupli" as "<span class='gismu'>mupli</span> ";
@@ -168,18 +170,21 @@ htmldef "steci" as "<span class='gismu'>steci</span> ";
 htmldef "stici" as "<span class='gismu'>stici</span> ";
 htmldef "stuna" as "<span class='gismu'>stuna</span> ";
 htmldef "sumji" as "<span class='gismu'>sumji</span> ";
+htmldef "takni" as "<span class='gismu'>takni</span> ";
 htmldef "tenfa" as "<span class='gismu'>tenfa</span> ";
 htmldef "trixe" as "<span class='gismu'>trixe</span> ";
 htmldef "tsida" as "<span class='gismu'>tsida</span> ";
 htmldef "vlina" as "<span class='gismu'>vlina</span> ";
 htmldef "xlane" as "<span class='gismu'>xlane</span> ";
 htmldef "xlane" as "<span class='gismu'>xlane</span> ";
-htmldef "zunle" as "<span class='gismu'>zunle</span> ";
 htmldef "xinmo" as "<span class='gismu'>xinmo</span> ";
+htmldef "zunle" as "<span class='gismu'>zunle</span> ";
 htmldef "du'u" as "<small>du'u</small> ";
 htmldef "ka" as "<small>ka</small> ";
 htmldef "ce'u" as "<small>ce'u</small> ";
 htmldef "kei" as "<small>kei</small> ";
+htmldef "efklipi" as "<span class='lujvo'>efklipi</span> ";
+htmldef "efklizu" as "<span class='lujvo'>efklizu</span> ";
 htmldef "jompau" as "<span class='lujvo'>jompau</span> ";
 htmldef "kacna'u" as "<span class='lujvo'>kacna'u</span> ";
 htmldef "kacli'e" as "<span class='lujvo'>kacli'e</span> ";
@@ -3301,7 +3306,85 @@ $)
 
 $(
 #*#*#
-Lattice of Relations
+Open classes of relations
+#*#*#
+
+We investigate several relation types as open classes.
+$)
+
+$(
+=-=-=
+Transitivity: {takni}
+=-=-=
+$)
+
+$c takni $.
+
+sbtakni $a selbri takni $.
+
+$( A standard definition of transitive relations. $)
+df-takni $a |- go ko'a takni ko'e
+  gi ro da zo'u ro de zo'u ro di zo'u
+    ganai ge da .e de .e di cmima ko'e
+      gi ge da ckini de ko'a gi de ckini di ko'a
+    gi da ckini di ko'a $.
+
+$(
+=-=-=
+Symmetry: {kinfi}
+=-=-=
+$)
+
+$c kinfi $.
+
+sbkinfi $a selbri kinfi $.
+
+$( A standard definition of symmetric relations. $)
+df-kinfi $a |- go ko'a kinfi ko'e
+  gi ro da zo'u ro de zo'u
+    ganai ge da .e de cmima ko'e gi da ckini de ko'a
+    gi de ckini da ko'a $.
+
+$(
+=-=-=
+Reflexivity: {kinra}
+=-=-=
+$)
+
+$c kinra $.
+
+sbkinra $a selbri kinra $.
+
+$( A standard definition of reflexive relations. $)
+df-kinra $a |- go ko'a kinra ko'e
+  gi ro da zo'u ganai da cmima ko'e gi da ckini da ko'a $.
+
+$(
+=-=-=
+Euclidean: {efklipi}, {efklizu}
+=-=-=
+$)
+
+$c efklipi efklizu $.
+
+sbefklipi $a selbri efklipi $.
+sbefklizu $a selbri efklizu $.
+
+$( A standard definition of right-Euclidean relations. $)
+df-efklipi $a |- go ko'a efklipi ko'e
+  gi ro da zo'u ro de zo'u ro di zo'u
+    ganai ge da .e de .e di cmima ko'e gi da ckini de .e di ko'a
+    gi de ckini di ko'a $.
+
+$( A standard definition of left-Euclidean relations. $)
+df-efklizu $a |- go ko'a efklizu ko'e
+  gi ro da zo'u ro de zo'u ro di zo'u
+    ganai ge da .e de .e di cmima ko'e gi de .e di ckini da ko'a
+    gi de ckini di ko'a $.
+
+$(
+#*#*#
+Lattice of relations
 #*#*#
 $)
 
