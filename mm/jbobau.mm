@@ -36,6 +36,7 @@ $( $t
 htmltitle "brismu bridi";
 htmlcss "<style type='text/css'>" +
         ".sumti { color: darkgreen; }" +
+        ".gadri { color: green; }" +
         ".selbri { color: blue; }" +
         ".brirebla { color: darkblue; }" +
         ".bridi { color: brown; }" +
@@ -126,6 +127,8 @@ htmldef "ce'o" as "<small>ce'o</small> ";
 htmldef "jo'e" as "<small>jo'e</small> ";
 htmldef "ku'a" as "<small>ku'a</small> ";
 htmldef "cu" as "<small>cu</small> ";
+htmldef "nomei" as "<span class='lujvo'>nomei</span> ";
+htmldef "pamei" as "<span class='lujvo'>pamei</span> ";
 htmldef "balvi" as "<span class='gismu'>balvi</span> ";
 htmldef "berti" as "<span class='gismu'>berti</span> ";
 htmldef "bridi" as "<span class='gismu'>bridi</span> ";
@@ -188,6 +191,7 @@ htmldef "pagyfancu" as "<span class='lujvo'>pagyfancu</span> ";
 htmldef "selbri" as "<span class='lujvo'>selbri</span> ";
 htmldef "mi" as "<span class='sumti'>mi</span> ";
 htmldef "do" as "<span class='sumti'>do</span> ";
+htmldef "le" as "<span class='gadri'>le</span> ";
 $)
 
 $(
@@ -1744,6 +1748,82 @@ $}
 
 $(
 #*#*#
+Sets I: {nomei}, {pamei}
+#*#*#
+$)
+
+$(
+=-=-=
+{cmima}
+=-=-=
+$)
+
+$c cmima $.
+
+sbcmima $a selbri cmima $.
+
+$(
+=-=-=
+{nomei}
+=-=-=
+$)
+
+$c le nomei $.
+
+snomei $a sumti le nomei $.
+
+$( {` le nomei `} is the empty set. Literally it is the set with zero
+cardinality. By standard folklore of sets, it is unique up to isomorphism,
+justifying {` le `}. $)
+df-nomei $a |- naku zo'u ko'a cmima le nomei $.
+
+${
+    nomei-gaiho.0 $e |- ko'a cmima le nomei $.
+    $( If the empty set is inhabited, then there is a contradiction.
+       (Contributed by la korvo, 16-May-2024.) $)
+    nomei-gaiho $p |- gai'o $=
+      ( snomei sbcmima bb df-nomei nakuii ) ACDEAFBG $.
+$}
+
+$(
+=-=-=
+{pamei}
+=-=-=
+$)
+
+$c pamei $.
+
+sbpamei $a selbri pamei $.
+
+$( The singleton set is the unique set whose elements are all isomorphic.
+   Since we use the full semantics of second-order logic, we cannot construct
+   the witness isomorphisms. As a compromise, we construct the isomorphism
+   between any two elements of any particular singleton set. $)
+df-pamei $a |- go ko'a pamei ko'e .e ko'i gi ko'e du ko'i $.
+
+${
+    pameii.0 $e |- ko'a pamei ko'e .e ko'i $.
+    $( Inference form of ~df-pamei
+       (Contributed by la korvo, 16-May-2024.) $)
+    pameii $p |- ko'e du ko'i $=
+      ( sje sbpamei bb sbdu df-pamei bi ) ABCEFGBCHGDABCIJ $.
+$}
+
+${
+    pameiii.0 $e |- ko'a pamei ko'e $.
+    pameiii.1 $e |- ko'a pamei ko'i $.
+    $( Inference form of ~df-pamei
+       (Contributed by la korvo, 16-May-2024.) $)
+    pameiii $p |- ko'e du ko'i $=
+      ( sje sbpamei sbs tsb tss bb seri ge-ini eri sei pameii ) ABCABCFGBCAGHZI
+      ZRJBAQKCAQKABGDLACGELMNOP $.
+$}
+
+$( The singleton set has one element. $)
+ax-pamei-cmima $a |- ganai ko'a pamei ko'e gi ko'e cmima ko'a $.
+
+$(
+#*#*#
 Mutual exclusion I
 #*#*#
 
@@ -2083,9 +2163,6 @@ $(
 {steci}
 =-=-=
 $)
-
-$c cmima $.
-sbcmima $a selbri cmima $.
 
 $c steci $.
 sbsteci $a selbri steci $.

@@ -28,6 +28,14 @@ all conifers are trees; all conifers are woody, which may suffice.
 
 Animal clades are nested according to the za'a diagram.
 
+## Fungi
+
+* clika: moss
+* gumri [archaic]: mushroom
+* mledi: mold, fungus, mushroom, truffle
+
+For archaic words, see [here](https://mw.lojban.org/papri/resurrected_gismu).
+
 ## Plants
 
 ### Species

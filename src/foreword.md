@@ -91,6 +91,12 @@ Lojbanists for input and insights:
 * la selpa'i
 * la tsani
 
+I also thank the following Lojbanists for proposing experimental valsi which I
+ended up using:
+
+* la krtisfranks
+* la lalxu
+
 ## Praise from Lojbanists
 
 > "alien language" -- la gleki

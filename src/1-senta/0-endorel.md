@@ -157,11 +157,25 @@ partial order x3", which would be a remarkably powerful and general relation.
 ## Connectedness
 
 A relation is connected if, for all pairs of values x and y, either xRy, yRx,
-or x=y.
+or x=y. Equivalently, x≠y => xRy \/ yRx.
 
 ## Serial relations
 
 A relation is serial if it is irreflexive, transitive, and connected.
+
+## Well-founded
+
+A relation is well-founded if it contains no infinite descending chains.
+Equivalently, every non-empty subset of the domain has a minimal element.
+
+## Well-order
+
+A relation is a well-order if it is transitive, antisymmetric, connected,
+reflexive, and well-founded.
+
+moi3 needs to be a well-order so that its domain moi2 can be given an order
+type. Or, put another way, moi2 is shown to have order-type moi3 (given as an
+expression for a binary relation).
 
 ## Lesniewskian
 
