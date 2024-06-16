@@ -124,6 +124,7 @@ htmldef "ro" as "<small>ro</small> ";
 htmldef "su'o" as "<small>su'o</small> ";
 htmldef "ce" as "<small>ce</small> ";
 htmldef "ce'o" as "<small>ce'o</small> ";
+htmldef "fa'u" as "<small>fa'u</small> ";
 htmldef "jo'e" as "<small>jo'e</small> ";
 htmldef "ku'a" as "<small>ku'a</small> ";
 htmldef "cu" as "<small>cu</small> ";
@@ -2761,6 +2762,58 @@ df-vlina $a |-
   pa du'u broda kei
   pa du'u brode kei $.
 
+$(
+#*#*#
+Parallel reasoning: {fa'u}
+#*#*#
+$)
+
+$(
+=-=-=
+{fa'u}
+=-=-=
+$)
+
+$c fa'u $.
+
+sfahu $a sumti ko'a fa'u ko'e $.
+
+$( Definition of {` fa'u `} in terms of {` ge `}. $)
+df-fahu $a |- go ko'a fa'u ko'e bu'a ko'i fa'u ko'o
+  gi ge ko'a bu'a ko'i gi ko'e bu'a ko'o $.
+
+${
+    fahui.0 $e |- ko'a fa'u ko'e bu'a ko'i fa'u ko'o $.
+    $( Inference form of ~df-fahu
+       (Contributed by la korvo, 16-Jun-2024.) $)
+    fahui $p |- ge ko'a bu'a ko'i gi ko'e bu'a ko'o $=
+      ( sfahu bb bge df-fahu bi ) ABGCDGEHACEHBDEHIFABCDEJK $.
+$}
+
+${
+    fahuil.0 $e |- ko'a fa'u ko'e bu'a ko'i fa'u ko'o $.
+    $( Inference form of ~df-fahu
+       (Contributed by la korvo, 16-Jun-2024.) $)
+    fahuil $p |- ko'a bu'a ko'i $=
+      ( bb fahui ge-lei ) ACEGBDEGABCDEFHI $.
+$}
+
+${
+    fahuir.0 $e |- ko'a fa'u ko'e bu'a ko'i fa'u ko'o $.
+    $( Inference form of ~df-fahu
+       (Contributed by la korvo, 16-Jun-2024.) $)
+    fahuir $p |- ko'e bu'a ko'o $=
+      ( bb fahui ge-rei ) ACEGBDEGABCDEFHI $.
+$}
+
+${
+    fahuri.0 $e |- ko'a bu'a ko'i $.
+    fahuri.1 $e |- ko'e bu'a ko'o $.
+    $( Reverse inference form of ~df-fahu
+       (Contributed by la korvo, 16-Jun-2024.) $)
+    fahuri $p |- ko'a fa'u ko'e bu'a ko'i fa'u ko'o $=
+      ( bb bge sfahu ge-ini df-fahu bi-rev ) ACEHZBDEHZIABJCDJEHNOFGKABCDELM $.
+$}
 
 $(
 #####
