@@ -117,6 +117,7 @@ htmldef "re" as "<span class='pa'>2</span> ";
 htmldef "ku'i'a" as "<span class='pa'>ku'i'a</span> ";
 htmldef "ku'i'e" as "<span class='pa'>ku'i'e</span> ";
 htmldef "ku'i'i" as "<span class='pa'>ku'i'i</span> ";
+htmldef "bai'ei" as " +1 ";
 htmldef "su'i" as " + ";
 htmldef "pi'i" as " * ";
 htmldef "vu'u" as " - ";
@@ -187,8 +188,9 @@ htmldef "kei" as "<small>kei</small> ";
 htmldef "efklipi" as "<span class='lujvo'>efklipi</span> ";
 htmldef "efklizu" as "<span class='lujvo'>efklizu</span> ";
 htmldef "jompau" as "<span class='lujvo'>jompau</span> ";
-htmldef "kacna'u" as "<span class='lujvo'>kacna'u</span> ";
 htmldef "kacli'e" as "<span class='lujvo'>kacli'e</span> ";
+htmldef "kacme'a" as "<span class='lujvo'>kacme'a</span> ";
+htmldef "kacna'u" as "<span class='lujvo'>kacna'u</span> ";
 htmldef "ki'irkanxe" as "<span class='lujvo'>ki'irkanxe</span> ";
 htmldef "ki'irni'i" as "<span class='lujvo'>ki'irni'i</span> ";
 htmldef "ki'irvlina" as "<span class='lujvo'>ki'irvlina</span> ";
@@ -2820,7 +2822,11 @@ $(
 NUMBERS
 #####
 
-We define the standard gadgets of number theory.
+We define the standard gadgets of number theory. Our axioms are based on the
+Robinson axioms for second-order arithmetic over successor, addition,
+multiplication, and comparison. We apply the standard intuitionistic and
+Metamath transformations to these axioms in addition to reframing them for
+a Lojbanic relation-first presentation.
 $)
 
 $(
@@ -2847,7 +2853,7 @@ ax-nat-zero $a |- li no kacna'u $.
 
 $(
 =-=-=
-{kacli'e}
+Successor I: {kacli'e}
 =-=-=
 $)
 
@@ -2855,72 +2861,75 @@ $c kacli'e $.
 
 bkaclihe $a selbri kacli'e $.
 
-$( Zero is not a successor. $)
-ax-succ-zero $a |- naku zo'u su'o da zo'u da kacli'e li no $.
+$( Zero is not a successor. This is Robinson axiom 1. $)
+ax-succ-zero $a |- naku zo'u ko'a kacli'e li no $.
 
 ${
-    succ-zero-ref.0 $e |- su'o da zo'u da kacli'e li no $.
+    succ-zero-ref.0 $e |- ko'a kacli'e li no $.
     $( Refutation of any claimed predecessor to zero.
        (Contributed by la korvo, 20-Aug-2023.) $)
     succ-zero-ref $p |- gai'o $=
-      ( sl0 bkaclihe bb bsd ax-succ-zero nakuii ) ACDEZAIFAGBH $.
+      ( sl0 bkaclihe bb ax-succ-zero nakuii ) ACDEAFBG $.
 $}
 
 ${
     ax-succ-succ.0 $e |- ko'a .e ko'e kacli'e ko'i $.
     $( Successors of natural numbers are also natural numbers, and each
-       natural number has exactly one successor. $)
+       natural number has exactly one successor. This is equivalent to
+       Robinson axiom 2. $)
     ax-succ-succ $a |- ko'a du ko'e $.
 $}
 
-$( The induction axiom for second-order arithmetic. $)
+$( The induction axiom for second-order arithmetic. To accomodate higher-order
+   relations, the selbri parameter is generalized to a brirebla. $)
 ax-nat-ind $a |- ganai
-  ge li no bu'a
-  gi ro da poi ke'a bu'a ku'o zo'u
+  ge li no bo'a
+  gi ro da poi ke'a bo'a ku'o zo'u
     su'o de zo'u
       ge da kacli'e de
-      gi de bu'a
-  gi ro da poi ke'a kacna'u ku'o zo'u da bu'a $.
+      gi de bo'a
+  gi ro da poi ke'a kacna'u ku'o zo'u da bo'a $.
 
 ${
-    nat-indi.0 $e |- ge li no bu'a
-      gi ro da poi ke'a bu'a ku'o zo'u
+    nat-indi.0 $e |- ge li no bo'a
+      gi ro da poi ke'a bo'a ku'o zo'u
         su'o de zo'u
           ge da kacli'e de
-          gi de bu'a $.
+          gi de bo'a $.
     $( Inference form of ~ax-nat-ind
        (Contributed by la korvo, 10-Aug-2023.) $)
-    nat-indi $p |- ro da poi ke'a kacna'u ku'o zo'u da bu'a $=
-      ( sl0 bu bkaclihe bb bge bsd tsb brd brdp bkacnahu ax-nat-ind ax-mp ) EAF
-      BCGHCAFIZCQJZAKBRBRLMIBAFZNKBSBSLMDABCOP $.
+    nat-indi $p |- ro da poi ke'a kacna'u ku'o zo'u da bo'a $=
+      ( sl0 btb bkaclihe bb bge bsd brd brdp bkacnahu tsb ax-nat-ind ax-mp ) EA
+      FBCGHCAFIZCQJZABRBRKLIBAFZMNBSBSKLDABCOP $.
 $}
 
 ${
-    nat-indii.0 $e |- li no bu'a $.
-    nat-indii.1 $e |- ro da poi ke'a bu'a ku'o zo'u
+    nat-indii.0 $e |- li no bo'a $.
+    nat-indii.1 $e |- ro da poi ke'a bo'a ku'o zo'u
       su'o de zo'u
         ge da kacli'e de
-        gi de bu'a $.
+        gi de bo'a $.
     $( Inference form of ~ax-nat-ind
        (Contributed by la korvo, 10-Aug-2023.) $)
-    nat-indii $p |- ro da poi ke'a kacna'u ku'o zo'u da bu'a $=
-      ( sl0 bu bkaclihe bb bge bsd tsb brd brdp ge-ini nat-indi ) ABCFAGBCHICAG
-      JZCQKZALBRBRMNDEOP $.
+    nat-indii $p |- ro da poi ke'a kacna'u ku'o zo'u da bo'a $=
+      ( sl0 btb bkaclihe bb bge bsd brd brdp ge-ini nat-indi ) ABCFAGBCHICAGJZC
+      PKZABQBQLMDENO $.
 $}
 
 $( Curried form of ~ax-nat-ind
    (Contributed by la korvo, 20-Aug-2023.) $)
-nat-ind-cur $p |- ganai li no bu'a gi
-  ganai ro da poi ke'a bu'a ku'o zo'u
+nat-ind-cur $p |- ganai li no bo'a gi
+  ganai ro da poi ke'a bo'a ku'o zo'u
     su'o de zo'u
       ge da kacli'e de
-      gi de bu'a
-  gi ro da poi ke'a kacna'u ku'o zo'u da bu'a $=
-  ( sl0 bu bkaclihe bb bge bsd tsb brd brdp bkacnahu ax-nat-ind uncur ) DAEBCFG
-  CAEHZCPIZAJBQBQKLBAEZMJBRBRKLABCNO $.
+      gi de bo'a
+  gi ro da poi ke'a kacna'u ku'o zo'u da bo'a $=
+  ( sl0 btb bkaclihe bb bge bsd brd brdp bkacnahu tsb ax-nat-ind uncur ) DAEBCF
+  GCAEHZCPIZABQBQJKBAEZLMBRBRJKABCNO $.
 
 $( There are no non-standard natural numbers. This axiom upgrades our
-   arithmetic from BA, "baby arithmetic", to Robinson's Q. $)
+   arithmetic from BA, "baby arithmetic", to Robinson's Q. This is Robinson
+   axiom 3. It should be provable using induction. $)
 ax-succ-std $a |- ro da poi ke'a kacna'u ku'o zo'u
   ga da du li no gi su'o de zo'u de kacli'e da $.
 
@@ -2928,6 +2937,9 @@ sl1 $a sumti li pa $.
 
 $( 1 is the successor of 0. $)
 df-pa-li $a |- li no kacli'e li pa $.
+
+$( 1 is a natural number. $)
+ax-nat-pa $a |- li pa kacna'u $.
 
 $c re $.
 
@@ -2938,7 +2950,7 @@ df-re-li $a |- li pa kacli'e li re $.
 
 $(
 =-=-=
-{sumji}
+Addition I: {sumji}
 =-=-=
 $)
 
@@ -2946,20 +2958,22 @@ $c sumji $.
 
 bsumji $a selbri sumji $.
 
-$( Every natural number is equal to itself plus zero. $)
+$( Every natural number is equal to itself plus zero. This is Robinson axiom
+   4. $)
 ax-sumji-no $a |- ro da poi ke'a kacna'u ku'o zo'u da sumji da li no $.
 
 ${
     ax-sumji-succ.0 $e |- su'o da zo'u
       ge ko'i sumji ko'a da gi ko'e kacli'e da $.
-    $( Addition on natural numbers is well-founded and proceeds by successors. $)
+    $( Addition on natural numbers is well-founded and proceeds by successors.
+       This is Robinson axiom 5. $)
     ax-sumji-succ $a |- su'o da zo'u
       ge da sumji ko'a ko'e gi da kacli'e ko'i $.
 $}
 
 $(
 =-=-=
-{su'i}
+Addition II: {su'i}
 =-=-=
 $)
 
@@ -3002,7 +3016,20 @@ $}
 
 $(
 =-=-=
-{pilji}
+Successor II: {bai'ei}
+=-=-=
+$)
+
+$c bai'ei $.
+
+mbaihei $a PA bai'ei ku'i'a $.
+
+$( Definition of {` bai'ei `} in terms of {` su'i `}. $)
+df-baihei $a |- li bai'ei ku'i'a du li ku'i'a su'i pa $.
+
+$(
+=-=-=
+Multiplication I: {pilji}
 =-=-=
 $)
 
@@ -3010,20 +3037,21 @@ $c pilji $.
 
 bpilji $a selbri pilji $.
 
-$( Zero times any natural number is zero. $)
+$( Zero times any natural number is zero. This is Robinson axiom 6. $)
 ax-pilji-no $a |- ro da poi ke'a kacna'u ku'o zo'u li no pilji da li no $.
 
 ${
     ax-pilji-succ.0 $e |- su'o da zo'u
       ge ko'i pilji ko'a da gi ko'e kacli'e da $.
-    $( Multiplication on natural numbers is well-founded. $)
+    $( Multiplication on natural numbers is well-founded. This is Robinson
+       axiom 7. $)
     ax-pilji-succ $a |- su'o da zo'u
       ge ko'i sumji da ko'a gi da pilji ko'a ko'e $.
 $}
 
 $(
 =-=-=
-{pi'i}
+Multiplication II: {pi'i}
 =-=-=
 $)
 
@@ -3050,6 +3078,31 @@ ${
     pihiri $p |- li ku'i'a du li ku'i'e pi'i ku'i'i $=
       ( sli bpilji bt mpihi sbdu bb df-pihi bi-rev ) AEZBECEFGMBCHEIJDABCKL $.
 $}
+
+$(
+=-=-=
+Comparison I: {kacme'a}
+=-=-=
+$)
+
+$c kacme'a $.
+
+bkacmeha $a selbri kacme'a $.
+
+$( Zero is not greater than any natural number. This is Robinson axiom 8. $)
+ax-gt-zero $a |- naku zo'u ko'a kacme'a li no $.
+
+${
+    gt-zero-ref.0 $e |- ko'a kacme'a li no $.
+    $( Refutation of any natural number less than zero.
+       (Contributed by la korvo, 21-Jun-2024.) $)
+    gt-zero-ref $p |- gai'o $=
+      ( sl0 bkacmeha bb ax-gt-zero nakuii ) ACDEAFBG $.
+$}
+
+$( Recursive definition of {` kacme'a `}. This is Robinson axiom 11. $)
+df-kacmeha $a |- go ko'a kacme'a ko'e
+  gi su'o da poi ke'a kacli'e ko'a zo'u ga da kacme'a ko'e gi da du ko'e $.
 
 $(
 #*#*#
@@ -3091,13 +3144,21 @@ $}
 
 $(
 #*#*#
+Exponents I: {tenfa}
+#*#*#
+$)
+
+$c tenfa $.
+sbtenfa $a selbri tenfa $.
+
+$(
+#*#*#
 Logarithms: {dugri}
 #*#*#
 $)
 
-$c dugri tenfa $.
+$c dugri $.
 sbdugri $a selbri dugri $.
-sbtenfa $a selbri tenfa $.
 
 $( {` dugri `} is a permutation of {` tenfa `}. $)
 df-dugri $a |- go ko'a dugri ko'e ko'i gi ko'a te se tenfa ko'e ko'i $.
