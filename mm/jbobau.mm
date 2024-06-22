@@ -59,6 +59,7 @@ htmldef "ko'a" as "<span class='sumti'>ko'a</span> ";
 htmldef "ko'e" as "<span class='sumti'>ko'e</span> ";
 htmldef "ko'i" as "<span class='sumti'>ko'i</span> ";
 htmldef "ko'o" as "<span class='sumti'>ko'o</span> ";
+htmldef "ko'u" as "<span class='sumti'>ko'u</span> ";
 htmldef "broda" as "<span class='bridi'>broda</span> ";
 htmldef "brode" as "<span class='bridi'>brode</span> ";
 htmldef "brodi" as "<span class='bridi'>brodi</span> ";
@@ -238,11 +239,12 @@ $c selbri sumti bridi brirebla brili'e $.
 $( A turnstile. Needed to indicate that a bridi is inhabited. $)
 $c |- $.
 
-$v ko'a ko'e ko'i ko'o $.
+$v ko'a ko'e ko'i ko'o ko'u $.
 wk1 $f sumti ko'a $.
 wk2 $f sumti ko'e $.
 wk3 $f sumti ko'i $.
 wk4 $f sumti ko'o $.
+wk5 $f sumti ko'u $.
 
 $v broda brode brodi brodo brodu $.
 sbb1 $f bridi broda $.
@@ -298,6 +300,11 @@ $( Normal form for quaternary selbri.
    (Contributed by la korvo, 19-Mar-2024.) $)
 bq $p bridi ko'a bu'a ko'e ko'i ko'o $=
   ( tsb tss btb ) ADCBEFZIGZJGZKGH $.
+$( Normal form for quinary selbri. To avoid conflict with ~bq, this syntax is
+   "bp" for "bridi, pentad".
+   (Contributed by la korvo, 22-Jun-2024.) $)
+bp $p bridi ko'a bu'a ko'e ko'i ko'o ko'u $=
+  ( tsb tss btb ) AEDCBFGZJHZKHZLHZMHI $.
 
 $(
 #*#*#
@@ -2817,6 +2824,113 @@ ${
 $}
 
 $(
+#*#*#
+Properties of relations
+#*#*#
+
+We investigate several common non-familial properties of relations.
+$)
+
+$(
+=-=-=
+Transitivity: {takni}
+=-=-=
+$)
+
+$c takni $.
+
+sbtakni $a selbri takni $.
+
+$( A standard definition of transitive relations. $)
+df-takni $a |- go ko'a takni ko'e
+  gi ro da zo'u ro de zo'u ro di zo'u
+    ganai ge da .e de .e di cmima ko'e
+      gi ge da ckini de ko'a gi de ckini di ko'a
+    gi da ckini di ko'a $.
+
+${
+    taknii.0 $e |- ko'a takni ko'e $.
+    $( Inference form of ~df-takni
+       (Contributed by la korvo, 22-Jun-2024.) $)
+    taknii $p |- ro da zo'u ro de zo'u ro di zo'u
+    ganai ge da .e de .e di cmima ko'e
+      gi ge da ckini de ko'a gi de ckini di ko'a
+    gi da ckini di ko'a $=
+      ( sbtakni bb sje sbcmima sbckini bt bge bgan brd df-takni bi ) ABGHCDEIIB
+      JHCDAKLDEAKLMMCEAKLNZEROZDSOZCTOFABCDEPQ $.
+$}
+
+${
+    takniis.0 $e |- ko'a takni ko'e $.
+    $( Pre-substituted form of ~taknii $)
+    takniis $p |- ganai ge ko'i .e ko'o .e ko'u cmima ko'e
+      gi ge ko'i ckini ko'o ko'a gi ko'o ckini ko'u ko'a
+    gi ko'i ckini ko'u ko'a $= ? $.
+$}
+
+${
+    takni-trans.0 $e |- pa ka ce'u broda ce'u kei takni ko'a $.
+    takni-trans.1 $e |- ko'e .e ko'i .e ko'o cmima ko'a $.
+    takni-trans.2 $e |- ko'e broda ko'i $.
+    takni-trans.3 $e |- ko'i broda ko'o $.
+    $( takni1 are transitive. $)
+    takni-trans $p |- ko'e broda ko'o $= ? $.
+$}
+
+$(
+=-=-=
+Symmetry: {kinfi}
+=-=-=
+$)
+
+$c kinfi $.
+
+sbkinfi $a selbri kinfi $.
+
+$( A standard definition of symmetric relations. $)
+df-kinfi $a |- go ko'a kinfi ko'e
+  gi ro da zo'u ro de zo'u
+    ganai ge da .e de cmima ko'e gi da ckini de ko'a
+    gi de ckini da ko'a $.
+
+$(
+=-=-=
+Reflexivity: {kinra}
+=-=-=
+$)
+
+$c kinra $.
+
+sbkinra $a selbri kinra $.
+
+$( A standard definition of reflexive relations. $)
+df-kinra $a |- go ko'a kinra ko'e
+  gi ro da zo'u ganai da cmima ko'e gi da ckini da ko'a $.
+
+$(
+=-=-=
+Euclidean: {efklipi}, {efklizu}
+=-=-=
+$)
+
+$c efklipi efklizu $.
+
+sbefklipi $a selbri efklipi $.
+sbefklizu $a selbri efklizu $.
+
+$( A standard definition of right-Euclidean relations. $)
+df-efklipi $a |- go ko'a efklipi ko'e
+  gi ro da zo'u ro de zo'u ro di zo'u
+    ganai ge da .e de .e di cmima ko'e gi da ckini de .e di ko'a
+    gi de ckini di ko'a $.
+
+$( A standard definition of left-Euclidean relations. $)
+df-efklizu $a |- go ko'a efklizu ko'e
+  gi ro da zo'u ro de zo'u ro di zo'u
+    ganai ge da .e de .e di cmima ko'e gi de .e di ckini da ko'a
+    gi de ckini di ko'a $.
+
+$(
 #####
 NUMBERS
 #####
@@ -3421,84 +3535,6 @@ $(
 RELATIONAL LOGIC
 #####
 $)
-
-$(
-#*#*#
-Open classes of relations
-#*#*#
-
-We investigate several relation types as open classes.
-$)
-
-$(
-=-=-=
-Transitivity: {takni}
-=-=-=
-$)
-
-$c takni $.
-
-sbtakni $a selbri takni $.
-
-$( A standard definition of transitive relations. $)
-df-takni $a |- go ko'a takni ko'e
-  gi ro da zo'u ro de zo'u ro di zo'u
-    ganai ge da .e de .e di cmima ko'e
-      gi ge da ckini de ko'a gi de ckini di ko'a
-    gi da ckini di ko'a $.
-
-$(
-=-=-=
-Symmetry: {kinfi}
-=-=-=
-$)
-
-$c kinfi $.
-
-sbkinfi $a selbri kinfi $.
-
-$( A standard definition of symmetric relations. $)
-df-kinfi $a |- go ko'a kinfi ko'e
-  gi ro da zo'u ro de zo'u
-    ganai ge da .e de cmima ko'e gi da ckini de ko'a
-    gi de ckini da ko'a $.
-
-$(
-=-=-=
-Reflexivity: {kinra}
-=-=-=
-$)
-
-$c kinra $.
-
-sbkinra $a selbri kinra $.
-
-$( A standard definition of reflexive relations. $)
-df-kinra $a |- go ko'a kinra ko'e
-  gi ro da zo'u ganai da cmima ko'e gi da ckini da ko'a $.
-
-$(
-=-=-=
-Euclidean: {efklipi}, {efklizu}
-=-=-=
-$)
-
-$c efklipi efklizu $.
-
-sbefklipi $a selbri efklipi $.
-sbefklizu $a selbri efklizu $.
-
-$( A standard definition of right-Euclidean relations. $)
-df-efklipi $a |- go ko'a efklipi ko'e
-  gi ro da zo'u ro de zo'u ro di zo'u
-    ganai ge da .e de .e di cmima ko'e gi da ckini de .e di ko'a
-    gi de ckini di ko'a $.
-
-$( A standard definition of left-Euclidean relations. $)
-df-efklizu $a |- go ko'a efklizu ko'e
-  gi ro da zo'u ro de zo'u ro di zo'u
-    ganai ge da .e de .e di cmima ko'e gi de .e di ckini da ko'a
-    gi de ckini di ko'a $.
 
 $(
 #*#*#
