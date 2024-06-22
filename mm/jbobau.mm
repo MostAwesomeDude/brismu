@@ -1756,82 +1756,6 @@ $}
 
 $(
 #*#*#
-Sets I: {nomei}, {pamei}
-#*#*#
-$)
-
-$(
-=-=-=
-{cmima}
-=-=-=
-$)
-
-$c cmima $.
-
-sbcmima $a selbri cmima $.
-
-$(
-=-=-=
-{nomei}
-=-=-=
-$)
-
-$c le nomei $.
-
-snomei $a sumti le nomei $.
-
-$( {` le nomei `} is the empty set. Literally it is the set with zero
-cardinality. By standard folklore of sets, it is unique up to isomorphism,
-justifying {` le `}. $)
-df-nomei $a |- naku zo'u ko'a cmima le nomei $.
-
-${
-    nomei-gaiho.0 $e |- ko'a cmima le nomei $.
-    $( If the empty set is inhabited, then there is a contradiction.
-       (Contributed by la korvo, 16-May-2024.) $)
-    nomei-gaiho $p |- gai'o $=
-      ( snomei sbcmima bb df-nomei nakuii ) ACDEAFBG $.
-$}
-
-$(
-=-=-=
-{pamei}
-=-=-=
-$)
-
-$c pamei $.
-
-sbpamei $a selbri pamei $.
-
-$( The singleton set is the unique set whose elements are all isomorphic.
-   Since we use the full semantics of second-order logic, we cannot construct
-   the witness isomorphisms. As a compromise, we construct the isomorphism
-   between any two elements of any particular singleton set. $)
-df-pamei $a |- go ko'a pamei ko'e .e ko'i gi ko'e du ko'i $.
-
-${
-    pameii.0 $e |- ko'a pamei ko'e .e ko'i $.
-    $( Inference form of ~df-pamei
-       (Contributed by la korvo, 16-May-2024.) $)
-    pameii $p |- ko'e du ko'i $=
-      ( sje sbpamei bb sbdu df-pamei bi ) ABCEFGBCHGDABCIJ $.
-$}
-
-${
-    pameiii.0 $e |- ko'a pamei ko'e $.
-    pameiii.1 $e |- ko'a pamei ko'i $.
-    $( Inference form of ~df-pamei
-       (Contributed by la korvo, 16-May-2024.) $)
-    pameiii $p |- ko'e du ko'i $=
-      ( sje sbpamei sbs tsb tss bb seri ge-ini eri sei pameii ) ABCABCFGBCAGHZI
-      ZRJBAQKCAQKABGDLACGELMNOP $.
-$}
-
-$( The singleton set has one element. $)
-ax-pamei-cmima $a |- ganai ko'a pamei ko'e gi ko'e cmima ko'a $.
-
-$(
-#*#*#
 Mutual exclusion I
 #*#*#
 
@@ -1992,7 +1916,6 @@ bgogin $a bridi go broda ginai brode $.
 df-ginai-ga $a |- go ga brode ginai broda gi ganai broda gi brode $.
 df-ginai-go $a |- go go broda ginai brode gi gonai broda gi brode $.
 
-
 $(
 #####
 NON-LOGICAL CONNECTIVES
@@ -2002,6 +1925,82 @@ We build the various non-logical connectives, which express combinations of
 elements of relations beyond truth tables. In particular, we develop the
 notion of set membership.
 $)
+
+$(
+#*#*#
+Sets I: {nomei}, {pamei}
+#*#*#
+$)
+
+$(
+=-=-=
+{cmima}
+=-=-=
+$)
+
+$c cmima $.
+
+sbcmima $a selbri cmima $.
+
+$(
+=-=-=
+{nomei}
+=-=-=
+$)
+
+$c le nomei $.
+
+snomei $a sumti le nomei $.
+
+$( {` le nomei `} is the empty set. Literally it is the set with zero
+cardinality. By standard folklore of sets, it is unique up to isomorphism,
+justifying {` le `}. $)
+df-nomei $a |- naku zo'u ko'a cmima le nomei $.
+
+${
+    nomei-gaiho.0 $e |- ko'a cmima le nomei $.
+    $( If the empty set is inhabited, then there is a contradiction.
+       (Contributed by la korvo, 16-May-2024.) $)
+    nomei-gaiho $p |- gai'o $=
+      ( snomei sbcmima bb df-nomei nakuii ) ACDEAFBG $.
+$}
+
+$(
+=-=-=
+{pamei}
+=-=-=
+$)
+
+$c pamei $.
+
+sbpamei $a selbri pamei $.
+
+$( The singleton set is the unique set whose elements are all isomorphic.
+   Since we use the full semantics of second-order logic, we cannot construct
+   the witness isomorphisms. As a compromise, we construct the isomorphism
+   between any two elements of any particular singleton set. $)
+df-pamei $a |- go ko'a pamei ko'e .e ko'i gi ko'e du ko'i $.
+
+${
+    pameii.0 $e |- ko'a pamei ko'e .e ko'i $.
+    $( Inference form of ~df-pamei
+       (Contributed by la korvo, 16-May-2024.) $)
+    pameii $p |- ko'e du ko'i $=
+      ( sje sbpamei bb sbdu df-pamei bi ) ABCEFGBCHGDABCIJ $.
+$}
+
+${
+    pameiii.0 $e |- ko'a pamei ko'e $.
+    pameiii.1 $e |- ko'a pamei ko'i $.
+    $( Inference form of ~df-pamei
+       (Contributed by la korvo, 16-May-2024.) $)
+    pameiii $p |- ko'e du ko'i $=
+      ( sje sbpamei sbs tsb tss bb seri ge-ini eri sei pameii ) ABCABCFGBCAGHZI
+      ZRJBAQKCAQKABGDLACGELMNOP $.
+$}
+
+$( The singleton set has one element. $)
+ax-pamei-cmima $a |- ganai ko'a pamei ko'e gi ko'e cmima ko'a $.
 
 $(
 #*#*#
@@ -2827,6 +2826,11 @@ Robinson axioms for second-order arithmetic over successor, addition,
 multiplication, and comparison. We apply the standard intuitionistic and
 Metamath transformations to these axioms in addition to reframing them for
 a Lojbanic relation-first presentation.
+
+Further directions include proving ~ax-succ-std by improving the axiom of
+induction, as well as introducing and proving the other Robinson axioms using
+induction. At the moment, induction can only handle closed formulae
+expressible as brirebla ({` da bo'a `}), which proves to be an obstacle.
 $)
 
 $(
@@ -2929,7 +2933,7 @@ nat-ind-cur $p |- ganai li no bo'a gi
 
 $( There are no non-standard natural numbers. This axiom upgrades our
    arithmetic from BA, "baby arithmetic", to Robinson's Q. This is Robinson
-   axiom 3. It should be provable using induction. $)
+   axiom 3. $)
 ax-succ-std $a |- ro da poi ke'a kacna'u ku'o zo'u
   ga da du li no gi su'o de zo'u de kacli'e da $.
 
