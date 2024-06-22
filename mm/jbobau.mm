@@ -28,8 +28,8 @@ Conventions:
 
 References to iset.mm are not just for comparison and contrast, but for
 borrowing; many minor lemmas can be proven by reusing steps from iset.mm.
-Formally, there's a functor from a fragment of iset.mm to jbobau.mm.
-
+Formally, there's a functor from a fragment of iset.mm to jbobau.mm. Cite
+iset.mm as [ILE].
 $)
 
 $( $t
@@ -341,8 +341,9 @@ ${
     ax-mp $a |- brode $.
 $}
 
-$( The principle of simplification. Known as "ax-1" in iset.mm. Known as the
-   constant combinator, or K, in combinator calculus. $)
+$( The principle of simplification. Known as the constant combinator, or K, in
+   combinator calculus.
+   Axiom ax-1 in [ILE] p. 0. $)
 ax-k $a |- ganai broda gi ganai brode gi broda $.
 
 ${
@@ -362,8 +363,8 @@ ${
       sbb2 sbb1 kii.1 sbb1 sbb2 kii.0 ki ax-mp $.
 $}
 
-$( Frege's axiom. Known as "ax-2" in iset.mm. Known as the S combinator in
-   combinator calculus. $)
+$( Frege's axiom. Known as the S combinator in combinator calculus.
+   Axiom ax-2 in [ILE] p. 0. $)
 ax-s $a |- ganai ganai broda gi ganai brode gi brodi gi ganai ganai broda gi brode gi ganai broda gi brodi $.
 
 ${
@@ -515,7 +516,7 @@ $}
 ${
     mpi.0 $e |- broda $.
     mpi.1 $e |- ganai brode gi ganai broda gi brodi $.
-    $( A nested modus ponens. Known as "mpi" in iset.mm.
+    $( A nested modus ponens. Theorem mpi in [ILE] p. 0.
        (Contributed by la korvo, 27-Jul-2023.) $)
     mpi $p |- ganai brode gi brodi $=
       sbb2 sbb1 sbb3 sbb1 sbb2 mpi.0 ki mpi.1 mpd $.
@@ -525,7 +526,7 @@ ${
     mp2.0 $e |- broda $.
     mp2.1 $e |- brode $.
     mp2.2 $e |- ganai broda gi ganai brode gi brodi $.
-    $( Double modus ponens. Known as "mp2" in iset.mm.
+    $( Double modus ponens. Theorem mp2 in [ILE] p. 0.
        (Contributed by la korvo, 27-Jul-2023.) $)
     mp2 $p |- brodi $=
       sbb1 sbb3 mp2.0 sbb2 sbb1 sbb3 mp2.1 mp2.2 mpi ax-mp $.
@@ -540,16 +541,16 @@ $)
 $c ge $.
 bge $a bridi ge broda gi brode $.
 
-$( Elimination of {` ge `} on the left. Known as "ax-ia1" in iset.mm. Curry
-   of the left-hand projection. $)
+$( Elimination of {` ge `} on the left. Curry of the left-hand projection.
+   Axiom ax-ia1 in [ILE] p. 0. $)
 ax-ge-le $a |- ganai ge broda gi brode gi broda $.
 
-$( Elimination of {` ge `} on the right. Known as "ax-ia2" in iset.mm. Curry
-   of the right-hand projection. $)
+$( Elimination of {` ge `} on the right. Curry of the right-hand projection.
+   Axiom ax-ia2 in [ILE] p. 0. $)
 ax-ge-re $a |- ganai ge broda gi brode gi brode $.
 
-$( Introduction of {` ge `}. Known as "ax-ia3" in iset.mm. Curry of the I
-   combinator. $)
+$( Introduction of {` ge `}. Curry of the I combinator.
+   Axiom ax-ia3 in [ILE] p. 0. $)
 ax-ge-in $a |- ganai broda gi ganai brode gi ge broda gi brode $.
 
 ${
@@ -600,8 +601,8 @@ ge-in-swap12 $p |- ganai broda gi ganai brode gi ge brode gi broda $=
 
 ${
     cur.0 $e |- ganai broda gi ganai brode gi brodi $.
-    $( The natural curry (or "import") for any well-formed statement. Known as
-       "imp" in iset.mm.
+    $( The natural curry (or "import") for any well-formed statement.
+       Theorem imp in [ILE] p. 0.
        (Contributed by la korvo, 31-Jul-2023.) $)
     cur $p |- ganai ge broda gi brode gi brodi $=
       ( bge ax-ge-le ax-ge-re sylc ) ABEABCABFABGDH $.
@@ -609,8 +610,8 @@ $}
 
 ${
     uncur.0 $e |- ganai ge broda gi brode gi brodi $.
-    $( The natural uncurry (or "export") for any well-formed statement. Known
-       as "ex" in iset.mm.
+    $( The natural uncurry (or "export") for any well-formed statement.
+       Theorem ex in [ILE] p. 0.
        (Contributed by la korvo, 31-Jul-2023.) $)
     uncur $p |- ganai broda gi ganai brode gi brodi $=
       ( bge ax-ge-in syl6 ) ABABECABFDG $.
@@ -668,7 +669,7 @@ bgo $a bridi go broda gi brode $.
 $( Definition of {` go `} in terms of {` ganai `} and {` ge `}. This is the
    standard definition of the biconditional connective in higher-order
    intuitionistic logic. This can be justified intuitionistically; see
-   "df-bi" and "bijust" in iset.mm. $)
+   theorem df-bi along with bijust from [ILE] p. 0. $)
 df-go $a |-
   ge
     ganai go broda gi brode
@@ -746,7 +747,7 @@ $}
 ${
     goriid-lem.0 $e |- ganai brode gi ganai brodi gi brodo $.
     goriid-lem.1 $e |- ganai broda gi ganai brodo gi brodi $.
-    $( Lemma for ~goriid known as "impbid21d" in iset.mm.
+    $( Lemma for ~goriid known as theorem impbid21d in [ILE] p. 0.
        (Contributed by la korvo, 31-Jul-2023.) $)
     goriid-lem $p |- ganai broda gi ganai brode gi go brodi gi brodo $=
       ( bgan ki kd goriidd ) ABCDBCDGGAEHADCGBFIJ $.
@@ -1200,8 +1201,8 @@ $)
 $c ga $.
 bga $a bridi ga broda gi brode $.
 
-$( Definition of {` ga `} in terms of {` go `}, {` ganai `}, and {` ge `}. Known as
-   "ax-io" in iset.mm. $)
+$( Definition of {` ga `} in terms of {` go `}, {` ganai `}, and {` ge `}.
+   Axiom ax-io in [ILE] p. 0. $)
 df-ga $a |- go ganai ga brode gi brodi gi broda gi ge ganai brode gi broda gi ganai brodi gi broda $.
 
 ${
@@ -1228,14 +1229,14 @@ ${
       sbb2 sbb3 df-ga bi-rev $.
 $}
 
-$( Introduce {` ga `} with the antecedent on the left. Known as "orc" in
-   iset.mm.
+$( Introduce {` ga `} with the antecedent on the left.
+   Theorem orc in [ILE] p. 0.
    (Contributed by la korvo, 31-Jul-2023.) $)
 ga-lin $p |- ganai broda gi ga broda gi brode $=
   ( bga bgan bge id df-ga bi ge-lei ) AABCZDZBJDZJJDKLEJFJABGHI $.
 
-$( Introduce {` ga `} with the antecedent on the right. Known as "olc" in
-   iset.mm.
+$( Introduce {` ga `} with the antecedent on the right.
+   Theorem olc in [ILE] p. 0.
    (Contributed by la korvo, 31-Jul-2023.) $)
 ga-rin $p |- ganai broda gi ga brode gi broda $=
   ( bga bgan bge id df-ga bi ge-rei ) BBACZDZAJDZJJDKLEJFJBAGHI $.
@@ -1749,8 +1750,8 @@ $( The principle of self-defeating objects. If an object's existence would
    imply that it doesn't exist -- usually via contradiction -- then it doesn't
    exist. As a special case, if some tuple's membership in a relation would
    imply non-membership in that relation, then it's not a member. For a survey
-   of this principle across maths, see [Tao]. This is known as "ax-in1" in
-   iset.mm. $)
+   of this principle across maths, see [Tao].
+   Axiom ax-in1 in [ILE] p. 0. $)
 ax-sdo $a |- ganai ganai broda gi naku zo'u broda gi naku zo'u broda $.
 
 ${
@@ -1781,8 +1782,8 @@ bgon $a bridi gonai broda gi brode $.
 
 $( Standard constructive definition of mutual exclusion ("the exclusive OR"),
    based on the mnemonic given to computer scientists in the USA and UK:
-   "It's cake or tea, but not cake and tea." This is also the definition used
-   in "df-xor" of iset.mm. $)
+   "It's cake or tea, but not cake and tea."
+   Definition df-xor in [ILE] p. 0. $)
 df-gonai $a |- go gonai broda gi brode
   gi ge ga broda gi brode gi naku zo'u ge broda gi brode $.
 
@@ -2420,9 +2421,9 @@ ${
     bsb $a bridi su'o bu'a zo'u broda $.
 $}
 
-$( The axiom of existence: at least one element exists in the universe. This
-   is necessary if we want to exclude the trivial empty model. This is "ax-i9"
-   in iset.mm. $)
+$( The axiom of existence: at least one element exists in the universe.
+   This is necessary if we want to exclude the trivial empty model.
+   Axiom ax-i9 in [ILE] p. 0. $)
 ax-ex $a |- su'o da zo'u da du de $.
 
 $(
