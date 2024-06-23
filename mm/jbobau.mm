@@ -1604,6 +1604,67 @@ ${
       ( brd ax-spec1 ax-mp ) ABADACABEF $.
 $}
 
+$( Axiom of second-order specialization, by analogy with ~ax-spec1 $)
+ax-spec2 $a |- ganai ro bu'a zo'u broda gi broda $.
+
+${
+    spec2i.0 $e |- ro bu'a zo'u broda $.
+    $( Inference form of ~ax-spec2
+       (Contributed by la korvo, 23-Jun-2024.) $)
+    spec2i $p |- broda $=
+      ( brb ax-spec2 ax-mp ) ABADACABEF $.
+$}
+
+$( Axiom of quantified implication: if {` ganai broda gi brode `} under some
+   universal quantifier, then the universal quantification of {` broda `}
+   implies the universal quantification of {` brode `}. Relationally, the
+   tuples of the consequent might not have the same data as the tuples of the
+   antecedent; we only know that they exist, not that they are related.
+   Axiom ax-5 in [ILE] p. 0. $)
+ax-qi1 $a |- ganai ro da zo'u ganai broda gi brode
+  gi ganai ro da zo'u broda gi ro da zo'u brode $.
+
+${
+    qi1i.0 $e |- ro da zo'u ganai broda gi brode $.
+    $( Inference form of ~ax-qi1
+       (Contributed by la korvo, 23-Jun-2024.) $)
+    qi1i $p |- ganai ro da zo'u broda gi ro da zo'u brode $=
+      ( bgan brd ax-qi1 ax-mp ) ABEZCIFACAFBCBFEDABCGH $.
+$}
+
+${
+    qi1ii.0 $e |- ro da zo'u ganai broda gi brode $.
+    qi1ii.1 $e |- ro da zo'u broda $.
+    $( Inference form of ~ax-qi1 Like ~ax-mp under {` ro da `}.
+       (Contributed by la korvo, 23-Jun-2024.) $)
+    qi1ii $p |- ro da zo'u brode $=
+      ( brd qi1i ax-mp ) ACAFBCBFEABCDGH $.
+$}
+
+$( A variant of ~ax-qi1 for second-order quantifiers. Very few claims will
+   be invariant under free choice of {` bu'a `}, but those that are should be
+   subject to this transformation by analogy to first-order reasoning and an
+   appeal to set theory. $)
+ax-qi2 $a |- ganai ro bu'a zo'u ganai broda gi brode
+  gi ganai ro bu'a zo'u broda gi ro bu'a zo'u brode $.
+
+${
+    qi2i.0 $e |- ro bu'a zo'u ganai broda gi brode $.
+    $( Inference form of ~ax-qi2
+       (Contributed by la korvo, 23-Jun-2024.) $)
+    qi2i $p |- ganai ro bu'a zo'u broda gi ro bu'a zo'u brode $=
+      ( bgan brb ax-qi2 ax-mp ) ABEZCIFACAFBCBFEDABCGH $.
+$}
+
+${
+    qi2ii.0 $e |- ro bu'a zo'u ganai broda gi brode $.
+    qi2ii.1 $e |- ro bu'a zo'u broda $.
+    $( Inference form of ~ax-qi2 Like ~ax-mp under {` ro bu'a `}.
+       (Contributed by la korvo, 23-Jun-2024.) $)
+    qi2ii $p |- ro bu'a zo'u brode $=
+      ( brb qi2i ax-mp ) ACAFBCBFEABCDGH $.
+$}
+
 ${
     ax-ro-inst-2u.0 $e selbri bu'a $.
     ax-ro-inst-2u.1 $e |- ro bu'e zo'u ko'a bu'e $.
@@ -1621,28 +1682,30 @@ ${
 $}
 
 ${
-    ax-ro-mp.0 $e |- ro bu'a zo'u broda $.
-    ax-ro-mp.1 $e |- ganai broda gi brode $.
-    $( Modus ponens under {` ro bu'a `}. $)
-    ax-ro-mp $a |- ro bu'a zo'u brode $.
+    ro2-mp.0 $e |- ro bu'a zo'u broda $.
+    ro2-mp.1 $e |- ganai broda gi brode $.
+    $( Modus ponens under {` ro bu'a `}.
+       (Contributed by la korvo, 23-Jun-2024.) $)
+    ro2-mp $p |- ro bu'a zo'u brode $=
+      ( bgan ax-gen2 qi2ii ) ABCABFCEGDH $.
 $}
 
 ${
-    ro-bi.0 $e |- ro bu'a zo'u broda $.
-    ro-bi.1 $e |- go broda gi brode $.
+    ro2-bi.0 $e |- ro bu'a zo'u broda $.
+    ro2-bi.1 $e |- go broda gi brode $.
     $( Biconditional modus ponens under {` ro bu'a `}.
        (Contributed by la korvo, 16-Jul-2023.) $)
-    ro-bi $p |- ro bu'a zo'u brode $=
-      sbb1 sbb2 sbba ro-bi.0 sbb1 sbb2 ro-bi.1 golili ax-ro-mp $.
+    ro2-bi $p |- ro bu'a zo'u brode $=
+      sbb1 sbb2 sbba ro2-bi.0 sbb1 sbb2 ro2-bi.1 golili ro2-mp $.
 $}
 
 ${
-    ro-bi-rev.0 $e |- ro bu'a zo'u broda $.
-    ro-bi-rev.1 $e |- go brode gi broda $.
+    ro2-bi-rev.0 $e |- ro bu'a zo'u broda $.
+    ro2-bi-rev.1 $e |- go brode gi broda $.
     $( Biconditional modus ponens under {` ro bu'a `}.
        (Contributed by la korvo, 16-Aug-2023.) $)
-    ro-bi-rev $p |- ro bu'a zo'u brode $=
-      ( go-comi golili ax-ro-mp ) ABCDABBAEFGH $.
+    ro2-bi-rev $p |- ro bu'a zo'u brode $=
+      ( go-comi golili ro2-mp ) ABCDABBAEFGH $.
 $}
 
 $(
@@ -1663,8 +1726,15 @@ ${
     $( Inference form of ~df-du
        (Contributed by la korvo, 18-Jul-2023.) $)
     dui $p |- ro bu'a zo'u ko'a .o ko'e bu'a $=
-      wk1 wk2 sbdu bb wk1 wk2 sjo sbba bu sbba wk1 wk2 sjo sbba bu brb dui.0
-      wk1 wk2 sbba df-du bi $.
+      ( sbdu bb sjo bu brb df-du bi ) ABEFABGCHZCLIDABCJK $.
+$}
+
+${
+    duis.0 $e |- ko'a du ko'e $.
+    $( Sugared inference form of ~df-du
+       (Contributed by la korvo, 23-Jun-2024.) $)
+    duis $p |- go ko'a bu'a gi ko'e bu'a $=
+      ( sjo bu bgo dui spec2i tsb df-o bi ) ABECFZACFBCFGMCABCDHIABCJKL $.
 $}
 
 ${
@@ -1672,46 +1742,41 @@ ${
     $( Reverse inference form of ~df-du
        (Contributed by la korvo, 18-Jul-2023.) $)
     duri $p |- ko'a du ko'e $=
-      wk1 wk2 sjo sbba bu sbba wk1 wk2 sjo sbba bu brb wk1 wk2 sbdu bb duri.0
-      wk1 wk2 sbba df-du bi-rev $.
+      ( sjo bu brb sbdu bb df-du bi-rev ) ABECFZCLGABHIDABCJK $.
 $}
-
-$( Because {` du `} is an equivalence, it is reflexive. $)
-ax-du-refl $a |- ko'a du ko'a $.
-
-$( {` du `} is reflexive.
-   (Contributed by la korvo, 16-Aug-2023.) $)
-du-refl $p |- ko'a du ko'a $=
-  ( ax-du-refl ) AB $.
 
 ${
-    ax-du-trans.0 $e |- ko'a du ko'e $.
-    ax-du-trans.1 $e |- ko'e du ko'i $.
-    $( Because {` du `} is an equivalence, it is transitive. $)
-    ax-du-trans $a |- ko'a du ko'i $.
+    duris.0 $e |- go ko'a bu'a gi ko'e bu'a $.
+    $( Sugared reverse inference form of ~df-du
+       (Contributed by la korvo, 23-Jun-2024.) $)
+    duris $p |- ko'a du ko'e $=
+      ( bu bgo sjo ax-gen2 tsb df-o bi-rev-syl ro2-mp duri ) ABCACEBCEFZABGCEZC
+      NCDHONABCIJKLM $.
 $}
+
+$( {` du `} is reflexive.
+   (Contributed by la korvo, 16-Aug-2023.)
+   (Shortened by la korvo, 23-Jun-2024.) $)
+du-refl $p |- ko'a du ko'a $=
+  ( sbba bu go-refl duris ) AABABCDE $.
 
 ${
     du-trans.0 $e |- ko'a du ko'e $.
     du-trans.1 $e |- ko'e du ko'i $.
     $( {` du `} is transitive.
-       (Contributed by la korvo, 16-Aug-2023.) $)
+       (Contributed by la korvo, 16-Aug-2023.)
+       (Shortened by la korvo, 23-Jun-2024.) $)
     du-trans $p |- ko'a du ko'i $=
-      ( ax-du-trans ) ABCDEF $.
-$}
-
-${
-    ax-du-sym.0 $e |- ko'a du ko'e $.
-    $( Because {` du `} is an equivalence, it is symmetric. $)
-    ax-du-sym $a |- ko'e du ko'a $.
+      ( sbba bu duis go-trans duris ) ACFAFGBFGCFGABFDHBCFEHIJ $.
 $}
 
 ${
     du-sym.0 $e |- ko'a du ko'e $.
     $( {` du `} is symmetric.
-       (Contributed by la korvo, 16-Aug-2023.) $)
+       (Contributed by la korvo, 16-Aug-2023.)
+       (Shortened by la korvo, 23-Jun-2024.) $)
     du-sym $p |- ko'e du ko'a $=
-      ( ax-du-sym ) ABCD $.
+      ( sbba bu duis go-comi duris ) BADADEBDEABDCFGH $.
 $}
 
 ${
@@ -1719,7 +1784,7 @@ ${
     $( {` se du `} may be replaced with {` du `}.
        (Contributed by la korvo, 9-Jul-2023.) $)
     se-du-elim $p |- ko'a du ko'e $=
-      wk2 wk1 wk2 wk1 sbdu se-du-elim.0 sei ax-du-sym $.
+      wk2 wk1 wk2 wk1 sbdu se-du-elim.0 sei du-sym $.
 $}
 
 $(
