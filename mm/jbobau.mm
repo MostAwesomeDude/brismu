@@ -49,6 +49,9 @@ htmlvarcolor "<span class='sumti'>sumti</span> " +
              "<span class='bridi'>bridi</span> ";
 
 htmldef "|-" as '&#8866; ';
+htmldef "[" as '[ ';
+htmldef "]" as '] ';
+htmldef "/" as '/ ';
 htmldef "bridi" as "<em>bridi</em> ";
 htmldef "selbri" as "<em>selbri</em> ";
 htmldef "sumti" as "<em>sumti</em> ";
@@ -453,6 +456,7 @@ $}
 ${
     kd.0 $e |- ganai broda gi brode $.
     $( Deductive form of ~ax-k
+       Theorem a1d in [ILE] p. 0.
        (Contributed by la korvo, 30-Jul-2023.) $)
     kd $p |- ganai broda gi ganai brodi gi brode $=
       sbb1 sbb2 sbb3 sbb2 bgan kd.0 sbb2 sbb3 ax-k syl $.
@@ -470,7 +474,7 @@ $}
 ${
     ganai-swap12.0 $e |- ganai broda gi ganai brode gi brodi $.
     $( Naturally swap the first and second antecedents in an internalized
-       inference.
+       inference. Theorem com12 in [ILE] p. 0.
        (Contributed by la korvo, 30-Jul-2023.) $)
     ganai-swap12 $p |- ganai brode gi ganai broda gi brodi $=
       sbb2 sbb2 sbb1 sbb3 sbb2 id ganai-swap12.0 syl5com $.
@@ -594,6 +598,11 @@ ${
       sbb1 sbb2 sbb1 sbb2 bge ge-ini.0 ge-ini.1 sbb1 sbb2 ax-ge-in mp2 $.
 $}
 
+$( Conjunction implies implication. Theorem pm3.4 in [ILE] p. 0.
+   (Contributed by la korvo, 22-Jun-2024.) $)
+ge-ganai $p |- ganai ge broda gi brode gi ganai broda gi brode $=
+  ( bge ax-ge-re kd ) ABCBAABDE $.
+
 $( ~ax-ge-in with swapped antecedents.
    (Contributed by la korvo, 31-Jul-2023.) $)
 ge-in-swap12 $p |- ganai broda gi ganai brode gi ge brode gi broda $=
@@ -615,6 +624,15 @@ ${
        (Contributed by la korvo, 31-Jul-2023.) $)
     uncur $p |- ganai broda gi ganai brode gi brodi $=
       ( bge ax-ge-in syl6 ) ABABECABFDG $.
+$}
+
+${
+    jca.0 $e |- ganai broda gi brode $.
+    jca.1 $e |- ganai broda gi brodi $.
+    $( "Join Consequents with AND".
+       (Contributed by la korvo, 22-Jun-2024.) $)
+    jca $p |- ganai broda gi ge brode gi brodi $=
+      ( bge ax-ge-in sylc ) ABCBCFDEBCGH $.
 $}
 
 ${
@@ -692,6 +710,7 @@ ${
     golili.0 $e |- go broda gi brode $.
     $( Biconditional implication may be weakened to unidirectional implication.
        Inference form of left side of ~goli
+       Theorem biimpi in [ILE] p. 0.
        (Contributed by la korvo, 17-Jul-2023.)
        (Shortened by la korvo, 29-Jul-2023.) $)
     golili $p |- ganai broda gi brode $=
@@ -757,12 +776,13 @@ ${
     goriid.0 $e |- ganai broda gi ganai brode gi brodi $.
     goriid.1 $e |- ganai broda gi ganai brodi gi brode $.
     $( Deduction form of ~gorii
+       Theorem impbid in [ILE] p. 0.
        (Contributed by la korvo, 31-Jul-2023.) $)
     goriid $p |- ganai broda gi go brode gi brodi $=
       ( bgo goriid-lem ganai-abs ) ABCFAABCDEGH $.
 $}
 
-$( {` go `} is reflexive.
+$( {` go `} is reflexive. Theorem equid in [ILE] p. 0.
    (Contributed by la korvo, 30-Jul-2023.) $)
 go-refl $p |- go broda gi broda $=
   sbb1 sbb1 sbb1 id sbb1 id gorii $.
@@ -780,6 +800,7 @@ go-com $p |- go go broda gi brode gi go brode gi broda $=
 ${
     go-comi.0 $e |- go broda gi brode $.
     $( Inference form of ~go-com
+       Theorem bicomi in [ILE] p. 0.
        (Contributed by la korvo, 31-Jul-2023.) $)
     go-comi $p |- go brode gi broda $=
       ( bgo go-com-lem ax-mp ) ABDBADCABEF $.
@@ -814,6 +835,7 @@ ${
     bi-rev.0 $e |- broda $.
     bi-rev.1 $e |- go brode gi broda $.
     $( Modus ponens in the other direction.
+       Theorem mpbir in [ILE] p. 0.
        (Contributed by la korvo, 16-Jul-2023.) $)
     bi-rev $p |- brode $=
       sbb1 sbb2 bi-rev.0 sbb2 sbb1 bi-rev.1 go-comi bi $.
@@ -822,9 +844,39 @@ $}
 ${
     bi-rev-syl.0 $e |- go broda gi brode $.
     $( The right-hand side of a {` go `} may also be weakened to a {` ganai `}.
+       Theorem biimpri in [ILE] p. 0.
        (Contributed by la korvo, 10-Jul-2023.) $)
     bi-rev-syl $p |- ganai brode gi broda $=
       sbb2 sbb1 sbb1 sbb2 bi-rev-syl.0 go-comi golili $.
+$}
+
+${
+    sylibr.0 $e |- ganai broda gi brode $.
+    sylibr.1 $e |- go brodi gi brode $.
+    $( Apply a definition to a consequent. Theorem sylibr in [ILE] p. 0.
+       (Contributed by la korvo, 22-Jun-2024.) $)
+    sylibr $p |- ganai broda gi brodi $=
+      ( bi-rev-syl syl ) ABCDCBEFG $.
+$}
+
+${
+    sylanbrc.0 $e |- ganai broda gi brode $.
+    sylanbrc.1 $e |- ganai broda gi brodi $.
+    sylanbrc.2 $e |- go brodo gi ge brode gi brodi $.
+    $( Deductive unpacking of a definition with conjoined components.
+       Theorem sylanbrc in [ILE] p. 0.
+       (Contributed by la korvo, 22-Jun-2024.) $)
+    sylanbrc $p |- ganai broda gi brodo $=
+      ( bge jca sylibr ) ABCHDABCEFIGJ $.
+$}
+
+${
+    syl5bi.0 $e |- go broda gi brode $.
+    syl5bi.1 $e |- ganai brodi gi ganai brode gi brodo $.
+    $( Replace a nested antecedent using a biconditional.
+       (Contributed by la korvo, 22-Jun-2024.) $)
+    syl5bi $p |- ganai brodi gi ganai broda gi brodo $=
+      ( golili syl5 ) ABCDABEGFH $.
 $}
 
 $(
@@ -1539,6 +1591,17 @@ ${
     ax-gen2.0 $e |- broda $.
     $( Axiom of second-order generalization. $)
     ax-gen2 $a |- ro bu'a zo'u broda $.
+$}
+
+$( Axiom of first-order specialization. Axiom ax-4 in [ILE] p. 0. $)
+ax-spec1 $a |- ganai ro da zo'u broda gi broda $.
+
+${
+    spec1i.0 $e |- ro da zo'u broda $.
+    $( Inference form of ~ax-spec1 Theorem spi in [ILE] p. 0.
+       (Contributed by la korvo, 22-Jun-2024.) $)
+    spec1i $p |- broda $=
+      ( brd ax-spec1 ax-mp ) ABADACABEF $.
 $}
 
 ${
@@ -2425,6 +2488,90 @@ $( The axiom of existence: at least one element exists in the universe.
    This is necessary if we want to exclude the trivial empty model.
    Axiom ax-i9 in [ILE] p. 0. $)
 ax-ex $a |- su'o da zo'u da du de $.
+
+$( {` su'o da zo'u `} binds {` da `}. Axiom ax-ie1 in [ILE] p. 0. $)
+ax-eb $a |- ganai su'o da zo'u broda gi ro da zo'u su'o da zo'u broda $.
+
+${
+    ebi.0 $e |- su'o da zo'u broda $.
+    $( Inference form of ~ax-eb
+       (Contributed by la korvo, 22-Jun-2024.) $)
+    ebi $p |- ro da zo'u su'o da zo'u broda $=
+      ( bsd brd ax-eb ax-mp ) ABADZHBHECABFG $.
+$}
+
+$( Extensional definition of existential quantification in terms of universal
+   quantification. Axiom ax-ie2 in [ILE] p. 0. $)
+ax-eq $a |- ganai ro da zo'u ganai broda gi ro da zo'u broda
+  gi go ro da zo'u ganai brode gi broda gi ganai su'o da zo'u brode gi broda $.
+
+${
+    eqi.0 $e |- ro da zo'u ganai broda gi ro da zo'u broda $.
+    $( Inference form of ~ax-eq
+       (Contributed by la korvo, 22-Jun-2024.) $)
+    eqi $p |- go ro da zo'u ganai brode gi broda
+      gi ganai su'o da zo'u brode gi broda $=
+      ( brd bgan bsd bgo ax-eq ax-mp ) AACAEFZCKEBAFZCLEBCBGAFHDABCIJ $.
+$}
+
+${
+    eqih.0 $e |- ganai broda gi ro da zo'u broda $.
+    $( Reduced inference from ~ax-eq Theorem 19.23h in [ILE] p. 0.
+       (Contributed by la korvo, 22-Jun-2024.) $)
+    eqih $p |- go ro da zo'u ganai brode gi broda
+      gi ganai su'o da zo'u brode gi broda $=
+      ( brd bgan ax-gen1 eqi ) ABCAACAEFCDGH $.
+$}
+
+$( Due to ~ax-ex there will always be a spurious witness to any true bridi.
+   Theorem 19.8a in [ILE] p. 0.
+   (Contributed by la korvo, 23-Jun-2024.) $)
+wit $p |- ganai broda gi su'o da zo'u broda $=
+  ( bsd bgan brd id ax-eb eqih bi-rev spec1i ) AABACZDZBKKDLBLEKFKABABGHIJ $.
+
+$(
+#*#*#
+Substitution
+#*#*#
+$)
+
+$c [ / ] $.
+
+$( Metasyntax for substitutions. In this example, we are replacing every
+instance of {` da `} within {` broda `} with {` ko'a `}. $)
+bsub $a bridi [ ko'a / da ] broda $.
+
+$( Definition of substitution following definition df-sb in [ILE] p. 0. This
+   clever gadget breaks scoping to require that substitution is correct in
+   both the case where {` da `} is free and the case wehre {` da `} is bound
+   by mixing both cases, skipping grammatical analysis and scope-tracking
+   entirely. $)
+df-sub $a |- go [ ko'a / da ] broda gi
+  ge ganai da du ko'a gi broda
+  gi su'o da zo'u ge da du ko'a gi broda $.
+
+${
+    subi.0 $e |- [ ko'a / da ] broda $.
+    $( Inference form of ~df-sub
+       (Contributed by la korvo, 22-Jun-2024.) $)
+    subi $p |- ge ganai da du ko'a gi broda
+      gi su'o da zo'u ge da du ko'a gi broda $=
+  ( bsub sbdu bb bgan bge bsd df-sub bi ) ABCECAFGZBHMBIZCNJIDABCKL $.
+$}
+
+subeq-lem1 $p |- ganai da du ko'a gi ganai broda gi [ ko'a / da ] broda $=
+  ( sbdu bb bsub bge bgan bsd ge-ganai wit df-sub sylanbrc uncur ) CADEZBABCFZO
+  BGZOBHQCQIPOBJQCKABCLMN $.
+
+subeq-lem2 $p |- ganai da du ko'a gi ganai [ ko'a / da ] broda gi broda $=
+  ( bsub sbdu bb bgan bge bsd df-sub ax-ge-le ganai-swap12 syl5bi ) ABCDCAEFZBG
+  ZNBHZCPIZHZNBABCJRNBOQKLM $.
+
+$( An identity for substitutions. Theorem sbid in [ILE] p. 0.
+   (Contributed by la korvo, 22-Jun-2024.) $)
+subid $p |- go [ da / da ] broda gi broda $=
+  ( bsub sbdu bb bgo du-refl subeq-lem1 subeq-lem2 goriid ax-mp go-comi ) ABABCZBBDEZAM
+  FBGNAMBABHBABIJKL $.
 
 $(
 #*#*#

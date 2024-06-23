@@ -38,6 +38,9 @@ def crack(ts):
             else: return ts[1:j], ts[j + 1:]
     raise ValueError("unbalanced GA/GI brackets")
 
+# Hack: Remove df-sub, which introduces metasyntax.
+if "sub" in dfs: del dfs["sub"]
+
 dfc = Counter(vc[k] for k in dfs)
 dff = Counter(vc[k] for k in fs)
 count = sum(dfc.values()) + sum(dff.values())
