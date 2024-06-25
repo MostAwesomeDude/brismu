@@ -1137,6 +1137,15 @@ $( {` ge `} is commutative.
 ge-com $p |- go ge broda gi brode gi ge brode gi broda $=
   ( bge ge-com-lem gorii ) ABCBACABDBADE $.
 
+${
+    ge-go.0 $e |- ge broda gi brode $.
+    $( Conjunction implies biimplication.
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    ge-go $p |- go broda gi brode $=
+      ( bge bgan ge-ganai ax-mp ge-com-lem gorii ) ABABDZABECABFGBADZBAEJKCABHG
+      BAFGI $.
+$}
+
 $(
 =-=-=
 {.e}
@@ -1666,12 +1675,12 @@ ${
 $}
 
 ${
-    ax-ro-inst-2u.0 $e selbri bu'a $.
+    ax-ro-inst-2u.0 $e brirebla bo'a $.
     ax-ro-inst-2u.1 $e |- ro bu'e zo'u ko'a bu'e $.
     $( {` ro bu'a `} may be instantiated with any selbri. As
        example 13.3 of [CLL] p. 16 notes, this will be of limited use, and is
        included largely to allow for a second-order definition of equality. $)
-    ax-ro-inst-2u $a |- ko'a bu'a $.
+    ax-ro-inst-2u $a |- ko'a bo'a $.
 $}
 
 ${
@@ -2339,6 +2348,63 @@ $}
 $( Because modal x1 and modal x2 of {` dunli `} are definitionally
    interchangeable, {` dunli `} itself is symmetric. $)
 ax-dunli-sym $a |- go ko'a dunli ko'e ko'i gi ko'e dunli ko'a ko'i $.
+
+$(
+=-=-=
+{mintu}
+=-=-=
+$)
+
+$c mintu $.
+
+sbmintu $a selbri mintu $.
+
+$( {` mintu `} is often found with this conjugation.
+   (Contributed by la korvo, 6-Aug-2023.) $)
+bmintu $p bridi ko'a mintu ko'e pa ka ce'u bu'a kei $=
+  ( sc tsb spk sbmintu bt ) ABDCEFGH $.
+
+$( Definition of {` mintu `} in terms of {` ckaji `}. $)
+df-mintu $a |- go ko'a mintu ko'e ko'i gi ko'a .o ko'e ckaji ko'i $.
+
+${
+    mintui.0 $e |- ko'a mintu ko'e ko'i $.
+    $( Inference form of ~df-mintu
+       (Contributed by la korvo, 6-Aug-2023.) $)
+    mintui $p |- ko'a .o ko'e ckaji ko'i $=
+      ( sbmintu bt sjo sbckaji bb df-mintu bi ) ABCEFABGCHIDABCJK $.
+$}
+
+${
+    minturi.0 $e |- ko'a .o ko'e ckaji ko'i $.
+    $( Reverse inference form of ~df-mintu
+       (Contributed by la korvo, 6-Aug-2023.) $)
+    minturi $p |- ko'a mintu ko'e ko'i $=
+      ( sjo sbckaji bb sbmintu bt df-mintu bi-rev ) ABECFGABCHIDABCJK $.
+$}
+
+$( Because x1 and x2 of {` mintu `} are definitionally interchangeable, it is
+   symmetric. $)
+ax-mintu-sym $a |- go ko'a mintu ko'e ko'i gi ko'e mintu ko'a ko'i $.
+
+${
+    du-mintu.0 $e |- ko'a du ko'e $.
+    $( Suggested by baseline definition of {` mintu `}: {` du `} is {` mintu `}
+       without a standard of comparison, which is a stronger condition.
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    du-mintu $p |- ko'a mintu ko'e ko'i $=
+      ( sbba sjo sbckaji tsb tss dui ax-ro-inst-2u minturi ) ABCABFCGHZMIZENABE
+      DJKL $.
+$}
+
+${
+    simsa-mintu.0 $e |- ko'a simsa ko'e ko'i $.
+    $( {` simsa `} implies {` mintu `}.
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    simsa-mintu $p |- ko'a mintu ko'e ko'i $=
+      ( sbckaji bb bgo sjo sje bge simsai tsb df-e bi ge-go df-o bi-rev minturi
+      tss ) ABCACEFZBCEFZGABHCEFTUAABICEFTUAJABCDKABCELZUBSZMNOABUCPQR $.
+$}
 
 $(
 =-=-=
@@ -3889,19 +3955,6 @@ sbmapti $a selbri mapti $.
 $( Under postulated definitions of la xorxes and la korvo, {` mapti `} is a
    subrelation of {` ckini `}. $)
 ax-mapti-ckini $a |- ganai ko'a mapti ko'e ko'i gi ko'a ckini ko'e ko'i $.
-
-$(
-=-=-=
-{mintu}
-=-=-=
-$)
-
-$c mintu $.
-sbmintu $a selbri mintu $.
-
-$( Because x1 and x2 of {` mintu `} are definitionally interchangeable, it is
-   symmetric. $)
-ax-mintu-sym $a |- go ko'a mintu ko'e ko'i gi ko'e mintu ko'a ko'i $.
 
 $(
 =-=-=
