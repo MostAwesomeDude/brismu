@@ -2402,8 +2402,8 @@ ${
     $( {` simsa `} implies {` mintu `}.
        (Contributed by la korvo, 25-Jun-2024.) $)
     simsa-mintu $p |- ko'a mintu ko'e ko'i $=
-      ( sbckaji bb bgo sjo sje bge simsai tsb df-e bi ge-go df-o bi-rev minturi
-      tss ) ABCACEFZBCEFZGABHCEFTUAABICEFTUAJABCDKABCELZUBSZMNOABUCPQR $.
+      ( sbckaji tsb tss bb simsai ei ge-go ori minturi ) ABCABCEFZNGZACEHBCEHAB
+      OABCDIJKLM $.
 $}
 
 $(
