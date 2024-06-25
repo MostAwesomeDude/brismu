@@ -89,6 +89,7 @@ htmldef "ga" as "<small>ga</small> ";
 htmldef "ganai" as "<small>ganai</small> ";
 htmldef "ge" as "<small>ge</small> ";
 htmldef "gi" as "<small>gi</small> ";
+htmldef "ginai" as "<small>ginai</small> ";
 htmldef "go" as "<small>go</small> ";
 htmldef "gonai" as "<small>gonai</small> ";
 htmldef "gi'a" as "<small>gi'a</small> ";
@@ -182,7 +183,6 @@ htmldef "trixe" as "<span class='gismu'>trixe</span> ";
 htmldef "tsida" as "<span class='gismu'>tsida</span> ";
 htmldef "vlina" as "<span class='gismu'>vlina</span> ";
 htmldef "xlane" as "<span class='gismu'>xlane</span> ";
-htmldef "xlane" as "<span class='gismu'>xlane</span> ";
 htmldef "xinmo" as "<span class='gismu'>xinmo</span> ";
 htmldef "zunle" as "<span class='gismu'>zunle</span> ";
 htmldef "du'u" as "<small>du'u</small> ";
@@ -201,8 +201,6 @@ htmldef "ki'irvlina" as "<span class='lujvo'>ki'irvlina</span> ";
 htmldef "kuzypau" as "<span class='lujvo'>kuzypau</span> ";
 htmldef "pagyfancu" as "<span class='lujvo'>pagyfancu</span> ";
 htmldef "selbri" as "<span class='lujvo'>selbri</span> ";
-htmldef "mi" as "<span class='sumti'>mi</span> ";
-htmldef "do" as "<span class='sumti'>do</span> ";
 htmldef "le" as "<span class='gadri'>le</span> ";
 $)
 
@@ -303,8 +301,8 @@ $( Normal form for quaternary selbri.
    (Contributed by la korvo, 19-Mar-2024.) $)
 bq $p bridi ko'a bu'a ko'e ko'i ko'o $=
   ( tsb tss btb ) ADCBEFZIGZJGZKGH $.
-$( Normal form for quinary selbri. To avoid conflict with ~bq, this syntax is
-   "bp" for "bridi, pentad".
+$( Normal form for quinary selbri. To avoid conflict with ~bq this syntax is
+   "bp" for "bridi pentad".
    (Contributed by la korvo, 22-Jun-2024.) $)
 bp $p bridi ko'a bu'a ko'e ko'i ko'o ko'u $=
   ( tsb tss btb ) AEDCBFGZJHZKHZLHZMHI $.
@@ -2387,14 +2385,16 @@ $( Because x1 and x2 of {` mintu `} are definitionally interchangeable, it is
    symmetric. $)
 ax-mintu-sym $a |- go ko'a mintu ko'e ko'i gi ko'e mintu ko'a ko'i $.
 
+$( XXX metamath-exe bug(223) when the following proof is compressed and
+   printed to HTML $)
 ${
     du-mintu.0 $e |- ko'a du ko'e $.
     $( Suggested by baseline definition of {` mintu `}: {` du `} is {` mintu `}
        without a standard of comparison, which is a stronger condition.
        (Contributed by la korvo, 25-Jun-2024.) $)
     du-mintu $p |- ko'a mintu ko'e ko'i $=
-      ( sbba sjo sbckaji tsb tss dui ax-ro-inst-2u minturi ) ABCABFCGHZMIZENABE
-      DJKL $.
+      wk1 wk2 wk3 wk1 wk2 sjo wk3 sbckaji tsb sbckaji tsb tss sbba wk3 sbckaji
+      tsb sbckaji tsb tss wk1 wk2 sbba du-mintu.0 dui ax-ro-inst-2u minturi $.
 $}
 
 ${
@@ -2779,10 +2779,27 @@ $}
 
 ${
     poi-rori.0 $e |- ro da zo'u ganai da bu'a gi broda $.
-    $( Inference form of ~df-poi-ro
+    $( Reverse inference form of ~df-poi-ro
        (Contributed by la korvo, 11-Aug-2023.) $)
     poi-rori $p |- ro da poi ke'a bu'a ku'o zo'u broda $=
       ( bu bgan brd tsb brdp df-poi-ro bi-rev ) CBEAFZCLGABHCACAGIDABCJK $.
+$}
+
+${
+    poi-gen.0 $e |- broda $.
+    $( First-order generalization for restricted quantification.
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    poi-gen $p |- ro da poi ke'a bu'a ku'o zo'u broda $=
+      ( bu bgan ki ax-gen1 poi-rori ) ABCCBEZAFCAJDGHI $.
+$}
+
+${
+    ro-poi.0 $e |- ro da zo'u broda $.
+    $( Restricted quantification is a special case of universal
+       quantification.
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    ro-poi $p |- ro da poi ke'a bu'a ku'o zo'u broda $=
+      ( spec1i poi-gen ) ABCACDEF $.
 $}
 
 $c cu $.
@@ -3160,39 +3177,23 @@ $c takni $.
 sbtakni $a selbri takni $.
 
 $( A standard definition of transitive relations. $)
-df-takni $a |- go ko'a takni ko'e
-  gi ro da zo'u ro de zo'u ro di zo'u
-    ganai ge da .e de .e di cmima ko'e
-      gi ge da ckini de ko'a gi de ckini di ko'a
-    gi da ckini di ko'a $.
+df-takni $a |- go ko'a takni ko'e gi
+  ro da poi ke'a cmima ko'e ku'o zo'u
+  ro de poi ke'a cmima ko'e ku'o zo'u
+  ro di poi ke'a cmima ko'e ku'o zo'u
+  ganai ge da ckini de ko'a gi de ckini di ko'a gi da ckini di ko'a $.
 
 ${
     taknii.0 $e |- ko'a takni ko'e $.
     $( Inference form of ~df-takni
        (Contributed by la korvo, 22-Jun-2024.) $)
-    taknii $p |- ro da zo'u ro de zo'u ro di zo'u
-    ganai ge da .e de .e di cmima ko'e
-      gi ge da ckini de ko'a gi de ckini di ko'a
-    gi da ckini di ko'a $=
-      ( sbtakni bb sje sbcmima sbckini bt bge bgan brd df-takni bi ) ABGHCDEIIB
-      JHCDAKLDEAKLMMCEAKLNZEROZDSOZCTOFABCDEPQ $.
-$}
-
-${
-    takniis.0 $e |- ko'a takni ko'e $.
-    $( Pre-substituted form of ~taknii $)
-    takniis $p |- ganai ge ko'i .e ko'o .e ko'u cmima ko'e
-      gi ge ko'i ckini ko'o ko'a gi ko'o ckini ko'u ko'a
-    gi ko'i ckini ko'u ko'a $= ? $.
-$}
-
-${
-    takni-trans.0 $e |- pa ka ce'u broda ce'u kei takni ko'a $.
-    takni-trans.1 $e |- ko'e .e ko'i .e ko'o cmima ko'a $.
-    takni-trans.2 $e |- ko'e broda ko'i $.
-    takni-trans.3 $e |- ko'i broda ko'o $.
-    $( takni1 are transitive. $)
-    takni-trans $p |- ko'e broda ko'o $= ? $.
+    taknii $p |-
+      ro da poi ke'a cmima ko'e ku'o zo'u
+      ro de poi ke'a cmima ko'e ku'o zo'u
+      ro di poi ke'a cmima ko'e ku'o zo'u
+      ganai ge da ckini de ko'a gi de ckini di ko'a gi da ckini di ko'a $=
+      ( sbtakni bb sbckini bt bge bgan sbcmima tsb tss brd brdp df-takni bi ) A
+      BGHCDAIJDEAIJKCEAIJLZBMNZUAOZETETPQZUBDUCDUCPQZUBCUDCUDPQFABCDERS $.
 $}
 
 $(
@@ -3207,9 +3208,8 @@ sbkinfi $a selbri kinfi $.
 
 $( A standard definition of symmetric relations. $)
 df-kinfi $a |- go ko'a kinfi ko'e
-  gi ro da zo'u ro de zo'u
-    ganai ge da .e de cmima ko'e gi da ckini de ko'a
-    gi de ckini da ko'a $.
+  gi ro da poi ke'a cmima ko'e ku'o zo'u ro de poi ke'a cmima ko'e ku'o zo'u
+    ganai da ckini de ko'a gi de ckini da ko'a $.
 
 $(
 =-=-=
@@ -3237,16 +3237,18 @@ sbefklipi $a selbri efklipi $.
 sbefklizu $a selbri efklizu $.
 
 $( A standard definition of right-Euclidean relations. $)
-df-efklipi $a |- go ko'a efklipi ko'e
-  gi ro da zo'u ro de zo'u ro di zo'u
-    ganai ge da .e de .e di cmima ko'e gi da ckini de .e di ko'a
-    gi de ckini di ko'a $.
+df-efklipi $a |- go ko'a efklipi ko'e gi
+    ro da poi ke'a cmima ko'e ku'o zo'u
+    ro de poi ke'a cmima ko'e ku'o zo'u
+    ro di poi ke'a cmima ko'e ku'o zo'u
+    ganai da ckini de .e di ko'a gi de ckini di ko'a $.
 
 $( A standard definition of left-Euclidean relations. $)
-df-efklizu $a |- go ko'a efklizu ko'e
-  gi ro da zo'u ro de zo'u ro di zo'u
-    ganai ge da .e de .e di cmima ko'e gi de .e di ckini da ko'a
-    gi de ckini di ko'a $.
+df-efklizu $a |- go ko'a efklizu ko'e gi
+    ro da poi ke'a cmima ko'e ku'o zo'u
+    ro de poi ke'a cmima ko'e ku'o zo'u
+    ro di poi ke'a cmima ko'e ku'o zo'u
+    ganai de .e di ckini da ko'a gi de ckini di ko'a $.
 
 $( Every Euclidean reflexive relation is symmetric. $)
 ax-efklipi-sym $a |- ganai ko'a kinra je efklipi ko'e gi ko'a kinfi ko'e $.

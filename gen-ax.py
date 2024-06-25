@@ -23,10 +23,12 @@ def chapter(label): header("=-=-=", label)
 
 section("Generated baseline ontology")
 
+def apos(s): return s.replace("'", "h")
+
 for constant in constants:
     db.extend([
         f"$c {constant} $.",
-        f"sb{constant} $a selbri {constant} $.",
+        f"sb{apos(constant)} $a selbri {constant} $.",
     ])
 
 chapter("Classes of selbri")
@@ -36,7 +38,7 @@ for (cls, gs) in classMap.items():
         db.extend([
             f"$c {g} $.",
             f"$( Automatically generated axiom: {{` {g} `}} is {{` {cls} `}} $)",
-            f"ax-{cls}-{g} $a |- {cls} {g} $.",
+            f"ax-{apos(cls)}-{apos(g)} $a |- {cls} {g} $.",
         ])
 
 chapter("Subrelations between selbri")
@@ -47,7 +49,7 @@ for u in dag:
         sv = dearitize(v)
         db.extend([
             f"$( Automatically generated axiom: {{` {su} `}} is a subrelation of {{` {sv} `}} $)",
-            f"ax-{su}-{sv} $a |- pa ka ce'u {su} ce'u ki'irni'i pa ka ce'u {sv} ce'u $.",
+            f"ax-{apos(su)}-{apos(sv)} $a |- pa ka ce'u {su} ce'u ki'irni'i pa ka ce'u {sv} ce'u $.",
         ])
 
 with open(sys.argv[-1], "w") as handle: handle.write("\n".join(db))
