@@ -2255,51 +2255,90 @@ $( {` simsa `} is often found with this conjugation.
 bsimsa $p bridi ko'a simsa ko'e pa ka ce'u bu'a kei $=
   ( sc tsb spk sbsimsa bt ) ABDCEFGH $.
 
-df-simsa $a |- go ko'a simsa ko'e pa ka ce'u bu'a kei gi ge ko'a bu'a gi ko'e bu'a $.
+$( Definition of {` simsa `} in terms of {` ckaji `}. $)
+df-simsa $a |- go ko'a simsa ko'e ko'i gi ko'a .e ko'e ckaji ko'i $.
 
 ${
-    simsai.0 $e |- ko'a simsa ko'e pa ka ce'u bu'a kei $.
+    simsai.0 $e |- ko'a simsa ko'e ko'i $.
     $( Inference form of ~df-simsa
        (Contributed by la korvo, 6-Aug-2023.) $)
-    simsai $p |- ge ko'a bu'a gi ko'e bu'a $=
-      ( bsimsa bu bge df-simsa bi ) ABCEACFBCFGDABCHI $.
+    simsai $p |- ko'a .e ko'e ckaji ko'i $=
+      ( sbsimsa bt sje sbckaji bb df-simsa bi ) ABCEFABGCHIDABCJK $.
 $}
 
 ${
-    simsail.0 $e |- ko'a simsa ko'e pa ka ce'u bu'a kei $.
+    simsail.0 $e |- ko'a simsa ko'e ko'i $.
     $( Inference form of ~df-simsa
        (Contributed by la korvo, 6-Aug-2023.) $)
-    simsail $p |- ko'a bu'a $=
-      ( bu simsai ge-lei ) ACEBCEABCDFG $.
+    simsail $p |- ko'a ckaji ko'i $=
+      ( sbckaji bb tsb tss simsai ei ge-lei ) ACEFBCEFABCEGZLHABCDIJK $.
 $}
 
 ${
-    simsair.0 $e |- ko'a simsa ko'e pa ka ce'u bu'a kei $.
+    simsair.0 $e |- ko'a simsa ko'e ko'i $.
     $( Inference form of ~df-simsa
        (Contributed by la korvo, 6-Aug-2023.) $)
-    simsair $p |- ko'e bu'a $=
-      ( bu simsai ge-rei ) ACEBCEABCDFG $.
+    simsair $p |- ko'e ckaji ko'i $=
+      ( sbckaji bb tsb tss simsai ei ge-rei ) ACEFBCEFABCEGZLHABCDIJK $.
 $}
 
 ${
-    simsari.0 $e |- ge ko'a bu'a gi ko'e bu'a $.
+    simsari.0 $e |- ko'a .e ko'e ckaji ko'i $.
     $( Reverse inference form of ~df-simsa
        (Contributed by la korvo, 6-Aug-2023.) $)
-    simsari $p |- ko'a simsa ko'e pa ka ce'u bu'a kei $=
-      ( bu bge bsimsa df-simsa bi-rev ) ACEBCEFABCGDABCHI $.
+    simsari $p |- ko'a simsa ko'e ko'i $=
+      ( sje sbckaji bb sbsimsa bt df-simsa bi-rev ) ABECFGABCHIDABCJK $.
 $}
 
 ${
-    simsarii.0 $e |- ko'a bu'a $.
-    simsarii.1 $e |- ko'e bu'a $.
+    simsarii.0 $e |- ko'a ckaji ko'i $.
+    simsarii.1 $e |- ko'e ckaji ko'i $.
     $( Reverse inference form of ~df-simsa
        (Contributed by la korvo, 6-Aug-2023.) $)
-    simsarii $p |- ko'a simsa ko'e pa ka ce'u bu'a kei $=
-      ( bu ge-ini simsari ) ABCACFBCFDEGH $.
+    simsarii $p |- ko'a simsa ko'e ko'i $=
+      ( sbckaji tsb tss bb ge-ini eri simsari ) ABCABCFGZMHACFIBCFIDEJKL $.
 $}
 
 $( {` simsa `} is symmetric. $)
 ax-simsa-sym $a |- go ko'a simsa ko'e ko'i gi ko'e simsa ko'a ko'i $.
+
+$(
+=-=-=
+{dunli}
+=-=-=
+$)
+
+$c dunli $.
+
+sbdunli $a selbri dunli $.
+
+$( {` dunli `} is often found with this conjugation.
+   (Contributed by la korvo, 23-Jun-2024.) $)
+bdunli $p bridi ko'a dunli ko'e pa ka ce'u bu'a ce'u kei $=
+  ( sc tsb tss spk sbdunli bt ) ABDDCEZJFGHI $.
+
+$( Definition of {` dunli `} by la ilmen in terms of {` ckini `}. $)
+df-dunli $a |- go ko'a dunli ko'e ko'i gi ro da zo'u ko'a .o ko'e ckini da ko'i $.
+
+${
+    dunlii.0 $e |- ko'a dunli ko'e ko'i $.
+    $( Inference form of ~df-dunli
+       (Contributed by la korvo, 23-Jun-2024.) $)
+    dunlii $p |- ro da zo'u ko'a .o ko'e ckini da ko'i $=
+      ( sbdunli bt sjo sbckini brd df-dunli bi ) ABCFGABHDCIGZDMJEABCDKL $.
+$}
+
+${
+    dunliri.0 $e |- ro da zo'u ko'a .o ko'e ckini da ko'i $.
+    $( Reverse inference form of ~df-dunli
+       (Contributed by la korvo, 23-Jun-2024.) $)
+    dunliri $p |- ko'a dunli ko'e ko'i $=
+  ( sjo sbckini bt brd sbdunli df-dunli bi-rev ) ABFDCGHZDMIABCJHEABCDKL $.
+$}
+
+$( Because modal x1 and modal x2 of {` dunli `} are definitionally
+   interchangeable, {` dunli `} itself is symmetric. $)
+ax-dunli-sym $a |- go ko'a dunli ko'e ko'i gi ko'e dunli ko'a ko'i $.
 
 $(
 =-=-=
@@ -3143,6 +3182,10 @@ df-efklizu $a |- go ko'a efklizu ko'e
     ganai ge da .e de .e di cmima ko'e gi de .e di ckini da ko'a
     gi de ckini di ko'a $.
 
+$( Every Euclidean reflexive relation is symmetric. $)
+ax-efklipi-sym $a |- ganai ko'a kinra je efklipi ko'e gi ko'a kinfi ko'e $.
+ax-efklizu-sym $a |- ganai ko'a kinra je efklizu ko'e gi ko'a kinfi ko'e $.
+
 $(
 #####
 NUMBERS
@@ -3846,19 +3889,6 @@ sbmapti $a selbri mapti $.
 $( Under postulated definitions of la xorxes and la korvo, {` mapti `} is a
    subrelation of {` ckini `}. $)
 ax-mapti-ckini $a |- ganai ko'a mapti ko'e ko'i gi ko'a ckini ko'e ko'i $.
-
-$(
-=-=-=
-{dunli}
-=-=-=
-$)
-
-$c dunli $.
-sbdunli $a selbri dunli $.
-
-$( Because modal x1 and modal x2 of {` dunli `} are definitionally
-   interchangeable, {` dunli `} itself is symmetric. $)
-ax-dunli-sym $a |- go ko'a dunli ko'e ko'i gi ko'e dunli ko'a ko'i $.
 
 $(
 =-=-=
