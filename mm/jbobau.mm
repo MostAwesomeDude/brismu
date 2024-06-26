@@ -2894,31 +2894,31 @@ $}
 $( Definition of {` ro da poi `} quantifiers as restricted first-order
    universal quantifiers. $)
 df-poi-ro $a |-
-  go ro da poi ke'a bu'a ku'o zo'u broda
-  gi ro da zo'u ganai da bu'a gi broda $.
+  go ro da poi ke'a bo'a ku'o zo'u broda
+  gi ro da zo'u ganai da bo'a gi broda $.
 
 ${
-    poi-roi.0 $e |- ro da poi ke'a bu'a ku'o zo'u broda $.
+    poi-roi.0 $e |- ro da poi ke'a bo'a ku'o zo'u broda $.
     $( Inference form of ~df-poi-ro
        (Contributed by la korvo, 11-Aug-2023.) $)
-    poi-roi $p |- ro da zo'u ganai da bu'a gi broda $=
-      ( tsb brd brdp bu bgan df-poi-ro bi ) ABECACAFGCBHAIZCLFDABCJK $.
+    poi-roi $p |- ro da zo'u ganai da bo'a gi broda $=
+      ( brd brdp btb bgan df-poi-ro bi ) ABCACAEFCBGAHZCKEDABCIJ $.
 $}
 
 ${
-    poi-rori.0 $e |- ro da zo'u ganai da bu'a gi broda $.
+    poi-rori.0 $e |- ro da zo'u ganai da bo'a gi broda $.
     $( Reverse inference form of ~df-poi-ro
        (Contributed by la korvo, 11-Aug-2023.) $)
-    poi-rori $p |- ro da poi ke'a bu'a ku'o zo'u broda $=
-      ( bu bgan brd tsb brdp df-poi-ro bi-rev ) CBEAFZCLGABHCACAGIDABCJK $.
+    poi-rori $p |- ro da poi ke'a bo'a ku'o zo'u broda $=
+      ( btb bgan brd brdp df-poi-ro bi-rev ) CBEAFZCKGABCACAGHDABCIJ $.
 $}
 
 ${
     poi-gen.0 $e |- broda $.
     $( First-order generalization for restricted quantification.
        (Contributed by la korvo, 25-Jun-2024.) $)
-    poi-gen $p |- ro da poi ke'a bu'a ku'o zo'u broda $=
-      ( bu bgan ki ax-gen1 poi-rori ) ABCCBEZAFCAJDGHI $.
+    poi-gen $p |- ro da poi ke'a bo'a ku'o zo'u broda $=
+      ( btb bgan ki ax-gen1 poi-rori ) ABCCBEZAFCAJDGHI $.
 $}
 
 ${
@@ -2926,7 +2926,7 @@ ${
     $( Restricted quantification is a special case of universal
        quantification.
        (Contributed by la korvo, 25-Jun-2024.) $)
-    ro-poi $p |- ro da poi ke'a bu'a ku'o zo'u broda $=
+    ro-poi $p |- ro da poi ke'a bo'a ku'o zo'u broda $=
       ( spec1i poi-gen ) ABCACDEF $.
 $}
 
@@ -3351,7 +3351,22 @@ sbkinra $a selbri kinra $.
 
 $( A standard definition of reflexive relations. $)
 df-kinra $a |- go ko'a kinra ko'e
-  gi ro da zo'u ganai da cmima ko'e gi da ckini da ko'a $.
+  gi ro da poi ke'a cmima ko'e ku'o zo'u da ckini da ko'a $.
+
+${
+    kinrari.0 $e |- ro da poi ke'a cmima ko'e ku'o zo'u da ckini da ko'a $.
+    $( Reverse inference form of ~df-kinra
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    kinrari $p |- ko'a kinra ko'e $=
+      ( sbckini bt sbcmima tsb tss brd brdp sbkinra bb df-kinra bi-rev ) CCAEFZ
+      BGHZQICPCPJKABLMDABCNO $.
+$}
+
+$( {` du `} is reflexive over any domain.
+   (Contributed by la korvo, 25-Jun-2024.) $)
+du-kinra $p |- pa ka ce'u du ce'u kei kinra ko'e $=
+  ( wda sc sbdu tsb tss spk bckini sbcmima du-refl ckiniri poi-gen kinrari ) CC
+  DEZNFGABBBDHAIEZOFBBBDBJKLM $.
 
 $(
 =-=-=

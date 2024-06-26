@@ -9,6 +9,8 @@ elements.
 
 ## Reflexivity
 
+gismu: kinra
+
 A reflexive relation contains at least, for every element x in the underlying
 set, `x R x`.
 
@@ -41,6 +43,8 @@ Examples of irreflexive relations:
 
 ## Transitivity
 
+gismu: takni
+
 A transitive relation turns chains of related elements into transitive
 closures, which are subsets of the underlying set characterized by the heads
 of the longest chains. For any three elements x, y, and z,
@@ -70,6 +74,8 @@ failure, indicating a need for composition in order to build the implied
 transitive structure. Or perhaps just ``{dzena fi zi'o}``, not sure.
 
 ## Symmetric
+
+gismu: kinfi
 
 A symmetric relation freely interchanges the elements in its pairs; whenever
 it is the case that `x R y`, it is also the case that `y R x`.
@@ -129,13 +135,6 @@ relation.
 
 Every equivalence relation creates a partition on the underlying set, called
 the partition into equivalence classes.
-
-``{dunli}`` indexes the equivalence relations; dunli3 (ka) is a binary
-relation which sends both dunli1 and dunli2 to some unseen comparison key, and
-witnesses that they would be in the same equivalence class if quotiented by
-dunli3.
-
-What's the difference between ``{dunli}`` and ``{simsa}`` and ``{mintu}``?
 
 Examples of equivalence relations:
 
