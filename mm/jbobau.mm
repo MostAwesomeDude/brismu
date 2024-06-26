@@ -128,6 +128,7 @@ htmldef "pi'i" as " * ";
 htmldef "vu'u" as " - ";
 htmldef "ro" as "<small>ro</small> ";
 htmldef "su'o" as "<small>su'o</small> ";
+htmldef "na'a'u" as "<small>na'a'u</small> ";
 htmldef "ce" as "<small>ce</small> ";
 htmldef "ce'o" as "<small>ce'o</small> ";
 htmldef "fa'u" as "<small>fa'u</small> ";
@@ -846,6 +847,24 @@ ${
        (Contributed by la korvo, 10-Jul-2023.) $)
     bi-rev-syl $p |- ganai brode gi broda $=
       sbb2 sbb1 sbb1 sbb2 bi-rev-syl.0 go-comi golili $.
+$}
+
+${
+    sylbi.0 $e |- go broda gi brode $.
+    sylbi.1 $e |- ganai brode gi brodi $.
+    $( Syllogism with a biconditional.
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    sylbi $p |- ganai broda gi brodi $=
+      ( golili syl ) ABCABDFEG $.
+$}
+
+${
+    sylib.0 $e |- ganai broda gi brode $.
+    sylib.1 $e |- go brode gi brodi $.
+    $( Syllogism with a biconditional.
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    sylib $p |- ganai broda gi brodi $=
+      ( golili syl ) ABCDBCEFG $.
 $}
 
 ${
@@ -1897,6 +1916,29 @@ ${
       ( bnk bgan ax-sdo ax-mp ) AAACZDGBAEF $.
 $}
 
+$( The principle of explosion. If a tuple both is and is not a member of some
+   relation, then we are inconsistent and any theorem whatsoever may be
+   derived. The short name "efq" comes from the Latin phrase, "ex falso
+   quodlibet". $)
+ax-efq $a |- ganai naku zo'u broda gi ganai broda gi brode $.
+
+${
+    efqi.0 $e |- naku zo'u broda $.
+    $( Inference form of ~ax-efq
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    efqi $p |- ganai broda gi brode $=
+      ( bnk bgan ax-efq ax-mp ) AADABECABFG $.
+$}
+
+${
+    efqii.0 $e |- naku zo'u broda $.
+    efqii.1 $e |- broda $.
+    $( Inference form of ~ax-efq
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    efqii $p |- brode $=
+      ( efqi ax-mp ) ABDABCEF $.
+$}
+
 $(
 #*#*#
 Mutual exclusion I
@@ -2711,11 +2753,11 @@ $( Metasyntax for substitutions. In this example, we are replacing every
 instance of {` da `} within {` broda `} with {` ko'a `}. $)
 bsub $a bridi [ ko'a / da ] broda $.
 
-$( Definition of substitution following definition df-sb in [ILE] p. 0. This
-   clever gadget breaks scoping to require that substitution is correct in
-   both the case where {` da `} is free and the case wehre {` da `} is bound
-   by mixing both cases, skipping grammatical analysis and scope-tracking
-   entirely. $)
+$( Definition of proper substitution following definition df-sb in [ILE] p. 0.
+   This clever gadget breaks scoping to require that substitution is correct
+   in both the case where {` da `} is free and the case wehre {` da `} is
+   bound by mixing both cases, skipping grammatical analysis and
+   scope-tracking entirely. $)
 df-sub $a |- go [ ko'a / da ] broda gi
   ge ganai da du ko'a gi broda
   gi su'o da zo'u ge da du ko'a gi broda $.
@@ -2728,6 +2770,12 @@ ${
       gi su'o da zo'u ge da du ko'a gi broda $=
   ( bsub sbdu bb bgan bge bsd df-sub bi ) ABCECAFGZBHMBIZCNJIDABCKL $.
 $}
+
+$( Property of proper substitution. Theorem sb1 in [ILE] p. 0.
+   (Contributed by la korvo, 25-Jun-2024.) $)
+sub1 $p |- ganai [ ko'a / da ] broda gi su'o da zo'u ge da du ko'a gi broda $=
+  ( bsub sbdu bb bgan bge bsd df-sub golili ge-red ) ABCDZCAEFZBGZNBHZCPIZMOQHA
+  BCJKL $.
 
 subeq-lem1 $p |- ganai da du ko'a gi ganai broda gi [ ko'a / da ] broda $=
   ( sbdu bb bsub bge bgan bsd ge-ganai wit df-sub sylanbrc uncur ) CADEZBABCFZO
@@ -2742,6 +2790,86 @@ $( An identity for substitutions. Theorem sbid in [ILE] p. 0.
 subid $p |- go [ da / da ] broda gi broda $=
   ( bsub sbdu bb bgo du-refl subeq-lem1 subeq-lem2 goriid ax-mp go-comi ) ABABCZBBDEZAM
   FBGNAMBABHBABIJKL $.
+
+$(
+#*#*#
+Not-free quantification
+#*#*#
+$)
+
+$c na'a'u $.
+
+${
+    bnd.0 $e bridi broda $.
+    $( Syntax for first-order not-free quantification. $)
+    bnd $a bridi na'a'u da zo'u broda $.
+$}
+
+$( Definition of not-free quantification: {` na'a'u da `} means that the
+   value which {` da `} takes on is effectively irrelevant to the truth value
+   of its bridi. $)
+df-nahahu $a |- go na'a'u da zo'u broda
+  gi ro da zo'u ganai broda gi ro da zo'u broda $.
+
+${
+    bi-revg.0 $e |- go broda gi ro da zo'u brode $.
+    bi-revg.1 $e |- brode $.
+    $( ~bi-rev with generalization on the RHS.
+       Theorem mpgbir in [ILE] p. 0.
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    bi-revg $p |- broda $=
+      ( brd ax-gen1 bi-rev ) BCBFABCEGDH $.
+$}
+
+${
+    nfi.0 $e |- ganai broda gi ro da zo'u broda $.
+    $( Inference form of ~df-nahahu.
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    nfi $p |- na'a'u da zo'u broda $=
+      ( bnd brd bgan df-nahahu bi-revg ) ABADAABAEFBABGCH $.
+$}
+
+$( Property of not-free quantification.
+   (Contributed by la korvo, 25-Jun-2024.) $)
+nfr $p |- ganai na'a'u da zo'u broda gi ganai broda gi ro da zo'u broda $=
+  ( bnd brd bgan df-nahahu ax-spec1 sylbi ) ABACAABADEZBIDIABFIBGH $.
+
+${
+    nfri.0 $e |- na'a'u da zo'u broda $.
+    $( Inference form of ~nfr
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    nfri $p |- ganai broda gi ro da zo'u broda $=
+      ( bnd brd bgan nfr ax-mp ) ABADAABAEFCABGH $.
+$}
+
+${
+    hbth.0 $e |- broda $.
+    $( Hypothesis builder: theorems are closed.
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    hbth $p |- ganai broda gi ro da zo'u broda $=
+      ( brd ax-gen1 ki ) ABADAABCEF $.
+$}
+
+${
+    nfth.0 $e |- broda $.
+    $( Theorems are closed.
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    nfth $p |- na'a'u da zo'u broda $=
+      ( hbth nfi ) ABABCDE $.
+$}
+
+${
+    nfnth.0 $e |- naku zo'u broda $.
+    $( Non-theorems are closed.
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    nfnth $p |- na'a'u da zo'u broda $=
+      ( brd efqi nfi ) ABAABADCEF $.
+$}
+
+$( The true relation is closed. Theorem nftru in [ILE] p. 0.
+   (Contributed by la korvo, 25-Jun-2024.) $)
+ceihi-nf $p |- na'a'u da zo'u cei'i $=
+  ( bceihi ceihi nfth ) BACD $.
 
 $(
 #*#*#
