@@ -3339,6 +3339,19 @@ df-kinfi $a |- go ko'a kinfi ko'e
   gi ro da poi ke'a cmima ko'e ku'o zo'u ro de poi ke'a cmima ko'e ku'o zo'u
     ganai da ckini de ko'a gi de ckini da ko'a $.
 
+${
+    kinfiri.0 $e |- ro da poi ke'a cmima ko'e ku'o zo'u ro de poi ke'a cmima ko'e ku'o zo'u
+    ganai da ckini de ko'a gi de ckini da ko'a $.
+    $( Reverse inference form of ~df-kinfi
+       (Contributed by la korvo, 25-Jun-2024.) $)
+    kinfiri $p |- ko'a kinfi ko'e $=
+      ( sbckini bt bgan sbcmima tsb tss brd brdp sbkinfi bb df-kinfi bi-rev ) C
+      DAFGDCAFGHZBIJZSKZDRDRLMZTCUACUALMABNOEABCDPQ $.
+$}
+
+$( {` du `} is symmetric over any domain. $)
+du-kinfi $p |- pa ka ce'u du ce'u kei kinfi ko'e $= ? $.
+
 $(
 =-=-=
 Reflexivity: {kinra}
