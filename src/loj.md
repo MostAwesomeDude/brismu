@@ -14,6 +14,9 @@ To read Metamath theorems as statements about **Loj**, encode:
 * objects as members of the {broda} series
 * arrows from X to Y as {ganai X gi Y}
 
+Note that while **Loj** is thin, its formal verification in Metamath is
+non-thin. This is not a serious issue.
+
 ## Table of proofs
 
 Metamath statement | Lojban bridi | What it means
