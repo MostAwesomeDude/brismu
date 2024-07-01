@@ -68,9 +68,11 @@ htmldef "brode" as "<span class='bridi'>brode</span> ";
 htmldef "brodi" as "<span class='bridi'>brodi</span> ";
 htmldef "brodo" as "<span class='bridi'>brodo</span> ";
 htmldef "brodu" as "<span class='bridi'>brodu</span> ";
-htmldef "da" as "<span class='selbri'>da</span> ";
-htmldef "de" as "<span class='selbri'>de</span> ";
-htmldef "di" as "<span class='selbri'>di</span> ";
+htmldef "da" as "<span class='sumti'>da</span> ";
+htmldef "de" as "<span class='sumti'>de</span> ";
+htmldef "di" as "<span class='sumti'>di</span> ";
+htmldef "do" as "<span class='sumti'>do</span> ";
+htmldef "mi" as "<span class='sumti'>mi</span> ";
 htmldef "du" as "<span class='selbri'>du</span> ";
 htmldef "cei'i" as "<span class='selbri'>cei'i</span> ";
 htmldef "gai'o" as "<span class='selbri'>gai'o</span> ";
@@ -1585,6 +1587,33 @@ ${
       wk1 wk2 sbba wk2 wk1 sbba sbs se-invo.0 sei sei $.
 $}
 
+${
+    se-dual.0 $e |- ko'a bu'a naja bu'e ko'e $.
+    $( Self-duality property for {` se `}.
+       (Contributed by la korvo, 30-Jun-2024.) $)
+    se-dual $p |- ko'e se bu'a naja se bu'e ko'a $=
+      ( sbs bb df-se golili najai bi-rev-syl syl najari ) BACFZDFZBANGZABCGZBAO
+      GZPQABCHIQABDGZRABCDEJRSABDHKLLM $.
+$}
+
+${
+    se-dual-l.0 $e |- ko'a bu'a naja se bu'e ko'e $.
+    $( Shift {` se `} to the left of an implication.
+       (Contributed by la korvo, 30-Jun-2024.) $)
+    se-dual-l $p |- ko'e se bu'a naja bu'e ko'a $=
+      ( sbs bb df-se golili najai syl najari ) BACFZDBAMGZABCGZBADGZNOABCHIOABD
+      FZGZPABCQEJRPBADHIKKL $.
+$}
+
+${
+    se-dual-r.0 $e |- ko'a se bu'a naja bu'e ko'e $.
+    $( Shift {` se `} to the right of an implication.
+       (Contributed by la korvo, 30-Jun-2024.) $)
+    se-dual-r $p |- ko'e bu'a naja se bu'e ko'a $=
+      ( sbs bb df-se bi-rev-syl najai syl najari ) BACDFZBACGZABCFZGZBAMGZPNBAC
+      HIPABDGZQABODEJQRABDHIKKL $.
+$}
+
 $(
 #*#*#
 Universal quantifiers I: {ro}
@@ -1808,6 +1837,7 @@ $}
 ${
     se-du-elim.0 $e |- ko'a se du ko'e $.
     $( {` se du `} may be replaced with {` du `}.
+       Theorem Cat.Allegory.Base.dual-id in [1Lab] p. 0.
        (Contributed by la korvo, 9-Jul-2023.) $)
     se-du-elim $p |- ko'a du ko'e $=
       wk2 wk1 wk2 wk1 sbdu se-du-elim.0 sei du-sym $.

@@ -61,7 +61,7 @@ especially worried about h-levels, so this is not a serious issue.
 `_†` | [sbs](sbs.html)
 `dual` | no closed form yet, can be inferred from [se-invo](se-invo.html) and [seri](seri.html) [seri](seri.html) respectively
 `dual-∘` | todo
-`dual-≤` | todo
+`dual-≤` | [se-dual](se-dual.html)
 `_∩_` | [bge](bge.html)
 `∩-le-l` | [ax-ge-le](ax-ge-le.html)
 `∩-le-r` | [ax-ge-re](ax-ge-re.html)
@@ -73,8 +73,8 @@ We also reprove the following theorems:
 1Lab theorem | Metamath theorem
 ---|---
 `≤-yoneda` | todo
-`dual-≤ₗ` | todo
-`dual-≤ᵣ` | todo
+`dual-≤ₗ` | [se-dual-l](se-dual-l.html)
+`dual-≤ᵣ` | [se-dual-r](se-dual-r.html)
 `_dual-∩` | todo
 `dual-id` | [se-du-elim](se-du-elim.html)
 
