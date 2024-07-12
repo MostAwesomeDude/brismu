@@ -3379,9 +3379,6 @@ ${
       DAFGDCAFGHZBIJZSKZDRDRLMZTCUACUALMABNOEABCDPQ $.
 $}
 
-$( {` du `} is symmetric over any domain. $)
-du-kinfi $p |- pa ka ce'u du ce'u kei kinfi ko'e $= ? $.
-
 $(
 =-=-=
 Reflexivity: {kinra}
@@ -3500,12 +3497,16 @@ ${
       ( sl0 bkaclihe bb ax-succ-zero nakuii ) ACDEAFBG $.
 $}
 
+$( Successors of natural numbers are also natural numbers, and each natural
+   number has exactly one successor. This is equivalent to Robinson axiom 2. $)
+ax-succ-succ $a |- ganai ko'a .e ko'e kacli'e ko'i gi ko'a du ko'e $.
+
 ${
-    ax-succ-succ.0 $e |- ko'a .e ko'e kacli'e ko'i $.
-    $( Successors of natural numbers are also natural numbers, and each
-       natural number has exactly one successor. This is equivalent to
-       Robinson axiom 2. $)
-    ax-succ-succ $a |- ko'a du ko'e $.
+    succ-succ.0 $e |- ko'a .e ko'e kacli'e ko'i $.
+    $( Inference form of ~ax-succ-succ
+       (Contributed by la korvo, 7-Jul-2024.) $)
+    succ-succ $p |- ko'a du ko'e $=
+      ( sje bkaclihe bb sbdu ax-succ-succ ax-mp ) ABECFGABHGDABCIJ $.
 $}
 
 $( The induction axiom for second-order arithmetic. To accomodate higher-order

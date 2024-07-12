@@ -13,6 +13,7 @@ To read Metamath theorems as statements about **Loj**, encode:
 
 * objects as members of the {broda} series
 * arrows from X to Y as {ganai X gi Y}
+* pasting diagrams as applications of [ax-mp](ax-mp.html)
 
 Note that while **Loj** is thin, its formal verification in Metamath is
 non-thin. This is not a serious issue.
@@ -44,3 +45,26 @@ Metamath statement | Lojban bridi | What it means
     * Associativity: {ge/ga broda gi ge/ga brode gi brodi}
       => {ge/ga ge/ga broda gi brode gi brodi}
     * Absorption: {ge/ga broda gi ga/ge broda gi brode} => {broda}
+
+## Core
+
+The [core](https://ncatlab.org/nlab/show/core+groupoid) of a category is the
+groupoid which includes all of its isomorphisms. The core of **Loj**, written
+**Core(Loj)**, is the groupoid whose:
+
+* objects are the three equivalence classes of true, false, and independent
+  bridi, and
+* arrows are bi-implications from one bridi to another.
+
+To read Metamath theorems as statements about **Core(Loj)**, encode:
+
+* objects as members of the {broda} series
+* arrows from X to Y as {go X gi Y}
+* pasting diagrams as applications of [bi](bi.html)
+
+### Table of proofs
+
+Metamath statement | Lojban bridi | What it means
+---|---|---
+[go-refl](go-refl.html) | {go broda gi broda} | identity arrows exist
+[go-trans](go-trans.html) | {go broda gi brode} & {go brode gi brodi} => {go broda gi brodi} | composition is allowed and well-typed
