@@ -1615,6 +1615,24 @@ ${
       HIPABDGZQABODEJQRABDHIKKL $.
 $}
 
+${
+    se-ganaii.0 $e |- ganai ko'a bu'a ko'e gi ko'i bu'e ko'o $.
+    $( Convert selbri on both sides of an implication simultaneously.
+       (Contributed by la korvo, 19-Jul-2024.) $)
+    se-ganaii $p |- ganai ko'e se bu'a ko'a gi ko'o se bu'e ko'i $=
+      ( sbs bb df-se golili go-comi syl ) BAEHIZABEIZDCFHIZNOABEJKOCDFIZPGQPPQC
+      DFJLKMM $.
+$}
+
+${
+    se-ganair.0 $e |- ganai ko'a se bu'a ko'e gi ko'i se bu'e ko'o $.
+    $( Convert selbri on both sides of an implication simultaneously.
+       (Contributed by la korvo, 19-Jul-2024.) $)
+    se-ganair $p |- ganai ko'e bu'a ko'a gi ko'o bu'e ko'i $=
+      ( bb sbs df-se go-comi golili syl ) BAEHZABEIHZDCFHZNOONBAEJKLOCDFIHZPGQP
+      DCFJLMM $.
+$}
+
 $(
 #*#*#
 Universal quantifiers I: {ro}
@@ -2259,8 +2277,11 @@ $}
 
 ${
     gripauis.0 $e |- ko'a gripau ko'e $.
-    $( Inference form of ~df-gripau $)
-    gripauis $p |- ganai ko'i cmima ko'a gi ko'i cmima ko'e $= ? $.
+    $( Inference form of ~df-gripau
+       (Contributed by la korvo, 19-Jul-2024.) $)
+    gripauis $p |- ganai ko'i cmima ko'a gi ko'i cmima ko'e $=
+      ( sbcmima sbs tsb tss sjnaa gripaui seri naai se-ganair ) ACBCEEABCEFGZNH
+      CABIEABCDJKLM $.
 $}
 
 ${
@@ -2274,8 +2295,11 @@ $}
 
 ${
     gripauris.0 $e |- ganai ko'i cmima ko'a gi ko'i cmima ko'e $.
-    $( Reverse inference form of ~df-gripau $)
-    gripauris $p |- ko'a gripau ko'e $= ? $.
+    $( Reverse inference form of ~df-gripau
+       (Contributed by la korvo, 19-Jul-2024.) $)
+    gripauris $p |- ko'a gripau ko'e $=
+      ( sjnaa sbcmima sbs tsb tss se-ganaii naari sei gripauri ) ABCCABEFABCFGH
+      ZNICACBFFDJKLM $.
 $}
 
 $( {` gripau `} is symmetric.
