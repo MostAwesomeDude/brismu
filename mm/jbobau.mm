@@ -2305,7 +2305,7 @@ $}
 $( {` gripau `} is symmetric.
    (Contributed by la korvo, 15-Jul-2024.) $)
 gripau-sym $p |- ko'a gripau ko'a $=
-  ( sbcmima tsb tss btb id gripauris ) AAAAABCZHDEFG $.
+  ( wk2 sbcmima bb id gripauris ) AABBACDEF $.
 
 $(
 #*#*#
