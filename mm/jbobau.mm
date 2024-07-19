@@ -2302,10 +2302,20 @@ ${
       ZNICACBFFDJKLM $.
 $}
 
-$( {` gripau `} is symmetric.
+$( {` gripau `} is reflexive.
    (Contributed by la korvo, 15-Jul-2024.) $)
-gripau-sym $p |- ko'a gripau ko'a $=
+gripau-refl $p |- ko'a gripau ko'a $=
   ( wk2 sbcmima bb id gripauris ) AABBACDEF $.
+
+${
+    gripau-trans.0 $e |- ko'a gripau ko'e $.
+    gripau-trans.1 $e |- ko'e gripau ko'i $.
+    $( {` gripau `} is transitive.
+       (Contributed by la korvo, 19-Jul-2024.) $)
+    gripau-trans $p |- ko'a gripau ko'i $=
+      ( wk4 sbcmima bb gripauis syl gripauris ) ACFFAGHFBGHFCGHABFDIBCFEIJK $.
+$}
+
 
 $(
 #*#*#
@@ -3285,6 +3295,36 @@ df-nibli $a |-
   go pa du'u broda kei nibli pa du'u brode kei
   gi ganai broda gi brode $.
 
+${
+    niblii.0 $e |- pa du'u broda kei nibli pa du'u brode kei $.
+    $( Inference form of ~df-nibli
+       (Contributed by la korvo, 19-Jul-2024.) $)
+    niblii $p |- ganai broda gi brode $=
+      ( sdu sbnibli bb bgan df-nibli bi ) ADBDEFABGCABHI $.
+$}
+
+${
+    nibliii.0 $e |- pa du'u broda kei nibli pa du'u brode kei $.
+    nibliii.1 $e |- broda $.
+    $( Inference form of ~df-nibli
+       (Contributed by la korvo, 19-Jul-2024.) $)
+    nibliii $p |- brode $=
+      ( niblii ax-mp ) ABDABCEF $.
+$}
+
+${
+    nibliri.0 $e |- ganai broda gi brode $.
+    $( Reverse inference form of ~df-nibli
+       (Contributed by la korvo, 19-Jul-2024.) $)
+    nibliri $p |- pa du'u broda kei nibli pa du'u brode kei $=
+      ( bgan sdu sbnibli bb df-nibli bi-rev ) ABDAEBEFGCABHI $.
+$}
+
+$( {` nibli `} is reflexive.
+   (Contributed by la korvo, 19-Jul-2024.) $)
+nibli-refl $p |- pa du'u broda kei nibli pa du'u broda kei $=
+  ( id nibliri ) AAABC $.
+
 $(
 =-=-=
 {sigda}
@@ -3497,6 +3537,12 @@ $( {` du `} is reflexive over any domain.
 du-kinra $p |- pa ka ce'u du ce'u kei kinra ko'e $=
   ( wda sc sbdu tsb tss spk bckini sbcmima du-refl ckiniri poi-gen kinrari ) CC
   DEZNFGABBBDHAIEZOFBBBDBJKLM $.
+
+$( {` gripau `} is reflexive over any domain.
+   (Contributed by la korvo, 19-Jul-2024.) $)
+gripau-kinra $p |- pa ka ce'u gripau ce'u kei kinra ko'e $=
+  ( wda sbgripau tsb tss spk bckini sbcmima gripau-refl ckiniri poi-gen kinrari
+  sc ) MMCDZNEFABBBCGAHDZOEBBBCBIJKL $.
 
 $(
 =-=-=
