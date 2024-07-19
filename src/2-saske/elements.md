@@ -142,6 +142,10 @@ These gismu are ambiguous about whether they refer to atoms or molecules.
 
 Perhaps {curve lo tabno} "pure carbon", for example.
 
+* spisa: piece, portion, lump, chunk, particle (substance)
+
+Perhaps {spisa} => {pagbu}.
+
 ### Oxidizers
 
 {fagri}'s third place takes an "oxidizer." This could be oxygen, air, hydrogen

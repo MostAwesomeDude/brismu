@@ -194,6 +194,7 @@ htmldef "ce'u" as "<small>ce'u</small> ";
 htmldef "kei" as "<small>kei</small> ";
 htmldef "efklipi" as "<span class='lujvo'>efklipi</span> ";
 htmldef "efklizu" as "<span class='lujvo'>efklizu</span> ";
+htmldef "gripau" as "<span class='lujvo'>gripau</span> ";
 htmldef "jompau" as "<span class='lujvo'>jompau</span> ";
 htmldef "kacli'e" as "<span class='lujvo'>kacli'e</span> ";
 htmldef "kacme'a" as "<span class='lujvo'>kacme'a</span> ";
@@ -2216,6 +2217,71 @@ $}
 
 $( The singleton set has one element. $)
 ax-pamei-cmima $a |- ganai ko'a pamei ko'e gi ko'e cmima ko'a $.
+
+$(
+#*#*#
+Subsets
+#*#*#
+$)
+
+$(
+=-=-=
+{gripau}
+=-=-=
+$)
+
+$c gripau $.
+
+sbgripau $a selbri gripau $.
+
+$( Definition of {` gripau `} in terms of {` cmima `} and {` na.a `}.
+   Defined in section 7 of [CLL] p. 18 based on the gloss "set-part". This
+   definition is phrased with an implicit universal quantification instead of
+   {` ro da zo'u da cmima ko'a na.a ko'e `} or {` ro da poi ke'a cmima ko'a
+   ku'o zo'u da cmima ko'e `} for succinctness and ease of theorem-proving. $)
+df-gripau $a |- go ko'a gripau ko'e gi ko'i cmima ko'a na.a ko'e $.
+
+${
+    gripaui.0 $e |- ko'a gripau ko'e $.
+    $( Inference form of ~df-gripau
+       (Contributed by la korvo, 15-Jul-2024.) $)
+    gripaui $p |- ko'i cmima ko'a na.a ko'e $=
+      ( sbgripau bb sjnaa sbcmima df-gripau bi ) ABEFCABGHFDABCIJ $.
+$}
+
+${
+    gripauri.0 $e |- ko'i cmima ko'a na.a ko'e $.
+    $( Reverse inference form of ~df-gripau
+       (Contributed by la korvo, 15-Jul-2024.) $)
+    gripauri $p |- ko'a gripau ko'e $=
+      ( sjnaa sbcmima bb sbgripau df-gripau bi-rev ) CABEFGABHGDABCIJ $.
+$}
+
+${
+    gripauis.0 $e |- ko'a gripau ko'e $.
+    $( Inference form of ~df-gripau $)
+    gripauis $p |- ganai ko'i cmima ko'a gi ko'i cmima ko'e $= ? $.
+$}
+
+${
+    gripauiis.0 $e |- ko'a gripau ko'e $.
+    gripauiis.1 $e |- ko'i cmima ko'a $.
+    $( Inference form of ~df-gripau
+       (Contributed by la korvo, 15-Jul-2024.) $)
+    gripauiis $p |- ko'i cmima ko'e $=
+      ( sbcmima bb gripauis ax-mp ) CAFGCBFGEABCDHI $.
+$}
+
+${
+    gripauris.0 $e |- ganai ko'i cmima ko'a gi ko'i cmima ko'e $.
+    $( Reverse inference form of ~df-gripau $)
+    gripauris $p |- ko'a gripau ko'e $= ? $.
+$}
+
+$( {` gripau `} is symmetric.
+   (Contributed by la korvo, 15-Jul-2024.) $)
+gripau-sym $p |- ko'a gripau ko'a $=
+  ( sbcmima tsb tss btb id gripauris ) AAAAABCZHDEFG $.
 
 $(
 #*#*#
