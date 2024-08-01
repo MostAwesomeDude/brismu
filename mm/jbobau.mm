@@ -124,7 +124,8 @@ htmldef "re" as "<span class='pa'>2</span> ";
 htmldef "ku'i'a" as "<span class='pa'>ku'i'a</span> ";
 htmldef "ku'i'e" as "<span class='pa'>ku'i'e</span> ";
 htmldef "ku'i'i" as "<span class='pa'>ku'i'i</span> ";
-htmldef "bai'ei" as " +1 ";
+htmldef "bai'ei" as " 1+ ";
+htmldef "ka'au" as " # ";
 htmldef "su'i" as " + ";
 htmldef "pi'i" as " * ";
 htmldef "vu'u" as " - ";
@@ -157,6 +158,7 @@ htmldef "frica" as "<span class='gismu'>frica</span> ";
 htmldef "gapru" as "<span class='gismu'>gapru</span> ";
 htmldef "kampu" as "<span class='gismu'>kampu</span> ";
 htmldef "kanxe" as "<span class='gismu'>kanxe</span> ";
+htmldef "kazmi" as "<span class='gismu'>kazmi</span> ";
 htmldef "kinfi" as "<span class='gismu'>kinfi</span> ";
 htmldef "kinra" as "<span class='gismu'>kinra</span> ";
 htmldef "mapti" as "<span class='gismu'>mapti</span> ";
@@ -3593,11 +3595,11 @@ $)
 $(
 #*#*#
 Natural numbers
+#*#*#
 
 We build the natural numbers first with {` li `} and {` du `} to match
 standard presentations, then again with {` kacna'u `} to establish properties
 of the set of natural numbers.
-#*#*#
 $)
 
 $(
@@ -3980,9 +3982,51 @@ $}
 
 $(
 #*#*#
-Cardinality: {kazmi}
+Cardinality
 #*#*#
 $)
+
+$(
+=-=-=
+{ka'au}
+=-=-=
+$)
+
+$c ka'au $.
+
+$( Syntax for cardinality over arbitrary sumti. $)
+mkahau $a PA ka'au ko'a $.
+
+$(
+=-=-=
+{kazmi}
+=-=-=
+$)
+
+$c kazmi $.
+
+sbkazmi $a selbri kazmi $.
+
+$( Definition of {` kazmi `} in terms of {` ka'au `}. $)
+df-kazmi $a |- go ko'a kazmi ko'e gi ko'a du li ka'au ko'e $.
+
+$( Cardinality is a function on sets. An axiom of Fregean cardinality. $)
+ax-card-fun $a |- ganai ko'a .e ko'e kazmi ko'i gi ko'a du ko'e $.
+
+${
+    kazmi-funii.0 $e |- ko'a kazmi ko'i $.
+    kazmi-funii.1 $e |- ko'e kazmi ko'i $.
+    $( Inference form of ~ax-card-fun
+       (Contributed by la korvo, 31-Jul-2024.) $)
+    kazmi-funii $p |- ko'a du ko'e $=
+      ( sje sbkazmi bb sbdu tsb tss ge-ini eri ax-card-fun ax-mp ) ABFCGHABIHAB
+      CGJZPKACGHBCGHDELMABCNO $.
+$}
+
+$( A unary relation describes the empty set when it never holds. An axiom of
+   Fregean cardinality. $)
+ax-card-ex $a |- go li no kazmi pa ka ce'u bo'a kei
+  gi naku zo'u su'o da zo'u da bo'a $.
 
 $(
 #####
