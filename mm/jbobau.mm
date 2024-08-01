@@ -3774,7 +3774,23 @@ ax-succ-std $a |- ro da poi ke'a kacna'u ku'o zo'u
 
 $(
 =-=-=
-Addition I: {sumji}
+Addition I: {su'i}
+=-=-=
+$)
+
+$c su'i $.
+
+msuhi $a PA su'i ku'i'a ku'i'e $.
+
+$( Addition with zero. A standard axiom of second-order arithmetic. $)
+ax-plus-zero $a |- li su'i ku'i'a no du li ku'i'a $.
+
+$( Addition with successor. A standard axiom of second-order arithmetic. $)
+ax-plus-succ $a |- li su'i ku'i'a bai'ei ku'i'e du li bai'ei su'i ku'i'a ku'i'e $.
+
+$(
+=-=-=
+Addition II: {sumji}
 =-=-=
 $)
 
@@ -3797,40 +3813,24 @@ $}
 
 $(
 =-=-=
-Addition II: {su'i}
+Multiplication I: {pi'i}
 =-=-=
 $)
 
-$c su'i $.
+$c pi'i $.
 
-msuhi $a PA ku'i'a su'i ku'i'e $.
+mpihi $a PA pi'i ku'i'a ku'i'e $.
 
-df-suhi $a |-
-  go li ku'i'a du li ku'i'e su'i ku'i'i
-  gi li ku'i'a sumji li ku'i'e li ku'i'i $.
+$( Multiplication with zero. A standard axiom of second-order arithmetic. $)
+ax-mul-zero $a |- li pi'i ku'i'a no du li no $.
 
-${
-    suhii.0 $e |- li ku'i'a du li ku'i'e su'i ku'i'i $.
-    $( Inference form of ~df-suhi
-       (Contributed by la korvo, 21-Aug-2023.) $)
-    suhii $p |- li ku'i'a sumji li ku'i'e li ku'i'i $=
-      ( sli msuhi sbdu bb bsumji bt df-suhi bi ) AEZBCFEGHMBECEIJDABCKL $.
-$}
-
-${
-    suhiri.0 $e |- li ku'i'a sumji li ku'i'e li ku'i'i $.
-    $( Reverse inference form of ~df-suhi
-       (Contributed by la korvo, 21-Aug-2023.) $)
-    suhiri $p |- li ku'i'a du li ku'i'e su'i ku'i'i $=
-      ( sli bsumji bt msuhi sbdu bb df-suhi bi-rev ) AEZBECEFGMBCHEIJDABCKL $.
-$}
-
-$( Definition of {` bai'ei `} in terms of {` su'i `}. $)
-df-baihei $a |- li bai'ei ku'i'a du li ku'i'a su'i pa $.
+$( Multiplication with successor. A standard axiom of second-order arithmetic. $)
+ax-mul-succ $a |-
+  li pi'i ku'i'a bai'ei ku'i'e du li su'i pi'i ku'i'a ku'i'e ku'i'a $.
 
 $(
 =-=-=
-Multiplication I: {pilji}
+Multiplication II: {pilji}
 =-=-=
 $)
 
@@ -3848,36 +3848,6 @@ ${
        axiom 7. $)
     ax-pilji-succ $a |- su'o da zo'u
       ge ko'i sumji da ko'a gi da pilji ko'a ko'e $.
-$}
-
-$(
-=-=-=
-Multiplication II: {pi'i}
-=-=-=
-$)
-
-$c pi'i $.
-
-mpihi $a PA ku'i'a pi'i ku'i'e $.
-
-df-pihi $a |-
-  go li ku'i'a du li ku'i'e pi'i ku'i'i
-  gi li ku'i'a pilji li ku'i'e li ku'i'i $.
-
-${
-    pihii.0 $e |- li ku'i'a du li ku'i'e pi'i ku'i'i $.
-    $( Inference form of ~df-pihi
-       (Contributed by la korvo, 23-Aug-2023.) $)
-    pihii $p |- li ku'i'a pilji li ku'i'e li ku'i'i $=
-      ( sli mpihi sbdu bb bpilji bt df-pihi bi ) AEZBCFEGHMBECEIJDABCKL $.
-$}
-
-${
-    pihiri.0 $e |- li ku'i'a pilji li ku'i'e li ku'i'i $.
-    $( Reverse inference form of ~df-pihi
-       (Contributed by la korvo, 23-Aug-2023.) $)
-    pihiri $p |- li ku'i'a du li ku'i'e pi'i ku'i'i $=
-      ( sli bpilji bt mpihi sbdu bb df-pihi bi-rev ) AEZBECEFGMBCHEIJDABCKL $.
 $}
 
 $(
