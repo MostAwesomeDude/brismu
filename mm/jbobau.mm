@@ -3593,36 +3593,63 @@ $)
 $(
 #*#*#
 Natural numbers
+
+We build the natural numbers first with {` li `} and {` du `} to match
+standard presentations, then again with {` kacna'u `} to establish properties
+of the set of natural numbers.
 #*#*#
 $)
 
 $(
 =-=-=
-{kacna'u}
+Zero: {li no}
 =-=-=
 $)
 
-$c kacna'u $.
-$c li no $.
+$( Experimental cmavo for "empty digits" which will serve as PA metavariables. $)
+$v ku'i'a ku'i'e ku'i'i $.
+$d ku'i'a ku'i'e ku'i'i $.
+$c li PA $.
 
-bkacnahu $a selbri kacna'u $.
+mkuhiha $f PA ku'i'a $.
+mkuhihe $f PA ku'i'e $.
+mkuhihi $f PA ku'i'i $.
 
-sl0 $a sumti li no $.
+sli $a sumti li ku'i'a $.
 
-$( Zero is a natural number. $)
-ax-nat-zero $a |- li no kacna'u $.
+$c no $.
+
+p0 $a PA no $.
+
+$( Syntax for zero.
+   (Contributed by la korvo, 31-Jul-2024.) $)
+sl0 $p sumti li no $=
+  ( p0 sli ) AB $.
 
 $(
 =-=-=
-Successor I: {kacli'e}
+Successor I: {bai'ei}, {kacli'e}
 =-=-=
 $)
+
+$c bai'ei $.
+
+mbaihei $a PA bai'ei ku'i'a $.
+
+$( The successor function is injective. A standard axiom of second-order
+   arithmetic. $)
+ax-baihei-inj $a |- ganai li bai'ei ku'i'a du li bai'ei ku'i'e
+  gi li ku'i'a du li ku'i'e $.
 
 $c kacli'e $.
 
 bkaclihe $a selbri kacli'e $.
 
-$( Zero is not a successor. This is Robinson axiom 1. $)
+$( Definition of {` kacli'e `} in terms of {` bai'ei `}. $)
+df-kaclihe $a |- go li ku'i'a kacli'e li ku'i'e
+  gi li bai'ei ku'i'a du li ku'i'e $.
+
+$( Zero is not a successor. A standard axiom of second-order arithmetic. $)
 ax-succ-zero $a |- naku zo'u ko'a kacli'e li no $.
 
 ${
@@ -3633,15 +3660,60 @@ ${
       ( sl0 bkaclihe bb ax-succ-zero nakuii ) ACDEAFBG $.
 $}
 
+p1 $a PA pa $.
+
+$( Syntax for one.
+   (Contributed by la korvo, 31-Jul-2024.) $)
+sl1 $p sumti li pa $=
+  ( p1 sli ) AB $.
+
+$( One is the successor of zero. $)
+df-pa $a |- li pa du li bai'ei no $.
+
+$c re $.
+
+p2 $a PA re $.
+
+$( Syntax for two.
+   (Contributed by la korvo, 31-Jul-2024.) $)
+sl2 $p sumti li re $=
+  ( p2 sli ) AB $.
+
+$( Two is the successor of one. $)
+df-re $a |- li re du li bai'ei pa $.
+
+$(
+=-=-=
+Natural number predicate: {kacna'u}
+=-=-=
+$)
+
+$c kacna'u $.
+
+bkacnahu $a selbri kacna'u $.
+
+$( Zero is a natural number. A standard axiom of second-order arithmetic. $)
+ax-nat-no $a |- li no kacna'u $.
+
+$( One is a natural number. $)
+ax-nat-pa $a |- li pa kacna'u $.
+
+$(
+=-=-=
+Successor II
+=-=-=
+$)
+
 $( Successors of natural numbers are also natural numbers, and each natural
-   number has exactly one successor. This is equivalent to Robinson axiom 2. $)
+   number has exactly one successor. This is equivalent to Robinson axiom 2
+   and, as such, should be provable from ~ax-baihei-inj $)
 ax-succ-succ $a |- ganai ko'a .e ko'e kacli'e ko'i gi ko'a du ko'e $.
 
 ${
-    succ-succ.0 $e |- ko'a .e ko'e kacli'e ko'i $.
+    succ-succi.0 $e |- ko'a .e ko'e kacli'e ko'i $.
     $( Inference form of ~ax-succ-succ
        (Contributed by la korvo, 7-Jul-2024.) $)
-    succ-succ $p |- ko'a du ko'e $=
+    succ-succi $p |- ko'a du ko'e $=
       ( sje bkaclihe bb sbdu ax-succ-succ ax-mp ) ABECFGABHGDABCIJ $.
 $}
 
@@ -3698,21 +3770,6 @@ $( There are no non-standard natural numbers. This axiom upgrades our
 ax-succ-std $a |- ro da poi ke'a kacna'u ku'o zo'u
   ga da du li no gi su'o de zo'u de kacli'e da $.
 
-sl1 $a sumti li pa $.
-
-$( 1 is the successor of 0. $)
-df-pa-li $a |- li no kacli'e li pa $.
-
-$( 1 is a natural number. $)
-ax-nat-pa $a |- li pa kacna'u $.
-
-$c re $.
-
-sl2 $a sumti li re $.
-
-$( 2 is the successor of 1. $)
-df-re-li $a |- li pa kacli'e li re $.
-
 $(
 =-=-=
 Addition I: {sumji}
@@ -3744,19 +3801,6 @@ $)
 
 $c su'i $.
 
-$( Grammar for VUhU and PA. $)
-
-$( Experimental cmavo for "empty digits" which will serve as PA metavariables. $)
-$v ku'i'a ku'i'e ku'i'i $.
-$d ku'i'a ku'i'e ku'i'i $.
-$c PA $.
-
-mkuhiha $f PA ku'i'a $.
-mkuhihe $f PA ku'i'e $.
-mkuhihi $f PA ku'i'i $.
-
-sli $a sumti li ku'i'a $.
-
 msuhi $a PA ku'i'a su'i ku'i'e $.
 
 df-suhi $a |-
@@ -3778,16 +3822,6 @@ ${
     suhiri $p |- li ku'i'a du li ku'i'e su'i ku'i'i $=
       ( sli bsumji bt msuhi sbdu bb df-suhi bi-rev ) AEZBECEFGMBCHEIJDABCKL $.
 $}
-
-$(
-=-=-=
-Successor II: {bai'ei}
-=-=-=
-$)
-
-$c bai'ei $.
-
-mbaihei $a PA bai'ei ku'i'a $.
 
 $( Definition of {` bai'ei `} in terms of {` su'i `}. $)
 df-baihei $a |- li bai'ei ku'i'a du li ku'i'a su'i pa $.
@@ -3943,6 +3977,12 @@ ${
     dugriri $p |- ko'a dugri ko'e ko'i $=
       ( sbtenfa sbs sbt bt sbdugri df-dugri bi-rev ) ABCEFGHABCIHDABCJK $.
 $}
+
+$(
+#*#*#
+Cardinality: {kazmi}
+#*#*#
+$)
 
 $(
 #####
