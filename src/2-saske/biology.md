@@ -149,3 +149,47 @@ What is {jbari}? Are all {guzme} also {jbari}?
 
 It is not clear whether {gurni} refers to processed products only. Presumably
 the unprocessed kernels are {tsiju} instead.
+
+## Other Issues
+
+What is {jmive}? The Anglophone approach is near-useless because the following
+objects are all-or-nothing on {jmive}:
+
+* Galaxies
+* Stars
+* Biomes
+* Forests
+* Lithotrophs
+* Viruses
+
+So the Anglophone approach might be to give up and say that {jmive} is
+Earth-centric: life is "homeostatic arrangements of organic chemicals in
+thermal non-equilibrium," quoting la korvo.
+
+la gleki points to the Russophone approach, in particular the axioms of B. M.
+Mednikov, and proposes the valsi {mednikovo} which indexes them. This approach
+includes the following characteristics of life:
+
+* Homeostasis
+* Organization
+* Metabolism including an anabolic and catabolic component
+* Growth
+* Adaptation
+* Response to stimuli
+* Reproduction or autocatalysis
+
+And of non-life:
+
+* Cessation of brain function ({co'u})
+* Divergence of homeostasis
+* Cessation of metabolism
+
+la gleki gives a translation from Russian to English of Mednikov's axioms:
+
+> "mednikovo li 5". x1 is the organism that shows repeatedly amplified changes in the body's genetic programs being subject to selection by environmental conditions (Charles Darwin axiom)
+
+> "mednikovo li 3": x1 is the organism showing its genetic program transferred through generations having random non-directional changes (successful only in given environment) as a result of various reasons (Charles Darwin axiom)
+
+> "mednikovo li 2": x1 is the organism that shows taking genes of its parents for forming its offspring (N.K. Koltsov axiom)
+
+> "mednikovo li 1": x1 is the organism that shows the unity of its phenotype and the program for its construction (genotype) inherited from its ancestors  (Weissman axiom)
