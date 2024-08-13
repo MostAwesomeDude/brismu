@@ -152,6 +152,7 @@ htmldef "crane" as "<span class='gismu'>crane</span> ";
 htmldef "drata" as "<span class='gismu'>drata</span> ";
 htmldef "dugri" as "<span class='gismu'>dugri</span> ";
 htmldef "dunli" as "<span class='gismu'>dunli</span> ";
+htmldef "fancu" as "<span class='gismu'>fancu</span> ";
 htmldef "fatci" as "<span class='gismu'>fatci</span> ";
 htmldef "fatne" as "<span class='gismu'>fatne</span> ";
 htmldef "frica" as "<span class='gismu'>frica</span> ";
@@ -4299,6 +4300,41 @@ $(
 Functions I
 #*#*#
 $)
+
+$(
+=-=-=
+{fancu}
+=-=-=
+$)
+
+$c fancu $.
+sbfancu $a selbri fancu $.
+
+$( Definition of {` fancu `}. Note that the name of the function is neither
+   unique nor concrete. $)
+df-fancu $a |- go ko'a fancu ko'e ko'i ko'o
+  gi ro da poi ke'a cmima ko'e ku'o zo'u pa de zo'u
+  ge de cmima ko'i gi da ckini de ko'o $.
+
+${
+    fancui.0 $e |- ko'a fancu ko'e ko'i ko'o $.
+    $( Inference form of ~df-fancu
+       (Contributed by la korvo, 12-Aug-2024.) $)
+    fancui $p |- ro da poi ke'a cmima ko'e ku'o zo'u pa de zo'u
+      ge de cmima ko'i gi da ckini de ko'o $=
+      ( sbfancu bq sbcmima bb sbckini bt bge bpd tsb tss brd brdp df-fancu bi )
+      ABCDHIFCJKEFDLMNFOZBJPZUCQEUBEUBRSGABCDEFTUA $.
+$}
+
+${
+    fancuii.0 $e |- ko'a fancu ko'e ko'i ko'o $.
+    fancuii.1 $e |- de cmima ko'e $.
+    $( Inference form of ~df-fancu
+       (Contributed by la korvo, 12-Aug-2024.) $)
+    fancuii $p |- pa da zo'u ge da cmima ko'i gi de ckini da ko'o $=
+  ( sbcmima bb sbckini bt bge bpd bgan tsb tss fancui poi-roi spec1i ax-mp ) FB
+  IJZECIJFEDKLMENZHUBUCOFUCBIPZUDQFABCDFEGRSTUA $.
+$}
 
 $(
 =-=-=
