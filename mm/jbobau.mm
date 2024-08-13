@@ -58,6 +58,11 @@ htmldef "sumti" as "<em>sumti</em> ";
 htmldef "brirebla" as "<em>brirebla</em> ";
 htmldef "skaselbri" as "<em>skaselbri</em> ";
 htmldef "PA" as "<em>PA</em> ";
+htmldef "fo'a" as "<span class='sumti'>fo'a</span> ";
+htmldef "fo'e" as "<span class='sumti'>fo'e</span> ";
+htmldef "fo'i" as "<span class='sumti'>fo'i</span> ";
+htmldef "fo'o" as "<span class='sumti'>fo'o</span> ";
+htmldef "fo'u" as "<span class='sumti'>fo'u</span> ";
 htmldef "ko'a" as "<span class='sumti'>ko'a</span> ";
 htmldef "ko'e" as "<span class='sumti'>ko'e</span> ";
 htmldef "ko'i" as "<span class='sumti'>ko'i</span> ";
@@ -247,12 +252,17 @@ $c selbri sumti bridi brirebla brili'e $.
 $( A turnstile. Needed to indicate that a bridi is inhabited. $)
 $c |- $.
 
-$v ko'a ko'e ko'i ko'o ko'u $.
-wk1 $f sumti ko'a $.
-wk2 $f sumti ko'e $.
-wk3 $f sumti ko'i $.
-wk4 $f sumti ko'o $.
-wk5 $f sumti ko'u $.
+$v ko'a ko'e ko'i ko'o ko'u fo'a fo'e fo'i fo'o fo'u $.
+wk1  $f sumti ko'a $.
+wk2  $f sumti ko'e $.
+wk3  $f sumti ko'i $.
+wk4  $f sumti ko'o $.
+wk5  $f sumti ko'u $.
+wk6  $f sumti fo'a $.
+wk7  $f sumti fo'e $.
+wk8  $f sumti fo'i $.
+wk9  $f sumti fo'o $.
+wk10 $f sumti fo'u $.
 
 $v broda brode brodi brodo brodu $.
 sbb1 $f bridi broda $.
@@ -1025,6 +1035,9 @@ ${
     najari $p |- ko'a bu'a naja bu'e ko'e $=
       ( bb bgan sbnaja df-naja bi-rev ) ABCFABDFGABCDHFEABCDIJ $.
 $}
+
+$( Extension of ~df-naja to ternary bridi. $)
+df-naja-t $a |- go ko'a bu'a naja bu'e ko'e ko'i gi ganai ko'a bu'a ko'e ko'i gi ko'a bu'e ko'e ko'i $.
 
 $(
 =-=-=
@@ -2755,6 +2768,54 @@ ${
       wk1 wk2 wk3 sbba wk3 wk2 wk1 sbba sbt te-invo.0 tei tei $.
 $}
 
+${
+    te-dual.0 $e |- ko'a bu'a naja bu'e ko'e ko'i $.
+    $( Self-duality property for {` te `}.
+       (Contributed by la korvo, 13-Aug-2024.) $)
+    te-dual $p |- ko'i te bu'a naja te bu'e ko'e ko'a $=
+      ( sbt bt bgan sbnaja df-te golili df-naja-t bi bi-rev-syl syl bi-rev ) CB
+      ADGZHZCBAEGZHZICBADTJGHSABCDHZUASUBABCDKLUBABCEHZUAABCDEJHUBUCIFABCDEMNUA
+      UCABCEKOPPCBARTMQ $.
+$}
+
+${
+    te-dual-l.0 $e |- ko'a bu'a naja te bu'e ko'e ko'i $.
+    $( Shift {` te `} to the left of an implication.
+       (Contributed by la korvo, 13-Aug-2024.) $)
+    te-dual-l $p |- ko'i te bu'a naja bu'e ko'e ko'a $=
+      ( sbt bt bgan sbnaja df-te golili df-naja-t bi syl bi-rev ) CBADGZHZCBAEH
+      ZICBADEJGHRABCDHZSRTABCDKLTABCEGZHZSABCDUAJHTUBIFABCDUAMNUBSCBAEKLOOCBAQE
+      MP $.
+$}
+
+${
+    te-dual-r.0 $e |- ko'a te bu'a naja bu'e ko'e ko'i $.
+    $( Shift {` te `} to the right of an implication.
+       (Contributed by la korvo, 13-Aug-2024.) $)
+    te-dual-r $p |- ko'i bu'a naja te bu'e ko'e ko'a $=
+      ( bt sbt bgan sbnaja df-te bi-rev-syl df-naja-t bi syl bi-rev ) CBADGZCBA
+      EHZGZICBADRJGQABCDHZGZSUAQCBADKLUAABCEGZSABCDEJHGUAUBIFABCTEMNSUBABCEKLOO
+      CBADRMP $.
+$}
+
+${
+    te-ganaii.0 $e |- ganai ko'a bu'a ko'e ko'i gi fo'a bu'e fo'e fo'i $.
+    $( Convert selbri on both sides of an implication simultaneously.
+       (Contributed by la korvo, 13-Aug-2024.) $)
+    te-ganaii $p |- ganai ko'i te bu'a ko'e ko'a gi fo'i te bu'e fo'e fo'a $=
+      ( sbt bt df-te golili go-comi syl ) CBAGJKZABCGKZFEDHJKZPQABCGLMQDEFHKZRI
+      SRRSDEFHLNMOO $.
+$}
+
+${
+    te-ganair.0 $e |- ganai ko'a te bu'a ko'e ko'i gi fo'a te bu'e fo'e fo'i $.
+    $( Convert selbri on both sides of an implication simultaneously.
+       (Contributed by la korvo, 13-Aug-2024.) $)
+    te-ganair $p |- ganai ko'i bu'a ko'e ko'a gi fo'i bu'e fo'e fo'a $=
+      ( bt sbt df-te go-comi golili syl ) CBAGJZABCGKJZFEDHJZPQQPCBAGLMNQDEFHKJ
+      ZRISRFEDHLNOO $.
+$}
+
 $(
 #*#*#
 Pairing: {ce}
@@ -4253,10 +4314,17 @@ $)
 $c ki'irni'i $.
 sbkihirnihi $a selbri ki'irni'i $.
 
-$( Definition of {` ki'irni'i `} in terms of {` naja `}. $)
-df-kihirnihi $a |-
-  go pa ka ce'u bu'a ce'u kei ki'irni'i pa ka ce'u bu'e ce'u kei
-  gi ko'a bu'a naja bu'e ko'e $.
+$( Definition of {` ki'irni'i `} in terms of {` ckini `} and {` na.a `}.
+   Unlike prior definitions, this one does not require any terbri inspection. $)
+df-kihirnihi $a |- go ko'a ki'irni'i ko'e
+  gi ro da zo'u ro de zo'u da ckini de ko'a na.a ko'e $.
+
+$( {` ki'irni'i `} is reflexive.
+   (Contributed by la korvo, 13-Aug-2024.) $)
+kihirnihi-refl $p |- ko'a ki'irni'i ko'a $=
+  ( wda wde sjnaa sbckini bt brd sbkihirnihi bb sbt bgan tsb tss df-na.a bi-rev
+  id tei ax-gen1 df-kihirnihi ) BCAADZEFZCUAGZBUBGAAHIUBBUACBCTEACBEJZFZUDKTCBU
+  CFUDPAABCUCLZUEMZUFMNOQRRAABCSO $.
 
 $( {` ki'irni'i `} is transitive. $)
 ax-kihirnihi-trans $a |-
