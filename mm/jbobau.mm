@@ -960,6 +960,11 @@ ${
       ( btb bgan sjnaa df-na.a bi-rev ) ACEBCEFABGCEDABCHI $.
 $}
 
+$( {` na.a `} is reflexive over any brirebla.
+   (Contributed by la korvo, 14-Aug-2024.) $)
+na.a-refl $p |- ko'a na.a ko'a bo'a $=
+  ( btb id naari ) AABABCDE $.
+
 $(
 =-=-=
 {.anai}
@@ -1503,6 +1508,11 @@ ${
     o-comi $p |- ko'e .o ko'a bo'a $=
       ( sjo btb o-com bi ) ABECFBAECFDABCGH $.
 $}
+
+$( {` .o `} is reflexive over any brirebla.
+   (Contributed by la korvo, 14-Aug-2024.) $)
+o-refl $p |- ko'a .o ko'a bo'a $=
+  ( btb go-refl ori ) AABABCDE $.
 
 $(
 =-=-=
@@ -2321,7 +2331,8 @@ $}
 $( {` gripau `} is reflexive.
    (Contributed by la korvo, 15-Jul-2024.) $)
 gripau-refl $p |- ko'a gripau ko'a $=
-  ( wk2 sbcmima bb id gripauris ) AABBACDEF $.
+  ( wk2 sjnaa sbcmima sbs tsb tss na.a-refl sei gripauri ) AABBAACDABDEFZKGHIJ
+  $.
 
 ${
     gripau-trans.0 $e |- ko'a gripau ko'e $.
@@ -2531,6 +2542,12 @@ ${
   ( sjo sbckini bt brd sbdunli df-dunli bi-rev ) ABFDCGHZDMIABCJHEABCDKL $.
 $}
 
+$( {` dunli `} is reflexive over any dunli3.
+   (Contributed by la korvo, 14-Aug-2024.) $)
+dunli-refl $p |- ko'a dunli ko'a ko'e $=
+  ( wda sjo sbckini bt tsb tss o-refl ax-gen1 dunliri ) AABCAADCBEFCABCEGZLHZMH
+  IJK $.
+
 $( Because modal x1 and modal x2 of {` dunli `} are definitionally
    interchangeable, {` dunli `} itself is symmetric. $)
 ax-dunli-sym $a |- go ko'a dunli ko'e ko'i gi ko'e dunli ko'a ko'i $.
@@ -2568,6 +2585,11 @@ ${
     minturi $p |- ko'a mintu ko'e ko'i $=
       ( sjo sbckaji bb sbmintu bt df-mintu bi-rev ) ABECFGABCHIDABCJK $.
 $}
+
+$( {` mintu `} is reflexive over any mintu3.
+   (Contributed by la korvo, 14-Aug-2024.) $)
+mintu-refl $p |- ko'a mintu ko'a ko'e $=
+  ( sbckaji tsb tss o-refl minturi ) AABABCDZHEFG $.
 
 $( Because x1 and x2 of {` mintu `} are definitionally interchangeable, it is
    symmetric. $)
