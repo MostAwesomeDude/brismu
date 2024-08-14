@@ -3596,17 +3596,25 @@ ${
       BGHZQICPCPJKABLMDABCNO $.
 $}
 
+${
+    refl-kinra.0 $e |- da bu'a da $.
+    $( If a selbri is reflexive over any metasyntactic terbri, then it is
+       reflexive over any domain.
+       (Contributed by la korvo, 13-Aug-2024.) $)
+    refl-kinra $p |- pa ka ce'u bu'a ce'u kei kinra ko'e $=
+      ( sc tsb tss spk bckini sbcmima ckiniri poi-gen kinrari ) EEBFZNGHACCCBIA
+      JFZOGCCCBDKLM $.
+$}
+
 $( {` du `} is reflexive over any domain.
    (Contributed by la korvo, 25-Jun-2024.) $)
 du-kinra $p |- pa ka ce'u du ce'u kei kinra ko'e $=
-  ( wda sc sbdu tsb tss spk bckini sbcmima du-refl ckiniri poi-gen kinrari ) CC
-  DEZNFGABBBDHAIEZOFBBBDBJKLM $.
+  ( wda sbdu du-refl refl-kinra ) ACBBDE $.
 
 $( {` gripau `} is reflexive over any domain.
    (Contributed by la korvo, 19-Jul-2024.) $)
 gripau-kinra $p |- pa ka ce'u gripau ce'u kei kinra ko'e $=
-  ( wda sbgripau tsb tss spk bckini sbcmima gripau-refl ckiniri poi-gen kinrari
-  sc ) MMCDZNEFABBBCGAHDZOEBBBCBIJKL $.
+  ( wda sbgripau gripau-refl refl-kinra ) ACBBDE $.
 
 $(
 =-=-=
@@ -4325,6 +4333,11 @@ kihirnihi-refl $p |- ko'a ki'irni'i ko'a $=
   ( wda wde sjnaa sbckini bt brd sbkihirnihi bb sbt bgan tsb tss df-na.a bi-rev
   id tei ax-gen1 df-kihirnihi ) BCAADZEFZCUAGZBUBGAAHIUBBUACBCTEACBEJZFZUDKTCBU
   CFUDPAABCUCLZUEMZUFMNOQRRAABCSO $.
+
+$( {` ki'irni'i `} is reflexive over any domain.
+   (Contributed by la korvo, 13-Aug-2024.) $)
+kihirnihi-kinra $p |- pa ka ce'u ki'irni'i ce'u kei kinra ko'e $=
+  ( wda sbkihirnihi kihirnihi-refl refl-kinra ) ACBBDE $.
 
 $( {` ki'irni'i `} is transitive. $)
 ax-kihirnihi-trans $a |-
