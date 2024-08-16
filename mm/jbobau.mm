@@ -25,6 +25,8 @@ Conventions:
 * Lemmas append "-lem", as in ~ge-com-lem and ~ge-com
   * Multiple lemmas append "-lem0", "-lem1", etc.
 * Operators commute "-com", relations are symmetric "-sym"
+* Operators have identities "-id", relations are reflexive "-refl"
+* Operators compose "-comp", relations are transitive "-trans"
 
 References to iset.mm are not just for comparison and contrast, but for
 borrowing; many minor lemmas can be proven by reusing steps from iset.mm.
@@ -1187,6 +1189,11 @@ ${
       BAFGI $.
 $}
 
+$( {` ge `} is idempotent.
+   (Contributed by la korvo, 15-Aug-2024.) $)
+ge-idem $p |- ganai ge broda gi broda gi broda $=
+  ( ax-ge-le ) AAB $.
+
 $(
 =-=-=
 {.e}
@@ -1351,6 +1358,11 @@ ${
     garii $p |- ganai ga broda gi brodi gi brode $=
       ( bgan bga gar mp2an ) ABFCBFACGBFDEBACHI $.
 $}
+
+$( {` ga `} is idempotent.
+   (Contributed by la korvo, 15-Aug-2024.) $)
+ga-idem $p |- go ga broda gi broda gi broda $=
+  ( bga id garii ga-lin gorii ) AABAAAAACZGDAAEF $.
 
 $( Lemma for ~ga-com
    (Contributed by la korvo, 31-Jul-2023.) $)
