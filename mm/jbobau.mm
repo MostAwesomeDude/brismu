@@ -125,6 +125,7 @@ htmldef "naku" as "<small>naku</small> ";
 htmldef "poi" as "<small>poi</small> ";
 htmldef "ke'a" as "<small>ke'a</small> ";
 htmldef "ku'o" as "<small>ku'o</small> ";
+htmldef "po'u" as "<small>po'u</small> ";
 htmldef "li" as "<small>li</small> ";
 htmldef "no" as "<span class='pa'>0</span> ";
 htmldef "pa" as "<span class='pa'>1</span> ";
@@ -3190,6 +3191,25 @@ ${
     ro-quantri $p |- ro bu'a cu bu'e $=
       ( bu tsb brd brdp brbc df-ro-quant bi-rev ) CBEZAFCLCLGHABIDABCJK $.
 $}
+
+$(
+=-=-=
+{po'u}
+=-=-=
+$)
+
+$c po'u $.
+
+${
+    brdpu.0 $e bridi ro da zo'u broda $.
+    $( Restriction for first-order identity. $)
+    brdpu $a bridi ro da po'u ko'a zo'u broda $.
+$}
+
+$( Definition of {` po'u `} in terms of {` poi du `}, as given by
+   example 3.9-10 from [CLL] p. 8. $)
+df-pohu $a |- go ro da po'u ko'a zo'u broda
+  gi ro da poi ke'a du ko'a ku'o zo'u broda $.
 
 $(
 #*#*#
