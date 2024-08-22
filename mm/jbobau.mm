@@ -60,6 +60,7 @@ htmldef "sumti" as "<em>sumti</em> ";
 htmldef "brirebla" as "<em>brirebla</em> ";
 htmldef "skaselbri" as "<em>skaselbri</em> ";
 htmldef "PA" as "<em>PA</em> ";
+htmldef "zi'o" as "<span class='sumti'>zi'o</span> ";
 htmldef "fo'a" as "<span class='sumti'>fo'a</span> ";
 htmldef "fo'e" as "<span class='sumti'>fo'e</span> ";
 htmldef "fo'i" as "<span class='sumti'>fo'i</span> ";
@@ -2457,7 +2458,8 @@ $}
 
 ${
     ckini-se.0 $e |- ko'a ckini ko'e pa ka ce'u bu'a ce'u kei $.
-    $( {` se `} can be inserted underneath ckini3.
+    $( {` se `} can be inserted underneath ckini3. Example theorem from early
+       draft of la brismu.
        (Contributed by la korvo, 12-Jul-2023.) $)
     ckini-se $p |- ko'e ckini ko'a pa ka ce'u se bu'a ce'u kei $=
       wk2 wk1 sbba sbs wk1 wk2 sbba wk1 wk2 sbba ckini-se.0 ckinii seri ckiniri
@@ -3548,6 +3550,35 @@ ${
        (Contributed by la korvo, 16-Jun-2024.) $)
     fahuri $p |- ko'a fa'u ko'e bu'a ko'i fa'u ko'o $=
       ( bb bge sfahu ge-ini df-fahu bi-rev ) ACEHZBDEHZIABJCDJEHNOFGKABCDELM $.
+$}
+
+$(
+#*#*#
+Deletion: {zi'o}
+#*#*#
+$)
+
+$c zi'o $.
+
+sziho $a sumti zi'o $.
+
+$( Definition of {` zi'o `}. Justified by example 7.4-7 from [CLL] p. 7. $)
+df-ziho $a |- ganai ko'a bo'a gi zi'o bo'a $.
+
+${
+    zihoi.0 $e |- ko'a bo'a $.
+    $( Inference form of ~df-ziho
+       (Contributed by la korvo, 22-Aug-2024.) $)
+    zihoi $p |- zi'o bo'a $=
+      ( btb sziho df-ziho ax-mp ) ABDEBDCABFG $.
+$}
+
+${
+    zihoit.0 $e |- ko'a bu'a ko'e $.
+    $( Delete the second place of a binary bridi.
+       (Contributed by la korvo, 22-Aug-2024.) $)
+    zihoit $p |- ko'a bu'a zi'o $=
+      ( sziho sbs tsb tss seri zihoi sei ) AECBACFGZLHABCDIJK $.
 $}
 
 $(
