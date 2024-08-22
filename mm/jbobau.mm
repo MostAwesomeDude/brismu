@@ -4539,9 +4539,18 @@ $)
 $c mapti $.
 sbmapti $a selbri mapti $.
 
+$( Proposed definition of {` mapti `} as a witness to an inhabited bijection. $)
+df-mapti $a |- go ko'a mapti ko'e ko'i
+  gi ge ko'a ckini ko'e ko'i gi
+    ge ro da zo'u ganai da ckini ko'e ko'i gi da du ko'a
+    gi ro da zo'u ganai ko'a ckini da ko'i gi da du ko'e $.
+
 $( Under postulated definitions of la xorxes and la korvo, {` mapti `} is a
-   subrelation of {` ckini `}. $)
-ax-mapti-ckini $a |- ganai ko'a mapti ko'e ko'i gi ko'a ckini ko'e ko'i $.
+   subrelation of {` ckini `}.
+   (Contributed by la korvo, 22-Aug-2024.) $)
+mapti-ckini $p |- ganai ko'a mapti ko'e ko'i gi ko'a ckini ko'e ko'i $=
+  ( wde sbmapti bt sbckini sbdu bb bgan brd bge df-mapti golili ax-ge-le syl )
+  ABCEFZABCGFZDBCGFDAHIJZDSKADCGFDBHIJZDTKLZLZRQUBABCDMNRUAOP $.
 
 $(
 =-=-=
