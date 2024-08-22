@@ -2,6 +2,10 @@
 
 - [Foreword](foreword.md)
 
+# 0: logji
+
+- [Introduction to Logic](intro-logji.md)
+
 # 0: midju
 
 - [Rel](0-midju/3-Rel.md)
