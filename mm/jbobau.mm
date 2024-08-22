@@ -1189,10 +1189,16 @@ ${
       BAFGI $.
 $}
 
+$( {` ge `} admits the diagonal morphism.
+   (Contributed by la korvo, 21-Aug-2024.) $)
+ge-diag $p |- ganai broda gi ge broda gi broda $=
+  ( bge ax-ge-in ganai-abs ) AAABAACD $.
+
 $( {` ge `} is idempotent.
-   (Contributed by la korvo, 15-Aug-2024.) $)
-ge-idem $p |- ganai ge broda gi broda gi broda $=
-  ( ax-ge-le ) AAB $.
+   (Contributed by la korvo, 15-Aug-2024.)
+   (Strengthened by la korvo, 21-Aug-2024.) $)
+ge-idem $p |- go ge broda gi broda gi broda $=
+  ( bge ax-ge-le ge-diag gorii ) AABAAACADE $.
 
 $(
 =-=-=

@@ -29,7 +29,7 @@ Metamath statement | Lojban bridi | What it means
 [ga-lin](ga-lin.html) | {ganai broda gi ga broda gi brode} | disjunction is a left upper bound
 [ga-rin](ga-rin.html) | {ganai broda gi ga broda gi broda} | disjunction is a right upper bound
 [garii](garii.html) | {ganai broda gi brode} & {ganai brodi gi brode} => {ganai ga broda gi brodi gi brode} | disjunction is the least upper bound
-[ge-idem](ge-idem.html) | {ganai ge broda gi broda gi broda} | conjunction is idempotent
+[ge-idem](ge-idem.html) | {go ge broda gi broda gi broda} | conjunction is idempotent
 [ga-idem](ga-idem.html) | {go ga broda gi broda gi broda} | disjunction is idempotent
 [ge-com](ge-com.html) | {go ge broda gi brode gi ge brode gi broda} | conjunction commutes
 [ga-com](ga-com.html) | {go ga broda gi brode gi ga brode gi broda} | disjunction commutes
