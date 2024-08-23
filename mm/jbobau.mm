@@ -217,6 +217,7 @@ htmldef "ki'irvlina" as "<span class='lujvo'>ki'irvlina</span> ";
 htmldef "kuzypau" as "<span class='lujvo'>kuzypau</span> ";
 htmldef "pagyfancu" as "<span class='lujvo'>pagyfancu</span> ";
 htmldef "selbri" as "<span class='lujvo'>selbri</span> ";
+htmldef "selcmi" as "<span class='lujvo'>selcmi</span> ";
 htmldef "le" as "<span class='gadri'>le</span> ";
 $)
 
@@ -2218,9 +2219,12 @@ $(
 =-=-=
 $)
 
-$c cmima $.
+$c cmima selcmi $.
 
 sbcmima $a selbri cmima $.
+sbselcmi $a selbri selcmi $.
+
+df-selcmi $a |- go ko'a selcmi ko'e gi ko'a se cmima ko'e $.
 
 $(
 =-=-=
