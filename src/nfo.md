@@ -9,37 +9,9 @@ is more
 and
 [Shutt-abstractive](https://fexpr.blogspot.com/2013/12/abstractive-power.html).
 
-## Identity
+## Examples
 
-As a classic and powerful first example, we can give a redefinition of `{du}`
-in NFOL terms.
-
-    ro da ro de zo'u:
-
-             da du de
-    ========================== (id-def)
-    ro bu'a zo'u da .o de bu'a
-
-This rule is a second-order *definition*; such rules are not possible within
-first-order logic. There are many reasons to justify this sort of explanation
-as a definition, but the primary reason is that they could be entered into
-Lojban dictionaries. For example, we could define ``{du}`` as:
-
-    ro bu'a zo'u x₁ .o x₂ bu'a
-
-And give any tautology, like ``(id-refl)``, as an example:
-
-    ro da zo'u da du da
-
-Once so defined, ``{du}`` is technically not in terms of any particular
-selbri; rather, it is a global property of *all* selbri!
-
-## Natural numbers
-
-We can give the induction principle for natural numbers with SO quantifiers.
-
-    ro bu'a zo'u:
-
-    ge li no bu'a gi ro da su'o de zo'u da na.a de bu'a .ije da kacli'e de
-    ---------------------------------------------------------------------- (kacna'u-ind)
-                      ro da zo'u da kacna'u nagi'a bu'a
+Metamath statement | Lojban bridi | Description
+---|---|---
+[df-du](df-du.html) | {go ko'a du ko'e gi ro bu'a zo'u ko'a .o ko'e bu'a} | definition of identity
+[ax-nat-ind](ax-nat-ind.html) | {ganai ge li no bo'a gi ro da poi ke'a bo'a ku'o zo'u su'o de zo'u ge da kacli'e de gi de bo'a gi ro da poi ke'a kacna'u ku'o zo'u da bo'a} | induction for natural numbers
