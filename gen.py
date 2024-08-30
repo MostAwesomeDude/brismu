@@ -56,7 +56,7 @@ if cmd == "coverage":
     print("total", "| - |", count, "/", total,
           "(%0.2f%%)" % (count * 100 / total))
 elif cmd == "metavars":
-    print("cmavo | Metamath type")
+    print("Metamath type | cmavo")
     print("---|---")
     for k, v in sorted(fs.items()): print(f"{v} | {k}")
 elif cmd == "definitions":
