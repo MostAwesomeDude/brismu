@@ -3812,13 +3812,21 @@ $( The successor function is injective. A standard axiom of second-order
 ax-baihei-inj $a |- ganai li bai'ei ku'i'a du li bai'ei ku'i'e
   gi li ku'i'a du li ku'i'e $.
 
+${
+    baihei-inj.0 $e |- li bai'ei ku'i'a du li bai'ei ku'i'e $.
+    $( Inference form of ~ax-baihei-inj
+       (Contributed by la korvo, 30-Aug-2024.) $)
+    baihei-inj $p |- li ku'i'a du li ku'i'e $=
+      ( mbaihei sli sbdu bb ax-baihei-inj ax-mp ) ADEBDEFGAEBEFGCABHI $.
+$}
+
 $c kacli'e $.
 
 bkaclihe $a selbri kacli'e $.
 
 $( Definition of {` kacli'e `} in terms of {` bai'ei `}. $)
-df-kaclihe $a |- go li ku'i'a kacli'e li ku'i'e
-  gi li bai'ei ku'i'a du li ku'i'e $.
+df-kaclihe $a |- go li ku'i'a kacli'e ko'a
+  gi li bai'ei ku'i'a du ko'a $.
 
 $( Zero is not a successor. A standard axiom of second-order arithmetic. $)
 ax-succ-zero $a |- naku zo'u ko'a kacli'e li no $.
@@ -3951,11 +3959,16 @@ $c su'i $.
 
 msuhi $a PA su'i ku'i'a ku'i'e $.
 
-$( Addition with zero. A standard axiom of second-order arithmetic. $)
+$( Addition with zero. A standard axiom of second-order arithmetic. Robinson's fourth axiom. $)
 ax-plus-zero $a |- li su'i ku'i'a no du li ku'i'a $.
 
 $( Addition with successor. A standard axiom of second-order arithmetic. $)
 ax-plus-succ $a |- li su'i ku'i'a bai'ei ku'i'e du li bai'ei su'i ku'i'a ku'i'e $.
+
+$( 1 + 0 = 1
+   (Contributed by la korvo, 30-Aug-2024.) $)
+1p0e1 $p |- li su'i pa no du li pa $=
+  ( p1 ax-plus-zero ) AB $.
 
 $(
 =-=-=
@@ -3967,9 +3980,15 @@ $c sumji $.
 
 bsumji $a selbri sumji $.
 
-$( Every natural number is equal to itself plus zero. This is Robinson axiom
-   4. $)
-ax-sumji-no $a |- ro da poi ke'a kacna'u ku'o zo'u da sumji da li no $.
+$( Definition of {` sumji `} in terms of {` su'i `}. $)
+df-sumji $a |- go li ku'i'a sumji li ku'i'e ko'a
+  gi li su'i ku'i'a ku'i'e du ko'a $.
+
+$( Every natural number is equal to zero plus itself.
+   (Contributed by la korvo, 30-Aug-2024.) $)
+sumji-no $p |- li ku'i'a sumji li no li ku'i'a $=
+  ( p0 msuhi sli sbdu bb sl0 bsumji bt ax-plus-zero df-sumji bi-rev ) ABCDADZEF
+  MGMHIAJMABKL $.
 
 ${
     ax-sumji-succ.0 $e |- su'o da zo'u
