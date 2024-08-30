@@ -56,7 +56,7 @@ especially worried about h-levels, so this is not a serious issue.
 `_≤_` | [bgan](bgan.html)
 `≤-refl` | [id](id.html)
 `≤-trans` | [syl](syl.html)
-`≤-antisym` | [gorii](gorii.html)
+`≤-antisym` | [iso](iso.html)
 `_◆_` | todo
 `_†` | [sbs](sbs.html)
 `dual` | no closed form yet, can be inferred from [se-invo](se-invo.html) and [seri](seri.html) [seri](seri.html) respectively

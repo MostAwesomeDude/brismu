@@ -14,6 +14,7 @@ To read Metamath theorems as statements about **Loj**, encode:
 * objects as members of the {broda} series
 * arrows from X to Y as {ganai X gi Y}
 * pasting diagrams as applications of [ax-mp](ax-mp.html)
+* Isomorphisms from X to Y as {go X gi Y}
 
 Note that while **Loj** is thin, its formal verification in Metamath is
 non-thin. This is not a serious issue.
@@ -24,6 +25,7 @@ Metamath statement | Lojban bridi | What it means
 ---|---|---
 [id](id.html) | {ganai broda gi broda} | [identity arrows](https://ncatlab.org/nlab/show/identity%20morphism) exist
 [syl](syl.html) | {ganai broda gi brode} & {ganai brode gi brodi} => {ganai broda gi brodi} | [composition](https://ncatlab.org/nlab/show/composition) is allowed and well-typed
+[iso](iso.html) | {ganai broda gi brode} & {ganai brode gi broda} => {go broda gi brode} | isomorphisms are allowed
 [ax-ge-le](ax-ge-le.html) | {ganai ge broda gi brode gi broda} | conjunction is a left lower bound
 [ax-ge-re](ax-ge-re.html) | {ganai ge broda gi brode gi brode} | conjunction is a right lower bound
 [ga-lin](ga-lin.html) | {ganai broda gi ga broda gi brode} | disjunction is a left upper bound
@@ -36,9 +38,6 @@ Metamath statement | Lojban bridi | What it means
 
 ## To Do
 
-* Implication should form a partial order; we're missing antisymmetry
-  * {ganai broda gi brode} & {ganai brode gi broda}
-    => {pa du'u broda kei du pa du'u brode}
 * Implication, conjunction, disjunction should form a lattice
   * Missing ge-ind: deductive form of ax-ge-in
   * And also a distributive lattice?
@@ -68,7 +67,7 @@ To read Metamath theorems as statements about **Core(Loj)**, encode:
 
 Metamath statement | Lojban bridi | What it means
 ---|---|---
-[go-refl](go-refl.html) | {go broda gi broda} | identity arrows exist
-[go-trans](go-trans.html) | {go broda gi brode} & {go brode gi brodi} => {go broda gi brodi} | composition is allowed and well-typed
-[golili](golili.html) | {go broda gi brode} => {ganai broda gi brode} | the core is a subcategory
+[go-id](go-id.html) | {go broda gi broda} | identity arrows exist
+[go-syl](go-syl.html) | {go broda gi brode} & {go brode gi brodi} => {go broda gi brodi} | composition is allowed and well-typed
+[go-ganai](go-ganai.html) | {go broda gi brode} => {ganai broda gi brode} | the core is a subcategory
 [go-comi](go-comi.html) | {go broda gi brode} => {go brode gi broda} | the core is its own opposite category

@@ -24,6 +24,7 @@ Conventions:
     ~syl and appending "d", as in ~mpd for ~ax-mp
 * Lemmas append "-lem", as in ~ge-com-lem and ~ge-com
   * Multiple lemmas append "-lem0", "-lem1", etc.
+* Operator or relation? Only selbri are relations, everything else is operators.
 * Operators commute "-com", relations are symmetric "-sym"
 * Operators have identities "-id", relations are reflexive "-refl"
 * Operators compose "-comp", relations are transitive "-trans"
@@ -727,14 +728,15 @@ ${
 $}
 
 ${
-    golili.0 $e |- go broda gi brode $.
+    go-ganai.0 $e |- go broda gi brode $.
     $( Biconditional implication may be weakened to unidirectional implication.
-       Inference form of left side of ~goli
+       Category-theoretically, this theorem embeds the core of Loj.
+       Inference form of left side of ~goli .
        Theorem biimpi in [ILE] p. 0.
        (Contributed by la korvo, 17-Jul-2023.)
        (Shortened by la korvo, 29-Jul-2023.) $)
-    golili $p |- ganai broda gi brode $=
-      sbb1 sbb2 bgan sbb2 sbb1 bgan sbb1 sbb2 golili.0 goli ge-lei $.
+    go-ganai $p |- ganai broda gi brode $=
+      sbb1 sbb2 bgan sbb2 sbb1 bgan sbb1 sbb2 go-ganai.0 goli ge-lei $.
 $}
 
 ${
@@ -748,12 +750,12 @@ ${
 $}
 
 ${
-    gorii.0 $e |- ganai broda gi brode $.
-    gorii.1 $e |- ganai brode gi broda $.
+    iso.0 $e |- ganai broda gi brode $.
+    iso.1 $e |- ganai brode gi broda $.
     $( Inference form of right side of ~gori
        (Contributed by la korvo, 30-Jul-2023.) $)
-    gorii $p |- go broda gi brode $=
-      sbb1 sbb2 sbb1 sbb2 bgan sbb2 sbb1 bgan gorii.0 gorii.1 ge-ini gori $.
+    iso $p |- go broda gi brode $=
+      sbb1 sbb2 sbb1 sbb2 bgan sbb2 sbb1 bgan iso.0 iso.1 ge-ini gori $.
 $}
 
 $( Property of biconditionals.
@@ -775,47 +777,47 @@ bi3 $p |- ganai
   ( bgan bgo bge df-go ge-rei uncur ) ABCZBACZABDZKIJEZCLKCABFGH $.
 
 ${
-    goriidd.0 $e |- ganai broda gi ganai brode gi ganai brodi gi brodo $.
-    goriidd.1 $e |- ganai broda gi ganai brode gi ganai brodo gi brodi $.
-    $( Double deduction form of ~gorii
+    isodd.0 $e |- ganai broda gi ganai brode gi ganai brodi gi brodo $.
+    isodd.1 $e |- ganai broda gi ganai brode gi ganai brodo gi brodi $.
+    $( Double deduction form of ~iso
        (Contributed by la korvo, 31-Jul-2023.) $)
-    goriidd $p |- ganai broda gi ganai brode gi go brodi gi brodo $=
+    isodd $p |- ganai broda gi ganai brode gi go brodi gi brodo $=
       ( bgan bgo bi3 syl6c ) ABCDGDCGCDHEFCDIJ $.
 $}
 
 ${
-    goriid-lem.0 $e |- ganai brode gi ganai brodi gi brodo $.
-    goriid-lem.1 $e |- ganai broda gi ganai brodo gi brodi $.
-    $( Lemma for ~goriid known as theorem impbid21d in [ILE] p. 0.
+    isod-lem.0 $e |- ganai brode gi ganai brodi gi brodo $.
+    isod-lem.1 $e |- ganai broda gi ganai brodo gi brodi $.
+    $( Lemma for ~isod known as theorem impbid21d in [ILE] p. 0.
        (Contributed by la korvo, 31-Jul-2023.) $)
-    goriid-lem $p |- ganai broda gi ganai brode gi go brodi gi brodo $=
-      ( bgan ki kd goriidd ) ABCDBCDGGAEHADCGBFIJ $.
+    isod-lem $p |- ganai broda gi ganai brode gi go brodi gi brodo $=
+      ( bgan ki kd isodd ) ABCDBCDGGAEHADCGBFIJ $.
 $}
 
 ${
-    goriid.0 $e |- ganai broda gi ganai brode gi brodi $.
-    goriid.1 $e |- ganai broda gi ganai brodi gi brode $.
-    $( Deduction form of ~gorii
+    isod.0 $e |- ganai broda gi ganai brode gi brodi $.
+    isod.1 $e |- ganai broda gi ganai brodi gi brode $.
+    $( Deduction form of ~iso
        Theorem impbid in [ILE] p. 0.
        (Contributed by la korvo, 31-Jul-2023.) $)
-    goriid $p |- ganai broda gi go brode gi brodi $=
-      ( bgo goriid-lem ganai-abs ) ABCFAABCDEGH $.
+    isod $p |- ganai broda gi go brode gi brodi $=
+      ( bgo isod-lem ganai-abs ) ABCFAABCDEGH $.
 $}
 
 $( {` go `} is reflexive. Theorem equid in [ILE] p. 0.
    (Contributed by la korvo, 30-Jul-2023.) $)
-go-refl $p |- go broda gi broda $=
-  sbb1 sbb1 sbb1 id sbb1 id gorii $.
+go-id $p |- go broda gi broda $=
+  sbb1 sbb1 sbb1 id sbb1 id iso $.
 
 $( Lemma: {` go `} commutes in one direction.
    (Contributed by la korvo, 31-Jul-2023.) $)
 go-com-lem $p |- ganai go broda gi brode gi go brode gi broda $=
-  ( bgo bi2 bi1 goriid ) ABCBAABDABEF $.
+  ( bgo bi2 bi1 isod ) ABCBAABDABEF $.
 
 $( {` go `} commutes.
    (Contributed by la korvo, 17-Aug-2023.) $)
 go-com $p |- go go broda gi brode gi go brode gi broda $=
-  ( bgo go-com-lem gorii ) ABCBACABDBADE $.
+  ( bgo go-com-lem iso ) ABCBACABDBADE $.
 
 ${
     go-comi.0 $e |- go broda gi brode $.
@@ -834,11 +836,11 @@ ${
 $}
 
 ${
-    go-trans.0 $e |- go broda gi brode $.
-    go-trans.1 $e |- go brode gi brodi $.
-    $( {` go `} is transitive.
+    go-syl.0 $e |- go broda gi brode $.
+    go-syl.1 $e |- go brode gi brodi $.
+    $( {` go `} admits composition.
        (Contributed by la korvo, 16-Aug-2023.) $)
-    go-trans $p |- go broda gi brodi $=
+    go-syl $p |- go broda gi brodi $=
       ( ax-go-trans ) ABCDEF $.
 $}
 
@@ -848,7 +850,7 @@ ${
     $( Like modus ponens ~ax-mp but for biconditionals.
        (Contributed by la korvo, 16-Jul-2023.) $)
     bi $p |- brode $=
-      sbb1 sbb2 bi.0 sbb1 sbb2 bi.1 golili ax-mp $.
+      sbb1 sbb2 bi.0 sbb1 sbb2 bi.1 go-ganai ax-mp $.
 $}
 
 ${
@@ -867,7 +869,7 @@ ${
        Theorem biimpri in [ILE] p. 0.
        (Contributed by la korvo, 10-Jul-2023.) $)
     bi-rev-syl $p |- ganai brode gi broda $=
-      sbb2 sbb1 sbb1 sbb2 bi-rev-syl.0 go-comi golili $.
+      sbb2 sbb1 sbb1 sbb2 bi-rev-syl.0 go-comi go-ganai $.
 $}
 
 ${
@@ -876,7 +878,7 @@ ${
     $( Syllogism with a biconditional.
        (Contributed by la korvo, 25-Jun-2024.) $)
     sylbi $p |- ganai broda gi brodi $=
-      ( golili syl ) ABCABDFEG $.
+      ( go-ganai syl ) ABCABDFEG $.
 $}
 
 ${
@@ -885,7 +887,7 @@ ${
     $( Syllogism with a biconditional.
        (Contributed by la korvo, 25-Jun-2024.) $)
     sylib $p |- ganai broda gi brodi $=
-      ( golili syl ) ABCDBCEFG $.
+      ( go-ganai syl ) ABCDBCEFG $.
 $}
 
 ${
@@ -914,7 +916,7 @@ ${
     $( Replace a nested antecedent using a biconditional.
        (Contributed by la korvo, 22-Jun-2024.) $)
     syl5bi $p |- ganai brodi gi ganai broda gi brodo $=
-      ( golili syl5 ) ABCDABEGFH $.
+      ( go-ganai syl5 ) ABCDABEGFH $.
 $}
 
 $(
@@ -1181,14 +1183,14 @@ ge-com-lem $p |- ganai ge broda gi brode gi ge brode gi broda $=
 $( {` ge `} is commutative.
    (Contributed by la korvo, 31-Jul-2023.) $)
 ge-com $p |- go ge broda gi brode gi ge brode gi broda $=
-  ( bge ge-com-lem gorii ) ABCBACABDBADE $.
+  ( bge ge-com-lem iso ) ABCBACABDBADE $.
 
 ${
     ge-go.0 $e |- ge broda gi brode $.
     $( Conjunction implies biimplication.
        (Contributed by la korvo, 25-Jun-2024.) $)
     ge-go $p |- go broda gi brode $=
-      ( bge bgan ge-ganai ax-mp ge-com-lem gorii ) ABABDZABECABFGBADZBAEJKCABHG
+      ( bge bgan ge-ganai ax-mp ge-com-lem iso ) ABABDZABECABFGBADZBAEJKCABHG
       BAFGI $.
 $}
 
@@ -1201,7 +1203,7 @@ $( {` ge `} is idempotent.
    (Contributed by la korvo, 15-Aug-2024.)
    (Strengthened by la korvo, 21-Aug-2024.) $)
 ge-idem $p |- go ge broda gi broda gi broda $=
-  ( bge ax-ge-le ge-diag gorii ) AABAAACADE $.
+  ( bge ax-ge-le ge-diag iso ) AABAAACADE $.
 
 $(
 =-=-=
@@ -1371,7 +1373,7 @@ $}
 $( {` ga `} is idempotent.
    (Contributed by la korvo, 15-Aug-2024.) $)
 ga-idem $p |- go ga broda gi broda gi broda $=
-  ( bga id garii ga-lin gorii ) AABAAAAACZGDAAEF $.
+  ( bga id garii ga-lin iso ) AABAAAAACZGDAAEF $.
 
 $( Lemma for ~ga-com
    (Contributed by la korvo, 31-Jul-2023.) $)
@@ -1381,7 +1383,7 @@ ga-com-lem $p |- ganai ga broda gi brode gi ga brode gi broda $=
 $( {` ga `} commutes.
    (Contributed by la korvo, 31-Jul-2023.) $)
 ga-com $p |- go ga broda gi brode gi ga brode gi broda $=
-  ( bga ga-com-lem gorii ) ABCBACABDBADE $.
+  ( bga ga-com-lem iso ) ABCBACABDBADE $.
 
 $(
 =-=-=
@@ -1415,7 +1417,7 @@ $}
 $( {` .a `} commutes.
    (Contributed by la korvo, 17-Aug-2023.) $)
 a-com $p |- go ko'a .a ko'e bo'a gi ko'e .a ko'a bo'a $=
-  ( sja btb bga df-a ga-com go-trans go-comi ) ABDCEACEZBCEZFZBADCEZABCGNMNLKFM
+  ( sja btb bga df-a ga-com go-syl go-comi ) ABDCEACEZBCEZFZBADCEZABCGNMNLKFM
   BACGLKHIJI $.
 
 ${
@@ -1519,7 +1521,7 @@ $}
 $( {` .o `} commutes.
    (Contributed by la korvo, 14-Aug-2023.) $)
 o-com $p |- go ko'a .o ko'e bo'a gi ko'e .o ko'a bo'a $=
-  ( sjo btb bgo df-o go-com go-trans go-comi ) ABDCEACEZBCEZFZBADCEZABCGNMNLKFM
+  ( sjo btb bgo df-o go-com go-syl go-comi ) ABDCEACEZBCEZFZBADCEZABCGNMNLKFM
   BACGLKHIJI $.
 
 ${
@@ -1533,7 +1535,7 @@ $}
 $( {` .o `} is reflexive over any brirebla.
    (Contributed by la korvo, 14-Aug-2024.) $)
 o-refl $p |- ko'a .o ko'a bo'a $=
-  ( btb go-refl ori ) AABABCDE $.
+  ( btb go-id ori ) AABABCDE $.
 
 $(
 =-=-=
@@ -1640,7 +1642,7 @@ ${
     $( Self-duality property for {` se `}.
        (Contributed by la korvo, 30-Jun-2024.) $)
     se-dual $p |- ko'e se bu'a naja se bu'e ko'a $=
-      ( sbs bb df-se golili najai bi-rev-syl syl najari ) BACFZDFZBANGZABCGZBAO
+      ( sbs bb df-se go-ganai najai bi-rev-syl syl najari ) BACFZDFZBANGZABCGZBAO
       GZPQABCHIQABDGZRABCDEJRSABDHKLLM $.
 $}
 
@@ -1649,7 +1651,7 @@ ${
     $( Shift {` se `} to the left of an implication.
        (Contributed by la korvo, 30-Jun-2024.) $)
     se-dual-l $p |- ko'e se bu'a naja bu'e ko'a $=
-      ( sbs bb df-se golili najai syl najari ) BACFZDBAMGZABCGZBADGZNOABCHIOABD
+      ( sbs bb df-se go-ganai najai syl najari ) BACFZDBAMGZABCGZBADGZNOABCHIOABD
       FZGZPABCQEJRPBADHIKKL $.
 $}
 
@@ -1667,7 +1669,7 @@ ${
     $( Convert selbri on both sides of an implication simultaneously.
        (Contributed by la korvo, 19-Jul-2024.) $)
     se-ganaii $p |- ganai ko'e se bu'a ko'a gi ko'o se bu'e ko'i $=
-      ( sbs bb df-se golili go-comi syl ) BAEHIZABEIZDCFHIZNOABEJKOCDFIZPGQPPQC
+      ( sbs bb df-se go-ganai go-comi syl ) BAEHIZABEIZDCFHIZNOABEJKOCDFIZPGQPPQC
       DFJLKMM $.
 $}
 
@@ -1676,7 +1678,7 @@ ${
     $( Convert selbri on both sides of an implication simultaneously.
        (Contributed by la korvo, 19-Jul-2024.) $)
     se-ganair $p |- ganai ko'e bu'a ko'a gi ko'o bu'e ko'i $=
-      ( bb sbs df-se go-comi golili syl ) BAEHZABEIHZDCFHZNOONBAEJKLOCDFIHZPGQP
+      ( bb sbs df-se go-comi go-ganai syl ) BAEHZABEIHZDCFHZNOONBAEJKLOCDFIHZPGQP
       DCFJLMM $.
 $}
 
@@ -1754,11 +1756,12 @@ ${
 $}
 
 ${
-    qi1ii.0 $e |- ro da zo'u ganai broda gi brode $.
-    qi1ii.1 $e |- ro da zo'u broda $.
-    $( Inference form of ~ax-qi1 Like ~ax-mp under {` ro da `}.
+    qi1-mp.0 $e |- ro da zo'u ganai broda gi brode $.
+    qi1-mp.1 $e |- ro da zo'u broda $.
+    $( Inference form of ~ax-qi1 .
+       Like ~ax-mp under {` ro da `}.
        (Contributed by la korvo, 23-Jun-2024.) $)
-    qi1ii $p |- ro da zo'u brode $=
+    qi1-mp $p |- ro da zo'u brode $=
       ( brd qi1i ax-mp ) ACAFBCBFEABCDGH $.
 $}
 
@@ -1778,11 +1781,12 @@ ${
 $}
 
 ${
-    qi2ii.0 $e |- ro bu'a zo'u ganai broda gi brode $.
-    qi2ii.1 $e |- ro bu'a zo'u broda $.
-    $( Inference form of ~ax-qi2 Like ~ax-mp under {` ro bu'a `}.
+    qi2-mp.0 $e |- ro bu'a zo'u ganai broda gi brode $.
+    qi2-mp.1 $e |- ro bu'a zo'u broda $.
+    $( Inference form of ~ax-qi2 .
+       Like ~ax-mp under {` ro bu'a `}.
        (Contributed by la korvo, 23-Jun-2024.) $)
-    qi2ii $p |- ro bu'a zo'u brode $=
+    qi2-mp $p |- ro bu'a zo'u brode $=
       ( brb qi2i ax-mp ) ACAFBCBFEABCDGH $.
 $}
 
@@ -1808,7 +1812,7 @@ ${
     $( Modus ponens under {` ro bu'a `}.
        (Contributed by la korvo, 23-Jun-2024.) $)
     ro2-mp $p |- ro bu'a zo'u brode $=
-      ( bgan ax-gen2 qi2ii ) ABCABFCEGDH $.
+      ( bgan ax-gen2 qi2-mp ) ABCABFCEGDH $.
 $}
 
 ${
@@ -1817,7 +1821,7 @@ ${
     $( Biconditional modus ponens under {` ro bu'a `}.
        (Contributed by la korvo, 16-Jul-2023.) $)
     ro2-bi $p |- ro bu'a zo'u brode $=
-      sbb1 sbb2 sbba ro2-bi.0 sbb1 sbb2 ro2-bi.1 golili ro2-mp $.
+      sbb1 sbb2 sbba ro2-bi.0 sbb1 sbb2 ro2-bi.1 go-ganai ro2-mp $.
 $}
 
 ${
@@ -1826,7 +1830,7 @@ ${
     $( Biconditional modus ponens under {` ro bu'a `}.
        (Contributed by la korvo, 16-Aug-2023.) $)
     ro2-bi-rev $p |- ro bu'a zo'u brode $=
-      ( go-comi golili ro2-mp ) ABCDABBAEFGH $.
+      ( go-comi go-ganai ro2-mp ) ABCDABBAEFGH $.
 $}
 
 $(
@@ -1879,7 +1883,7 @@ $( {` du `} is reflexive.
    (Contributed by la korvo, 16-Aug-2023.)
    (Shortened by la korvo, 23-Jun-2024.) $)
 du-refl $p |- ko'a du ko'a $=
-  ( sbba bu go-refl duris ) AABABCDE $.
+  ( sbba bu go-id duris ) AABABCDE $.
 
 ${
     du-trans.0 $e |- ko'a du ko'e $.
@@ -1888,7 +1892,7 @@ ${
        (Contributed by la korvo, 16-Aug-2023.)
        (Shortened by la korvo, 23-Jun-2024.) $)
     du-trans $p |- ko'a du ko'i $=
-      ( sbba bu duis go-trans duris ) ACFAFGBFGCFGABFDHBCFEHIJ $.
+      ( sbba bu duis go-syl duris ) ACFAFGBFGCFGABFDHBCFEHIJ $.
 $}
 
 ${
@@ -1955,7 +1959,7 @@ df-naku $a |- go naku zo'u broda gi ganai broda gi gai'o $.
 $( Uncurried form of ~df-naku
    (Contributed by la korvo, 20-Aug-2023.) $)
 naku-uncur $p |- ganai ge naku zo'u broda gi broda gi gai'o $=
-  ( bnk bgaiho bgan df-naku golili cur ) AABZACHACDAEFG $.
+  ( bnk bgaiho bgan df-naku go-ganai cur ) AABZACHACDAEFG $.
 
 ${
     lnc.0 $e |- ge broda gi naku zo'u broda $.
@@ -2820,7 +2824,7 @@ ${
     $( Self-duality property for {` te `}.
        (Contributed by la korvo, 13-Aug-2024.) $)
     te-dual $p |- ko'i te bu'a naja te bu'e ko'e ko'a $=
-      ( sbt bt bgan sbnaja df-te golili df-naja-t bi bi-rev-syl syl bi-rev ) CB
+      ( sbt bt bgan sbnaja df-te go-ganai df-naja-t bi bi-rev-syl syl bi-rev ) CB
       ADGZHZCBAEGZHZICBADTJGHSABCDHZUASUBABCDKLUBABCEHZUAABCDEJHUBUCIFABCDEMNUA
       UCABCEKOPPCBARTMQ $.
 $}
@@ -2830,7 +2834,7 @@ ${
     $( Shift {` te `} to the left of an implication.
        (Contributed by la korvo, 13-Aug-2024.) $)
     te-dual-l $p |- ko'i te bu'a naja bu'e ko'e ko'a $=
-      ( sbt bt bgan sbnaja df-te golili df-naja-t bi syl bi-rev ) CBADGZHZCBAEH
+      ( sbt bt bgan sbnaja df-te go-ganai df-naja-t bi syl bi-rev ) CBADGZHZCBAEH
       ZICBADEJGHRABCDHZSRTABCDKLTABCEGZHZSABCDUAJHTUBIFABCDUAMNUBSCBAEKLOOCBAQE
       MP $.
 $}
@@ -2850,7 +2854,7 @@ ${
     $( Convert selbri on both sides of an implication simultaneously.
        (Contributed by la korvo, 13-Aug-2024.) $)
     te-ganaii $p |- ganai ko'i te bu'a ko'e ko'a gi fo'i te bu'e fo'e fo'a $=
-      ( sbt bt df-te golili go-comi syl ) CBAGJKZABCGKZFEDHJKZPQABCGLMQDEFHKZRI
+      ( sbt bt df-te go-ganai go-comi syl ) CBAGJKZABCGKZFEDHJKZPQABCGLMQDEFHKZRI
       SRRSDEFHLNMOO $.
 $}
 
@@ -2859,7 +2863,7 @@ ${
     $( Convert selbri on both sides of an implication simultaneously.
        (Contributed by la korvo, 13-Aug-2024.) $)
     te-ganair $p |- ganai ko'i bu'a ko'e ko'a gi fo'i bu'e fo'e fo'a $=
-      ( bt sbt df-te go-comi golili syl ) CBAGJZABCGKJZFEDHJZPQQPCBAGLMNQDEFHKJ
+      ( bt sbt df-te go-comi go-ganai syl ) CBAGJZABCGKJZFEDHJZPQQPCBAGLMNQDEFHKJ
       ZRISRFEDHLNOO $.
 $}
 
@@ -3015,7 +3019,7 @@ $}
 $( Property of proper substitution. Theorem sb1 in [ILE] p. 0.
    (Contributed by la korvo, 25-Jun-2024.) $)
 sub1 $p |- ganai [ ko'a / da ] broda gi su'o da zo'u ge da du ko'a gi broda $=
-  ( bsub sbdu bb bgan bge bsd df-sub golili ge-red ) ABCDZCAEFZBGZNBHZCPIZMOQHA
+  ( bsub sbdu bb bgan bge bsd df-sub go-ganai ge-red ) ABCDZCAEFZBGZNBHZCPIZMOQHA
   BCJKL $.
 
 subeq-lem1 $p |- ganai da du ko'a gi ganai broda gi [ ko'a / da ] broda $=
@@ -3029,7 +3033,7 @@ subeq-lem2 $p |- ganai da du ko'a gi ganai [ ko'a / da ] broda gi broda $=
 $( An identity for substitutions. Theorem sbid in [ILE] p. 0.
    (Contributed by la korvo, 22-Jun-2024.) $)
 subid $p |- go [ da / da ] broda gi broda $=
-  ( bsub sbdu bb bgo du-refl subeq-lem1 subeq-lem2 goriid ax-mp go-comi ) ABABCZBBDEZAM
+  ( bsub sbdu bb bgo du-refl subeq-lem1 subeq-lem2 isod ax-mp go-comi ) ABABCZBBDEZAM
   FBGNAMBABHBABIJKL $.
 
 $(
@@ -4553,7 +4557,7 @@ $( Under postulated definitions of la xorxes and la korvo, {` mapti `} is a
    subrelation of {` ckini `}.
    (Contributed by la korvo, 22-Aug-2024.) $)
 mapti-ckini $p |- ganai ko'a mapti ko'e ko'i gi ko'a ckini ko'e ko'i $=
-  ( wde sbmapti bt sbckini sbdu bb bgan brd bge df-mapti golili ax-ge-le syl )
+  ( wde sbmapti bt sbckini sbdu bb bgan brd bge df-mapti go-ganai ax-ge-le syl )
   ABCEFZABCGFZDBCGFDAHIJZDSKADCGFDBHIJZDTKLZLZRQUBABCDMNRUAOP $.
 
 $(
