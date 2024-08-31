@@ -4009,7 +4009,7 @@ $c pi'i $.
 
 mpihi $a PA pi'i ku'i'a ku'i'e $.
 
-$( Multiplication with zero. A standard axiom of second-order arithmetic. $)
+$( Multiplication with zero. A standard axiom of second-order arithmetic. Robinson's sixth axiom. $)
 ax-mul-zero $a |- li pi'i ku'i'a no du li no $.
 
 $( Multiplication with successor. A standard axiom of second-order arithmetic. $)
@@ -4026,8 +4026,15 @@ $c pilji $.
 
 bpilji $a selbri pilji $.
 
-$( Zero times any natural number is zero. This is Robinson axiom 6. $)
-ax-pilji-no $a |- ro da poi ke'a kacna'u ku'o zo'u li no pilji da li no $.
+$( Definition of {` pilji `} in terms of {` pi'i `}. $)
+df-pilji $a |- go li ku'i'a pilji li ku'i'e ko'a
+  gi li pi'i ku'i'a ku'i'e du ko'a $.
+
+$( Every natural number times zero is zero.
+   (Contributed by la korvo, 30-Aug-2024.) $)
+pilji-no $p |- li ku'i'a pilji li no li no $=
+  ( p0 mpihi sli sl0 sbdu bb bpilji bt ax-mul-zero df-pilji bi-rev ) ABCDEFGADE
+  EHIAJEABKL $.
 
 ${
     ax-pilji-succ.0 $e |- su'o da zo'u
