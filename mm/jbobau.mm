@@ -27,7 +27,7 @@ Conventions:
 * Operator or relation? Only selbri are relations, everything else is operators.
 * Operators commute "-com", relations are symmetric "-sym"
 * Operators have identities "-id", relations are reflexive "-refl"
-* Operators compose "-comp", relations are transitive "-trans"
+* Operators compose "-syl", relations are transitive "-trans"
 
 References to iset.mm are not just for comparison and contrast, but for
 borrowing; many minor lemmas can be proven by reusing steps from iset.mm.
@@ -4079,33 +4079,26 @@ $)
 $( Syntax for uniqueness quantification. $)
 bpd $a bridi pa da zo'u broda $.
 
+$( Definition of {` pa da `} in terms of {` su'o da `} and {` du `}. $)
 df-pa-da $a |- go pa da zo'u da bo'a
-  gi ge su'o da zo'u da bo'a gi ganai ko'a bo'a gi ko'a du da $.
+  gi su'o da zo'u ge da bo'a gi ganai ko'a bo'a gi ko'a du da $.
 
 ${
     pa-dai.0 $e |- pa da zo'u da bo'a $.
     $( Inference form of ~pa-da
        (Contributed by la korvo, 20-Aug-2023.) $)
-    pa-dai $p |- ge su'o da zo'u da bo'a gi ganai ko'a bo'a gi ko'a du da $=
-      ( btb bpd bsd sbdu bb bgan bge df-pa-da bi ) CBEZCFNCNGABEACHIJKDABCLM $.
+    pa-dai $p |- su'o da zo'u ge da bo'a gi ganai ko'a bo'a gi ko'a du da $=
+      ( btb bpd sbdu bb bgan bge bsd df-pa-da bi ) CBEZCFNABEACGHIJZCOKDABCLM
+      $.
 $}
 
 ${
-    pa-dari.0 $e |- ge su'o da zo'u da bo'a gi ganai ko'a bo'a gi ko'a du da $.
+    pa-dari.0 $e |- su'o da zo'u ge da bo'a gi ganai ko'a bo'a gi ko'a du da $.
     $( Reverse inference form of ~pa-da
        (Contributed by la korvo, 20-Aug-2023.) $)
     pa-dari $p |- pa da zo'u da bo'a $=
-      ( btb bsd sbdu bb bgan bge bpd df-pa-da bi-rev ) CBEZCNFABEACGHIJNCKDABCL
-      M $.
-$}
-
-${
-    pa-darii.0 $e |- su'o da zo'u da bo'a $.
-    pa-darii.1 $e |- ganai ko'a bo'a gi ko'a du da $.
-    $( Reverse inference form of ~pa-da
-       (Contributed by la korvo, 20-Aug-2023.) $)
-    pa-darii $p |- pa da zo'u da bo'a $=
-      ( btb bsd sbdu bb bgan ge-ini pa-dari ) ABCCBFZCMGABFACHIJDEKL $.
+      ( btb sbdu bb bgan bge bsd bpd df-pa-da bi-rev ) CBEZABEACFGHIZCOJNCKDABC
+      LM $.
 $}
 
 $(
@@ -4222,6 +4215,11 @@ sbpagbu $a selbri pagbu $.
 $( Parthood is reflexive. $)
 ax-pagbu-refl $a |- ko'a pagbu ko'a $.
 
+$( {` pagbu `} is reflexive over any domain.
+   (Contributed by la korvo, 31-Aug-2024.) $)
+pagbu-kinra $p |- pa ka ce'u pagbu ce'u kei kinra ko'e $=
+  ( wda sbpagbu ax-pagbu-refl refl-kinra ) ACBBDE $.
+
 $( Parthood is antisymmetric. $)
 ax-pagbu-antisym $a |-
   ganai ge ko'a pagbu ko'e gi ko'e pagbu ko'a
@@ -4270,23 +4268,22 @@ sbjompau $a selbri jompau $.
 $( Definition of {` jompau `} in terms of {` pagbu `}. $)
 df-jompau $a |-
   go ko'a jompau ko'e
-  gi su'o da zo'u ge da pagbu ko'a gi da pagbu ko'e $.
+  gi su'o da zo'u da pagbu ko'a .e ko'e $.
 
 ${
     jompaui.0 $e |- ko'a jompau ko'e $.
     $( Inference form of ~df-jompau
        (Contributed by la korvo, 4-Sep-2023.) $)
-    jompaui $p |- su'o da zo'u ge da pagbu ko'a gi da pagbu ko'e $=
-      ( sbjompau bb sbpagbu bge bsd df-jompau bi ) ABEFCAGFCBGFHZCLIDABCJK $.
+    jompaui $p |- su'o da zo'u da pagbu ko'a .e ko'e $=
+      ( sbjompau bb sje sbpagbu bsd df-jompau bi ) ABEFCABGHFZCLIDABCJK $.
 $}
 
 ${
-    jompauri.0 $e |- su'o da zo'u ge da pagbu ko'a gi da pagbu ko'e $.
+    jompauri.0 $e |- su'o da zo'u da pagbu ko'a .e ko'e $.
     $( Reverse inference form of ~df-jompau
        (Contributed by la korvo, 4-Sep-2023.) $)
     jompauri $p |- ko'a jompau ko'e $=
-      ( sbpagbu bb bge bsd sbjompau df-jompau bi-rev ) CAEFCBEFGZCLHABIFDABCJK
-      $.
+      ( sje sbpagbu bb bsd sbjompau df-jompau bi-rev ) CABEFGZCLHABIGDABCJK $.
 $}
 
 $(
@@ -4301,23 +4298,23 @@ sbkuzypau $a selbri kuzypau $.
 $( Definition of {` kuzypau `} in terms of {` pagbu `}. $)
 df-kuzypau $a |-
   go ko'a kuzypau ko'e
-  gi su'o da zo'u ge ko'a pagbu da gi ko'e pagbu da $.
+  gi su'o da zo'u ko'a .e ko'e pagbu da $.
 
 ${
     kuzypaui.0 $e |- ko'a kuzypau ko'e $.
     $( Inference form of ~df-kuzypau
        (Contributed by la korvo, 4-Sep-2023.) $)
-    kuzypaui $p |- su'o da zo'u ge ko'a pagbu da gi ko'e pagbu da $=
-      ( sbkuzypau bb sbpagbu bge bsd df-kuzypau bi ) ABEFACGFBCGFHZCLIDABCJK $.
+    kuzypaui $p |- su'o da zo'u ko'a .e ko'e pagbu da $=
+      ( sbkuzypau bb sje sbpagbu bsd df-kuzypau bi ) ABEFABGCHFZCLIDABCJK $.
 $}
 
 ${
-    kuzypauri.0 $e |- su'o da zo'u ge ko'a pagbu da gi ko'e pagbu da $.
+    kuzypauri.0 $e |- su'o da zo'u ko'a .e ko'e pagbu da $.
     $( Reverse inference form of ~df-kuzypau
        (Contributed by la korvo, 4-Sep-2023.) $)
     kuzypauri $p |- ko'a kuzypau ko'e $=
-      ( sbpagbu bb bge bsd sbkuzypau df-kuzypau bi-rev ) ACEFBCEFGZCLHABIFDABCJ
-      K $.
+      ( sje sbpagbu bb bsd sbkuzypau df-kuzypau bi-rev ) ABECFGZCLHABIGDABCJK
+      $.
 $}
 
 $(
