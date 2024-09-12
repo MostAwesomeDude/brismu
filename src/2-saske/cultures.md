@@ -10,15 +10,27 @@ gismu without spoiling all of the relevant rafsi. These speakers use cultural
 gismu to decorate lujvo with cultural origin, a Lojbanic adaptation of a
 longstanding and widespread practice in many cultures.
 
+That said, we acknowledge the main critiques of cultural gismu:
+
+1. They unfairly privilege some cultures over others in the baseline.
+1. They are not phonetically faithful to how members of some cultures refer to
+   themselves.
+
+As a result, we will not endorse any particular cultural gismu, nor insist that
+the baseline is correct, but give a path for adapting any set of cultural gismu
+to fit within a single unifying framework.
+
 ## Classes
 
 There should be a class for kulnu1:
 
-    kulnu1: cultures
-    kulnu2: people
-
     culture1: events
     culture2: observations
+
+    prenu1: people
+
+    kulnu1: cultures
+    kulnu2: prenu1
 
     natmi1: nations
     natmi2: kulnu2
@@ -26,8 +38,8 @@ There should be a class for kulnu1:
     rutni1: artifacts
     rutni2: kulnu2
 
-    turni1: people
-    turni2: people
+    turni1: prenu1
+    turni2: prenu1
 
     tutra1: territories
     tutra2: turni1
