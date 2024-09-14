@@ -2695,6 +2695,9 @@ $c mupli $.
 
 sbmupli $a selbri mupli $.
 
+$( Tentative definition of {` mupli `}. It is worth noting that there is
+   currently a lack of community consensus on whether all elements of mupli3
+   must satisfy mupli2. $)
 df-mupli $a |-
   go ko'a mupli ko'e ko'i
   gi ge ko'a ckaji ko'e gi ko'a cmima ko'i $.
