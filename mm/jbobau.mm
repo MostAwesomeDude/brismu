@@ -221,6 +221,7 @@ htmldef "pagyfancu" as "<span class='lujvo'>pagyfancu</span> ";
 htmldef "selbri" as "<span class='lujvo'>selbri</span> ";
 htmldef "selcmi" as "<span class='lujvo'>selcmi</span> ";
 htmldef "le" as "<span class='gadri'>le</span> ";
+htmldef "ku" as "<small>ku</small> ";
 $)
 
 $(
@@ -2243,17 +2244,17 @@ $(
 =-=-=
 $)
 
-$c le nomei $.
+$c le nomei ku $.
 
-snomei $a sumti le nomei $.
+snomei $a sumti le nomei ku $.
 
 $( {` le nomei `} is the empty set. Literally it is the set with zero
 cardinality. By standard folklore of sets, it is unique up to isomorphism,
 justifying {` le `}. $)
-df-nomei $a |- naku zo'u ko'a cmima le nomei $.
+df-nomei $a |- naku zo'u ko'a cmima le nomei ku $.
 
 ${
-    nomei-gaiho.0 $e |- ko'a cmima le nomei $.
+    nomei-gaiho.0 $e |- ko'a cmima le nomei ku $.
     $( If the empty set is inhabited, then there is a contradiction.
        (Contributed by la korvo, 16-May-2024.) $)
     nomei-gaiho $p |- gai'o $=
@@ -3140,6 +3141,43 @@ $( The true relation is closed. Theorem nftru in [ILE] p. 0.
    (Contributed by la korvo, 25-Jun-2024.) $)
 ceihi-nf $p |- na'a'u da zo'u cei'i $=
   ( bceihi ceihi nfth ) BACD $.
+
+$(
+#*#*#
+Sets II: {zilcmi}
+#*#*#
+$)
+
+$(
+=-=-=
+{zilcmi}
+=-=-=
+$)
+
+$c zilcmi $.
+
+sbzilcmi $a selbri zilcmi $.
+
+$( {` zilcmi `} is lujvo for {` se cmima zi'o `}. The effect is to include
+   {` le nomei `} as a valid set, forming a predicate of possibly-inhabited
+   sets. $)
+df-zilcmi $a |- go ko'a zilcmi gi
+  ga ko'a du le nomei ku gi su'o da zo'u da cmima ko'a $.
+
+$( The empty set is a set.
+   (Contributed by la korvo, 19-Sep-2024.) $)
+zilcmi-nomei $p |- le nomei ku zilcmi $=
+  ( wda snomei sbdu bb sbcmima bsd bga sbzilcmi du-refl ga-lin df-zilcmi bi-rev
+  bu ax-mp ) BBCDZABEDZAPFZGZBHMORBIOQJNBAKL $.
+
+${
+    cmima-zilcmi.0 $e |- su'o da zo'u da cmima ko'a $.
+    $( Forget the inhabitant of a set.
+       (Contributed by la korvo, 19-Sep-2024.) $)
+    cmima-zilcmi $p |- ko'a zilcmi $=
+      ( snomei sbdu bb sbcmima bsd bga sbzilcmi ga-rin ax-mp df-zilcmi bi-rev
+      bu ) ADEFZBAGFZBQHZIZAJORSCRPKLABMN $.
+$}
 
 $(
 #*#*#
