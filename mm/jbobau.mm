@@ -184,6 +184,7 @@ htmldef "prami" as "<span class='gismu'>prami</span> ";
 htmldef "pritu" as "<span class='gismu'>pritu</span> ";
 htmldef "purci" as "<span class='gismu'>purci</span> ";
 htmldef "rinka" as "<span class='gismu'>rinka</span> ";
+htmldef "sefsi" as "<span class='gismu'>sefsi</span> ";
 htmldef "sigda" as "<span class='gismu'>sigda</span> ";
 htmldef "simsa" as "<span class='gismu'>simsa</span> ";
 htmldef "simxu" as "<span class='gismu'>simxu</span> ";
@@ -1961,12 +1962,18 @@ $( Uncurried form of ~df-naku
 naku-uncur $p |- ganai ge naku zo'u broda gi broda gi gai'o $=
   ( bnk bgaiho bgan df-naku go-ganai cur ) AABZACHACDAEFG $.
 
+$( The law of non-contradiction. No bridi is simultaneously inhabited and
+   uninhabited.
+   (Contributed by la korvo, 19-Sep-2024.) $)
+lnc $p |- naku zo'u ge naku zo'u broda gi broda $=
+  ( bnk bge bgaiho bgan naku-uncur df-naku bi-rev ) AABACZDEIIBAFIGH $.
+
 ${
-    lnc.0 $e |- ge broda gi naku zo'u broda $.
-    $( The law of non-contradiction. No bridi is simultaneously inhabited and
-       uninhabited.
+    lnci.0 $e |- ge broda gi naku zo'u broda $.
+    $( The law of non-contradiction. If a bridi is simultaneously inhabited
+       and uninhabited, then we reach an absurdity.
        (Contributed by la korvo, 20-Aug-2023.) $)
-    lnc $p |- gai'o $=
+    lnci $p |- gai'o $=
       ( bnk bge bgaiho ge-com bi naku-uncur ax-mp ) AACZADZEAJDKBAJFGAHI $.
 $}
 
@@ -2474,6 +2481,21 @@ ${
       wk2 wk1 sbba sbs wk1 wk2 sbba wk1 wk2 sbba ckini-se.0 ckinii seri ckiniri
       $.
 $}
+
+$(
+=-=-=
+{sefsi}
+=-=-=
+$)
+
+$c sefsi $.
+
+sbsefsi $a selbri sefsi $.
+
+$( A useful experimental gismu like {` ckini `}. In particular, {` sefsi `}
+   can adapt between unary and binary {` ka `} abstractions. This definition
+   was given by la xorxes. $)
+df-sefsi $a |- go ko'a sefsi ko'e gi ko'a ckini ko'a ko'e $.
 
 $(
 =-=-=
