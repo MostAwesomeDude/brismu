@@ -2575,34 +2575,37 @@ $( {` dunli `} is often found with this conjugation.
 bdunli $p bridi ko'a dunli ko'e pa ka ce'u bu'a ce'u kei $=
   ( sc tsb tss spk sbdunli bt ) ABDDCEZJFGHI $.
 
-$( Definition of {` dunli `} by la ilmen in terms of {` ckini `}. $)
-df-dunli $a |- go ko'a dunli ko'e ko'i gi ro da zo'u ko'a .o ko'e ckini da ko'i $.
+$( Definition of {` dunli `} by la ilmen in terms of {` ckini `}. A
+   metavariable is used instead of a universal quantifier to ease manipulation. $)
+df-dunli $a |- go ko'a dunli ko'e ko'i gi ko'a .o ko'e ckini ko'o ko'i $.
 
 ${
     dunlii.0 $e |- ko'a dunli ko'e ko'i $.
     $( Inference form of ~df-dunli
        (Contributed by la korvo, 23-Jun-2024.) $)
-    dunlii $p |- ro da zo'u ko'a .o ko'e ckini da ko'i $=
-      ( sbdunli bt sjo sbckini brd df-dunli bi ) ABCFGABHDCIGZDMJEABCDKL $.
+    dunlii $p |- ko'a .o ko'e ckini ko'o ko'i $=
+      ( sbdunli bt sjo sbckini df-dunli bi ) ABCFGABHDCIGEABCDJK $.
 $}
 
 ${
-    dunliri.0 $e |- ro da zo'u ko'a .o ko'e ckini da ko'i $.
+    dunliri.0 $e |- ko'a .o ko'e ckini ko'o ko'i $.
     $( Reverse inference form of ~df-dunli
        (Contributed by la korvo, 23-Jun-2024.) $)
     dunliri $p |- ko'a dunli ko'e ko'i $=
-  ( sjo sbckini bt brd sbdunli df-dunli bi-rev ) ABFDCGHZDMIABCJHEABCDKL $.
+      ( sjo sbckini bt sbdunli df-dunli bi-rev ) ABFDCGHABCIHEABCDJK $.
 $}
 
 $( {` dunli `} is reflexive over any dunli3.
    (Contributed by la korvo, 14-Aug-2024.) $)
 dunli-refl $p |- ko'a dunli ko'a ko'e $=
-  ( wda sjo sbckini bt tsb tss o-refl ax-gen1 dunliri ) AABCAADCBEFCABCEGZLHZMH
-  IJK $.
+  ( wk4 sbckini tsb tss o-refl dunliri ) AABCABCDEZIFZJFGH $.
 
 $( Because modal x1 and modal x2 of {` dunli `} are definitionally
-   interchangeable, {` dunli `} itself is symmetric. $)
-ax-dunli-sym $a |- go ko'a dunli ko'e ko'i gi ko'e dunli ko'a ko'i $.
+   interchangeable, {` dunli `} itself is symmetric.
+   (Contributed by la korvo, 20-Sep-2024.) $)
+dunli-sym $p |- go ko'a dunli ko'e ko'i gi ko'e dunli ko'a ko'i $=
+  ( wk4 sbdunli bt sjo sbckini df-dunli tsb tss o-com go-syl go-comi ) ABCEFZBA
+  GDCHFZBACEFZOABGDCHFPABCDIABCDHJZRKZSKLMQPBACDINM $.
 
 $(
 =-=-=
