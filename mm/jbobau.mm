@@ -2644,8 +2644,11 @@ mintu-refl $p |- ko'a mintu ko'a ko'e $=
   ( sbckaji tsb tss o-refl minturi ) AABABCDZHEFG $.
 
 $( Because x1 and x2 of {` mintu `} are definitionally interchangeable, it is
-   symmetric. $)
-ax-mintu-sym $a |- go ko'a mintu ko'e ko'i gi ko'e mintu ko'a ko'i $.
+   symmetric.
+   (Contributed by la korvo, 20-Sep-2024.) $)
+mintu-sym $p |- go ko'a mintu ko'e ko'i gi ko'e mintu ko'a ko'i $=
+  ( sbmintu bt sjo sbckaji bb df-mintu tsb tss o-com go-syl go-comi ) ABCDEZBAF
+  CGHZBACDEZOABFCGHPABCIABCGJZRKLMQPBACINM $.
 
 $( XXX metamath-exe bug(223) when the following proof is compressed and
    printed to HTML $)
