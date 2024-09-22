@@ -158,3 +158,20 @@ TENSE, with e.g. {.ibabo} akin to {.ijebo}. So, uh?
 Conversationally, Lojban bridi refer to events. The story-time convention
 connects those events spatiotemporally. The utterance ``{broda .i brode}``
 implies something like ``{lo nu broda ku purci lo nu brode}``.
+
+## Notes
+
+### Arrows of Time
+
+Some philosopher-physicists argue in favor of "entropic time": all arrows of
+time are generated from the second law of thermodynamics. Sean Carroll gives examples:
+
+* Biology: individuals age
+* Genetics: evolution occurs
+* Psychology: memories are into the past
+* Causality
+* Electromagnetism: energy flows along paths
+
+The argument is that they are all oriented along the same broken symmetry of
+low entropy as the universe's own physical entropy. As Nick Lucid puts it, "All
+will follow the gradient. The gradient is inevitable."
