@@ -1,11 +1,6 @@
 # Biology
 
-## Classes
-
-    clade1: specimens
-    clade2: species
-
-    grute2: clade2
+## Clades
 
 A clade is a monophyletic rooted tree; the root is known as the [most recent
 common ancestor](https://en.wikipedia.org/wiki/Most_recent_common_ancestor).
@@ -17,43 +12,90 @@ invalidate membership within a clade.
 Some non-animal non-plants, particularly viruses and bacteria, can also form
 clades.
 
-### Issues
+The following table includes PhyloCodes which have been registered at
+[RegNum](https://www.phyloregnum.org/). A PhyloCode is a registered taxon
+denoting a clade for international biologists.
 
-It's not clear whether cladistics are required relationally. In terms of
-implication, {tricu} is a subrelation of {spati} but trees don't form a clade.
-Also, e.g. {ckunu} is arguably a subrelation of {tricu}, depending on whether
-all conifers are trees; all conifers are woody, which may suffice.
+gismu | English gloss | Linnean hint | PhyloCode
+---|---|---|---
+ankabuta | spider | *Araneae* | *Araneae* (182)
+bakni | cow | - | *Bovinae* (265)
+bambu [exp] | bamboo | *Bambuseae* | -
+banfi | amphibian | - | *Amphibia* (9)
+bifce | bee, wasp, hornet | - | -
+cindu | oak | -
+cinfo | lion | - | -
+cinki | insect, arthopod, bug, beetle | - | -
+cipni | bird, avian, fowl | - | *Aves* (113)
+civla | louse, flea, blood-sucking arthopod | - | -
+ckunu | conifer, pine, fir | - | *Coniferae* (31)
+clika | moss | - | *Musci* (69)
+cribe | bear | - | -
+curnu | worm, invertebrate | - | -
+danlu | animal | - | -
+datka | duck | - | -
+finpe | fish | - | -
+gerku | dog | - | -
+gumri [archaic] | mushroom | - | *Basidomycota* (19)
+gunse | goose | - | -
+jalra | cockroach, orthopteran, termite | - | -
+jipci | chicken, small fowl | - | -
+jukni | spider, arachnid, crustacean, lobster, crab | - | -
+kanba | goat | - | -
+ku'urkupresu | cypress | *Cupressus* | *Cupressophyta* (249)
+kumte | camel, llama, alpaca, vicuna | - | -
+labno | wolf | - | -
+lanme | sheep | - | -
+lelxe [exp] | lily | *Lilium* | -
+lorxu | fox | - | -
+mabru | mammal | - | *Mammalia* (220)
+manti | ant | - | -
+marna | cannabis | *Cannabis* | -
+mirli | deer, elk, moose | - | -
+mlatu | cat | - | -
+mledi | mold, fungus, mushroom, truffle | - | *Fungi* (45)
+nimre | citrus | *Citrus* | -
+poplu [exp] | poplar, aspen, cottonwood | *Populus* | -
+ractu | rabbit | - | -
+ratcu | rat | - | -
+remna | human | *H. sapiens* | -
+respa | reptile | - | *Reptilia* (88)
+ri'ospa | green plants | *Viridiplantae* | *Viridiplantae* (110)
+rozgu | rose | -
+sfani | fly | - | -
+since | snake | - | *Serpentes* (96)
+sluni | onions, scallions | *Allium* | -
+smacu | mouse | - | -
+smani | monkey, ape, simian, baboon, chimpanzee | - | *Primates* (259)
+spati | plant, herb, greenery | - | -
+srasu | grasses | -
+tirxu | tiger | - | -
+toldi | butterfly, moth | - | -
+tujli | tulip | -
+xanto | elephant | - | -
+xarju | pig, hog, swine | - | -
+xasli | donkey | - | -
+xirma | horse | - | -
+xruba | buckwheat, rhubarb, sorrel grass | *Polygonaceae* | -
+xruki | turkey | - | -
 
-## Animals
+The following inclusions definitionally follow:
 
-Animal clades are nested according to the za'a diagram.
+subrelation | superrelation
+---|---
+bakni | mabru
+gumri | mledi
+ku'urkupresu | ckunu
+since | respa
+smani | mabru
 
 ## Fungi
-
-* clika: moss
-* gumri [archaic]: mushroom
-* mledi: mold, fungus, mushroom, truffle
 
 For archaic words, see [here](https://mw.lojban.org/papri/resurrected_gismu).
 
 ## Plants
 
 ### Species
-
-#### Clades
-
-* bambu: [exp] bamboo, *Bambuseae*
-* cindu: oak
-* ckunu: conifer, pine, fir
-* lelxe: [exp] lily, *Lilium*
-* marna: *Cannabis*
-* nimre: *Citrus*
-* poplu: [exp] poplar, aspen, cottonwood, *Populus*
-* rozgu: rose
-* sluni: onions, scallions, *Allium*
-* srasu: grasses
-* tujli: tulip
-* xruba: buckwheat, rhubarb, sorrel grass, *Polygonaceae*
 
 #### Non-cladistic Families
 
