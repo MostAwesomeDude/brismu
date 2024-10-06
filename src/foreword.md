@@ -16,18 +16,24 @@ Lojban is syntax for a special flavor of category -- a [bicategory of
 relations](https://ncatlab.org/nlab/show/bicategory+of+relations) -- forming a
 fictional universe.
 
-This book comes in two halves. This half is written mostly in English prose.
-The other half is [a formally-verified collection of proofs about
-Lojban](mmtheorems.html) written mostly in
-[Metamath](https://us.metamath.org/), a system for formalizing symbolic logic.
-The other half explains which bridi are logically provable; this half explains
-the meaning of the various axioms.
+This book has multiple pieces:
+
+* [a formally-verified collection of proofs about Lojban syntax](mmtheorems.html)
+  written mostly in [Metamath](https://us.metamath.org/), a system for
+  formalizing symbolic logic and proving theorems
+* a pile of mostly-English notes and prose, organized loosely into chapters,
+  which informs that formal system's axioms and grammar
+* formal definitions of categories **Loj** and **Selb** which are suitable for
+  foundational and high-level logical reasoning
+* a [*vlaste*](vlaste.md) which logically defines *valsi* in terms of other
+  *valsi*
 
 This book is addressed at folks who know Lojban and want to gain a deeper
 understanding of Lojbanic logic. If the reader does not know Lojban, then they
 may be somewhat mystified by the purpose of this work. For that reader, please
 consider Lojban as a sort of neutral speakable language for reading well-formed
-formulae aloud.
+formulae aloud; the purpose of this book would then be to show that a
+Lojban-style project can be rigorously formal.
 
 There are no mathematical prerequisites. Instead, the first few pages will
 rapidly build up all of the mathematical concepts which are required, and any

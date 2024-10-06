@@ -56,8 +56,8 @@
 
             # Generate tables and posets from valsi listings.
             python3 gen.py coverage > src/coverage.md
-            python3 gen.py definitions > definitions.json
             python3 gen.py dependencies > dependencies.dot
+            python3 gen.py vlaste > src/vlaste-table.md
             python3 gen.py metavars > src/metavar-table.md
 
             mdbook build

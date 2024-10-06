@@ -41,6 +41,7 @@
 - [Metavariables](metavars.md)
 - [**Loj**](loj.md)
 - [Relations and **Selb**](selb.md)
+- [Definitional vlaste](vlaste.md)
 
 # Appendices
 
