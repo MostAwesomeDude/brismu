@@ -14,6 +14,9 @@ appendix](appendices/posets.md).
 
 Note the following brismu conventions:
 
+* All definitions are schematic: free metavariables are universally quantified
+  and may be substituted with *any* grammatical fragments whatsoever. Bound
+  metavariables are bound existentially, universally, etc. as indicated.
 * The default article for {ka} and {du'u} is {pa}, not {lo}, reflecting
   *syntactic* capture rather than *semantic* capture.
 * {broda} and friends refer to filled-in bridi; {bu'a} and friends refer to

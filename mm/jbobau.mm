@@ -3032,7 +3032,7 @@ bsub $a bridi [ ko'a / da ] broda $.
 
 $( Definition of proper substitution following definition df-sb in [ILE] p. 0.
    This clever gadget breaks scoping to require that substitution is correct
-   in both the case where {` da `} is free and the case wehre {` da `} is
+   in both the case where {` da `} is free and the case where {` da `} is
    bound by mixing both cases, skipping grammatical analysis and
    scope-tracking entirely. $)
 df-sub $a |- go [ ko'a / da ] broda gi
