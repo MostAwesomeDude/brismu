@@ -5,10 +5,9 @@
 
 # 0: midju
 
-- [Upward](0-midju/7-upward.md)
+- [Discursive Logic](0-midju/discursive.md)
 - [Abstractors](0-midju/8-abstractors.md)
 - [Adjunctions](0-midju/9-adjunctions.md)
-- [Discursive Logic](0-midju/discursive.md)
 
 # 1: senta
 
