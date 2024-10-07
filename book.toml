@@ -5,6 +5,9 @@ multilingual = false
 src = "src"
 title = "brismu: a relational interpretation of Lojban"
 
+[preprocessor.metamath]
+command = "python preprocess.py"
+
 [preprocessor.graphviz]
 # Required for including DOT into Markdown.
 after = ["links"]

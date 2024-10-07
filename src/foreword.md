@@ -52,10 +52,10 @@ selbri which did not previously exist.
 
 Theorem | Formalized | Proved
 ---|---|---
-cei'i | yes | yes: [ceihi](ceihi.html)
-ganai broda gi broda | yes | yes: [id](id.html)
-go broda gi broda | yes | yes: [go-id](go-id.html)
-ko'a du ko'a | yes | yes: [du-refl](du-refl.html)
+cei'i | yes | yes: ~ceihi
+ganai broda gi broda | yes | yes: ~id
+go broda gi broda | yes | yes: ~go-id
+ko'a du ko'a | yes | yes: ~du-refl
 lo broda ku broda | somewhat (prose, not Metamath) | no
 lo'i broda ku broda | not really | no
 
