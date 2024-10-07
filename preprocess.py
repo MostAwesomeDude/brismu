@@ -1,6 +1,6 @@
 import json, re, sys
 
-THEOREM_RE = re.compile("~([-\.'\w]+)")
+THEOREM_RE = re.compile("~([-\.'\w]*\w)")
 makeLink = lambda m: "[{0}]({0}.html)".format(m.group(1))
 
 def processSection(section):

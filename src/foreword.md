@@ -41,12 +41,12 @@ additional concepts will be built as needed.
 
 ## Coverage
 
-Of the 1343 baseline valsi recognized as selbri (1342 gismu, 1 cmavo), 161
-selbri are partially defined via formal rules. All 12 baseline abstractors (NU)
-are informally defined. Of the 8 classic articles (LE), 2 are informally defined.
+Of the 1343 baseline *valsi* recognized as *selbri* (1342 gismu, 1 cmavo), 161
+*selbri* are partially defined via formal rules. All 12 baseline abstractors (NU)
+are informally defined. Of the 8 classic *gadri* (LE), 2 are informally defined.
 
-In addition, 8 experimental selbri are informally defined, as well as 6 cnino
-selbri which did not previously exist.
+In addition, 8 experimental *selbri* are informally defined, as well as 6 *cnino
+selbri* which did not previously exist.
 
 ### Essential theorems
 
@@ -61,15 +61,15 @@ lo'i broda ku broda | not really | no
 
 ### Formal coverage
 
-The following table shows how many valsi have been formalized in handwritten
+The following table shows how many *valsi* have been formalized in handwritten
 Metamath, not including automatically-generated rules.
 
 {{#include coverage.md}}
 
 ### Ontology coverage
 
-The following table shows how many selbri have been ontologized: given partial
-meaning relative to other selbri, but not necessarily formally defined.
+The following table shows how many *selbri* have been ontologized: given partial
+meaning relative to other *selbri*, but not necessarily formally defined.
 
 Class | Count
 ---|---
@@ -97,7 +97,7 @@ Lojbanists for input and insights:
 * la selpa'i
 * la tsani
 
-I also thank the following Lojbanists for proposing experimental valsi which I
+I also thank the following Lojbanists for proposing experimental *valsi* which I
 ended up using:
 
 * la krtisfranks

@@ -27,13 +27,13 @@ let us consider syllogisms in Lojban, which have the following schema:
 1. Therefore: {ganai *broda* gi *brodi*}
 
 For now, the logical rules are easy to state: *broda*, *brode*, and *brodi*
-must be grammatical bridi with valsi drawn from a basis set. The basis set
-contains valsi like {ganai} and {gi} which are necessary to state the logical
+must be grammatical *bridi* with *valsi* drawn from a basis set. The basis set
+contains *valsi* like {ganai} and {gi} which are necessary to state the logical
 rules themselves; if we didn't choose a basis, then we wouldn't be able to
 define our logic! However, the basis set will not contain
 [discursive connectives](0-midju/discursive.md), so it may seem like a
 restricted way of using Lojban at first. We will see later how to define new
-valsi in terms of the basis set.
+*valsi* in terms of the basis set.
 
 ## *modus ponens*
 
@@ -46,8 +46,9 @@ for the following schema:
 1. Therefore: *Q*.
 
 To be direct with the reader: "*modus ponens*" or "MP" is one of those few
-names that you must memorize; it occurs too frequently and is too fundamental
-to not be known. I apologize and wish it had a better common name.
+names that you must memorize in order to read English prose about logic; it
+occurs too frequently in Anglophone literature and is too fundamental to not be
+understood by readers. I apologize and wish it had a better common name.
 
 In Lojban, there are several schema we might consider. Here is one classic
 schema:
@@ -63,9 +64,9 @@ for deep reasons. Instead, the schema used throughout la brismu is:
 1. {ganai *broda* gi *brode*}
 1. Therefore: {*brode*}
 
-This schema is compatible with the syllogism schema. Both schemata have a
-bridi of the form {ganai *broda* gi *brode*}. Considering this more deeply
-leads to…
+Compare and contrast with the fully-formalized axiom statement, ~ax-mp. This
+schema is compatible with the syllogism schema. Both schemata have a bridi of
+the form {ganai *broda* gi *brode*}. Considering this more deeply leads to…
 
 ## Categorical logic
 
@@ -120,7 +121,8 @@ follow a sort of schema:
 1. {go *broda* gi *brode*}
 1. Therefore: {*brode*}
 
-This is merely *modus ponens* for {go}. However, let us be more specific:
+This is merely *modus ponens* for {go}, and indeed it is a theorem, ~bi.
+However, let us be more specific:
 
 1. Suppose: {*ko'a bu'a*}
 1. {go *ko'a bu'a* gi *brode*}
