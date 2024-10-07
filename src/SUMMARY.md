@@ -16,7 +16,6 @@
 - [Basis](1-senta/1-basis.md)
 - [Places](1-senta/3-places.md)
 - [Spacetime](1-senta/4-spacetime.md)
-- [Modals](1-senta/5-modals.md)
 
 # 2: saske
 
