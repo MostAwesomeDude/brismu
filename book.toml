@@ -7,6 +7,8 @@ title = "brismu: a relational interpretation of Lojban"
 
 [preprocessor.metamath]
 command = "python preprocess.py"
+# Include tables before linkifying them.
+after = ["links"]
 
 [preprocessor.graphviz]
 # Required for including DOT into Markdown.

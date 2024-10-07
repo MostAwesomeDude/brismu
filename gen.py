@@ -12,6 +12,7 @@ with open("mm/jbobau.mm") as handle: db = handle.read().split()
 clss = Counter(vc.values())
 
 def apos(s): return s.replace("h", "'")
+def unapos(s): return s.replace("'", "h")
 dfs = {}
 fs = {}
 i = 0
@@ -71,11 +72,11 @@ elif cmd == "metavars":
     for k, v in sorted(fs.items()): print(f"{v} | {k}")
 elif cmd == "vlaste":
     d = {k: " ".join(crack(v)[1]) for k, v in dfs.items()}
-    tableHeaders("*valsi*", "*lo jbovla* (definiendum)", "*lo se jbovla* (definiens)")
+    tableHeaders("*valsi*", "full statement", "*lo jbovla* (definiendum)", "*lo se jbovla* (definiens)")
     for k, v in dfs.items():
         if v[0] != "go": continue
         j1, j2 = crack(v)
-        print(k, "|", " ".join(map(vlaste, j1)), "|", " ".join(map(vlaste, j2)))
+        print(k, "|", "~df-" + unapos(k), "|", " ".join(map(vlaste, j1)), "|", " ".join(map(vlaste, j2)))
 elif cmd == "dependencies":
     mvs = set(fs)
     print("digraph {")
