@@ -53,8 +53,7 @@ The [core](https://ncatlab.org/nlab/show/core+groupoid) of a category is the
 groupoid which includes all of its isomorphisms. The core of **Loj**, written
 **Core(Loj)**, is the groupoid whose:
 
-* objects are the three equivalence classes of true, false, and independent
-  bridi, and
+* objects are equivalence classes of bridi, and
 * arrows are bi-implications from one bridi to another.
 
 To read Metamath theorems as statements about **Core(Loj)**, encode:
