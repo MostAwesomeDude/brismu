@@ -59,6 +59,7 @@ htmldef "bridi" as "<em>bridi</em> ";
 htmldef "selbri" as "<em>selbri</em> ";
 htmldef "sumti" as "<em>sumti</em> ";
 htmldef "brirebla" as "<em>brirebla</em> ";
+htmldef "kluselbri" as "<em>kluselbri</em> ";
 htmldef "skaselbri" as "<em>skaselbri</em> ";
 htmldef "PA" as "<em>PA</em> ";
 htmldef "zi'o" as "<span class='sumti'>zi'o</span> ";
@@ -4752,3 +4753,11 @@ $c xinmo $.
 $( Definitionally, xinmo2 is drawn from skari2. $)
 ax-xinmo2-skari2 $a |- ganai ko'a se xinmo ko'e
   gi su'o da zo'u su'o de zo'u su'o di zo'u ko'a se skari da de di $.
+
+$(
+=-=-=
+Cultures
+=-=-=
+$)
+
+$c kluselbri $.
