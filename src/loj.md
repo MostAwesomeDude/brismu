@@ -13,7 +13,7 @@ To read Metamath theorems as statements about **Loj**, encode:
 
 * objects as members of the {broda} series
 * arrows from X to Y as {ganai X gi Y}
-* pasting diagrams as applications of [ax-mp](ax-mp.html)
+* pasting diagrams as applications of ~ax-mp
 * Isomorphisms from X to Y as {go X gi Y}
 
 Note that while **Loj** is thin, its formal verification in Metamath is
@@ -23,18 +23,18 @@ non-thin. This is not a serious issue.
 
 Metamath statement | Lojban bridi | What it means
 ---|---|---
-[id](id.html) | {ganai broda gi broda} | [identity arrows](https://ncatlab.org/nlab/show/identity%20morphism) exist
-[syl](syl.html) | {ganai broda gi brode} & {ganai brode gi brodi} => {ganai broda gi brodi} | [composition](https://ncatlab.org/nlab/show/composition) is allowed and well-typed
-[iso](iso.html) | {ganai broda gi brode} & {ganai brode gi broda} => {go broda gi brode} | isomorphisms are allowed
-[ax-ge-le](ax-ge-le.html) | {ganai ge broda gi brode gi broda} | conjunction is a left lower bound
-[ax-ge-re](ax-ge-re.html) | {ganai ge broda gi brode gi brode} | conjunction is a right lower bound
-[ga-lin](ga-lin.html) | {ganai broda gi ga broda gi brode} | disjunction is a left upper bound
-[ga-rin](ga-rin.html) | {ganai broda gi ga broda gi broda} | disjunction is a right upper bound
-[garii](garii.html) | {ganai broda gi brode} & {ganai brodi gi brode} => {ganai ga broda gi brodi gi brode} | disjunction is the least upper bound
-[ge-idem](ge-idem.html) | {go ge broda gi broda gi broda} | conjunction is idempotent
-[ga-idem](ga-idem.html) | {go ga broda gi broda gi broda} | disjunction is idempotent
-[ge-com](ge-com.html) | {go ge broda gi brode gi ge brode gi broda} | conjunction commutes
-[ga-com](ga-com.html) | {go ga broda gi brode gi ga brode gi broda} | disjunction commutes
+~id | {ganai broda gi broda} | [identity arrows](https://ncatlab.org/nlab/show/identity%20morphism) exist
+~syl | {ganai broda gi brode} & {ganai brode gi brodi} => {ganai broda gi brodi} | [composition](https://ncatlab.org/nlab/show/composition) is allowed and well-typed
+~iso | {ganai broda gi brode} & {ganai brode gi broda} => {go broda gi brode} | isomorphisms are allowed
+~ax-ge-le | {ganai ge broda gi brode gi broda} | conjunction is a left lower bound
+~ax-ge-re | {ganai ge broda gi brode gi brode} | conjunction is a right lower bound
+~ga-lin | {ganai broda gi ga broda gi brode} | disjunction is a left upper bound
+~ga-rin | {ganai broda gi ga broda gi broda} | disjunction is a right upper bound
+~garii | {ganai broda gi brode} & {ganai brodi gi brode} => {ganai ga broda gi brodi gi brode} | disjunction is the least upper bound
+~ge-idem | {go ge broda gi broda gi broda} | conjunction is idempotent
+~ga-idem | {go ga broda gi broda gi broda} | disjunction is idempotent
+~ge-com | {go ge broda gi brode gi ge brode gi broda} | conjunction commutes
+~ga-com | {go ga broda gi brode gi ga brode gi broda} | disjunction commutes
 
 ## To Do
 
@@ -61,13 +61,13 @@ To read Metamath theorems as statements about **Core(Loj)**, encode:
 
 * objects as members of the {broda} series
 * arrows from X to Y as {go X gi Y}
-* pasting diagrams as applications of [bi](bi.html)
+* pasting diagrams as applications of ~bi
 
 ### Table of proofs
 
 Metamath statement | Lojban bridi | What it means
 ---|---|---
-[go-id](go-id.html) | {go broda gi broda} | identity arrows exist
-[go-syl](go-syl.html) | {go broda gi brode} & {go brode gi brodi} => {go broda gi brodi} | composition is allowed and well-typed
-[go-ganai](go-ganai.html) | {go broda gi brode} => {ganai broda gi brode} | the core is a subcategory
-[go-comi](go-comi.html) | {go broda gi brode} => {go brode gi broda} | the core is its own opposite category
+~go-id | {go broda gi broda} | identity arrows exist
+~go-syl | {go broda gi brode} & {go brode gi brodi} => {go broda gi brodi} | composition is allowed and well-typed
+~go-ganai | {go broda gi brode} => {ganai broda gi brode} | the core is a subcategory
+~go-comi | {go broda gi brode} => {go brode gi broda} | the core is its own opposite category

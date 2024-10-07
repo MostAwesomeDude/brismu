@@ -13,5 +13,5 @@ and
 
 Metamath statement | Lojban bridi | Description
 ---|---|---
-[df-du](df-du.html) | {go ko'a du ko'e gi ro bu'a zo'u ko'a .o ko'e bu'a} | definition of identity
-[ax-nat-ind](ax-nat-ind.html) | {ganai ge li no bo'a gi ro da poi ke'a bo'a ku'o zo'u su'o de zo'u ge da kacli'e de gi de bo'a gi ro da poi ke'a kacna'u ku'o zo'u da bo'a} | induction for natural numbers
+~df-du | {go ko'a du ko'e gi ro bu'a zo'u ko'a .o ko'e bu'a} | definition of identity
+~ax-nat-ind | {ganai ge li no bo'a gi ro da poi ke'a bo'a ku'o zo'u su'o de zo'u ge da kacli'e de gi de bo'a gi ro da poi ke'a kacna'u ku'o zo'u da bo'a} | induction for natural numbers

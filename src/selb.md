@@ -53,19 +53,19 @@ especially worried about h-levels, so this is not a serious issue.
 
 1Lab axiom | Metamath entry
 ---|---
-`_≤_` | [bgan](bgan.html)
-`≤-refl` | [id](id.html)
-`≤-trans` | [syl](syl.html)
-`≤-antisym` | [iso](iso.html)
+`_≤_` | ~bgan
+`≤-refl` | ~id
+`≤-trans` | ~syl
+`≤-antisym` | ~iso
 `_◆_` | todo
-`_†` | [sbs](sbs.html)
-`dual` | no closed form yet, can be inferred from [se-invo](se-invo.html) and [seri](seri.html) [seri](seri.html) respectively
+`_†` | ~sbs
+`dual` | no closed form yet, can be inferred from ~se-invo and ~seri ~seri respectively
 `dual-∘` | todo
-`dual-≤` | [se-dual](se-dual.html)
-`_∩_` | [bge](bge.html)
-`∩-le-l` | [ax-ge-le](ax-ge-le.html)
-`∩-le-r` | [ax-ge-re](ax-ge-re.html)
-`∩-univ` | no closed form yet, deductive form of [ge-ini](ge-ini.html)
+`dual-≤` | ~se-dual
+`_∩_` | ~bge
+`∩-le-l` | ~ax-ge-le
+`∩-le-r` | ~ax-ge-re
+`∩-univ` | no closed form yet, deductive form of ~ge-ini
 `modular` | todo
 
 We also reprove the following theorems:
@@ -73,10 +73,10 @@ We also reprove the following theorems:
 1Lab theorem | Metamath theorem
 ---|---
 `≤-yoneda` | todo
-`dual-≤ₗ` | [se-dual-l](se-dual-l.html)
-`dual-≤ᵣ` | [se-dual-r](se-dual-r.html)
+`dual-≤ₗ` | ~se-dual-l
+`dual-≤ᵣ` | ~se-dual-r
 `_dual-∩` | todo
-`dual-id` | [se-du-elim](se-du-elim.html)
+`dual-id` | ~se-du-elim
 
 ## Interpreting natural deduction
 
