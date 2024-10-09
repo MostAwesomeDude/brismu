@@ -1,22 +1,27 @@
 # Summary
 
 - [Foreword](foreword.md)
-- [Introduction to Logic](intro-logji.md)
 
-# 0: midju
+# logji ve ciksi
+
+- [Introduction to Logic](intro-logji.md)
+- [Logical Connectives](ganai.md)
+- [Non-Logical Connectives](cmima.md)
+
+# logji midju
 
 - [Discursive Logic](0-midju/discursive.md)
 - [Abstractors](0-midju/8-abstractors.md)
 - [Adjunctions](0-midju/9-adjunctions.md)
 
-# 1: senta
+# logji senta
 
 - [Endo(Rel)](1-senta/0-endorel.md)
 - [Basis](1-senta/1-basis.md)
 - [Places](1-senta/3-places.md)
 - [Spacetime](1-senta/4-spacetime.md)
 
-# 2: saske
+# logji saske
 
 - [Classes of gismu](2-saske/classes.md)
 - [Anatomy](2-saske/anatomy.md)
@@ -39,7 +44,7 @@
 - [Metavariables](metavars.md)
 - [**Loj**](loj.md)
 - [Relations and **Selb**](selb.md)
-- [Definitional vlaste](vlaste.md)
+- [Definitional *vlaste*](vlaste.md)
 
 # Appendices
 
