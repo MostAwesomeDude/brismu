@@ -7,7 +7,7 @@ We now tour the Metamath axioms and theorems.
 The axioms begin with ~ax-mp and two other axioms which we call ~ax-k and
 ~ax-s. Here is how we phrase them in Metamath:
 
-XXX table: ax-k, ax-s, ax-mp
+~table ax-k ax-s ax-mp
 
 Where do these axioms come from? These are the rules of SKI combinator calculus
 ([WP](https://en.wikipedia.org/wiki/SKI_combinator_calculus),
@@ -51,17 +51,17 @@ which uses the *valsi* being defined in its left-hand component but not its
 right-hand component. For example, here are two definitions from this section
 of the database:
 
-XXX table: df-se, df-du
+~table df-se df-du
 
 However, we can't use that for the connectives themselves. We don't define
 `{ganai}` at all! It's part of the basis. We add the following axioms, as well
 as a suspicious pseudo-definition ~df-go, in order to achieve our bootstrap:
 
-XXX table: ax-ge-le, ax-ge-re, ax-ge-in, df-go
+~table ax-ge-le ax-ge-re ax-ge-in df-go
 
 But once this is done, we can define our final two connectives:
 
-XXX table: df-ga, df-gonai
+~table df-ga df-gonai
 
 ## Negation
 
