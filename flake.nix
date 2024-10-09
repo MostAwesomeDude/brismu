@@ -31,7 +31,7 @@
           buildInputs = with pkgs; [
             graphviz python3
             metamath
-            mdbook mdbook-graphviz mdbook-linkcheck
+            mdbook mdbook-admonish mdbook-graphviz mdbook-linkcheck
           ];
 
           buildPhase = ''
@@ -60,6 +60,7 @@
             python3 gen.py vlaste > src/vlaste-table.md
             python3 gen.py metavars > src/metavar-table.md
 
+            mdbook-admonish install
             mdbook build
 
             pushd mm/
