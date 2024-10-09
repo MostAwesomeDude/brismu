@@ -26,7 +26,7 @@ For now, we don't have a clean enumeration of ZF axioms.
 Next, we consider subsets. By defining subsets in terms of elementhood, we can
 establish that the subset relation is reflexive and transitive.
 
-XXX table: gripau-refl, gripau-trans
+~table gripau-refl gripau-trans
 
 ## Internal Homs
 
@@ -46,7 +46,7 @@ internal hom described here is for the logic of *selbri*: [**Selb**](selb.md).
 
 We use this to define many classic *gismu*. Here are some examples:
 
-XXX table: df-ckaji, df-ckini
+~table df-ckaji df-ckini
 
 This section also includes a definition of `{du'u}`, which further internalizes
 logic by allowing us to treat *bridi* as *terbri*. At this point we can explain
@@ -66,7 +66,7 @@ first-order quantified variable, like `{da}`, but we may replace it with any
 grammatical `{ko'a}`. Theorems about proper substitution are extremely powerful
 but take effort to prove; our listing of them is currently fairly short.
 
-XXX table subid
+~table subid
 
 ## Not-Free Quantification
 

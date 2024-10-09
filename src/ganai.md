@@ -69,7 +69,7 @@ It is convenient to define negation alongside `{gonai}`. We define experimental
 *valsi* `{cei'i}` and `{gai'o}` for vacuous truth and falsehood respectively,
 along with `{naku}` for negating entire *bridi* at once:
 
-XXX table: df-ceihi, df-gaiho, df-naku
+~table df-ceihi df-naku
 
 We also define two essential axioms of negation. ~ax-sdo defines
 [self-defeating
@@ -78,11 +78,11 @@ and ~ax-efq is the principle of explosion, also called *ex falso quodlibet*
 ([WP](https://en.wikipedia.org/wiki/Principle_of_explosion),
 [nLab](https://ncatlab.org/nlab/show/ex%20falso%20quodlibet)).
 
-XXX table: ax-sdo, ax-efq
+~table ax-sdo ax-efq
 
 And we also prove several classical tautologies:
 
-XXX table: ceihi, na-gaiho, lnc
+~table ceihi na-gaiho lnc
 
 ## Other Axioms
 
@@ -90,4 +90,4 @@ This section includes several axioms whose full potential is not yet unlocked,
 but whose inclusion couldn't be postponed to the discussion on [non-logical
 connectives](cmima.md). There are axioms of first- and second-order universal quantification:
 
-XXX table: ax-spec1, ax-spec2, ax-qi1, ax-qi2
+~table ax-spec1 ax-spec2 ax-qi1 ax-qi2
