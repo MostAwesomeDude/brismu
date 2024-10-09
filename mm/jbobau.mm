@@ -3101,7 +3101,7 @@ $}
 
 ${
     nfi.0 $e |- ganai broda gi ro da zo'u broda $.
-    $( Inference form of ~df-nahahu.
+    $( Inference form of ~df-nahahu
        (Contributed by la korvo, 25-Jun-2024.) $)
     nfi $p |- na'a'u da zo'u broda $=
       ( bnd brd bgan df-nahahu bi-revg ) ABADAABAEFBABGCH $.
