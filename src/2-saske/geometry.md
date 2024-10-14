@@ -13,6 +13,10 @@
 * {plita}: x1 is a 2D plane defined by points x2 (set)
 * {sefta}: x1 is a face of object x2, side x3, edges x4
 
+### Spaces
+
+* {nicfa}: x1 is displacement between vectors x2 and x3 in affine space x4
+
 ### Issues
 
 diklo3 should be a "range", not a radius; but I can't find good examples of
@@ -27,6 +31,10 @@ mokca2 is "in/on/at time/place", which seems polysemous.
 linji2 cardinality is at least 1, but plita2 cardinality is at least 3. This
 is because plita1 is fixed by plita2; linji1 is "a line", but plita2 is "the
 plane".
+
+nicfa4 and nicfa5 aren't useful to us here. I'm replacing nicfa4 and folks can
+put {la brismu} for nicfa5 to indicate that they're using our definition
+instead.
 
 ## Physical
 
