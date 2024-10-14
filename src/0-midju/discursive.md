@@ -74,3 +74,9 @@ hinted at in CLL, and were explored by la xorxes.
     lo sinxa be lo se cmima be da ku broda
     ====================================== (lu'i-intel)
                 lu'i da broda
+
+## Ellipsis: zo'e, co'e, do'e
+
+An ellipsis represents a *selbri* or *terbri* which the speaker has not yet
+uttered. As such, they should be registered as discursive evidence, rather than
+given semantics like `{zi'o}`.
