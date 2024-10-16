@@ -162,6 +162,7 @@ htmldef "cnita" as "<span class='gismu'>cnita</span> ";
 htmldef "crane" as "<span class='gismu'>crane</span> ";
 htmldef "drata" as "<span class='gismu'>drata</span> ";
 htmldef "dugri" as "<span class='gismu'>dugri</span> ";
+htmldef "dukni" as "<span class='gismu'>dukni</span> ";
 htmldef "dunli" as "<span class='gismu'>dunli</span> ";
 htmldef "fancu" as "<span class='gismu'>fancu</span> ";
 htmldef "fatci" as "<span class='gismu'>fatci</span> ";
@@ -173,6 +174,7 @@ htmldef "kanxe" as "<span class='gismu'>kanxe</span> ";
 htmldef "kazmi" as "<span class='gismu'>kazmi</span> ";
 htmldef "kinfi" as "<span class='gismu'>kinfi</span> ";
 htmldef "kinra" as "<span class='gismu'>kinra</span> ";
+htmldef "kloje" as "<span class='gismu'>kloje</span> ";
 htmldef "mapti" as "<span class='gismu'>mapti</span> ";
 htmldef "mintu" as "<span class='gismu'>mintu</span> ";
 htmldef "mupli" as "<span class='gismu'>mupli</span> ";
@@ -186,6 +188,7 @@ htmldef "pritu" as "<span class='gismu'>pritu</span> ";
 htmldef "purci" as "<span class='gismu'>purci</span> ";
 htmldef "rinka" as "<span class='gismu'>rinka</span> ";
 htmldef "sefsi" as "<span class='gismu'>sefsi</span> ";
+htmldef "sezni" as "<span class='gismu'>sezni</span> ";
 htmldef "sigda" as "<span class='gismu'>sigda</span> ";
 htmldef "simsa" as "<span class='gismu'>simsa</span> ";
 htmldef "simxu" as "<span class='gismu'>simxu</span> ";
@@ -217,6 +220,7 @@ htmldef "kacna'u" as "<span class='lujvo'>kacna'u</span> ";
 htmldef "ki'irkanxe" as "<span class='lujvo'>ki'irkanxe</span> ";
 htmldef "ki'irni'i" as "<span class='lujvo'>ki'irni'i</span> ";
 htmldef "ki'irvlina" as "<span class='lujvo'>ki'irvlina</span> ";
+htmldef "klojere" as "<span class='lujvo'>klojere</span> ";
 htmldef "kuzypau" as "<span class='lujvo'>kuzypau</span> ";
 htmldef "pagyfancu" as "<span class='lujvo'>pagyfancu</span> ";
 htmldef "selbri" as "<span class='lujvo'>selbri</span> ";
@@ -3819,12 +3823,94 @@ $(
 Properties of operators
 #*#*#
 
-We study binary operators: ternary relations with functional dependencies.
+We study binary operators: ternary relations with functional dependencies. Our
+approach uses abstract algebra, characterizing operators in terms of the
+algebraic structures which they carry upon their underlying set.
 $)
 
 $(
+#*#*#
+Existential quantifiers II: {pa da}
+#*#*#
+$)
+
+$( Syntax for uniqueness quantification. $)
+bpd $a bridi pa da zo'u broda $.
+
+$( Definition of {` pa da `} in terms of {` su'o da `} and {` du `}. $)
+df-pa-da $a |- go pa da zo'u da bo'a
+  gi su'o da zo'u ge da bo'a gi ganai ko'a bo'a gi ko'a du da $.
+
+${
+    pa-dai.0 $e |- pa da zo'u da bo'a $.
+    $( Inference form of ~pa-da
+       (Contributed by la korvo, 20-Aug-2023.) $)
+    pa-dai $p |- su'o da zo'u ge da bo'a gi ganai ko'a bo'a gi ko'a du da $=
+      ( btb bpd sbdu bb bgan bge bsd df-pa-da bi ) CBEZCFNABEACGHIJZCOKDABCLM
+      $.
+$}
+
+${
+    pa-dari.0 $e |- su'o da zo'u ge da bo'a gi ganai ko'a bo'a gi ko'a du da $.
+    $( Reverse inference form of ~pa-da
+       (Contributed by la korvo, 20-Aug-2023.) $)
+    pa-dari $p |- pa da zo'u da bo'a $=
+      ( btb sbdu bb bgan bge bsd bpd df-pa-da bi-rev ) CBEZABEACFGHIZCOJNCKDABC
+      LM $.
+$}
+
+${
+    bpdp.0 $e bridi pa da zo'u broda $.
+    $( Restriction for first-order uniqueness quantification. $)
+    bpdp $a bridi pa da poi ke'a bo'a ku'o zo'u broda $.
+$}
+
+$( Definition of {` pa da poi `} quantifiers as restricted first-order
+   uniqueness quantifiers. $)
+df-poi-pa $a |-
+  go pa da poi ke'a bo'a ku'o zo'u broda
+  gi pa da zo'u ganai da bo'a gi broda $.
+
+${
+    poi-pai.0 $e |- pa da poi ke'a bo'a ku'o zo'u broda $.
+    $( Inference form of ~df-poi-pa
+       (Contributed by la korvo, 15-Oct-2024.) $)
+    poi-pai $p |- pa da zo'u ganai da bo'a gi broda $=
+      ( bpd bpdp btb bgan df-poi-pa bi ) ABCACEFCBGAHCEDABCIJ $.
+$}
+
+${
+    poi-pari.0 $e |- pa da zo'u ganai da bo'a gi broda $.
+    $( Reverse inference form of ~df-poi-pa
+       (Contributed by la korvo, 15-Oct-2024.) $)
+    poi-pari $p |- pa da poi ke'a bo'a ku'o zo'u broda $=
+      ( btb bgan bpd bpdp df-poi-pa bi-rev ) CBEAFCGABCACGHDABCIJ $.
+$}
+
+$(
 =-=-=
-Closure: {kloje}
+Magmas: {klojere}
+=-=-=
+$)
+
+$c klojere $.
+
+sbklojere $a selbri klojere $.
+
+$( Definition of {` klojere `}. This is our most foundational definition for
+   binary operators for now: a binary operator is a ternary relation closed
+   over a set such that, for every ordered pair of elements in the closure,
+   there is a unique related element. In terms of abstract algebra, our binary
+   operators are magmas. $)
+df-klojere $a |- go pa ka ce'u bu'a ce'u ce'u kei klojere ko'a
+  gi ro da poi ke'a cmima ko'a ku'o zo'u
+     ro de poi ke'a cmima ko'a ku'o zo'u
+     pa di poi ke'a cmima ko'a ku'o zo'u
+     da bu'a de di $.
+
+$(
+=-=-=
+Semigroups: {kloje}
 =-=-=
 $)
 
@@ -3832,20 +3918,19 @@ $c kloje $.
 
 sbkloje $a selbri kloje $.
 
-$( Definition of {` kloje `}. This is our most foundational definition for
-   binary operators for now: a binary operator is a ternary relation closed
-   over a set such that, for every ordered pair of elements in the closure,
-   there is a unique related element. In terms of abstract algebra, our binary
-   operators are magmas. $)
-df-kloje $a |- go pa ka ce'u bu'a ce'u ce'u kei kloje ko'e
-  gi ro da poi ke'a cmima ko'e ku'o zo'u
-     ro de poi ke'a cmima ko'e ku'o zo'u
-     pa di poi ke'a cmima ko'e ku'o zo'u
-     da bu'a de di $.
+$( Definition of {` kloje `} in terms of {` klojere `}: a semigroup is an
+   associative magma. $)
+df-kloje $a |- go pa ka ce'u bu'a ce'u ce'u kei kloje ko'a
+  gi ge pa ka ce'u bu'a ce'u ce'u kei klojere ko'a
+  gi ro da poi ke'a cmima ko'a ku'o zo'u
+     ro de poi ke'a cmima ko'a ku'o zo'u
+     ro di poi ke'a cmima ko'a ku'o zo'u
+     go ge da bu'a de ko'e gi ko'e bu'a di ko'i
+     gi ge de bu'a di ko'e gi di bu'a ko'e ko'i $.
 
 $(
 =-=-=
-Identity element: {sezni}
+Monoids: {sezni}
 =-=-=
 $)
 
@@ -3853,14 +3938,26 @@ $c sezni $.
 
 sbsezni $a selbri sezni $.
 
-$( Definition of {` sezni `} in terms of {` kloje `}. It is an open question
-   in abstract algebra whether there are any interesting left-unital magmas,
-   so our definition corresponds instead to unital magmas. $)
-df-sezni $a |- go pa ka ce'u bu'a ce'u ce'u kei sezni ko'e
-  gi ge ko'e kloje pa ka ce'u bu'a ce'u ce'u kei
-  gi ro da poi ke'a cmima ko'e ku'o zo'u
-     pa de poi ke'a cmima ko'e ku'o zo'u
+$( Definition of {` sezni `} in terms of {` kloje `}: a monoid is a semigroup
+   with an identity element. $)
+df-sezni $a |- go pa ka ce'u bu'a ce'u ce'u kei sezni ko'a
+  gi ge ko'a kloje pa ka ce'u bu'a ce'u ce'u kei
+  gi ro da poi ke'a cmima ko'a ku'o zo'u
+     pa de poi ke'a cmima ko'a ku'o zo'u
      ge da bu'a de da gi de bu'a da da $.
+
+${
+    sezni-elt.0 $e |- pa ka ce'u bu'a ce'u ce'u kei sezni ko'a $.
+    sezni-elt.1 $e |- da cmima ko'a $.
+    $( The identity element of monoids is unique.
+       (Contributed by la korvo, 16-Oct-2024.) $)
+    sezni-elt $p |- pa de poi ke'a cmima ko'a ku'o zo'u
+      ge da bu'a de da gi de bu'a da da $=
+      ( sbcmima bb bt bge tsb tss bpd bpdp bgan sc spk sbkloje brd brdp sbsezni
+      df-sezni bi ge-rei poi-roi spec1i ax-mp ) CAGHZCDCBIDCCBIJZAGKZUJLZDUIDMN
+      ZFUHULOCULUKCAPPPBKZUMLZUNLQZRHZULUKCULCULSTZUOAUAHUPUQJEABCDUBUCUDUEUFUG
+      $.
+$}
 
 $(
 #####
@@ -4187,65 +4284,6 @@ $}
 $( Recursive definition of {` kacme'a `}. This is Robinson axiom 11. $)
 df-kacmeha $a |- go ko'a kacme'a ko'e
   gi su'o da poi ke'a kacli'e ko'a zo'u ga da kacme'a ko'e gi da du ko'e $.
-
-$(
-#*#*#
-Existential quantifiers II: {pa da}
-#*#*#
-$)
-
-$( Syntax for uniqueness quantification. $)
-bpd $a bridi pa da zo'u broda $.
-
-$( Definition of {` pa da `} in terms of {` su'o da `} and {` du `}. $)
-df-pa-da $a |- go pa da zo'u da bo'a
-  gi su'o da zo'u ge da bo'a gi ganai ko'a bo'a gi ko'a du da $.
-
-${
-    pa-dai.0 $e |- pa da zo'u da bo'a $.
-    $( Inference form of ~pa-da
-       (Contributed by la korvo, 20-Aug-2023.) $)
-    pa-dai $p |- su'o da zo'u ge da bo'a gi ganai ko'a bo'a gi ko'a du da $=
-      ( btb bpd sbdu bb bgan bge bsd df-pa-da bi ) CBEZCFNABEACGHIJZCOKDABCLM
-      $.
-$}
-
-${
-    pa-dari.0 $e |- su'o da zo'u ge da bo'a gi ganai ko'a bo'a gi ko'a du da $.
-    $( Reverse inference form of ~pa-da
-       (Contributed by la korvo, 20-Aug-2023.) $)
-    pa-dari $p |- pa da zo'u da bo'a $=
-      ( btb sbdu bb bgan bge bsd bpd df-pa-da bi-rev ) CBEZABEACFGHIZCOJNCKDABC
-      LM $.
-$}
-
-${
-    bpdp.0 $e bridi pa da zo'u broda $.
-    $( Restriction for first-order uniqueness quantification. $)
-    bpdp $a bridi pa da poi ke'a bo'a ku'o zo'u broda $.
-$}
-
-$( Definition of {` pa da poi `} quantifiers as restricted first-order
-   uniqueness quantifiers. $)
-df-poi-pa $a |-
-  go pa da poi ke'a bo'a ku'o zo'u broda
-  gi pa da zo'u ganai da bo'a gi broda $.
-
-${
-    poi-pai.0 $e |- pa da poi ke'a bo'a ku'o zo'u broda $.
-    $( Inference form of ~df-poi-pa
-       (Contributed by la korvo, 15-Oct-2024.) $)
-    poi-pai $p |- pa da zo'u ganai da bo'a gi broda $=
-      ( bpd bpdp btb bgan df-poi-pa bi ) ABCACEFCBGAHCEDABCIJ $.
-$}
-
-${
-    poi-pari.0 $e |- pa da zo'u ganai da bo'a gi broda $.
-    $( Reverse inference form of ~df-poi-pa
-       (Contributed by la korvo, 15-Oct-2024.) $)
-    poi-pari $p |- pa da poi ke'a bo'a ku'o zo'u broda $=
-      ( btb bgan bpd bpdp df-poi-pa bi-rev ) CBEAFCGABCACGHDABCIJ $.
-$}
 
 $(
 #*#*#

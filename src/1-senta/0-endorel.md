@@ -156,3 +156,7 @@ And:
 ## Euclidean
 
 ~table df-efklipi df-efklizu
+
+## Groups
+
+gismu: dukni
