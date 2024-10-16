@@ -1,36 +1,21 @@
-# 0: Endorelational gismu
+# 0: Endorelations
 
-We cover some essential relational properties of the baseline gismu. We'll use
-the notation `x R y` to indicate relation R relating elements x and y.
-
-We'll focus on binary relations where both elements of each pair are drawn
-from one single underlying set. This lets us consider equality on related
-elements.
+Endorelations are binary *selbri* which relate a set to itself.
 
 ## Reflexivity
 
-gismu: kinra
+~table df-kinra
 
-A reflexive relation contains at least, for every element x in the underlying
-set, `x R x`.
+### Examples
 
-I don't know of any gismu which are reflexive but not equivalence relations.
-Still, were there any, they'd get the following formal rule.
-
-    ro da ro de zo'u:
-
-     da du de
-    ----------- (broda is reflexive)
-    da broda de
-
-For any gismu which is reflexive, just substitute into the above rule.
+~table du-kinra gripau-kinra kihirnihi-kinra pagbu-kinra nibli-refl
 
 ## Irreflexivity
 
 An irreflexive relation omits any pair which a reflexive relation would be
-required to have. For every element x in the underlying set, `x ~R x`. Since
-we only care about endorelations, we won't mention relations like ``{mlatu}``
-which would otherwise trivially be irreflexive.
+required to have. For every element x in the underlying set, `x R x` is false.
+Since we only care about endorelations, we won't mention relations like
+``{mlatu}`` which would otherwise trivially be irreflexive.
 
     ro da zo'u:
 
@@ -43,20 +28,9 @@ Examples of irreflexive relations:
 
 ## Transitivity
 
-gismu: takni
+~table df-takni
 
-A transitive relation turns chains of related elements into transitive
-closures, which are subsets of the underlying set characterized by the heads
-of the longest chains. For any three elements x, y, and z,
-if `x R y` and `y R z` then also `x R z`.
-
-    ro da ro de ro di zo'u:
-
-    da broda de .ije de broda di
-    ---------------------------- (broda is transitive)
-            da broda di
-
-Examples of transitive relations:
+### Examples
 
 * ``{zmadu}`` for any particular zmadu3 metric and zmadu4 value of the metric
   between zmadu1 and zmadu2
@@ -75,22 +49,9 @@ transitive structure. Or perhaps just ``{dzena fi zi'o}``, not sure.
 
 ## Symmetric
 
-gismu: kinfi
+~table df-kinfi
 
-A symmetric relation freely interchanges the elements in its pairs; whenever
-it is the case that `x R y`, it is also the case that `y R x`.
-
-    ro da ro de zo'u:
-
-    da broda de
-    =========== (broda is symmetric)
-    de broda da
-
-The rule for symmetric relations is also symmetric, which I find pleasant.
-
-Note that symmetric relations are like involutions, in that when composed with
-themselves they yield the identity relation ``{du}``. However, they need not
-be functions.
+### Examples
 
 Examples of symmetric relations:
 
@@ -191,3 +152,7 @@ And:
     da broda de & de broda di
     -------------------------
            de broda da
+
+## Euclidean
+
+~table df-efklipi df-efklizu

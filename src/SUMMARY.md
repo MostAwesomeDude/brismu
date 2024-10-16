@@ -16,7 +16,7 @@
 
 # logji senta
 
-- [Endo(Rel)](1-senta/0-endorel.md)
+- [Endorelations](1-senta/0-endorel.md)
 - [Basis](1-senta/1-basis.md)
 - [Places](1-senta/3-places.md)
 - [Spacetime](1-senta/4-spacetime.md)
