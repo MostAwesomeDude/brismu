@@ -3815,6 +3815,54 @@ ax-efklipi-sym $a |- ganai ko'a kinra je efklipi ko'e gi ko'a kinfi ko'e $.
 ax-efklizu-sym $a |- ganai ko'a kinra je efklizu ko'e gi ko'a kinfi ko'e $.
 
 $(
+#*#*#
+Properties of operators
+#*#*#
+
+We study binary operators: ternary relations with functional dependencies.
+$)
+
+$(
+=-=-=
+Closure: {kloje}
+=-=-=
+$)
+
+$c kloje $.
+
+sbkloje $a selbri kloje $.
+
+$( Definition of {` kloje `}. This is our most foundational definition for
+   binary operators for now: a binary operator is a ternary relation closed
+   over a set such that, for every ordered pair of elements in the closure,
+   there is a unique related element. In terms of abstract algebra, our binary
+   operators are magmas. $)
+df-kloje $a |- go pa ka ce'u bu'a ce'u ce'u kei kloje ko'e
+  gi ro da poi ke'a cmima ko'e ku'o zo'u
+     ro de poi ke'a cmima ko'e ku'o zo'u
+     pa di poi ke'a cmima ko'e ku'o zo'u
+     da bu'a de di $.
+
+$(
+=-=-=
+Identity element: {sezni}
+=-=-=
+$)
+
+$c sezni $.
+
+sbsezni $a selbri sezni $.
+
+$( Definition of {` sezni `} in terms of {` kloje `}. It is an open question
+   in abstract algebra whether there are any interesting left-unital magmas,
+   so our definition corresponds instead to unital magmas. $)
+df-sezni $a |- go pa ka ce'u bu'a ce'u ce'u kei sezni ko'e
+  gi ge ko'e kloje pa ka ce'u bu'a ce'u ce'u kei
+  gi ro da poi ke'a cmima ko'e ku'o zo'u
+     pa de poi ke'a cmima ko'e ku'o zo'u
+     ge da bu'a de da gi de bu'a da da $.
+
+$(
 #####
 NUMBERS
 #####
@@ -4169,6 +4217,34 @@ ${
     pa-dari $p |- pa da zo'u da bo'a $=
       ( btb sbdu bb bgan bge bsd bpd df-pa-da bi-rev ) CBEZABEACFGHIZCOJNCKDABC
       LM $.
+$}
+
+${
+    bpdp.0 $e bridi pa da zo'u broda $.
+    $( Restriction for first-order uniqueness quantification. $)
+    bpdp $a bridi pa da poi ke'a bo'a ku'o zo'u broda $.
+$}
+
+$( Definition of {` pa da poi `} quantifiers as restricted first-order
+   uniqueness quantifiers. $)
+df-poi-pa $a |-
+  go pa da poi ke'a bo'a ku'o zo'u broda
+  gi pa da zo'u ganai da bo'a gi broda $.
+
+${
+    poi-pai.0 $e |- pa da poi ke'a bo'a ku'o zo'u broda $.
+    $( Inference form of ~df-poi-pa
+       (Contributed by la korvo, 15-Oct-2024.) $)
+    poi-pai $p |- pa da zo'u ganai da bo'a gi broda $=
+      ( bpd bpdp btb bgan df-poi-pa bi ) ABCACEFCBGAHCEDABCIJ $.
+$}
+
+${
+    poi-pari.0 $e |- pa da zo'u ganai da bo'a gi broda $.
+    $( Reverse inference form of ~df-poi-pa
+       (Contributed by la korvo, 15-Oct-2024.) $)
+    poi-pari $p |- pa da poi ke'a bo'a ku'o zo'u broda $=
+      ( btb bgan bpd bpdp df-poi-pa bi-rev ) CBEAFCGABCACGHDABCIJ $.
 $}
 
 $(
