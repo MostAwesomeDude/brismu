@@ -179,6 +179,7 @@ htmldef "mapti" as "<span class='gismu'>mapti</span> ";
 htmldef "mintu" as "<span class='gismu'>mintu</span> ";
 htmldef "mupli" as "<span class='gismu'>mupli</span> ";
 htmldef "natfe" as "<span class='gismu'>natfe</span> ";
+htmldef "nalti" as "<span class='gismu'>nalti</span> ";
 htmldef "nenri" as "<span class='gismu'>nenri</span> ";
 htmldef "nibli" as "<span class='gismu'>nibli</span> ";
 htmldef "pagbu" as "<span class='gismu'>pagbu</span> ";
@@ -3600,6 +3601,30 @@ df-vlina $a |-
   vlina
   pa du'u broda kei
   pa du'u brode kei $.
+
+$(
+=-=-=
+{nalti}
+=-=-=
+$)
+
+$c nalti $.
+
+sbnalti $a selbri nalti $.
+
+$( {` nalti `} internalizes negation. This direction adds the {` naku zo'u `}
+   prenex to the second bridi. $)
+df-nalti-ana $a |-
+  pa du'u broda kei
+  nalti
+  pa du'u naku zo'u broda kei $.
+
+$( {` nalti `} internalizes negation. This direction adds the {` naku zo'u `}
+   prenex to the first bridi. $)
+df-nalti-kata $a |-
+  pa du'u naku zo'u broda kei
+  nalti
+  pa du'u broda kei $.
 
 $(
 #*#*#

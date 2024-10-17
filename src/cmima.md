@@ -17,9 +17,17 @@ axioms known as ZF
 ([WP](https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory),
 [nLab](https://ncatlab.org/nlab/show/ZFC)). ZF is often combined with an Axiom
 of Choice, which we will discuss later; the reader is advised to carefully note
-the distinction between "ZF" and "ZFC".
+the distinction between "ZF" and "ZFC". We study two *selbri*, `{cmima}` and
+`{zilcmi}`, which represent inhabited sets and all sets respectively.
 
-For now, we don't have a clean enumeration of ZF axioms.
+We present the following subset of ZF, containing Axioms of Empty Set,
+Pairing, and Union:
+
+~table df-nomei df-ce df-johe
+
+And also extensionally define a fair number of *selbri* in terms of `{cmima}`:
+
+~table df-zilcmi
 
 ## Subsets
 
@@ -48,14 +56,22 @@ We use this to define many classic *gismu*. Here are some examples:
 
 ~table df-ckaji df-ckini
 
+And we can combine those with `{cmima}` to define more *gismu*:
+
+~table df-steci df-mupli df-simxu df-kampu
+
 This section also includes a definition of `{du'u}`, which further internalizes
-logic by allowing us to treat *bridi* as *terbri*. At this point we can explain
-the main issue with using abstractors as our basis: *terbri* cannot be
-manipulated as generic syntax. It's not obvious how to do manipulations with
-*gismu* like `{nibli}` which operate upon `{du'u}` abstractions. The situation
-is not dire, merely unclear and difficult; theorems like ~nibli-refl have been
-proven without any fancy techniques. But we will need some fancy techniques,
-like…
+logic by allowing us to treat *bridi* as *terbri*.
+
+~table df-fatci df-nibli df-sigda df-tsida df-kanxe df-vlina df-nalti-ana df-nalti-kata
+
+At this point we can explain the main issue with using abstractors as our
+basis: *terbri* cannot be manipulated as generic syntax. It's not obvious how
+to do manipulations with *gismu* like `{nibli}` which operate upon `{du'u}`
+abstractions. As such, we prefer `{ka}` abstraction over `{du'u}` abstraction
+when manipulating syntax. The situation is not dire, merely unclear and
+difficult; theorems like ~nibli-refl have been proven without any fancy
+techniques. But we will need some fancy techniques, like…
 
 ## Proper Substitution
 

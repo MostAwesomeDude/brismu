@@ -7,6 +7,7 @@
 - [Introduction to Logic](intro-logji.md)
 - [Logical Connectives](ganai.md)
 - [Non-Logical Connectives](cmima.md)
+- [Mereology](pagbu.md)
 
 # logji midju
 
@@ -21,7 +22,7 @@
 - [Places](1-senta/3-places.md)
 - [Spacetime](1-senta/4-spacetime.md)
 
-# logji saske
+# logji ke zasti saske
 
 - [Classes of gismu](2-saske/classes.md)
 - [Anatomy](2-saske/anatomy.md)
