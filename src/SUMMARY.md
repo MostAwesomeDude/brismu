@@ -7,6 +7,7 @@
 - [Introduction to Logic](intro-logji.md)
 - [Logical Connectives](ganai.md)
 - [Non-Logical Connectives](cmima.md)
+- [Natural Numbers](kacnahu.md)
 - [Mereology](pagbu.md)
 
 # logji midju
