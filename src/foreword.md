@@ -82,7 +82,8 @@ formalized | 14
 groups of chemical elements | 4
 molecules | 1
 plants | 13
-Total | 168 / 1342 (12.52%)
+units of measurement | 15
+Total | 183 / 1342 (13.63%)
 
 ## Credits
 
@@ -102,6 +103,7 @@ ended up using:
 
 * la krtisfranks
 * la lalxu
+* la latros
 
 ## Praise from Lojbanists
 

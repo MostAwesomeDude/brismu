@@ -156,7 +156,8 @@ subjective `{nu}`; li'i2 is the experiencer of the event. Not much more to say
 for now; we'll have to get to subjective experiences for this to be useful.
 
 `{si'o}` is similar, but vague. si'o2 is an agent who is imagining a bridi.
-Can `{ce'u}` appear underneath? Nobody knows.
+Can `{ce'u}` appear underneath? We should take the convention offered
+[here](https://mw-live.lojban.org/papri/ka,_du%27u,_si%27o,_ce%27u,_zo%27e).
 
 `{su'u}` is theoretically essential for constructing abstractors, but CLL
 doesn't give us enough information for how to wield it. It's not even clear
